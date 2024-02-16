@@ -35,16 +35,21 @@ struct SessionView: View {
             case .shaking:
                 TabView(selection: $secondTabView,
                         content:  {
-                    Button(role: .destructive) {
-                        firstTabView = 2
-                    } label: {
+                    Button(role: .destructive,
+                           action: {
+                        self.firstTabView = 2
+                        currentState = .done
+                    }, label: {
                         Text("I'm done")
-                    }.tag(1)
-                    Text("Shaking").tag(2)
+                    })
+                        .tag(1)
+                    
+                    Text("Shaking")
+                        .tag(2)
                 })
                 .tabViewStyle(.page)
             case .done:
-                Text("Done2!")
+                Text("You just finished a session!")
             }
             
         }
