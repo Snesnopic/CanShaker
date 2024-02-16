@@ -6,19 +6,30 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct ContentView: View {
+    @State var healthStore:HKHealthStore?
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button {
+                if HKHealthStore.isHealthDataAvailable() {
+                    print("ok")
+                    healthStore = HKHealthStore()
+                    
+                }
+                else {
+                    print("not ok")
+                }
+            } label: {
+                Text("Start")
+            }
+            
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(healthStore: nil)
 }

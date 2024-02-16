@@ -43,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9D5360EA2B7E4E3800BE628C /* CanShaker Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CanShaker Watch App.entitlements"; sourceTree = "<group>"; };
+		9D5360EB2B7E4E9100BE628C /* CanShaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CanShaker.entitlements; sourceTree = "<group>"; };
 		9D7187F92B7E419A002C02B0 /* CanShaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanShaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanShakerApp.swift; sourceTree = "<group>"; };
 		9D7187FE2B7E419A002C02B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		9D7187FB2B7E419A002C02B0 /* CanShaker */ = {
 			isa = PBXGroup;
 			children = (
+				9D5360EB2B7E4E9100BE628C /* CanShaker.entitlements */,
 				9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */,
 				9D7187FE2B7E419A002C02B0 /* ContentView.swift */,
 				9D7188002B7E419B002C02B0 /* Assets.xcassets */,
@@ -113,6 +116,7 @@
 		9D71880D2B7E419B002C02B0 /* CanShaker Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				9D5360EA2B7E4E3800BE628C /* CanShaker Watch App.entitlements */,
 				9D71880E2B7E419B002C02B0 /* CanShakerApp.swift */,
 				9D7188102B7E419B002C02B0 /* ContentView.swift */,
 				9D7188122B7E419C002C02B0 /* Assets.xcassets */,
@@ -375,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CanShaker Watch App/CanShaker Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
@@ -405,6 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CanShaker Watch App/CanShaker Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
@@ -437,6 +443,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CanShaker/CanShaker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
@@ -470,6 +477,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CanShaker/CanShaker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
