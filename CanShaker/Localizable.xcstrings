@@ -17,7 +17,14 @@
 
     },
     "Badges" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemmi"
+          }
+        }
+      }
     },
     "Detail" : {
 
@@ -50,7 +57,14 @@
 
     },
     "Last session" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultima sessione"
+          }
+        }
+      }
     },
     "Lorem ipsum Dorem" : {
 
@@ -76,7 +90,7 @@
     "Start session" : {
 
     },
-    "statistics" : {
+    "Statistics" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -92,9 +106,6 @@
           }
         }
       }
-    },
-    "Statistics" : {
-
     },
     "Total Count" : {
 
