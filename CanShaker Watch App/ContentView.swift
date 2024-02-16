@@ -24,6 +24,8 @@ struct ContentView: View {
             } label: {
                 Text("Start")
             }
+            .buttonBorderShape(.circle)
+            .buttonStyle(.borderedProminent)
             
         }
         .padding()
