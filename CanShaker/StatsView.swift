@@ -12,14 +12,23 @@ struct StatsView: View {
     let hk = HKHealthStore()
     var body: some View {
         NavigationStack {
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+            List {
+                Section(header: Text("Finish time")) {
+                    Text("Graph")
+                }
+                Section(header: Text("About")) {
+                    VStack (alignment: .leading) {
+                        HStack {
+                            Image(systemName: "heart.fill")
+                            Text("Heart Rate")
+                        }
+                        .padding(.bottom)
+                        Text("Lorem ipsum Dorem")
+                    }
+                }
             }
-            .padding()
-            .navigationTitle("Statistics")
+            .headerProminence(.increased)
+            .navigationTitle(String(localized: "statistics"))
         }
     }
 }
