@@ -17,8 +17,8 @@ struct BadgeObtainedView: View {
                 }
                 
             })
-                .navigationTitle("New badge!")
-
+            .navigationTitle("New badge!")
+            
         }
     }
 }
