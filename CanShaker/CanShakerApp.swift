@@ -13,13 +13,13 @@ struct CanShakerApp: App {
         WindowGroup {
             TabView(selection: .constant(1)) {
                 StatsView().tabItem {
-                    Label("Statistics", systemImage: "chart.bar.xaxis")
+                    Label(String(localized: "Statistics"), systemImage: "chart.bar.xaxis")
                 }
                 AdvicesView().tabItem {
-                    Label("Advices", systemImage: "lightbulb.fill")
+                    Label(String(localized: "Advices"), systemImage: "lightbulb.fill")
                 }
                 AchievementsView().tabItem {
-                    Label("Achievements", systemImage: "trophy")
+                    Label(String(localized: "Achievements"), systemImage: "trophy")
                 }
             }
         }
