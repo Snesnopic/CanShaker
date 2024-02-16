@@ -13,29 +13,14 @@ struct CanShakerApp: App {
         WindowGroup {
             TabView(selection: .constant(1)) {
                 StatsView().tabItem {
-                    VStack {
-                    Image(systemName: "chart.bar.xaxis")
-                    Text("Statistics")
-                }}
-                SharingView().tabItem {
-                    VStack {
-                        Image(systemName: "person.2.fill")
-                        Text("Sharing")
-                }}
+                    Label("Statistics", systemImage: "chart.bar.xaxis")
+                }
                 AdvicesView().tabItem {
-                    VStack {
-                        Image(systemName: "lightbulb.fill")
-                        Text("Advices")
-                }}
-                
+                    Label("Advices", systemImage: "lightbulb.fill")
+                }
                 AchievementsView().tabItem {
-                    VStack {
-                        Image(systemName: "trophy")
-                        Text("Achievements")
-                }}
-                
-                
-
+                    Label("Achievements", systemImage: "trophy")
+                }
             }
         }
     }
