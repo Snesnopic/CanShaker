@@ -1,0 +1,104 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "5 times a day!" : {
+
+    },
+    "About" : {
+
+    },
+    "Achievements" : {
+
+    },
+    "Advices" : {
+
+    },
+    "Are you sure? Too many sessions can cause serious health issues!" : {
+
+    },
+    "Badges" : {
+
+    },
+    "Detail" : {
+
+    },
+    "Do it anyway" : {
+
+    },
+    "Done2!" : {
+
+    },
+    "Finish time" : {
+
+    },
+    "Go back" : {
+
+    },
+    "Graph" : {
+
+    },
+    "Heart Rate" : {
+
+    },
+    "Hello World" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "I'm done" : {
+
+    },
+    "Last session" : {
+
+    },
+    "Lorem ipsum Dorem" : {
+
+    },
+    "New badge!" : {
+
+    },
+    "Prova" : {
+
+    },
+    "Serial shaker!" : {
+
+    },
+    "Session" : {
+
+    },
+    "Shaking" : {
+
+    },
+    "Shape Type" : {
+
+    },
+    "Start session" : {
+
+    },
+    "statistics" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistics"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistiche"
+          }
+        }
+      }
+    },
+    "Statistics" : {
+
+    },
+    "Total Count" : {
+
+    }
+  },
+  "version" : "1.0"
+}
