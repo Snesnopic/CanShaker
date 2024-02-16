@@ -9,13 +9,20 @@ import SwiftUI
 
 @main
 struct CanShaker_Watch_AppApp: App {
+    @State var firstTabView:Int = 1
+    @State var currentState:SessionState = .start
     var body: some Scene {
         WindowGroup {
-            TabView(selection: .constant(1),
+            TabView(selection: $firstTabView,
                     content:  {
-                ContentView().tag(1)
-                Text("Tab Content 2").tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 2")/*@END_MENU_TOKEN@*/ }.tag(2)
+                SessionView(currentState: $currentState,firstTabView: $firstTabView)
+                    .tabItem { Label(String(localized: "Session"), systemImage: "figure") }
+                LastStatsView()
+                    .tabItem { Label(String(localized: "Last session"), systemImage: "chart.bar.xaxis") }
+                BadgesView()
+                    .tabItem { Label(String(localized: "Badges"), systemImage: "trophy.fill") }
             })
+            .tabViewStyle(.carousel)            
         }
     }
 }
