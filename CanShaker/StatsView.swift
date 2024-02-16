@@ -28,7 +28,7 @@ struct StatsView: View {
                 }
             }
             .headerProminence(.increased)
-            .navigationTitle(String(localized: "statistics"))
+            .navigationTitle("Statistics")
         }
     }
 }
