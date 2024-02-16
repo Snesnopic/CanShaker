@@ -10,8 +10,22 @@ import SwiftUI
 struct AchievementsView: View {
     var body: some View {
         NavigationStack {
-            Text("Hello, World!")
+            List {
+                NavigationLink {
+                    
+                } label: {
+                    HStack {
+                        VStack {
+                            Text("Serial shaker!").bold()
+                            Text("5 times a day!").foregroundStyle(.secondary)
+                        }
+                        Spacer()
+                        Text("Detail").foregroundStyle(.secondary)
+                    }
+                }
 
+            }
+            .listStyle(.grouped)
             .navigationTitle("Achievements")
         }
     }
