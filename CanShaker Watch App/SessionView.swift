@@ -55,3 +55,7 @@ struct SessionView: View {
         }
     }
 }
+
+#Preview {
+    SessionView(currentState: .constant(.start), firstTabView: .constant(1))
+}
