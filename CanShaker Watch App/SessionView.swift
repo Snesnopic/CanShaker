@@ -16,6 +16,7 @@ struct SessionView: View {
     @Binding var currentState: SessionState
     @Binding var firstTabView:Int
     @State var secondTabView:Int = 2
+    @State var animationAmount = 1.0
     var body: some View {
         NavigationStack {
             switch currentState {
@@ -25,10 +26,19 @@ struct SessionView: View {
                 }, label: {
                     ZStack {
                         Circle()
-                            .foregroundStyle(.orange)
-                        Text("Start session")
+                            .foregroundStyle(.graffiti.opacity(0.5))
+                            .scaleEffect(animationAmount)
+                            .onAppear{
+                                withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
+                                    animationAmount = 1.1 * animationAmount
+                                }
+                            }
+                        Circle()
+                            .foregroundStyle(.graffiti)
+                        Text("Start")
                             .bold()
                             .foregroundStyle(.background)
+                            .font(.title)
                     }
                 })
                 .buttonStyle(.plain)
@@ -42,7 +52,7 @@ struct SessionView: View {
                     }, label: {
                         Text("I'm done")
                     })
-                        .tag(1)
+                    .tag(1)
                     
                     Text("Shaking")
                         .tag(2)
