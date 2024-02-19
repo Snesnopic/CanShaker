@@ -25,6 +25,8 @@
 		9D7411B22B7F96BD00869BF8 /* BadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411B12B7F96BD00869BF8 /* BadgesView.swift */; };
 		9D81EDA72B8372A5003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		9D81EDA92B8372C2003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
+		9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */; };
+		9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAC2B838D94003B7CD1 /* Badge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		9D7411AB2B7F6DD600869BF8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9D7411AE2B7F960600869BF8 /* LastStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastStatsView.swift; sourceTree = "<group>"; };
 		9D7411B12B7F96BD00869BF8 /* BadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesView.swift; sourceTree = "<group>"; };
+		9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDetailView.swift; sourceTree = "<group>"; };
+		9D81EDAC2B838D94003B7CD1 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 				9D7411AE2B7F960600869BF8 /* LastStatsView.swift */,
 				9D7411B12B7F96BD00869BF8 /* BadgesView.swift */,
 				9D4940362B7FA88D001AA714 /* ConditionalModifier.swift */,
+				9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */,
+				9D81EDAC2B838D94003B7CD1 /* Badge.swift */,
 			);
 			path = "CanShaker Watch App";
 			sourceTree = "<group>";
@@ -277,8 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
+				9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
 				9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */,
+				9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */,
 				9D4940372B7FA88D001AA714 /* ConditionalModifier.swift in Sources */,
 				9D7411A82B7F559A00869BF8 /* BadgeObtainedView.swift in Sources */,
 				9D7411B22B7F96BD00869BF8 /* BadgesView.swift in Sources */,
