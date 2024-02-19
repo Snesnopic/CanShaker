@@ -1,10 +1,7 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "5 times a day!" : {
-
-    },
-    "About" : {
+    "Achievement %lld" : {
 
     },
     "Achievements" : {
@@ -29,7 +26,16 @@
     "Based on your use of the app" : {
 
     },
-    "Detail" : {
+    "Challenges" : {
+
+    },
+    "Complete a session without using videos or images" : {
+
+    },
+    "Daily" : {
+
+    },
+    "Daily challenge" : {
 
     },
     "Do it anyway" : {
@@ -41,19 +47,7 @@
     "Don'ts" : {
 
     },
-    "Finish a session in over 1 hour" : {
-
-    },
-    "Finish time" : {
-
-    },
     "Go back" : {
-
-    },
-    "Graph" : {
-
-    },
-    "Heart Rate" : {
 
     },
     "Hello World" : {
@@ -63,6 +57,9 @@
 
     },
     "I'm done" : {
+
+    },
+    "Last achievement" : {
 
     },
     "Last session" : {
@@ -75,19 +72,22 @@
         }
       }
     },
-    "Lorem ipsum Dorem" : {
+    "Methods" : {
 
     },
-    "Methods" : {
+    "Monthly" : {
+
+    },
+    "Monthly challenge" : {
 
     },
     "New badge!" : {
 
     },
-    "Prova" : {
+    "Performance" : {
 
     },
-    "Serial shaker" : {
+    "Placeholder text placeholder text" : {
 
     },
     "Serial shaker!" : {
@@ -96,19 +96,16 @@
     "Session" : {
 
     },
-    "Shake at 140km/h" : {
+    "Shaking" : {
 
     },
-    "Shaking" : {
+    "Shaking speed" : {
 
     },
     "Shape Type" : {
 
     },
-    "Slow and steady wins the race" : {
-
-    },
-    "Start session" : {
+    "Start" : {
 
     },
     "Statistics" : {
@@ -128,13 +125,19 @@
         }
       }
     },
+    "Time" : {
+
+    },
     "Too much lorem ipsum. Consider dorime, interimo adapare dorime. Ameno? Ameno, latire. Latiremo." : {
 
     },
-    "Top speed" : {
+    "Total Count" : {
 
     },
-    "Total Count" : {
+    "Weekly" : {
+
+    },
+    "What is your favorite color?" : {
 
     },
     "You just finished a session!" : {
