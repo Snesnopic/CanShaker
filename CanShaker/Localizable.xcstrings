@@ -26,13 +26,22 @@
         }
       }
     },
+    "Based on your use of the app" : {
+
+    },
     "Detail" : {
 
     },
     "Do it anyway" : {
 
     },
-    "Done2!" : {
+    "Do's" : {
+
+    },
+    "Don'ts" : {
+
+    },
+    "Finish a session in over 1 hour" : {
 
     },
     "Finish time" : {
@@ -50,7 +59,7 @@
     "Hello World" : {
 
     },
-    "Hello, World!" : {
+    "Hygiene" : {
 
     },
     "I'm done" : {
@@ -69,10 +78,16 @@
     "Lorem ipsum Dorem" : {
 
     },
+    "Methods" : {
+
+    },
     "New badge!" : {
 
     },
     "Prova" : {
+
+    },
+    "Serial shaker" : {
 
     },
     "Serial shaker!" : {
@@ -81,10 +96,16 @@
     "Session" : {
 
     },
+    "Shake at 140km/h" : {
+
+    },
     "Shaking" : {
 
     },
     "Shape Type" : {
+
+    },
+    "Slow and steady wins the race" : {
 
     },
     "Start session" : {
@@ -107,7 +128,16 @@
         }
       }
     },
+    "Too much lorem ipsum. Consider dorime, interimo adapare dorime. Ameno? Ameno, latire. Latiremo." : {
+
+    },
+    "Top speed" : {
+
+    },
     "Total Count" : {
+
+    },
+    "You just finished a session!" : {
 
     }
   },
