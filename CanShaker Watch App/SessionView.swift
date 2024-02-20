@@ -16,7 +16,7 @@ struct SessionView: View {
     @Binding var currentState: SessionState
     @Binding var firstTabView:Int
     @State var secondTabView:Int = 2
-    @State var animationAmount = 1.0
+    @State var animationAmount:Double = 1.0
     var body: some View {
         NavigationStack {
             switch currentState {
@@ -30,7 +30,7 @@ struct SessionView: View {
                             .scaleEffect(animationAmount)
                             .onAppear{
                                 withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                                    animationAmount = 1.1 * animationAmount
+                                    animationAmount *= 1.09
                                 }
                             }
                         Circle()
