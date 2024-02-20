@@ -15,7 +15,7 @@ struct BadgeDetailView: View {
         ScrollView {
             VStack {
                 Circle()
-                    .matchedGeometryEffect(id: "circle11", in: animation)
+                    .matchedGeometryEffect(id: badge.id, in: animation)
                     .foregroundStyle(badge.color).frame(width: 100)
                 Text(badge.description).multilineTextAlignment(.center)
             }
