@@ -14,6 +14,7 @@ class Badge {
         self.color = color
         self.description = description
     }
+    var id = UUID()
     var name:String
     var color: Color
     var description:String
