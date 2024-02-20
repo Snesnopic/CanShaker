@@ -53,6 +53,9 @@ struct SessionView: View {
                                     animationAmount *= 1.09
                                 }
                             }
+                            .onDisappear{
+                                animationAmount = 1.0
+                            }
                         Circle()
                             .foregroundStyle(.graffiti)
                         Text("Start")
