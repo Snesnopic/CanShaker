@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class Advice: Identifiable{
+    let id: UUID
+    let title: String
+    let description: String
+    
+    init(id: UUID, title: String, description: String) {
+        self.id = id
+        self.title = title
+        self.description = description
+    }
+}
