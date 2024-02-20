@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@!" : {
+
+    },
     "Achievement %lld" : {
 
     },
@@ -90,16 +93,13 @@
     "Placeholder text placeholder text" : {
 
     },
-    "Serial shaker!" : {
+    "Prova" : {
 
     },
     "Session" : {
 
     },
     "Shaking" : {
-
-    },
-    "Shaking speed" : {
 
     },
     "Shape Type" : {
@@ -124,9 +124,6 @@
           }
         }
       }
-    },
-    "Time" : {
-
     },
     "Too much lorem ipsum. Consider dorime, interimo adapare dorime. Ameno? Ameno, latire. Latiremo." : {
 
