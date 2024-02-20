@@ -16,14 +16,15 @@ struct BadgeDetailView: View {
             VStack {
                 Circle()
                     .matchedGeometryEffect(id: "circle11", in: animation)
-                    .animation(.easeIn, value: isPresented)
                     .foregroundStyle(badge.color).frame(width: 100)
                 Text(badge.description).multilineTextAlignment(.center)
             }
             .navigationTitle(badge.name)
         }
         .onTapGesture {
-            isPresented = false
+            withAnimation {
+                isPresented = false
+            }
         }
     }
 }
