@@ -432,7 +432,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = WLW428B75Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CanShaker;
@@ -443,7 +443,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -463,7 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = WLW428B75Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CanShaker;
@@ -474,7 +474,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -496,7 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = WLW428B75Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CanShaker;
@@ -512,7 +512,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -531,7 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = WLW428B75Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CanShaker;
@@ -547,7 +547,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
