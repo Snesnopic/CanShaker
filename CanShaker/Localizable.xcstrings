@@ -1,10 +1,10 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "5 times a day!" : {
+    "%@!" : {
 
     },
-    "About" : {
+    "Achievement %lld" : {
 
     },
     "Achievements" : {
@@ -26,34 +26,43 @@
         }
       }
     },
-    "Detail" : {
+    "Based on your use of the app" : {
+
+    },
+    "Challenges" : {
+
+    },
+    "Complete a session without using videos or images" : {
+
+    },
+    "Daily" : {
+
+    },
+    "Daily challenge" : {
 
     },
     "Do it anyway" : {
 
     },
-    "Finish a session in over 1 hour" : {
+    "Do's" : {
 
     },
-    "Finish time" : {
+    "Don'ts" : {
 
     },
     "Go back" : {
 
     },
-    "Graph" : {
-
-    },
-    "Heart Rate" : {
-
-    },
     "Hello World" : {
 
     },
-    "Hello, World!" : {
+    "Hygiene" : {
 
     },
     "I'm done" : {
+
+    },
+    "Last achievement" : {
 
     },
     "Last session" : {
@@ -66,10 +75,22 @@
         }
       }
     },
-    "Lorem ipsum Dorem" : {
+    "Methods" : {
+
+    },
+    "Monthly" : {
+
+    },
+    "Monthly challenge" : {
 
     },
     "New badge!" : {
+
+    },
+    "Performance" : {
+
+    },
+    "Placeholder text placeholder text" : {
 
     },
     "Prova" : {
@@ -93,6 +114,7 @@
     "Shape Type" : {
 
     },
+    "Start" : {
     "Slow and steady wins the race" : {
 
     },
@@ -116,10 +138,16 @@
         }
       }
     },
-    "Top speed" : {
+    "Too much lorem ipsum. Consider dorime, interimo adapare dorime. Ameno? Ameno, latire. Latiremo." : {
 
     },
     "Total Count" : {
+
+    },
+    "Weekly" : {
+
+    },
+    "What is your favorite color?" : {
 
     },
     "You just finished a session!" : {

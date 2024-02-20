@@ -8,23 +8,35 @@
 import SwiftUI
 
 struct BadgesView: View {
+    @Namespace private var animation
+    @State var isPresented:Bool = false
     var body: some View {
         NavigationStack {
-            Grid {
-                ForEach(1...3, id: \.self){ Int in
-                    GridRow {
-                        ForEach(1...3, id: \.self) {_ in 
-                            Circle().foregroundStyle(Color(
-                                red: .random(in: 0...1),
-                                green: .random(in: 0...1),
-                                blue: .random(in: 0...1)))
-                        }.padding()
+            if !isPresented {
+                ScrollView {
+                    GridLayout() {
+                        ForEach(allBadges, id: \.id) { badge in
+                            Button(action: {
+                                withAnimation {
+                                    isPresented = true
+                                }
+                            }, label: {
+                                Circle()
+                                    .frame(width: 20)
+                                    .matchedGeometryEffect(id: badge.id, in: animation)
+                                    .foregroundStyle(.red)
+                                
+                            })
+                            .buttonStyle(.plain)
+                        }
                     }
+                    
+                    .navigationTitle("Badges")
                 }
             }
-            
-           
-            .navigationTitle("Badges")
+            else {
+                BadgeDetailView(animation: animation, isPresented: $isPresented, badge: Badge(name: "Prova", color: Color.red, description: "Prova test prova ipsum color prova testum"))
+            }
         }
     }
 }

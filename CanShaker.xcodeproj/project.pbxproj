@@ -11,12 +11,10 @@
 		9D4940372B7FA88D001AA714 /* ConditionalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4940362B7FA88D001AA714 /* ConditionalModifier.swift */; };
 		9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */; };
 		9D7187FF2B7E419A002C02B0 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FE2B7E419A002C02B0 /* StatsView.swift */; };
-		9D7188012B7E419B002C02B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
 		9D7188042B7E419B002C02B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188032B7E419B002C02B0 /* Preview Assets.xcassets */; };
 		9D71880A2B7E419B002C02B0 /* CanShaker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9D7188092B7E419B002C02B0 /* CanShaker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9D71880F2B7E419B002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71880E2B7E419B002C02B0 /* CanShakerApp.swift */; };
 		9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7188102B7E419B002C02B0 /* SessionView.swift */; };
-		9D7188132B7E419C002C02B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		9D7188162B7E419C002C02B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188152B7E419C002C02B0 /* Preview Assets.xcassets */; };
 		9D7411A22B7F515200869BF8 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A12B7F515200869BF8 /* AchievementsView.swift */; };
 		9D7411A42B7F51BE00869BF8 /* AdvicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A32B7F51BE00869BF8 /* AdvicesView.swift */; };
@@ -26,6 +24,11 @@
 		9D7411AD2B7F6DD600869BF8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9D7411AB2B7F6DD600869BF8 /* Localizable.xcstrings */; };
 		9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411AE2B7F960600869BF8 /* LastStatsView.swift */; };
 		9D7411B22B7F96BD00869BF8 /* BadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411B12B7F96BD00869BF8 /* BadgesView.swift */; };
+		9D81EDA72B8372A5003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
+		9D81EDA92B8372C2003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
+		9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */; };
+		9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAC2B838D94003B7CD1 /* Badge.swift */; };
+		9DB2146D2B83B7C500FB0AAE /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB2146C2B83B7C500FB0AAE /* Badges.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		9D7411AB2B7F6DD600869BF8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9D7411AE2B7F960600869BF8 /* LastStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastStatsView.swift; sourceTree = "<group>"; };
 		9D7411B12B7F96BD00869BF8 /* BadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesView.swift; sourceTree = "<group>"; };
+		9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDetailView.swift; sourceTree = "<group>"; };
+		9D81EDAC2B838D94003B7CD1 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		9DB2146C2B83B7C500FB0AAE /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,9 @@
 				9D7411AE2B7F960600869BF8 /* LastStatsView.swift */,
 				9D7411B12B7F96BD00869BF8 /* BadgesView.swift */,
 				9D4940362B7FA88D001AA714 /* ConditionalModifier.swift */,
+				9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */,
+				9D81EDAC2B838D94003B7CD1 /* Badge.swift */,
+				9DB2146C2B83B7C500FB0AAE /* Badges.swift */,
 			);
 			path = "CanShaker Watch App";
 			sourceTree = "<group>";
@@ -262,7 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7188042B7E419B002C02B0 /* Preview Assets.xcassets in Resources */,
-				9D7188012B7E419B002C02B0 /* Assets.xcassets in Resources */,
+				9D81EDA92B8372C2003B7CD1 /* Assets.xcassets in Resources */,
 				9D7411AC2B7F6DD600869BF8 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7188162B7E419C002C02B0 /* Preview Assets.xcassets in Resources */,
-				9D7188132B7E419C002C02B0 /* Assets.xcassets in Resources */,
+				9D81EDA72B8372A5003B7CD1 /* Assets.xcassets in Resources */,
 				9D7411AD2B7F6DD600869BF8 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,8 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
+				9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
 				9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */,
+				9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */,
+				9DB2146D2B83B7C500FB0AAE /* Badges.swift in Sources */,
 				9D4940372B7FA88D001AA714 /* ConditionalModifier.swift in Sources */,
 				9D7411A82B7F559A00869BF8 /* BadgeObtainedView.swift in Sources */,
 				9D7411B22B7F96BD00869BF8 /* BadgesView.swift in Sources */,
