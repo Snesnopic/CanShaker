@@ -10,48 +10,73 @@ import SwiftUI
 struct AchievementsView: View {
     var body: some View {
         NavigationStack {
-            List {
-                NavigationLink {
-                    
-                } label: {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Serial shaker").bold()
-                            Text("5 times a day!").foregroundStyle(.secondary)
+            Color(uiColor: UIColor.secondarySystemBackground).ignoresSafeArea().overlay {
+                ScrollView {
+                    VStack(alignment: .center) {
+                        HStack {
+                            Image(systemName: "diamond").font(.largeTitle)
+                            VStack(alignment: .leading) {
+                                Text("Monthly challenge").bold().font(.title2)
+                                Text("Complete a session without using videos or images")
+                            }
                         }
-                        Spacer()
-                        Text("Detail").foregroundStyle(.secondary)
-                    }
-                }
-
-                NavigationLink {
-                    
-                } label: {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Top speed").bold()
-                            Text("Shake at 140km/h").foregroundStyle(.secondary)
+                        .padding(.all,20)
+                        .background {
+                            Color.white.clipShape(RoundedRectangle(cornerRadius: 10))
                         }
-                        Spacer()
-                        Text("Detail").foregroundStyle(.secondary)
-                    }
-                }
-                
-                NavigationLink {
-                    
-                } label: {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Slow and steady wins the race").bold()
-                            Text("Finish a session in over 1 hour").foregroundStyle(.secondary)
+                        
+                        HStack {
+                            Image(systemName: "diamond.lefthalf.filled").font(.largeTitle)
+                            VStack(alignment: .leading) {
+                                Text("Daily challenge").bold().font(.title2)
+                                Text("Complete a session without using videos or images")
+                            }
                         }
-                        Spacer()
-                        Text("Detail").foregroundStyle(.secondary)
+                        .padding(.all,20)
+                        .background {
+                            Color.white.clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                        
+                        HStack {
+                            Text("Achievements").font(.title).bold()
+                            Spacer()
+                        }
+                        .padding()
+                        HStack {
+                            Image(systemName: "diamond.lefthalf.filled").font(.largeTitle)
+                            VStack(alignment: .leading) {
+                                Text("Last achievement").bold().font(.title2)
+                                Text("Placeholder text placeholder text")
+                            }
+                        }
+                        .padding(.all,20)
+                        .background {
+                            Color.white.clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                        
+                        Grid {
+                            ForEach(1...3, id: \.self){ i in
+                                GridRow {
+                                    ForEach(1...3, id: \.self) {j in
+                                        VStack {
+                                            Circle().foregroundStyle(Color(
+                                                red: .random(in: 0...1),
+                                                green: .random(in: 0...1),
+                                            blue: .random(in: 0...1)))
+                                            Text("Achievement \(i*j)")
+                                        }
+                                    }.padding()
+                                }
+                            }
+                        }
+                        .background {
+                            Color.white.clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                        .padding(.all, 20)
                     }
                 }
             }
-            .listStyle(.grouped)
-            .navigationTitle("Achievements")
+            .navigationTitle("Challenges")
         }
     }
 }
