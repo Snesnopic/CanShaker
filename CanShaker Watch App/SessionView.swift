@@ -7,6 +7,7 @@
 
 import SwiftUI
 import HealthKit
+import CoreMotion
 enum SessionState {
     case start
     case shaking
@@ -17,12 +18,31 @@ struct SessionView: View {
     @Binding var firstTabView:Int
     @State var secondTabView:Int = 2
     @State var animationAmount:Double = 1.0
+    @State  var timer:Timer = Timer()
     var body: some View {
         NavigationStack {
             switch currentState {
             case .start:
                 Button(action: {
                     currentState = .shaking
+                    var motion = CMMotionManager()
+                    print(motion.isDeviceMotionAvailable)
+                    if motion.isDeviceMotionAvailable {
+                        motion.deviceMotionUpdateInterval = 1.0/50.0
+                        motion.showsDeviceMovementDisplay = true
+                        motion.startDeviceMotionUpdates(using: .xMagneticNorthZVertical)
+                        timer = Timer(fire: Date(), 
+                                      interval: (1.0/50.0),
+                                      repeats: true,
+                                      block: { timer in
+                            if let data = motion.deviceMotion {
+                                let accel = data.userAcceleration
+                                print(accel)
+                            }
+                        })
+                        RunLoop.current.add(self.timer, forMode: RunLoop.Mode.default)
+                    }
+                    
                 }, label: {
                     ZStack {
                         Circle()
