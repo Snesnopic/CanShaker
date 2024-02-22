@@ -18,31 +18,14 @@ struct SessionView: View {
     @Binding var firstTabView:Int
     @State var secondTabView:Int = 2
     @State var animationAmount:Double = 1.0
-    @State  var timer:Timer = Timer()
+    @ObservedObject var motionManager = MotionDataManager.shared
     var body: some View {
         NavigationStack {
             switch currentState {
             case .start:
                 Button(action: {
                     currentState = .shaking
-                    var motion = CMMotionManager()
-                    print(motion.isDeviceMotionAvailable)
-                    if motion.isDeviceMotionAvailable {
-                        motion.deviceMotionUpdateInterval = 1.0/50.0
-                        motion.showsDeviceMovementDisplay = true
-                        motion.startDeviceMotionUpdates(using: .xMagneticNorthZVertical)
-                        timer = Timer(fire: Date(), 
-                                      interval: (1.0/50.0),
-                                      repeats: true,
-                                      block: { timer in
-                            if let data = motion.deviceMotion {
-                                let accel = data.userAcceleration
-                                print(accel)
-                            }
-                        })
-                        RunLoop.current.add(self.timer, forMode: RunLoop.Mode.default)
-                    }
-                    
+                    motionManager.startQueuedUpdates()
                 }, label: {
                     ZStack {
                         Circle()
@@ -72,13 +55,16 @@ struct SessionView: View {
                            action: {
                         self.firstTabView = 2
                         currentState = .done
+                        motionManager.stopQueuedUpdates()
+                        print("MOTION UPDATES ISACTIVE: \(motionManager.motion.isDeviceMotionActive)")
+                        print("Array has \(motionManager.accelData.count) values")
                     }, label: {
                         Text("I'm done")
                     })
                     .tag(1)
                     
-                    Text("Shaking")
-                        .tag(2)
+                    Text("Updates: \(motionManager.accelData.count)")
+                    .tag(2)
                 })
                 .tabViewStyle(.page)
             case .done:
@@ -90,5 +76,5 @@ struct SessionView: View {
 }
 
 #Preview {
-    SessionView(currentState: .constant(.start), firstTabView: .constant(1))
+    SessionView(currentState: .constant(.shaking), firstTabView: .constant(1))
 }
