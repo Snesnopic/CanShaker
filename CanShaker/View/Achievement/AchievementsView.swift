@@ -33,8 +33,6 @@ struct AchievementsView: View {
                 else {
                     AchievementDetailView(animation: animation, achievement: $selectedAchievement, isPresented: $isPresented)
                 }
-                
-                    
             }
             .navigationTitle("Achievements")
         }
@@ -61,10 +59,10 @@ struct AchievementsView: View {
                                 .matchedGeometryEffect(id: achievement.id, in: animation)
                             Text(achievement.title)
                                 .font(.title3)
-                                .matchedGeometryEffect(id: achievement.title, in: animation)
+                            
                             Text(achievement.subTitle)
                                 .font(.subheadline)
-                                .matchedGeometryEffect(id: achievement.subTitle, in: animation)
+                            
                         }
                         .padding()
                         .onTapGesture {
@@ -73,6 +71,7 @@ struct AchievementsView: View {
                                 isPresented = true
                             }
                         }
+                        
                         Text("\(achievement.completion)%")
                             .font(.title2)
                             .foregroundStyle(.white)
