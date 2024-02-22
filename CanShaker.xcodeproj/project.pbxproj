@@ -29,6 +29,7 @@
 		9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */; };
 		9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAC2B838D94003B7CD1 /* Badge.swift */; };
 		9DB2146D2B83B7C500FB0AAE /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB2146C2B83B7C500FB0AAE /* Badges.swift */; };
+		9DEDBF6B2B8769B300B56ED2 /* MotionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDBF6A2B8769B300B56ED2 /* MotionDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDetailView.swift; sourceTree = "<group>"; };
 		9D81EDAC2B838D94003B7CD1 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		9DB2146C2B83B7C500FB0AAE /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
+		9DEDBF6A2B8769B300B56ED2 /* MotionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */,
 				9D81EDAC2B838D94003B7CD1 /* Badge.swift */,
 				9DB2146C2B83B7C500FB0AAE /* Badges.swift */,
+				9DEDBF6A2B8769B300B56ED2 /* MotionDataManager.swift */,
 			);
 			path = "CanShaker Watch App";
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			files = (
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
 				9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */,
+				9DEDBF6B2B8769B300B56ED2 /* MotionDataManager.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
 				9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */,
 				9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */,
