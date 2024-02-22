@@ -489,7 +489,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = CanShaker;
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,7 +522,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = CanShaker;
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,7 +621,7 @@
 				9D7188182B7E419C002C02B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		9D7188192B7E419C002C02B0 /* Build configuration list for PBXNativeTarget "CanShaker Watch App" */ = {
 			isa = XCConfigurationList;
@@ -630,7 +630,7 @@
 				9D71881B2B7E419C002C02B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		9D71881D2B7E419C002C02B0 /* Build configuration list for PBXNativeTarget "CanShaker" */ = {
 			isa = XCConfigurationList;
@@ -639,7 +639,7 @@
 				9D71881F2B7E419C002C02B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
