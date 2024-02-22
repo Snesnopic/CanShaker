@@ -33,9 +33,11 @@ class Achievement: Identifiable{
 
 extension Achievement {
     static let allAchievements = [
-        Achievement(id: UUID(), badge: "", title: "title1", subTitle: "subtitle1", description: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: false),
+        Achievement(id: UUID(), badge: "", title: "title1", subTitle: "subtitle1", description: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true),
         Achievement(id: UUID(), badge: "", title: "title2", subTitle: "subtitle2", description: "You have shaked your can really fast!", completion: 22, isAchieved: false),
-        Achievement(id: UUID(), badge: "", title: "title3", subTitle: "subtitle3", description: "Something something", completion: 84, isAchieved: true)
+        Achievement(id: UUID(), badge: "", title: "title3", subTitle: "subtitle3", description: "Something something", completion: 84, isAchieved: true),
+        Achievement(id: UUID(), badge: "", title: "title4", subTitle: "subtitle4", description: "Something something", completion: 77, isAchieved: false),
+        Achievement(id: UUID(), badge: "", title: "title5", subTitle: "subtitle5", description: "Something something", completion: 99, isAchieved: false)
     ]
     
     static func sortAlmostCompleted() -> [Achievement] {

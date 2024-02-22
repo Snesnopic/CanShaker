@@ -10,8 +10,7 @@ import SwiftUI
 struct AchievementsView: View {
     
     let achievedAchievements = Achievement.allAchievements.filter { $0.isAchieved }
-    
-    
+    let groupedAchievements = stride(from: 0, to: Achievement.allAchievements.count, by: 3).map { Array(Achievement.allAchievements[$0..<min($0 + 3, Achievement.allAchievements.count)]) }
         
     var body: some View {
         
@@ -35,7 +34,7 @@ struct AchievementsView: View {
     
     var almostThere: some View {
         
-        //TODO: needs to show the 3 closer to completion
+        //TODO: The way it shows data is a placeholder
         ZStack(alignment: .leading){
             Text("Almost There!")
                 .font(.title2)
@@ -47,15 +46,22 @@ struct AchievementsView: View {
                 .padding()
             HStack{
                 ForEach(Achievement.sortAlmostCompleted()) { achievement in
-                    VStack() {
-                        Circle()
-                            .frame(width: 80, height: 80)
-                        Text(achievement.title)
-                            .font(.title3)
-                        Text(achievement.subTitle)
-                            .font(.subheadline)
+                    ZStack{
+                        VStack() {
+                            Circle()
+                                .frame(width: 80, height: 80)
+                            Text(achievement.title)
+                                .font(.title3)
+                            Text(achievement.subTitle)
+                                .font(.subheadline)
+                        }
+                        .padding()
+                        Text("\(achievement.completion)%")
+                            .font(.title2)
+                            .foregroundStyle(.white)
+                            .fontWeight(.bold)
+                            .offset(y: -25)
                     }
-                    .padding()
                 }
             }
             .padding()
@@ -73,7 +79,7 @@ struct AchievementsView: View {
                 .fontWeight(.semibold)
                 .offset(y: -105)
                 .padding()
-            //TODO: this is to prevent the first time the users uses the app to see achievements that he didn't acquire, needs to conform to only last 3 achieved
+            //TODO: It probably works fine while we will update .isAchieved, but idk
             if(!achievedAchievements.isEmpty) {
                 HStack{
                     ForEach(achievedAchievements){ achievement in
@@ -84,8 +90,6 @@ struct AchievementsView: View {
                                 .font(.title3)
                             Text(achievement.subTitle)
                                 .font(.subheadline)
-                            
-                            
                         }
                         .padding()
                     }
@@ -98,25 +102,32 @@ struct AchievementsView: View {
     var listOfAchievements: some View {
         
         ZStack(alignment: .leading){
-            Text("More Achievements")
-                .font(.title2)
-                .fontWeight(.semibold)
-                .offset(y: -105)
-                .padding()
+            
             RoundedRectangle(cornerRadius: 10)
                 .foregroundStyle(.white)
                 .padding()
+            Text("Achievements list")
+                .font(.title2)
+                .fontWeight(.semibold)
+                .offset(y: -190)
+                .padding()
             HStack{
-                ForEach(Achievement.allAchievements){ achievement in
-                    VStack() {
-                        Circle()
-                            .frame(width: 80, height: 80)
-                        Text(achievement.title)
-                            .font(.title3)
-                        Text(achievement.subTitle)
-                            .font(.subheadline)
+                VStack(alignment: .leading) {
+                    ForEach(0..<groupedAchievements.count, id: \.self) { rowIndex in
+                        HStack {
+                            ForEach(groupedAchievements[rowIndex], id: \.id) { achievement in
+                                VStack() {
+                                    Circle()
+                                        .frame(width: 80, height: 80)
+                                    Text(achievement.title)
+                                        .font(.title3)
+                                    Text(achievement.subTitle)
+                                        .font(.subheadline)
+                                }
+                                .padding()
+                            }
+                        }
                     }
-                    .padding()
                 }
             }
             .padding()
