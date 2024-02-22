@@ -11,22 +11,30 @@ struct AchievementsView: View {
     
     let achievedAchievements = Achievement.allAchievements.filter { $0.isAchieved }
     let groupedAchievements = stride(from: 0, to: Achievement.allAchievements.count, by: 3).map { Array(Achievement.allAchievements[$0..<min($0 + 3, Achievement.allAchievements.count)]) }
-        
+    @State var isPresented = false
+    @State var selectedAchievement:Achievement? = nil
+    @Namespace private var animation
     var body: some View {
         
         NavigationStack {
             Color(uiColor: UIColor.secondarySystemBackground).ignoresSafeArea().overlay {
-                
-                ScrollView {
-                    VStack() {
-                        almostThere
-                            .offset(y: 40)
-                        recentlyCompleted
-                            .offset(y: 70)
-                        listOfAchievements
-                            .offset(y: 100)
+                if !isPresented {
+                    ScrollView {
+                        VStack() {
+                            almostThere
+                                .offset(y: 40)
+                            recentlyCompleted
+                                .offset(y: 70)
+                            listOfAchievements
+                                .offset(y: 100)
+                        }
                     }
                 }
+                else {
+                    AchievementDetailView(animation: animation, achievement: $selectedAchievement, isPresented: $isPresented)
+                }
+                
+                    
             }
             .navigationTitle("Achievements")
         }
@@ -50,12 +58,21 @@ struct AchievementsView: View {
                         VStack() {
                             Circle()
                                 .frame(width: 80, height: 80)
+                                .matchedGeometryEffect(id: achievement.id, in: animation)
                             Text(achievement.title)
                                 .font(.title3)
+                                .matchedGeometryEffect(id: achievement.title, in: animation)
                             Text(achievement.subTitle)
                                 .font(.subheadline)
+                                .matchedGeometryEffect(id: achievement.subTitle, in: animation)
                         }
                         .padding()
+                        .onTapGesture {
+                            selectedAchievement = achievement
+                            withAnimation {
+                                isPresented = true
+                            }
+                        }
                         Text("\(achievement.completion)%")
                             .font(.title2)
                             .foregroundStyle(.white)
@@ -90,6 +107,7 @@ struct AchievementsView: View {
                                 .font(.title3)
                             Text(achievement.subTitle)
                                 .font(.subheadline)
+                            
                         }
                         .padding()
                     }
