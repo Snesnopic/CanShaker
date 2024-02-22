@@ -11,6 +11,7 @@ struct AchievementsView: View {
     
     let achievedAchievements = Achievement.allAchievements.filter { $0.isAchieved }
     let groupedAchievements = stride(from: 0, to: Achievement.allAchievements.count, by: 3).map { Array(Achievement.allAchievements[$0..<min($0 + 3, Achievement.allAchievements.count)]) }
+    
     @State var isPresented = false
     @State var selectedAchievement:Achievement? = nil
     @Namespace private var animation
