@@ -56,11 +56,9 @@ struct SessionView: View {
                         content:  {
                     Button(role: .destructive,
                            action: {
-                        self.firstTabView = 2
-                        currentState = .done
                         motionManager.stopQueuedUpdates()
-                        print("MOTION UPDATES ISACTIVE: \(motionManager.motion.isDeviceMotionActive)")
-                        print("Array has \(motionManager.accelData.count) values")
+                        currentState = .done
+                        self.firstTabView = 1
                     }, label: {
                         Text("I'm done")
                     })
