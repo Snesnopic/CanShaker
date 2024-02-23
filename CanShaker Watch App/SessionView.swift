@@ -36,14 +36,16 @@ struct SessionView: View {
                             .scaleEffect(circleAnimationAmount)
                             .onAppear{
                                 withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                                    circleAnimationAmount *= 1.09
+                                    circleAnimationAmount *= 1.2
                                 }
                             }
                             .onDisappear{
                                 circleAnimationAmount = 1.0
                             }
+                            .padding()
                         Circle()
                             .foregroundStyle(.graffiti)
+                            .padding()
                         Text("Start")
                             .bold()
                             .foregroundStyle(.background)
@@ -88,5 +90,5 @@ struct SessionView: View {
 }
 
 #Preview {
-    SessionView(currentState: .constant(.shaking), firstTabView: .constant(1))
+    SessionView(currentState: .constant(.start), firstTabView: .constant(0))
 }
