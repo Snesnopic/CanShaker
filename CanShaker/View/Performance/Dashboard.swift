@@ -16,7 +16,8 @@ struct Dashboard: View {
         NavigationStack {
             
             Color(uiColor: UIColor.secondarySystemBackground).ignoresSafeArea().overlay {
-               profileView
+                profileView
+                lastSessionView
             }
             .navigationTitle("Performance")
         }
@@ -50,6 +51,10 @@ struct Dashboard: View {
             .padding()
         }
         .padding()
+    }
+    
+    var lastSessionView: some View {
+        Text("ciao")
     }
 }
 
