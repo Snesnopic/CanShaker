@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct BadgeObtainedView: View {
-    @State var badge:Badge
+    @State var achievement:Achievement
     var body: some View {
         NavigationStack {
-            Circle().foregroundStyle(badge.color).overlay(content: {
+            Circle().foregroundStyle(achievement.color).overlay(content: {
                 VStack {
                     Image(systemName: "trophy")
                         .foregroundStyle(.black)
                         .font(.largeTitle)
-                    Text("\(badge.name)!")
+                    Text("\(achievement.title)!")
                         .foregroundStyle(.black)
                 }
                 
             })
-            .navigationTitle("New badge!")
+            .navigationTitle("New achievement!")
         }
     }
 }
 
 #Preview {
-    BadgeObtainedView(badge: Badge(name: "Serial shaker", color: .indigo, description: "Masturbate 10 times in a day"))
+    BadgeObtainedView(achievement: Achievement.allAchievements.randomElement()!)
 }
