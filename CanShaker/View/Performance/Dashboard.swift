@@ -10,11 +10,11 @@ import HealthKit
 import Charts
 
 struct Dashboard: View {
-    let hk = HKHealthStore()
-    @State var periodOfTime = 0
+    
+    let hk: HKHealthStore = HKHealthStore()
+    
     var body: some View {
         NavigationStack {
-            
             Color(uiColor: UIColor.secondarySystemBackground).ignoresSafeArea().overlay {
                 profileView
                 lastSessionView
@@ -46,7 +46,6 @@ struct Dashboard: View {
                 }
                 .padding()
             }
-            
             .padding(.bottom, 550)
             .padding()
         }
@@ -58,11 +57,11 @@ struct Dashboard: View {
             RoundedRectangle(cornerRadius: 10)
                 .foregroundStyle(.white)
                 .frame(height: 400)
-                .padding(.top, 60)
+                .padding(.top, 80)
             Text("Last session")
                 .font(.title)
                 .fontWeight(.semibold)
-                .padding(.bottom, 400)
+                .padding(.bottom, 370)
                 
         }
         .padding()
