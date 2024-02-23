@@ -17,7 +17,10 @@ struct SessionView: View {
     @Binding var currentState: SessionState
     @Binding var firstTabView:Int
     @State var secondTabView:Int = 2
-    @State var animationAmount:Double = 1.0
+    @State var circleAnimationAmount:Double = 1.0
+    
+    @State var sprayCanAnimationAmount:Double = 0
+    
     @ObservedObject var motionManager = MotionDataManager.shared
     var body: some View {
         NavigationStack {
@@ -30,17 +33,19 @@ struct SessionView: View {
                     ZStack {
                         Circle()
                             .foregroundStyle(.graffiti.opacity(0.5))
-                            .scaleEffect(animationAmount)
+                            .scaleEffect(circleAnimationAmount)
                             .onAppear{
                                 withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                                    animationAmount *= 1.09
+                                    circleAnimationAmount *= 1.2
                                 }
                             }
                             .onDisappear{
-                                animationAmount = 1.0
+                                circleAnimationAmount = 1.0
                             }
+                            .padding()
                         Circle()
                             .foregroundStyle(.graffiti)
+                            .padding()
                         Text("Start")
                             .bold()
                             .foregroundStyle(.background)
@@ -53,17 +58,26 @@ struct SessionView: View {
                         content:  {
                     Button(role: .destructive,
                            action: {
-                        self.firstTabView = 2
-                        currentState = .done
                         motionManager.stopQueuedUpdates()
-                        print("MOTION UPDATES ISACTIVE: \(motionManager.motion.isDeviceMotionActive)")
-                        print("Array has \(motionManager.accelData.count) values")
+                        currentState = .done
+                        self.firstTabView = 1
                     }, label: {
                         Text("I'm done")
                     })
                     .tag(1)
                     
-                    Text("Updates: \(motionManager.accelData.count)")
+                    Image("SprayCan")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .rotationEffect(.degrees(sprayCanAnimationAmount))
+                        .onAppear{
+                            withAnimation(.easeInOut(duration: 0.3).repeatForever(autoreverses: true)) {
+                                sprayCanAnimationAmount += 20
+                            }
+                        }
+                        .onDisappear{
+                            sprayCanAnimationAmount = 0
+                        }
                     .tag(2)
                 })
                 .tabViewStyle(.page)
@@ -76,5 +90,5 @@ struct SessionView: View {
 }
 
 #Preview {
-    SessionView(currentState: .constant(.shaking), firstTabView: .constant(1))
+    SessionView(currentState: .constant(.start), firstTabView: .constant(0))
 }

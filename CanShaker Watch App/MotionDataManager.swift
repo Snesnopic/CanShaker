@@ -39,6 +39,14 @@ class MotionDataManager: ObservableObject {
         if motion.isDeviceMotionActive {
             print("Motion updates are happening. Stopping...")
             motion.stopDeviceMotionUpdates()
+            
+            accelData.forEach { (key: TimeInterval, value: CMAcceleration) in
+                var newValue:CMAcceleration = value
+                newValue.x = abs(newValue.x)
+                newValue.y = abs(newValue.y)
+                newValue.z = abs(newValue.z)
+                accelData[key] = newValue
+            }
         }
         else {
             print("Motion updates are NOT happening!")
