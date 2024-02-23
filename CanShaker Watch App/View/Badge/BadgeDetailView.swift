@@ -10,25 +10,26 @@ import SwiftUI
 struct BadgeDetailView: View {
     var animation: Namespace.ID
     @Binding var isPresented:Bool
-    var badge:Badge
+    @Binding var badge:Badge?
     var body: some View {
-        ScrollView {
             VStack {
-                Circle()
-                    .matchedGeometryEffect(id: "circle11", in: animation)
-                    .foregroundStyle(badge.color).frame(width: 100)
-                Text(badge.description).multilineTextAlignment(.center)
+                if badge != nil {
+                    Circle()
+                        .matchedGeometryEffect(id: badge!.id, in: animation)
+                        .foregroundStyle(badge!.color)
+                    Text(badge!.description).multilineTextAlignment(.center)
+                }
             }
-            .navigationTitle(badge.name)
-        }
+            .navigationTitle(badge != nil ? badge!.name : "Badges")
         .onTapGesture {
             withAnimation {
                 isPresented = false
+                badge = nil
             }
         }
     }
 }
 
 #Preview {
-    BadgeDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), badge: Badge(name: "Prova", color: Color.red, description: "Prova test prova ipsum color prova testum"))
+    BadgeDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), badge: .constant(Badge(name: "Prova", color: Color.red, description: "Prova test prova ipsum color prova testum")))
 }

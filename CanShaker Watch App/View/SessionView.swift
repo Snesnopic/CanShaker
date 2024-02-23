@@ -7,6 +7,7 @@
 
 import SwiftUI
 import HealthKit
+import CoreMotion
 enum SessionState {
     case start
     case shaking
@@ -16,25 +17,35 @@ struct SessionView: View {
     @Binding var currentState: SessionState
     @Binding var firstTabView:Int
     @State var secondTabView:Int = 2
-    @State var animationAmount:Double = 1.0
+    @State var circleAnimationAmount:Double = 1.0
+    
+    @State var sprayCanAnimationAmount:Double = 0
+    
+    @ObservedObject var motionManager = MotionDataManager.shared
     var body: some View {
         NavigationStack {
             switch currentState {
             case .start:
                 Button(action: {
                     currentState = .shaking
+                    motionManager.startQueuedUpdates()
                 }, label: {
                     ZStack {
                         Circle()
                             .foregroundStyle(.graffiti.opacity(0.5))
-                            .scaleEffect(animationAmount)
+                            .scaleEffect(circleAnimationAmount)
                             .onAppear{
                                 withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                                    animationAmount *= 1.09
+                                    circleAnimationAmount *= 1.2
                                 }
                             }
+                            .onDisappear{
+                                circleAnimationAmount = 1.0
+                            }
+                            .padding()
                         Circle()
                             .foregroundStyle(.graffiti)
+                            .padding()
                         Text("Start")
                             .bold()
                             .foregroundStyle(.background)
@@ -47,15 +58,27 @@ struct SessionView: View {
                         content:  {
                     Button(role: .destructive,
                            action: {
-                        self.firstTabView = 2
+                        motionManager.stopQueuedUpdates()
                         currentState = .done
+                        self.firstTabView = 1
                     }, label: {
                         Text("I'm done")
                     })
                     .tag(1)
                     
-                    Text("Shaking")
-                        .tag(2)
+                    Image("SprayCan")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .rotationEffect(.degrees(sprayCanAnimationAmount))
+                        .onAppear{
+                            withAnimation(.easeInOut(duration: 0.3).repeatForever(autoreverses: true)) {
+                                sprayCanAnimationAmount += 20
+                            }
+                        }
+                        .onDisappear{
+                            sprayCanAnimationAmount = 0
+                        }
+                    .tag(2)
                 })
                 .tabViewStyle(.page)
             case .done:
@@ -71,5 +94,5 @@ struct SessionView: View {
 }
 
 #Preview {
-    SessionView(currentState: .constant(.start), firstTabView: .constant(1))
+    SessionView(currentState: .constant(.start), firstTabView: .constant(0))
 }

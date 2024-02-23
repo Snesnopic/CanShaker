@@ -9,21 +9,15 @@ import SwiftUI
 import Charts
 
 struct LastStatsView: View {
+    @ObservedObject var motionDataManager = MotionDataManager.shared
     var body: some View {
         NavigationStack {
             Chart {
-                BarMark(
-                    x: .value("Shape Type", "a"),
-                    y: .value("Total Count", 10)
-                )
-                BarMark(
-                    x: .value("Shape Type", "b"),
-                    y: .value("Total Count", 12)
-                )
-                BarMark(
-                    x: .value("Shape Type", "c"),
-                    y: .value("Total Count", 17)
-                )
+                ForEach(motionDataManager.accelData.keys.sorted(),id: \.self) {
+                    time in
+                    BarMark (x: .value("Time",time),
+                             y: .value("Acceleration", motionDataManager.accelData[time]!.x))
+                }
             }
             .chartLegend(content: {
                 Text("Prova")
