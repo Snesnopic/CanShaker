@@ -21,13 +21,13 @@
 		9D7411A22B7F515200869BF8 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A12B7F515200869BF8 /* AchievementsView.swift */; };
 		9D7411A42B7F51BE00869BF8 /* AdvicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A32B7F51BE00869BF8 /* AdvicesView.swift */; };
 		9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A52B7F534E00869BF8 /* HighFreqAlert.swift */; };
-		9D7411A82B7F559A00869BF8 /* BadgeObtainedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A72B7F559A00869BF8 /* BadgeObtainedView.swift */; };
+		9D7411A82B7F559A00869BF8 /* AchievementObtainedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A72B7F559A00869BF8 /* AchievementObtainedView.swift */; };
 		9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411AE2B7F960600869BF8 /* LastStatsView.swift */; };
-		9D7411B22B7F96BD00869BF8 /* BadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411B12B7F96BD00869BF8 /* BadgesView.swift */; };
+		9D7411B22B7F96BD00869BF8 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */; };
 		9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B324D2B889142003B08A7 /* MotionDataManager.swift */; };
 		9D81EDA72B8372A5003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		9D81EDA92B8372C2003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
-		9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */; };
+		9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */; };
 		9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAC2B838D94003B7CD1 /* Badge.swift */; };
 		9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
 		9D8C39322B88F05400FFB72F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39312B88F05400FFB72F /* Session.swift */; };
@@ -80,11 +80,11 @@
 		9D7411A12B7F515200869BF8 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		9D7411A32B7F51BE00869BF8 /* AdvicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesView.swift; sourceTree = "<group>"; };
 		9D7411A52B7F534E00869BF8 /* HighFreqAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighFreqAlert.swift; sourceTree = "<group>"; };
-		9D7411A72B7F559A00869BF8 /* BadgeObtainedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeObtainedView.swift; sourceTree = "<group>"; };
+		9D7411A72B7F559A00869BF8 /* AchievementObtainedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementObtainedView.swift; sourceTree = "<group>"; };
 		9D7411AE2B7F960600869BF8 /* LastStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastStatsView.swift; sourceTree = "<group>"; };
-		9D7411B12B7F96BD00869BF8 /* BadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesView.swift; sourceTree = "<group>"; };
+		9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		9D7B324D2B889142003B08A7 /* MotionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDataManager.swift; sourceTree = "<group>"; };
-		9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDetailView.swift; sourceTree = "<group>"; };
+		9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
 		9D81EDAC2B838D94003B7CD1 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		9D8C39312B88F05400FFB72F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		9D8C39352B89006400FFB72F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -142,9 +142,9 @@
 		6B3A23A12B874B6200E03F41 /* Badge */ = {
 			isa = PBXGroup;
 			children = (
-				9D7411A72B7F559A00869BF8 /* BadgeObtainedView.swift */,
-				9D7411B12B7F96BD00869BF8 /* BadgesView.swift */,
-				9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */,
+				9D7411A72B7F559A00869BF8 /* AchievementObtainedView.swift */,
+				9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */,
+				9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */,
 			);
 			path = Badge;
 			sourceTree = "<group>";
@@ -378,7 +378,7 @@
 				6B3A23A22B874C8400E03F41 /* Assets.xcassets in Sources */,
 				9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */,
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
-				9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */,
+				9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
 				9D8C39322B88F05400FFB72F /* Session.swift in Sources */,
 				9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */,
@@ -386,8 +386,8 @@
 				9DB2146D2B83B7C500FB0AAE /* Badges.swift in Sources */,
 				9D8C39362B89006400FFB72F /* Extensions.swift in Sources */,
 				9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */,
-				9D7411A82B7F559A00869BF8 /* BadgeObtainedView.swift in Sources */,
-				9D7411B22B7F96BD00869BF8 /* BadgesView.swift in Sources */,
+				9D7411A82B7F559A00869BF8 /* AchievementObtainedView.swift in Sources */,
+				9D7411B22B7F96BD00869BF8 /* AchievementsView.swift in Sources */,
 				9D71880F2B7E419B002C02B0 /* CanShakerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
