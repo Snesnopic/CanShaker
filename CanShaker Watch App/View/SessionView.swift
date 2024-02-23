@@ -19,7 +19,9 @@ struct SessionView: View {
     @State var secondTabView:Int = 2
     @State var circleAnimationAmount:Double = 1.0
     
-    @State var sprayCanAnimationAmount:Double = 0
+    @State var sprayCanRotationAmount:Double = 0
+    @State var sprayCanTranslationAmount:Double = 0
+    
     
     @ObservedObject var motionManager = MotionDataManager.shared
     var body: some View {
@@ -57,27 +59,32 @@ struct SessionView: View {
                 TabView(selection: $secondTabView){
                     Button(role: .destructive,
                            action: {
+                        print("Done!")
                         motionManager.stopQueuedUpdates()
                         currentState = .done
                         self.firstTabView = 1
                     }, label: {
                         Text("I'm done")
+                        
                     })
                     .tag(1)
                     
                     Image("SprayCan")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .rotationEffect(.degrees(sprayCanAnimationAmount))
+                        .rotationEffect(.degrees(sprayCanRotationAmount))
                         .onAppear{
                             withAnimation(.easeInOut(duration: 0.3).repeatForever(autoreverses: true)) {
-                                sprayCanAnimationAmount += 20
+                                sprayCanRotationAmount += 20
+                                sprayCanTranslationAmount += 20
                             }
                         }
                         .onDisappear{
-                            sprayCanAnimationAmount = 0
+                            sprayCanRotationAmount = 0
+                            sprayCanTranslationAmount = 0
                         }
-                    .tag(2)
+                        .offset(CGSize(width: 0.0, height: -sprayCanTranslationAmount))
+                        .tag(2)
                 }
                 .tabViewStyle(.page)
             case .done:
@@ -93,5 +100,5 @@ struct SessionView: View {
 }
 
 #Preview {
-    SessionView(currentState: .constant(.start), firstTabView: .constant(0))
+    SessionView(currentState: .constant(.shaking), firstTabView: .constant(0))
 }
