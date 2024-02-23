@@ -17,6 +17,11 @@ class MotionDataManager: ObservableObject {
         motion.deviceMotionUpdateInterval = 1.0 / 5.0
         motion.showsDeviceMovementDisplay = true
     }
+    func getTotalAcceleration(accel:CMAcceleration) -> Double {
+        var totalAccel:Double = 0
+        totalAccel = sqrt(accel.x * accel.x + accel.y * accel.y + accel.z * accel.z)
+        return totalAccel
+    }
     func startQueuedUpdates() {
         print("Prima di startDeviceMotionUpdates")
 
