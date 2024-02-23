@@ -13,7 +13,7 @@ struct CanShakerApp: App {
         WindowGroup {
             TabView(selection: .constant(1)) {
                 Dashboard().tabItem {
-                    Label("Performance", systemImage: "chart.bar.xaxis")
+                    Label("Dashboard", systemImage: "chart.bar.xaxis")
                 }
                 AdvicesView().tabItem {
                     Label("Advices", systemImage: "lightbulb.fill")

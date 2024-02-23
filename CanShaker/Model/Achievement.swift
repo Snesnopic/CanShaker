@@ -11,7 +11,6 @@ import SwiftUI
 
 class Achievement: Identifiable{
  
-    
     let id: UUID
     let badge: String
     let title: String
