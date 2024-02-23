@@ -57,9 +57,13 @@ struct Dashboard: View {
         ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 10)
                 .foregroundStyle(.white)
-                .frame(height: 100)
-            
-            .padding(.bottom, 400)
+                .frame(height: 400)
+                .padding(.top, 60)
+            Text("Last session")
+                .font(.title)
+                .fontWeight(.semibold)
+                .padding(.bottom, 400)
+                
         }
         .padding()
     }
