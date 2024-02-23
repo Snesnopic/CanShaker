@@ -7,24 +7,21 @@
 
 import Foundation
 import CoreMotion
+import SwiftData
 
 class MotionDataManager: ObservableObject {
     static var shared = MotionDataManager()
     let motion = CMMotionManager()
     let queue = OperationQueue()
     var accelData: [TimeInterval:CMAcceleration] = [:]
+    var session:Session? = nil
     private init() {
         motion.deviceMotionUpdateInterval = 1.0 / 5.0
         motion.showsDeviceMovementDisplay = true
     }
-    func getTotalAcceleration(accel:CMAcceleration) -> Double {
-        var totalAccel:Double = 0
-        totalAccel = sqrt(accel.x * accel.x + accel.y * accel.y + accel.z * accel.z)
-        return totalAccel
-    }
     func startQueuedUpdates() {
         print("Prima di startDeviceMotionUpdates")
-
+        session = Session()
         motion.startDeviceMotionUpdates(to: queue, withHandler: {
             motion, error in
             print("Qua ci arrivo?")
@@ -52,6 +49,9 @@ class MotionDataManager: ObservableObject {
                 newValue.z = abs(newValue.z)
                 accelData[key] = newValue
             }
+            session!.accelData = accelData
+            session!.duration = (session!.date.timeIntervalSinceNow)
+            print(session!.duration)
         }
         else {
             print("Motion updates are NOT happening!")
