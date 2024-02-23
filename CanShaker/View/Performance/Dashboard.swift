@@ -58,10 +58,8 @@ struct Dashboard: View {
             RoundedRectangle(cornerRadius: 10)
                 .foregroundStyle(.white)
                 .frame(height: 100)
-                .padding(.bottom, 600)
             
-            .padding(.bottom, 550)
-            .padding()
+            .padding(.bottom, 400)
         }
         .padding()
     }
