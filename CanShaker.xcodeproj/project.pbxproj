@@ -28,12 +28,10 @@
 		9D81EDA72B8372A5003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		9D81EDA92B8372C2003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
 		9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */; };
-		9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAC2B838D94003B7CD1 /* Badge.swift */; };
 		9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
 		9D8C39322B88F05400FFB72F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39312B88F05400FFB72F /* Session.swift */; };
 		9D8C39362B89006400FFB72F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39352B89006400FFB72F /* Extensions.swift */; };
 		9D8C39372B89336E00FFB72F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39352B89006400FFB72F /* Extensions.swift */; };
-		9DB2146D2B83B7C500FB0AAE /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB2146C2B83B7C500FB0AAE /* Badges.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,10 +83,8 @@
 		9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		9D7B324D2B889142003B08A7 /* MotionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDataManager.swift; sourceTree = "<group>"; };
 		9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
-		9D81EDAC2B838D94003B7CD1 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		9D8C39312B88F05400FFB72F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		9D8C39352B89006400FFB72F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		9DB2146C2B83B7C500FB0AAE /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				9D7B324D2B889142003B08A7 /* MotionDataManager.swift */,
-				9DB2146C2B83B7C500FB0AAE /* Badges.swift */,
-				9D81EDAC2B838D94003B7CD1 /* Badge.swift */,
 				9D8C39312B88F05400FFB72F /* Session.swift */,
 			);
 			path = Model;
@@ -382,8 +376,6 @@
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
 				9D8C39322B88F05400FFB72F /* Session.swift in Sources */,
 				9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */,
-				9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */,
-				9DB2146D2B83B7C500FB0AAE /* Badges.swift in Sources */,
 				9D8C39362B89006400FFB72F /* Extensions.swift in Sources */,
 				9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */,
 				9D7411A82B7F559A00869BF8 /* AchievementObtainedView.swift in Sources */,
