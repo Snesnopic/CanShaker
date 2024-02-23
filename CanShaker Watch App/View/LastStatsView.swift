@@ -33,10 +33,10 @@ struct LastStatsView: View {
                     AxisMarks(values: .automatic(desiredCount: 5))
                 }
                 .chartXAxisLabel("Time")
-    //            .chartYAxisLabel("Speed")
-    //            .chartLegend(content: {
-    //                Text("Acceleration")
-    //            })
+                .chartYAxisLabel("Speed")
+                .chartLegend(content: {
+                    Text("Acceleration")
+                })
                 .chartForegroundStyleScale([
                     "Test": .blue
                 ])
@@ -52,11 +52,7 @@ struct LastStatsView: View {
         }
     }
 }
-//
-//#Preview {
-//    for i in 0...100 {
-//        MotionDataManager.shared.accelData[Double(i)] = CMAcceleration(x: Double.random(in: 0...3), y: Double.random(in: 0...3), z: Double.random(in: 0...3))
-//    }
-//    
-//    return LastStatsView(motionDataManager: MotionDataManager.shared)
-//}
+
+#Preview {
+    LastStatsView()
+}
