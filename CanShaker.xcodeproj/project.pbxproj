@@ -25,12 +25,12 @@
 		9D7411A82B7F559A00869BF8 /* BadgeObtainedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A72B7F559A00869BF8 /* BadgeObtainedView.swift */; };
 		9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411AE2B7F960600869BF8 /* LastStatsView.swift */; };
 		9D7411B22B7F96BD00869BF8 /* BadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411B12B7F96BD00869BF8 /* BadgesView.swift */; };
+		9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B324D2B889142003B08A7 /* MotionDataManager.swift */; };
 		9D81EDA72B8372A5003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		9D81EDA92B8372C2003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
 		9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */; };
 		9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAC2B838D94003B7CD1 /* Badge.swift */; };
 		9DB2146D2B83B7C500FB0AAE /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB2146C2B83B7C500FB0AAE /* Badges.swift */; };
-		9DEDBF6B2B8769B300B56ED2 /* MotionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDBF6A2B8769B300B56ED2 /* MotionDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +81,10 @@
 		9D7411A72B7F559A00869BF8 /* BadgeObtainedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeObtainedView.swift; sourceTree = "<group>"; };
 		9D7411AE2B7F960600869BF8 /* LastStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastStatsView.swift; sourceTree = "<group>"; };
 		9D7411B12B7F96BD00869BF8 /* BadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesView.swift; sourceTree = "<group>"; };
+		9D7B324D2B889142003B08A7 /* MotionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDataManager.swift; sourceTree = "<group>"; };
 		9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDetailView.swift; sourceTree = "<group>"; };
 		9D81EDAC2B838D94003B7CD1 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		9DB2146C2B83B7C500FB0AAE /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
-		9DEDBF6A2B8769B300B56ED2 /* MotionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +119,7 @@
 		6B3A239F2B874B3300E03F41 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9D7B324D2B889142003B08A7 /* MotionDataManager.swift */,
 				9DB2146C2B83B7C500FB0AAE /* Badges.swift */,
 				9D81EDAC2B838D94003B7CD1 /* Badge.swift */,
 			);
@@ -369,9 +370,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B3A23A22B874C8400E03F41 /* Assets.xcassets in Sources */,
+				9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */,
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
 				9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */,
-				9DEDBF6B2B8769B300B56ED2 /* MotionDataManager.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
 				9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */,
 				9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */,
