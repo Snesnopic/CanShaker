@@ -1,5 +1,5 @@
 //
-//  BadgeObtainedView.swift
+//  AchievementObtainedView.swift
 //  CanShaker Watch App
 //
 //  Created by Giuseppe Francione on 16/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BadgeObtainedView: View {
+struct AchievementObtainedView: View {
     @State var achievement:Achievement
     var body: some View {
         NavigationStack {
@@ -27,5 +27,5 @@ struct BadgeObtainedView: View {
 }
 
 #Preview {
-    BadgeObtainedView(achievement: Achievement.allAchievements.randomElement()!)
+    AchievementObtainedView(achievement: Achievement.allAchievements.randomElement()!)
 }

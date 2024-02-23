@@ -1,5 +1,5 @@
 //
-//  BadgeDetailView.swift
+//  AchievementDetailView.swift
 //  CanShaker Watch App
 //
 //  Created by Giuseppe Francione on 19/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BadgeDetailView: View {
+struct AchievementDetailView: View {
     var animation: Namespace.ID
     @Binding var isPresented:Bool
     @Binding var achievement:Achievement?
@@ -31,5 +31,5 @@ struct BadgeDetailView: View {
 }
 
 #Preview {
-    BadgeDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), achievement: .constant(Achievement.allAchievements.randomElement()))
+    AchievementDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), achievement: .constant(Achievement.allAchievements.randomElement()))
 }

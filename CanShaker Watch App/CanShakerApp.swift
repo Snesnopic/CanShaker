@@ -33,8 +33,8 @@ struct CanShaker_Watch_AppApp: App {
                     LastStatsView()
                         .tabItem { Label("Last session", systemImage: "chart.bar.xaxis") }
                         .tag(1)
-                    BadgesView()
-                        .tabItem { Label("Badges", systemImage: "trophy.fill") }
+                    AchievementsView()
+                        .tabItem { Label("Achievements", systemImage: "trophy.fill") }
                         .tag(2)
                 })
                 .tabViewStyle(.verticalPage)
