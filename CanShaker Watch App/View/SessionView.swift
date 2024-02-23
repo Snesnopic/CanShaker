@@ -8,12 +8,15 @@
 import SwiftUI
 import HealthKit
 import CoreMotion
+import SwiftData
+
 enum SessionState {
     case start
     case shaking
     case done
 }
 struct SessionView: View {
+    @Environment(\.modelContext) var modelContext
     @Binding var currentState: SessionState
     @Binding var firstTabView:Int
     @State var secondTabView:Int = 2
@@ -21,8 +24,6 @@ struct SessionView: View {
     
     @State var sprayCanRotationAmount:Double = 0
     @State var sprayCanTranslationAmount:Double = 0
-    
-    
     @ObservedObject var motionManager = MotionDataManager.shared
     var body: some View {
         NavigationStack {
@@ -61,6 +62,7 @@ struct SessionView: View {
                            action: {
                         print("Done!")
                         motionManager.stopQueuedUpdates()
+                        modelContext.insert(motionManager.session!)
                         currentState = .done
                         self.firstTabView = 1
                     }, label: {
