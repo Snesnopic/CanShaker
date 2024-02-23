@@ -108,7 +108,7 @@
 		6B3A239E2B874B1B00E03F41 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6B3A23A12B874B6200E03F41 /* Badge */,
+				6B3A23A12B874B6200E03F41 /* Achievements */,
 				9D7411AE2B7F960600869BF8 /* LastStatsView.swift */,
 				9D7188102B7E419B002C02B0 /* SessionView.swift */,
 				9D7411A52B7F534E00869BF8 /* HighFreqAlert.swift */,
@@ -133,14 +133,14 @@
 			path = "Support files";
 			sourceTree = "<group>";
 		};
-		6B3A23A12B874B6200E03F41 /* Badge */ = {
+		6B3A23A12B874B6200E03F41 /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
 				9D7411A72B7F559A00869BF8 /* AchievementObtainedView.swift */,
 				9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */,
 				9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */,
 			);
-			path = Badge;
+			path = Achievements;
 			sourceTree = "<group>";
 		};
 		6B8AA1082B84AD790088E5E4 /* Model */ = {
