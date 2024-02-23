@@ -16,11 +16,11 @@ struct LastStatsView: View {
                 ForEach(motionDataManager.accelData.keys.sorted(),id: \.self) {
                     time in
                     BarMark (x: .value("Time",time),
-                             y: .value("Acceleration", motionDataManager.accelData[time]!.x))
+                             y: .value("Acceleration", motionDataManager.getTotalAcceleration(accel: motionDataManager.accelData[time]!)))
                 }
             }
             .chartLegend(content: {
-                Text("Prova")
+                Text("Acceleration")
             })
             .chartForegroundStyleScale([
                 "Test": .blue
