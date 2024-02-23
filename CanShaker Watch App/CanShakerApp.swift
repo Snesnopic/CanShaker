@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-
+import SwiftData
 @main
 struct CanShaker_Watch_AppApp: App {
     @State var firstTabView:Int = 0
     @State var currentState:SessionState = .start
+    
     var body: some Scene {
         WindowGroup {
             if currentState == .shaking {
@@ -38,6 +39,6 @@ struct CanShaker_Watch_AppApp: App {
                 })
                 .tabViewStyle(.verticalPage)
             }
-        }
+        }.modelContainer(for: [Session.self])
     }
 }
