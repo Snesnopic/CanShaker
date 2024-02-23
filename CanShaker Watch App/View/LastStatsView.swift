@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Charts
+import CoreMotion
 
 struct LastStatsView: View {
     @ObservedObject var motionDataManager = MotionDataManager.shared
@@ -31,5 +32,9 @@ struct LastStatsView: View {
 }
 
 #Preview {
-    LastStatsView()
+    for i in 0...10 {
+        MotionDataManager.shared.accelData[Double(i)] = CMAcceleration(x: Double.random(in: 0...3), y: Double.random(in: 0...3), z: Double.random(in: 0...3))
+    }
+    
+   return LastStatsView(motionDataManager: MotionDataManager.shared)
 }
