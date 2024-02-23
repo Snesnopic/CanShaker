@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B3A23A22B874C8400E03F41 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
 		6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */; };
 		6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10F2B84B9100088E5E4 /* Advice.swift */; };
@@ -101,6 +102,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B3A239E2B874B1B00E03F41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B3A23A12B874B6200E03F41 /* Badge */,
+				9D7411AE2B7F960600869BF8 /* LastStatsView.swift */,
+				9D7188102B7E419B002C02B0 /* SessionView.swift */,
+				9D7411A52B7F534E00869BF8 /* HighFreqAlert.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B3A239F2B874B3300E03F41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9DB2146C2B83B7C500FB0AAE /* Badges.swift */,
+				9D81EDAC2B838D94003B7CD1 /* Badge.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B3A23A02B874B4700E03F41 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				9D4940362B7FA88D001AA714 /* ConditionalModifier.swift */,
+			);
+			path = "Support files";
+			sourceTree = "<group>";
+		};
+		6B3A23A12B874B6200E03F41 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				9D7411A72B7F559A00869BF8 /* BadgeObtainedView.swift */,
+				9D7411B12B7F96BD00869BF8 /* BadgesView.swift */,
+				9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */,
+			);
+			path = Badge;
+			sourceTree = "<group>";
+		};
 		6B8AA1082B84AD790088E5E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,17 +228,11 @@
 			children = (
 				9D5360EA2B7E4E3800BE628C /* CanShaker Watch App.entitlements */,
 				9D71880E2B7E419B002C02B0 /* CanShakerApp.swift */,
-				9D7188102B7E419B002C02B0 /* SessionView.swift */,
+				6B3A239E2B874B1B00E03F41 /* View */,
 				9D7188122B7E419C002C02B0 /* Assets.xcassets */,
 				9D7188142B7E419C002C02B0 /* Preview Content */,
-				9D7411A52B7F534E00869BF8 /* HighFreqAlert.swift */,
-				9D7411A72B7F559A00869BF8 /* BadgeObtainedView.swift */,
-				9D7411AE2B7F960600869BF8 /* LastStatsView.swift */,
-				9D7411B12B7F96BD00869BF8 /* BadgesView.swift */,
-				9D4940362B7FA88D001AA714 /* ConditionalModifier.swift */,
-				9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */,
-				9D81EDAC2B838D94003B7CD1 /* Badge.swift */,
-				9DB2146C2B83B7C500FB0AAE /* Badges.swift */,
+				6B3A23A02B874B4700E03F41 /* Support files */,
+				6B3A239F2B874B3300E03F41 /* Model */,
 			);
 			path = "CanShaker Watch App";
 			sourceTree = "<group>";
@@ -331,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3A23A22B874C8400E03F41 /* Assets.xcassets in Sources */,
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
 				9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,

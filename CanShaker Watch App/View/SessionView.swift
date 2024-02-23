@@ -64,6 +64,10 @@ struct SessionView: View {
             
         }
     }
+    
+    func sendData(){
+        
+    }
 }
 
 #Preview {
