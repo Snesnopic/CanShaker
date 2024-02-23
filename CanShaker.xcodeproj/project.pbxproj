@@ -12,7 +12,7 @@
 		6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10F2B84B9100088E5E4 /* Advice.swift */; };
 		9D4940372B7FA88D001AA714 /* ConditionalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4940362B7FA88D001AA714 /* ConditionalModifier.swift */; };
 		9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */; };
-		9D7187FF2B7E419A002C02B0 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FE2B7E419A002C02B0 /* StatsView.swift */; };
+		9D7187FF2B7E419A002C02B0 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FE2B7E419A002C02B0 /* Dashboard.swift */; };
 		9D7188042B7E419B002C02B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188032B7E419B002C02B0 /* Preview Assets.xcassets */; };
 		9D71880A2B7E419B002C02B0 /* CanShaker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9D7188092B7E419B002C02B0 /* CanShaker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9D71880F2B7E419B002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71880E2B7E419B002C02B0 /* CanShakerApp.swift */; };
@@ -66,7 +66,7 @@
 		9D7135712B85EB7900650827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9D7187F92B7E419A002C02B0 /* CanShaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanShaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanShakerApp.swift; sourceTree = "<group>"; };
-		9D7187FE2B7E419A002C02B0 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		9D7187FE2B7E419A002C02B0 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		9D7188002B7E419B002C02B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D7188032B7E419B002C02B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9D7188092B7E419B002C02B0 /* CanShaker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CanShaker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +143,7 @@
 		6B8AA10E2B84B50F0088E5E4 /* Performance */ = {
 			isa = PBXGroup;
 			children = (
-				9D7187FE2B7E419A002C02B0 /* StatsView.swift */,
+				9D7187FE2B7E419A002C02B0 /* Dashboard.swift */,
 			);
 			path = Performance;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D7187FF2B7E419A002C02B0 /* StatsView.swift in Sources */,
+				9D7187FF2B7E419A002C02B0 /* Dashboard.swift in Sources */,
 				6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */,
 				6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */,
 				9D7411A22B7F515200869BF8 /* AchievementsView.swift in Sources */,
@@ -488,7 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = WLW428B75Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
@@ -497,13 +497,13 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires usage of Health.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -523,7 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = WLW428B75Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
@@ -532,13 +532,13 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires usage of Health.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -560,7 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = WLW428B75Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;
@@ -579,7 +579,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -598,7 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = WLW428B75Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;
@@ -617,7 +617,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -637,7 +637,7 @@
 				9D7188182B7E419C002C02B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		9D7188192B7E419C002C02B0 /* Build configuration list for PBXNativeTarget "CanShaker Watch App" */ = {
 			isa = XCConfigurationList;
@@ -646,7 +646,7 @@
 				9D71881B2B7E419C002C02B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		9D71881D2B7E419C002C02B0 /* Build configuration list for PBXNativeTarget "CanShaker" */ = {
 			isa = XCConfigurationList;
@@ -655,7 +655,7 @@
 				9D71881F2B7E419C002C02B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
