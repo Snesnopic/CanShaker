@@ -54,7 +54,16 @@ struct Dashboard: View {
     }
     
     var lastSessionView: some View {
-        Text("ciao")
+        ZStack(alignment: .leading) {
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundStyle(.white)
+                .frame(height: 100)
+                .padding(.bottom, 600)
+            
+            .padding(.bottom, 550)
+            .padding()
+        }
+        .padding()
     }
 }
 
