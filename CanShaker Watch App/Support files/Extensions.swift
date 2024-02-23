@@ -7,6 +7,23 @@
 
 import Foundation
 import CoreMotion
+import SwiftUI
+
+extension Color {
+    static func random() -> Color {
+        return Color(red: Double.random(in: 0...1), green: Double.random(in: 0...1), blue: Double.random(in: 0...1))
+    }
+}
+
+extension View {
+    @ViewBuilder func `if`<T>(_ condition: Bool, transform: (Self) -> T) -> some View where T: View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+}
 
 extension Date:RawRepresentable{
     public typealias RawValue = String

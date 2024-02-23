@@ -11,7 +11,6 @@
 		6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
 		6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */; };
 		6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10F2B84B9100088E5E4 /* Advice.swift */; };
-		9D4940372B7FA88D001AA714 /* ConditionalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4940362B7FA88D001AA714 /* ConditionalModifier.swift */; };
 		9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */; };
 		9D7187FF2B7E419A002C02B0 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FE2B7E419A002C02B0 /* Dashboard.swift */; };
 		9D7188042B7E419B002C02B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188032B7E419B002C02B0 /* Preview Assets.xcassets */; };
@@ -64,7 +63,6 @@
 		6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
 		6B8AA10F2B84B9100088E5E4 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
-		9D4940362B7FA88D001AA714 /* ConditionalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalModifier.swift; sourceTree = "<group>"; };
 		9D5360EA2B7E4E3800BE628C /* CanShaker Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CanShaker Watch App.entitlements"; sourceTree = "<group>"; };
 		9D5360EB2B7E4E9100BE628C /* CanShaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CanShaker.entitlements; sourceTree = "<group>"; };
 		9D7135712B85EB7900650827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 		6B3A23A02B874B4700E03F41 /* Support files */ = {
 			isa = PBXGroup;
 			children = (
-				9D4940362B7FA88D001AA714 /* ConditionalModifier.swift */,
 				9D8C39352B89006400FFB72F /* Extensions.swift */,
 			);
 			path = "Support files";
@@ -386,7 +383,6 @@
 				9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */,
 				9DB2146D2B83B7C500FB0AAE /* Badges.swift in Sources */,
 				9D8C39362B89006400FFB72F /* Extensions.swift in Sources */,
-				9D4940372B7FA88D001AA714 /* ConditionalModifier.swift in Sources */,
 				9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */,
 				9D7411A82B7F559A00869BF8 /* BadgeObtainedView.swift in Sources */,
 				9D7411B22B7F96BD00869BF8 /* BadgesView.swift in Sources */,

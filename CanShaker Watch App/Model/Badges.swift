@@ -8,13 +8,11 @@
 import Foundation
 import SwiftUI
 
-func randomColor() -> Color {
-    return Color(red: Double.random(in: 0...1), green: Double.random(in: 0...1), blue: Double.random(in: 0...1))
-}
+
 func generateBadges(num: Int) -> [Badge]{
     var allBadges: [Badge] = []
     for i in 1...num {
-        allBadges.append(Badge(name: "Badge \(i)", color: randomColor(), description: "Description \(i)"))
+        allBadges.append(Badge(name: "Badge \(i)", color: Color.random(), description: "Description \(i)"))
     }
     return allBadges
 }
