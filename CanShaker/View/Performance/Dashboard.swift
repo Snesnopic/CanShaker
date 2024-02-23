@@ -55,6 +55,7 @@ struct Dashboard: View {
     
     var lastSessionView: some View {
         Text("ciao")
+            .font(.title)
     }
 }
 
