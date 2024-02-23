@@ -54,8 +54,7 @@ struct SessionView: View {
                 })
                 .buttonStyle(.plain)
             case .shaking:
-                TabView(selection: $secondTabView,
-                        content:  {
+                TabView(selection: $secondTabView){
                     Button(role: .destructive,
                            action: {
                         motionManager.stopQueuedUpdates()
@@ -79,7 +78,7 @@ struct SessionView: View {
                             sprayCanAnimationAmount = 0
                         }
                     .tag(2)
-                })
+                }
                 .tabViewStyle(.page)
             case .done:
                 Text("You just finished a session!")
