@@ -24,4 +24,5 @@ class Advice: Identifiable{
 enum adviceCategory{
     case hygiene
     case methods
+    case safety
 }
