@@ -8,14 +8,13 @@
 import Foundation
 
 class Feedback: Identifiable {
-    let id: UUID
+    let id: UUID = UUID()
     let sentence: String
     let type: feedbackType
     let category: feedbackCategory
     let condition: String
     
-    init(id: UUID, sentence: String, type: feedbackType, category: feedbackCategory, condition: String) {
-        self.id = id
+    init(sentence: String, type: feedbackType, category: feedbackCategory, condition: String) {
         self.sentence = sentence
         self.type = type
         self.category = category

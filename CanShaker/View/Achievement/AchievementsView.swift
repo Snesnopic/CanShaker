@@ -9,8 +9,8 @@ import SwiftUI
 
 struct AchievementsView: View {
     
-    let achievedAchievements = Achievement.allAchievements.filter { $0.isAchieved }
-    let groupedAchievements = stride(from: 0, to: Achievement.allAchievements.count, by: 3).map { Array(Achievement.allAchievements[$0..<min($0 + 3, Achievement.allAchievements.count)]) }
+    let achievedAchievements = Achievement.list.filter { $0.isAchieved }
+    let groupedAchievements = stride(from: 0, to: Achievement.list.count, by: 3).map { Array(Achievement.list[$0..<min($0 + 3, Achievement.list.count)]) }
     
     @State var isPresented = false
     @State var selectedAchievement:Achievement? = nil

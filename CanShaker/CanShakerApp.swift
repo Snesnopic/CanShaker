@@ -12,15 +12,15 @@ struct CanShakerApp: App {
     var body: some Scene {
         WindowGroup {
             TabView(selection: .constant(1)) {
-                Dashboard().tabItem {
+                DashboardView().tabItem {
                     Label("Dashboard", systemImage: "chart.bar.xaxis")
                 }
                 AdvicesView().tabItem {
                     Label("Advices", systemImage: "lightbulb.fill")
                 }
-                AchievementsView().tabItem {
-                    Label("Achievements", systemImage: "trophy")
-                }
+//                AchievementsView().tabItem {
+//                    Label("Achievements", systemImage: "trophy")
+//                }
             }
         }
     }

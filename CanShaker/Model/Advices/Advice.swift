@@ -8,20 +8,19 @@
 import Foundation
 
 class Advice: Identifiable{
-    let id: UUID
+    let id: UUID = UUID()
     let title: String
     let description: String
     let category: adviceCategory
     
-    init(id: UUID, title: String, description: String, category: adviceCategory) {
-        self.id = id
+    init(title: String, description: String, category: adviceCategory) {
         self.title = title
         self.description = description
         self.category = category
     }
 }
 
-enum adviceCategory{
+enum adviceCategory {
     case hygiene
     case methods
     case safety
