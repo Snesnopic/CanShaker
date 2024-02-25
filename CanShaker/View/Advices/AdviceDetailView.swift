@@ -13,6 +13,7 @@ struct AdviceDetailView: View {
         ZStack{
             LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
+            
             VStack{
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
                 

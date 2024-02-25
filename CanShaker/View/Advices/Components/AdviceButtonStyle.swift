@@ -14,7 +14,7 @@ struct AdviceButtonStyle: View {
     var body: some View {
         
         ZStack{
-            RoundedRectangle(cornerRadius: 25.0)
+            RoundedRectangle(cornerRadius: 15.0)
                 .frame(height: 130)
                 .foregroundStyle(Color("boxColor"))
                 .opacity(0.2)
