@@ -20,6 +20,7 @@ struct AdviceDetailView: View {
         }
         .preferredColorScheme(.dark)
         .navigationTitle(adv.title)
+        
     }
 }
 

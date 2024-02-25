@@ -38,7 +38,10 @@ struct AdvicesListView: View {
             }
             .preferredColorScheme(.dark)
             .navigationTitle(advCategory)
+            
         }
+        
+        
     }
 }
 

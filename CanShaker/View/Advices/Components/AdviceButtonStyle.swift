@@ -15,10 +15,11 @@ struct AdviceButtonStyle: View {
         
         ZStack{
             RoundedRectangle(cornerRadius: 25.0)
-                .frame(width: 370, height: 130)
+                .frame(height: 130)
                 .foregroundStyle(Color("boxColor"))
                 .opacity(0.2)
                 .shadow(radius: 20)
+                
             VStack{
                 HStack{
                     Image(systemName: img)
@@ -26,17 +27,19 @@ struct AdviceButtonStyle: View {
                     Text(category)
                         .bold()
                         .font(.title)
+                    Spacer()
                 }
-                .frame(width: 350, alignment: .topLeading)
-                .padding(.vertical, 1)
+                .frame(alignment: .topLeading)
+                
                 Text(cDescription)
                     .frame(width: 350)
             }
-            .frame(width: 350, height: 100, alignment: .topLeading)
+            .frame(height: 100, alignment: .topLeading)
             .multilineTextAlignment(.leading)
             .foregroundStyle(.white)
-            
+            .padding(.horizontal)
         }
+        .padding(.horizontal)
         .preferredColorScheme(.dark)
     }
 }
