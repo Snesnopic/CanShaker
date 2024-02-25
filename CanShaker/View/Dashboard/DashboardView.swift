@@ -28,8 +28,8 @@ struct DashboardView: View {
                         Spacer()
                     }
                     
-                    //TODO: make the view
-                    //LastSessionView()
+                    //TODO: Adjust the view
+                    LastSessionView()
                     Spacer()
                     
                 }
