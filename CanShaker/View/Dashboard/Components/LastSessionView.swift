@@ -46,11 +46,12 @@ struct LastSessionView: View {
                     if !connectivity.sessions.isEmpty {
                         Chart{
                             ForEach(connectivity.sessions.last!.accelData.keys.sorted(),id: \.self){ time in
-                                AreaMark (x: .value("Time", Date(timeIntervalSince1970: time),unit: .second),
+                                
+                                AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
                                           y: .value("Acceleration", (connectivity.sessions.last!.accelData[time]!.getTotalAcceleration())))
                                 
                                 .interpolationMethod(.catmullRom)
-                                .foregroundStyle(Color("heartColor"))
+                                .foregroundStyle(heartGradient)
                                 
                             }
                             
