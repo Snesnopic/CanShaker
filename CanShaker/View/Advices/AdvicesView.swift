@@ -10,62 +10,34 @@ import SwiftUI
 struct AdvicesView: View {
     var body: some View {
         NavigationStack {
-            // IGNORE THIS
-            Color(uiColor: UIColor.secondarySystemBackground).ignoresSafeArea().overlay {
-                VStack {
-                        VStack(alignment: .leading) {
-                            HStack(alignment: .top) {
-                                Image(systemName: "exclamationmark.triangle.fill")
-                                Text("Based on your use of the app").bold()
-                            }.font(.title2)
-                            Text("Too much lorem ipsum. Consider dorime, interimo adapare dorime. Ameno? Ameno, latire. Latiremo.")
-                        }
-                        .padding(.all, 20)
-                        .background {
-                            Color.white.clipShape(RoundedRectangle(cornerRadius: 10))
-                        }
+            ZStack{
+                LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
+                    .ignoresSafeArea()
+                
+                //TODO: add list destination with advices category
+                VStack{
+                   NavigationLink(destination: AdvicesListView(advCategory: "Hygiene"), label: {
+                       AdviceButtonStyle(img: "heart.text.square.fill", category: "Hygiene", cDescription: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+                   })
+                    
+                    NavigationLink(destination: AdvicesListView(advCategory: "Methods"), label: {
+                        AdviceButtonStyle(img: "book.closed.fill", category: "Methods", cDescription: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+                    })
                     
                     
-                    VStack {
-                        HStack {
-                            Color.white.clipShape(RoundedRectangle(cornerRadius: 10)).overlay {
-                                VStack {
-                                    Image(systemName: "microbe.circle.fill")
-                                    Text("Hygiene")
-                                }
-                            }
-                            
-                            Color.white.clipShape(RoundedRectangle(cornerRadius: 10)).overlay {
-                                VStack {
-                                    Image(systemName: "party.popper.fill")
-                                    Text("Methods")
-                                }
-                            }
-                        }
-                        
-                        HStack {
-                            Color.white.clipShape(RoundedRectangle(cornerRadius: 10)).overlay {
-                                VStack {
-                                    Image(systemName: "checkmark.circle.fill")
-                                    Text("Do's")
-                                }
-                            }
-                            Color.white.clipShape(RoundedRectangle(cornerRadius: 10)).overlay {
-                                VStack {
-                                    Image(systemName: "x.circle.fill")
-                                    Text("Don'ts")
-                                }
-                            }
-                        }
-                    }
-                    .padding(.all, 20)
-                    .font(.title)
+                    NavigationLink(destination: AdvicesListView(advCategory: "Safety"), label: {
+                        AdviceButtonStyle(img: "exclamationmark.triangle.fill", category: "Safety", cDescription: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+                    })
+                    
                     Spacer()
                     
                 }
-                .navigationTitle("Advices")
             }
-        }
+            .navigationTitle("Advices")
+            .preferredColorScheme(.dark)
+            
+            //accentColor changes backButton color
+        }.accentColor(.white)
     }
 }
 

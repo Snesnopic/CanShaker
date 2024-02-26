@@ -28,6 +28,7 @@ struct SessionView: View {
     var body: some View {
         NavigationStack {
             switch currentState {
+                
             case .start:
                 Button(action: {
                     currentState = .shaking
@@ -56,6 +57,7 @@ struct SessionView: View {
                     }
                 })
                 .buttonStyle(.plain)
+                
             case .shaking:
                 TabView(selection: $secondTabView){
                     Button(role: .destructive,
@@ -89,6 +91,7 @@ struct SessionView: View {
                         .tag(2)
                 }
                 .tabViewStyle(.page)
+                
             case .done:
                 Text("You just finished a session!")
             }

@@ -12,7 +12,7 @@
 		6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */; };
 		6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10F2B84B9100088E5E4 /* Advice.swift */; };
 		9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */; };
-		9D7187FF2B7E419A002C02B0 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FE2B7E419A002C02B0 /* Dashboard.swift */; };
+		9D7187FF2B7E419A002C02B0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FE2B7E419A002C02B0 /* DashboardView.swift */; };
 		9D7188042B7E419B002C02B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188032B7E419B002C02B0 /* Preview Assets.xcassets */; };
 		9D71880A2B7E419B002C02B0 /* CanShaker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9D7188092B7E419B002C02B0 /* CanShaker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9D71880F2B7E419B002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71880E2B7E419B002C02B0 /* CanShakerApp.swift */; };
@@ -67,7 +67,7 @@
 		9D7135712B85EB7900650827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9D7187F92B7E419A002C02B0 /* CanShaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanShaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanShakerApp.swift; sourceTree = "<group>"; };
-		9D7187FE2B7E419A002C02B0 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		9D7187FE2B7E419A002C02B0 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		9D7188002B7E419B002C02B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D7188032B7E419B002C02B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9D7188092B7E419B002C02B0 /* CanShaker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CanShaker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,8 +146,10 @@
 		6B8AA1082B84AD790088E5E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */,
-				6B8AA10F2B84B9100088E5E4 /* Advice.swift */,
+				6BF3EEBA2B8B54ED00B52687 /* Achievements */,
+				6BF3EEB72B8B54D000B52687 /* Advices */,
+				6BF3EEBD2B8B551800B52687 /* Feedbacks */,
+				6BF3EECC2B8B7E3700B52687 /* Sessions */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,7 +157,7 @@
 		6B8AA1092B84AD870088E5E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6B8AA10E2B84B50F0088E5E4 /* Performance */,
+				6B8AA10E2B84B50F0088E5E4 /* Dashboard */,
 				6B8AA10D2B84B5020088E5E4 /* Advices */,
 				6B8AA10C2B84B4EC0088E5E4 /* Achievement */,
 			);
@@ -175,16 +177,72 @@
 			isa = PBXGroup;
 			children = (
 				9D7411A32B7F51BE00869BF8 /* AdvicesView.swift */,
+				6BF3EEC62B8B640500B52687 /* AdvicesListView.swift */,
+				6BF3EEC82B8B64B500B52687 /* AdviceDetailView.swift */,
+				6BF3EEC22B8B605800B52687 /* Components */,
 			);
 			path = Advices;
 			sourceTree = "<group>";
 		};
-		6B8AA10E2B84B50F0088E5E4 /* Performance */ = {
+		6B8AA10E2B84B50F0088E5E4 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				9D7187FE2B7E419A002C02B0 /* Dashboard.swift */,
+				9D7187FE2B7E419A002C02B0 /* DashboardView.swift */,
+				6BF3EEC32B8B61DA00B52687 /* Components */,
 			);
-			path = Performance;
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		6BF3EEB72B8B54D000B52687 /* Advices */ = {
+			isa = PBXGroup;
+			children = (
+				6B8AA10F2B84B9100088E5E4 /* Advice.swift */,
+				6BF3EEB82B8B54E500B52687 /* AdviceList.swift */,
+			);
+			path = Advices;
+			sourceTree = "<group>";
+		};
+		6BF3EEBA2B8B54ED00B52687 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */,
+				6BF3EEBB2B8B54FD00B52687 /* AchievementList.swift */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		6BF3EEBD2B8B551800B52687 /* Feedbacks */ = {
+			isa = PBXGroup;
+			children = (
+				6BFF7DDF2B889B010037C9C0 /* Feedback.swift */,
+				6BF3EEBE2B8B560800B52687 /* FeedbackList.swift */,
+			);
+			path = Feedbacks;
+			sourceTree = "<group>";
+		};
+		6BF3EEC22B8B605800B52687 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6BF3EEC02B8B59BD00B52687 /* AdviceButtonStyle.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6BF3EEC32B8B61DA00B52687 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6BF3EEB52B8B504C00B52687 /* LastSessionView.swift */,
+				6BF3EEC42B8B627600B52687 /* UserInfo.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6BF3EECC2B8B7E3700B52687 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				6BF3EECA2B8B7DB200B52687 /* Session.swift */,
+			);
+			path = Sessions;
 			sourceTree = "<group>";
 		};
 		9D7187F02B7E419A002C02B0 = {
@@ -209,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				9D7135712B85EB7900650827 /* Info.plist */,
+				6BFF7DE52B88C2E50037C9C0 /* THE_JACATRA.otf */,
 				9D5360EB2B7E4E9100BE628C /* CanShaker.entitlements */,
 				9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */,
 				6B8AA1082B84AD790088E5E4 /* Model */,
@@ -333,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BFF7DE62B88C2E50037C9C0 /* THE_JACATRA.otf in Resources */,
 				9D7188042B7E419B002C02B0 /* Preview Assets.xcassets in Resources */,
 				9D81EDA92B8372C2003B7CD1 /* Assets.xcassets in Resources */,
 			);
@@ -354,13 +414,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D7187FF2B7E419A002C02B0 /* Dashboard.swift in Sources */,
+				6BF3EEBC2B8B54FD00B52687 /* AchievementList.swift in Sources */,
+				6BF3EECB2B8B7DB200B52687 /* Session.swift in Sources */,
+				9D7187FF2B7E419A002C02B0 /* DashboardView.swift in Sources */,
 				6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */,
 				6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */,
 				9D8C39372B89336E00FFB72F /* Extensions.swift in Sources */,
 				9D7411A22B7F515200869BF8 /* AchievementsView.swift in Sources */,
 				9D7411A42B7F51BE00869BF8 /* AdvicesView.swift in Sources */,
 				9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */,
+				6BF3EEC12B8B59BD00B52687 /* AdviceButtonStyle.swift in Sources */,
+				6BF3EEB62B8B504C00B52687 /* LastSessionView.swift in Sources */,
+				6BF3EEC72B8B640500B52687 /* AdvicesListView.swift in Sources */,
+				6BF3EEB92B8B54E500B52687 /* AdviceList.swift in Sources */,
+				6BF3EEC92B8B64B500B52687 /* AdviceDetailView.swift in Sources */,
+				6BFF7DE02B889B010037C9C0 /* Feedback.swift in Sources */,
+				6BF3EEBF2B8B560800B52687 /* FeedbackList.swift in Sources */,
+				6BF3EEC52B8B627600B52687 /* UserInfo.swift in Sources */,
 				6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +441,7 @@
 			files = (
 				6B3A23A22B874C8400E03F41 /* Assets.xcassets in Sources */,
 				9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */,
+				6BFF7DE12B889B010037C9C0 /* Feedback.swift in Sources */,
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
 				9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
