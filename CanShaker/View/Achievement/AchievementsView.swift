@@ -146,11 +146,11 @@ struct AchievementsView: View {
                 .padding(.bottom, 500)
                 .padding(.leading, 10)
             
-            RoundedRectangle(cornerRadius: 5)
+            RoundedRectangle(cornerRadius: 6)
                 .foregroundColor(.black)
-                .frame(width: 128, height: 30)
+                .frame(width: 128, height: 28)
                 .padding()
-                .padding(.bottom, 500)
+                .padding(.bottom, 499)
                 .padding(.leading, 220)
                 .opacity(0.5)
             Picker(selection: .constant(1), label: Text("Picker")) {
@@ -160,7 +160,7 @@ struct AchievementsView: View {
             .pickerStyle(.segmented)
             .frame(width: 130)
             .padding(.bottom, 500)
-            .padding(.leading, 235)
+            .padding(.leading, 234)
             
             HStack{
                 VStack(alignment: .leading) {
