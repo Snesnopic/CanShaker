@@ -11,6 +11,8 @@
 		6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
 		6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */; };
 		6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10F2B84B9100088E5E4 /* Advice.swift */; };
+		6BD11A9E2B8CF519008FA32D /* SpeedGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */; };
+		6BD11AA02B8CF6BF008FA32D /* BpmGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */; };
 		6BDF79BC2B8C8CCA00E9663D /* ResponsiveFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF79BB2B8C8CCA00E9663D /* ResponsiveFrame.swift */; };
 		9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */; };
 		9D7187FF2B7E419A002C02B0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FE2B7E419A002C02B0 /* DashboardView.swift */; };
@@ -77,6 +79,8 @@
 		6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
 		6B8AA10F2B84B9100088E5E4 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedGraphView.swift; sourceTree = "<group>"; };
+		6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BpmGraphView.swift; sourceTree = "<group>"; };
 		6BDF79BB2B8C8CCA00E9663D /* ResponsiveFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveFrame.swift; sourceTree = "<group>"; };
 		9D5360EA2B7E4E3800BE628C /* CanShaker Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CanShaker Watch App.entitlements"; sourceTree = "<group>"; };
 		9D5360EB2B7E4E9100BE628C /* CanShaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CanShaker.entitlements; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				9DA6A8522B8C8B43009737D7 /* LastSessionView.swift */,
+				6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */,
+				6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */,
 				9DA6A8512B8C8B43009737D7 /* UserInfo.swift */,
 			);
 			path = Components;
@@ -454,6 +460,7 @@
 				9D7187FF2B7E419A002C02B0 /* DashboardView.swift in Sources */,
 				9DA6A84D2B8C8B2C009737D7 /* AdviceDetailView.swift in Sources */,
 				6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */,
+				6BD11A9E2B8CF519008FA32D /* SpeedGraphView.swift in Sources */,
 				9DA6A8502B8C8B34009737D7 /* AdviceButtonStyle.swift in Sources */,
 				9DA6A85D2B8C8B77009737D7 /* FeedbackList.swift in Sources */,
 				6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */,
@@ -472,6 +479,7 @@
 				6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */,
 				9DA6A84E2B8C8B2C009737D7 /* AdvicesListView.swift in Sources */,
 				9DA6A8632B8C95A7009737D7 /* Connectivity.swift in Sources */,
+				6BD11AA02B8CF6BF008FA32D /* BpmGraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
