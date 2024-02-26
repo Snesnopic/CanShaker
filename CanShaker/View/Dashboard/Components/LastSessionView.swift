@@ -58,7 +58,7 @@ struct LastSessionView: View {
                                 ForEach(connectivity.sessions.last!.accelData.keys.sorted(),id: \.self){ time in
                                     
                                     AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                                              y: .value("Acceleration", (connectivity.sessions.last!.accelData[time]!.getTotalAcceleration())))
+                                              y: .value("Acceleration", (connectivity.sessions.last!.accelData[time]!)))
                                     
                                     .interpolationMethod(.catmullRom)
                                     .foregroundStyle(speedGradient)
@@ -98,9 +98,9 @@ struct LastSessionView: View {
 }
 
 #Preview {
-    var accelData:[TimeInterval:CMAcceleration] = [:]
+    var accelData:[TimeInterval:Double] = [:]
     for i in 1...50 {
-        accelData[Double(i)*0.3] = CMAcceleration(x: Double.random(in: 0.0...3.0), y: Double.random(in: 0.0...3.0), z: Double.random(in: 0.0...3.0))
+        accelData[Double(i)*0.3] = Double.random(in: 1...3)
     }
     Connectivity.shared.sessions = [
         Session(date: Date(), accelData: accelData, duration: 50.0/3.0)
