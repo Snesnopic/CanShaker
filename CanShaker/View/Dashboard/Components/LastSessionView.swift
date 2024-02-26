@@ -39,7 +39,7 @@ struct LastSessionView: View {
                 .padding(.vertical, 5)
                 
                 //CHART
-                //TODO: filter based on data to show
+                //TODO: filter based on data to sho
                 HStack{
                     Chart{
                         ForEach(Session.list[0].bpmData){ data in
