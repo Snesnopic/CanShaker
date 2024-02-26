@@ -9,6 +9,7 @@ import SwiftUI
 import Charts
 struct LastSessionView: View {
     @State private var statToShow = 0
+    var connectivity = Connectivity.shared
     let heartGradient = LinearGradient(
         gradient: Gradient (
             colors: [ Color("heartColor").opacity(0.75),
@@ -41,34 +42,34 @@ struct LastSessionView: View {
                 //CHART
                 //TODO: filter based on data to sho
                 HStack{
-                    Chart{
-                        ForEach(Session.list[0].bpmData){ data in
-                            
-                            AreaMark(x: .value("Time", data.time),
-                                     y: .value("BPM", data.heartRate))
-                            
-                            .interpolationMethod(.catmullRom)
-                            .foregroundStyle(heartGradient)
+                    if !connectivity.sessions.isEmpty {
+                        Chart{
+                            ForEach(connectivity.sessions.last!.accelData.keys.sorted(),id: \.self){ time in
+                                AreaMark (x: .value("Time", Date(timeIntervalSince1970: time),unit: .second),
+                                          y: .value("Acceleration", (connectivity.sessions.last!.accelData[time]!.getTotalAcceleration())))
+                                
+                                .interpolationMethod(.catmullRom)
+                                .foregroundStyle(heartGradient)
+                                
+                            }
                             
                         }
+                        .chartXAxis{
+                            AxisMarks(values: .automatic(desiredCount: 7)) { _ in
+                                AxisValueLabel()
+                            }
+                        }
+                        .chartYAxis {
+                            AxisMarks(position: .leading) { _ in
+                                AxisValueLabel()
+                            }
+                        }
+                        .responsiveFrame(widthPercentage: 75, aspectRatio: (2,1))
+                        .padding(.vertical)
                         
+                        Spacer()
                     }
-                    .chartXAxis{
-                        AxisMarks(values: .automatic(desiredCount: 7)) { _ in
-                            AxisValueLabel()
-                        }
-                    }
-                    .chartYAxis {
-                        AxisMarks(position: .leading) { _ in
-                            AxisValueLabel()
-                        }
-                    }
-                    .responsiveFrame(widthPercentage: 75, aspectRatio: (2,1))
-                    .padding(.vertical)
-                    
-                    Spacer()
                 }
-                
                 // STATS RESUMEE
                 HStack{
                     //TODO: add text
