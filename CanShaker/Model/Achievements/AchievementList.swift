@@ -13,7 +13,9 @@ extension Achievement {
         Achievement(badge: "", title: "title2", subTitle: "subtitle2", description: "You have shaked your can really fast!", completion: 22, isAchieved: false),
         Achievement(badge: "", title: "title3", subTitle: "subtitle3", description: "Something something", completion: 84, isAchieved: true),
         Achievement(badge: "", title: "title4", subTitle: "subtitle4", description: "Something something", completion: 77, isAchieved: false),
-        Achievement(badge: "", title: "title5", subTitle: "subtitle5", description: "Something something", completion: 99, isAchieved: false)
+        Achievement(badge: "", title: "title5", subTitle: "subtitle5", description: "Something something", completion: 99, isAchieved: false),
+        Achievement(badge: "", title: "title6", subTitle: "subtitle6", description: "Something something", completion: 77, isAchieved: false),
+        Achievement(badge: "", title: "title7", subTitle: "subtitle7", description: "Something something", completion: 99, isAchieved: false)
     ]
     
     static func sortAlmostCompleted() -> [Achievement] {

@@ -17,6 +17,7 @@ struct AchievementDetailView: View {
                 Circle()
                     .frame(width: 300, height: 300)
                     .matchedGeometryEffect(id: achievement!.id, in: animation)
+                    .foregroundStyle(.black)
                 Text(achievement!.title)
                     .font(.title)
                     .matchedGeometryEffect(id: achievement!.title, in: animation)
