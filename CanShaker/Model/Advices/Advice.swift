@@ -24,4 +24,12 @@ enum adviceCategory {
     case hygiene
     case methods
     case safety
+    
+    var str: String {
+        switch self {
+        case .hygiene: return "Hygiene"
+        case .methods: return "Methods"
+        case .safety: return "Safety"
+        }
+    }
 }
