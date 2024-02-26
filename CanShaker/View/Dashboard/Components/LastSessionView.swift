@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Charts
+import CoreMotion
 struct LastSessionView: View {
     @State private var statToShow = 0
     var connectivity = Connectivity.shared
@@ -49,14 +50,14 @@ struct LastSessionView: View {
                                           y: .value("Acceleration", (connectivity.sessions.last!.accelData[time]!.getTotalAcceleration())))
                                 
                                 .interpolationMethod(.catmullRom)
-                                .foregroundStyle(heartGradient)
+                                .foregroundStyle(Color("heartColor"))
                                 
                             }
                             
                         }
                         .chartXAxis{
-                            AxisMarks(values: .automatic(desiredCount: 7)) { _ in
-                                AxisValueLabel()
+                            AxisMarks(values: .automatic(desiredCount: 7)) {
+                                AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
                             }
                         }
                         .chartYAxis {
@@ -85,5 +86,12 @@ struct LastSessionView: View {
 }
 
 #Preview {
-    LastSessionView()
+    var accelData:[TimeInterval:CMAcceleration] = [:]
+    for i in 1...50 {
+        accelData[Double(i)*0.3] = CMAcceleration(x: Double.random(in: 0.0...3.0), y: Double.random(in: 0.0...3.0), z: Double.random(in: 0.0...3.0))
+    }
+    Connectivity.shared.sessions = [
+        Session(date: Date(), accelData: accelData, duration: 50.0/3.0)
+    ]
+    return LastSessionView()
 }
