@@ -15,7 +15,7 @@ struct AdviceButtonStyle: View {
         
         ZStack{
             RoundedRectangle(cornerRadius: 15.0)
-                .frame(height: 130)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 15)
                 .foregroundStyle(Color("boxColor"))
                 .opacity(0.2)
                 .shadow(radius: 20)
@@ -29,17 +29,16 @@ struct AdviceButtonStyle: View {
                         .font(.title)
                     Spacer()
                 }
-                .frame(alignment: .topLeading)
-                
-                Text(cDescription)
-                    .frame(width: 350)
+                HStack{
+                    Text(cDescription)
+                    Spacer()
+                }
             }
-            .frame(height: 100, alignment: .topLeading)
+            .responsiveFrame(widthPercentage: 90, heightPercentage: 13, alignment: .topLeading)
             .multilineTextAlignment(.leading)
             .foregroundStyle(.white)
-            .padding(.horizontal)
+            
         }
-        .padding(.horizontal)
         .preferredColorScheme(.dark)
     }
 }
