@@ -11,7 +11,7 @@ struct UserInfo: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 25.0)
-                .frame(height: 150)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 15)
                 .foregroundStyle(Color("boxColor"))
                 .opacity(0.2)
                 .shadow(radius: 20)
@@ -20,7 +20,14 @@ struct UserInfo: View {
                 Image(systemName: "person.circle.fill")
                     .resizable()
                     .opacity(0.3)
-                    .frame(width: 90, height: 90)
+                    .responsiveFrame(widthPercentage: 18, aspectRatio: (1,1))
+                VStack{
+                    Text("Achievement complited: ").bold() + Text("10/150")
+                    Text("Streak: ").bold() + Text("3")
+                    Text("Session this week: ").bold() + Text("17")
+                }
+                .font(.callout)
+                .multilineTextAlignment(.leading)
                 Spacer()
             }
             
