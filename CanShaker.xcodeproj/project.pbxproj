@@ -35,15 +35,29 @@
 		9D7411A22B7F515200869BF8 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A12B7F515200869BF8 /* AchievementsView.swift */; };
 		9D7411A42B7F51BE00869BF8 /* AdvicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A32B7F51BE00869BF8 /* AdvicesView.swift */; };
 		9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A52B7F534E00869BF8 /* HighFreqAlert.swift */; };
-		9D7411A82B7F559A00869BF8 /* BadgeObtainedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A72B7F559A00869BF8 /* BadgeObtainedView.swift */; };
+		9D7411A82B7F559A00869BF8 /* AchievementObtainedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411A72B7F559A00869BF8 /* AchievementObtainedView.swift */; };
 		9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411AE2B7F960600869BF8 /* LastStatsView.swift */; };
-		9D7411B22B7F96BD00869BF8 /* BadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411B12B7F96BD00869BF8 /* BadgesView.swift */; };
+		9D7411B22B7F96BD00869BF8 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */; };
 		9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B324D2B889142003B08A7 /* MotionDataManager.swift */; };
 		9D81EDA72B8372A5003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		9D81EDA92B8372C2003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
-		9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */; };
-		9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAC2B838D94003B7CD1 /* Badge.swift */; };
-		9DB2146D2B83B7C500FB0AAE /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB2146C2B83B7C500FB0AAE /* Badges.swift */; };
+		9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */; };
+		9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
+		9D8C39322B88F05400FFB72F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39312B88F05400FFB72F /* Session.swift */; };
+		9D8C39362B89006400FFB72F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39352B89006400FFB72F /* Extensions.swift */; };
+		9D8C39372B89336E00FFB72F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39352B89006400FFB72F /* Extensions.swift */; };
+		9DA6A8492B8C8ABA009737D7 /* AchievementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8482B8C8ABA009737D7 /* AchievementList.swift */; };
+		9DA6A84A2B8C8AED009737D7 /* AchievementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8482B8C8ABA009737D7 /* AchievementList.swift */; };
+		9DA6A84D2B8C8B2C009737D7 /* AdviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */; };
+		9DA6A84E2B8C8B2C009737D7 /* AdvicesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A84C2B8C8B2C009737D7 /* AdvicesListView.swift */; };
+		9DA6A8502B8C8B34009737D7 /* AdviceButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A84F2B8C8B34009737D7 /* AdviceButtonStyle.swift */; };
+		9DA6A8532B8C8B43009737D7 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8512B8C8B43009737D7 /* UserInfo.swift */; };
+		9DA6A8542B8C8B43009737D7 /* LastSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8522B8C8B43009737D7 /* LastSessionView.swift */; };
+		9DA6A8562B8C8B57009737D7 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8552B8C8B57009737D7 /* Session.swift */; };
+		9DA6A8582B8C8B5F009737D7 /* SessionCompanion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8572B8C8B5F009737D7 /* SessionCompanion.swift */; };
+		9DA6A85A2B8C8B6E009737D7 /* AdviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8592B8C8B6E009737D7 /* AdviceList.swift */; };
+		9DA6A85D2B8C8B77009737D7 /* FeedbackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A85B2B8C8B77009737D7 /* FeedbackList.swift */; };
+		9DA6A85E2B8C8B77009737D7 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A85C2B8C8B77009737D7 /* Feedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,13 +117,24 @@
 		9D7411A12B7F515200869BF8 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		9D7411A32B7F51BE00869BF8 /* AdvicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesView.swift; sourceTree = "<group>"; };
 		9D7411A52B7F534E00869BF8 /* HighFreqAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighFreqAlert.swift; sourceTree = "<group>"; };
-		9D7411A72B7F559A00869BF8 /* BadgeObtainedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeObtainedView.swift; sourceTree = "<group>"; };
+		9D7411A72B7F559A00869BF8 /* AchievementObtainedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementObtainedView.swift; sourceTree = "<group>"; };
 		9D7411AE2B7F960600869BF8 /* LastStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastStatsView.swift; sourceTree = "<group>"; };
-		9D7411B12B7F96BD00869BF8 /* BadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesView.swift; sourceTree = "<group>"; };
+		9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		9D7B324D2B889142003B08A7 /* MotionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDataManager.swift; sourceTree = "<group>"; };
-		9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDetailView.swift; sourceTree = "<group>"; };
-		9D81EDAC2B838D94003B7CD1 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
-		9DB2146C2B83B7C500FB0AAE /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
+		9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
+		9D8C39312B88F05400FFB72F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		9D8C39352B89006400FFB72F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9DA6A8482B8C8ABA009737D7 /* AchievementList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementList.swift; sourceTree = "<group>"; };
+		9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceDetailView.swift; sourceTree = "<group>"; };
+		9DA6A84C2B8C8B2C009737D7 /* AdvicesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvicesListView.swift; sourceTree = "<group>"; };
+		9DA6A84F2B8C8B34009737D7 /* AdviceButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceButtonStyle.swift; sourceTree = "<group>"; };
+		9DA6A8512B8C8B43009737D7 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		9DA6A8522B8C8B43009737D7 /* LastSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastSessionView.swift; sourceTree = "<group>"; };
+		9DA6A8552B8C8B57009737D7 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		9DA6A8572B8C8B5F009737D7 /* SessionCompanion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCompanion.swift; sourceTree = "<group>"; };
+		9DA6A8592B8C8B6E009737D7 /* AdviceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceList.swift; sourceTree = "<group>"; };
+		9DA6A85B2B8C8B77009737D7 /* FeedbackList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackList.swift; sourceTree = "<group>"; };
+		9DA6A85C2B8C8B77009737D7 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +158,7 @@
 		6B3A239E2B874B1B00E03F41 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6B3A23A12B874B6200E03F41 /* Badge */,
+				6B3A23A12B874B6200E03F41 /* Achievements */,
 				9D7411AE2B7F960600869BF8 /* LastStatsView.swift */,
 				9D7188102B7E419B002C02B0 /* SessionView.swift */,
 				9D7411A52B7F534E00869BF8 /* HighFreqAlert.swift */,
@@ -145,8 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				9D7B324D2B889142003B08A7 /* MotionDataManager.swift */,
-				9DB2146C2B83B7C500FB0AAE /* Badges.swift */,
-				9D81EDAC2B838D94003B7CD1 /* Badge.swift */,
+				9D8C39312B88F05400FFB72F /* Session.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,24 +178,25 @@
 		6B3A23A02B874B4700E03F41 /* Support files */ = {
 			isa = PBXGroup;
 			children = (
-				9D4940362B7FA88D001AA714 /* ConditionalModifier.swift */,
+				9D8C39352B89006400FFB72F /* Extensions.swift */,
 			);
 			path = "Support files";
 			sourceTree = "<group>";
 		};
-		6B3A23A12B874B6200E03F41 /* Badge */ = {
+		6B3A23A12B874B6200E03F41 /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
-				9D7411A72B7F559A00869BF8 /* BadgeObtainedView.swift */,
-				9D7411B12B7F96BD00869BF8 /* BadgesView.swift */,
-				9D81EDAA2B838D52003B7CD1 /* BadgeDetailView.swift */,
+				9D7411A72B7F559A00869BF8 /* AchievementObtainedView.swift */,
+				9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */,
+				9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */,
 			);
-			path = Badge;
+			path = Achievements;
 			sourceTree = "<group>";
 		};
 		6B8AA1082B84AD790088E5E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9DA6A8572B8C8B5F009737D7 /* SessionCompanion.swift */,
 				6BF3EEBA2B8B54ED00B52687 /* Achievements */,
 				6BF3EEB72B8B54D000B52687 /* Advices */,
 				6BF3EEBD2B8B551800B52687 /* Feedbacks */,
@@ -202,9 +227,9 @@
 		6B8AA10D2B84B5020088E5E4 /* Advices */ = {
 			isa = PBXGroup;
 			children = (
+				9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */,
+				9DA6A84C2B8C8B2C009737D7 /* AdvicesListView.swift */,
 				9D7411A32B7F51BE00869BF8 /* AdvicesView.swift */,
-				6BF3EEC62B8B640500B52687 /* AdvicesListView.swift */,
-				6BF3EEC82B8B64B500B52687 /* AdviceDetailView.swift */,
 				6BF3EEC22B8B605800B52687 /* Components */,
 			);
 			path = Advices;
@@ -230,8 +255,8 @@
 		6BF3EEB72B8B54D000B52687 /* Advices */ = {
 			isa = PBXGroup;
 			children = (
+				9DA6A8592B8C8B6E009737D7 /* AdviceList.swift */,
 				6B8AA10F2B84B9100088E5E4 /* Advice.swift */,
-				6BF3EEB82B8B54E500B52687 /* AdviceList.swift */,
 			);
 			path = Advices;
 			sourceTree = "<group>";
@@ -239,8 +264,8 @@
 		6BF3EEBA2B8B54ED00B52687 /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
+				9DA6A8482B8C8ABA009737D7 /* AchievementList.swift */,
 				6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */,
-				6BF3EEBB2B8B54FD00B52687 /* AchievementList.swift */,
 			);
 			path = Achievements;
 			sourceTree = "<group>";
@@ -248,8 +273,8 @@
 		6BF3EEBD2B8B551800B52687 /* Feedbacks */ = {
 			isa = PBXGroup;
 			children = (
-				6BFF7DDF2B889B010037C9C0 /* Feedback.swift */,
-				6BF3EEBE2B8B560800B52687 /* FeedbackList.swift */,
+				9DA6A85C2B8C8B77009737D7 /* Feedback.swift */,
+				9DA6A85B2B8C8B77009737D7 /* FeedbackList.swift */,
 			);
 			path = Feedbacks;
 			sourceTree = "<group>";
@@ -257,7 +282,7 @@
 		6BF3EEC22B8B605800B52687 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6BF3EEC02B8B59BD00B52687 /* AdviceButtonStyle.swift */,
+				9DA6A84F2B8C8B34009737D7 /* AdviceButtonStyle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -265,8 +290,8 @@
 		6BF3EEC32B8B61DA00B52687 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6BF3EEB52B8B504C00B52687 /* LastSessionView.swift */,
-				6BF3EEC42B8B627600B52687 /* UserInfo.swift */,
+				9DA6A8522B8C8B43009737D7 /* LastSessionView.swift */,
+				9DA6A8512B8C8B43009737D7 /* UserInfo.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -274,7 +299,7 @@
 		6BF3EECC2B8B7E3700B52687 /* Sessions */ = {
 			isa = PBXGroup;
 			children = (
-				6BF3EECA2B8B7DB200B52687 /* Session.swift */,
+				9DA6A8552B8C8B57009737D7 /* Session.swift */,
 			);
 			path = Sessions;
 			sourceTree = "<group>";
@@ -301,7 +326,6 @@
 			isa = PBXGroup;
 			children = (
 				9D7135712B85EB7900650827 /* Info.plist */,
-				6BFF7DE52B88C2E50037C9C0 /* THE_JACATRA.otf */,
 				9D5360EB2B7E4E9100BE628C /* CanShaker.entitlements */,
 				9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */,
 				6BDF79BA2B8C8CBB00E9663D /* Support files */,
@@ -427,7 +451,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BFF7DE62B88C2E50037C9C0 /* THE_JACATRA.otf in Resources */,
 				9D7188042B7E419B002C02B0 /* Preview Assets.xcassets in Resources */,
 				9D81EDA92B8372C2003B7CD1 /* Assets.xcassets in Resources */,
 			);
@@ -449,24 +472,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BF3EEBC2B8B54FD00B52687 /* AchievementList.swift in Sources */,
-				6BF3EECB2B8B7DB200B52687 /* Session.swift in Sources */,
 				9D7187FF2B7E419A002C02B0 /* DashboardView.swift in Sources */,
+				9DA6A84D2B8C8B2C009737D7 /* AdviceDetailView.swift in Sources */,
 				6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */,
+				9DA6A8502B8C8B34009737D7 /* AdviceButtonStyle.swift in Sources */,
+				9DA6A85D2B8C8B77009737D7 /* FeedbackList.swift in Sources */,
 				6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */,
 				6BDF79BC2B8C8CCA00E9663D /* ResponsiveFrame.swift in Sources */,
 				9D7411A22B7F515200869BF8 /* AchievementsView.swift in Sources */,
+				9DA6A8542B8C8B43009737D7 /* LastSessionView.swift in Sources */,
+				9DA6A8582B8C8B5F009737D7 /* SessionCompanion.swift in Sources */,
 				9D7411A42B7F51BE00869BF8 /* AdvicesView.swift in Sources */,
+				9DA6A85A2B8C8B6E009737D7 /* AdviceList.swift in Sources */,
+				9DA6A8532B8C8B43009737D7 /* UserInfo.swift in Sources */,
+				9DA6A8492B8C8ABA009737D7 /* AchievementList.swift in Sources */,
 				9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */,
-				6BF3EEC12B8B59BD00B52687 /* AdviceButtonStyle.swift in Sources */,
-				6BF3EEB62B8B504C00B52687 /* LastSessionView.swift in Sources */,
-				6BF3EEC72B8B640500B52687 /* AdvicesListView.swift in Sources */,
-				6BF3EEB92B8B54E500B52687 /* AdviceList.swift in Sources */,
-				6BF3EEC92B8B64B500B52687 /* AdviceDetailView.swift in Sources */,
-				6BFF7DE02B889B010037C9C0 /* Feedback.swift in Sources */,
-				6BF3EEBF2B8B560800B52687 /* FeedbackList.swift in Sources */,
-				6BF3EEC52B8B627600B52687 /* UserInfo.swift in Sources */,
+				9DA6A85E2B8C8B77009737D7 /* Feedback.swift in Sources */,
 				6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */,
+				9DA6A84E2B8C8B2C009737D7 /* AdvicesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,17 +499,17 @@
 			files = (
 				6B3A23A22B874C8400E03F41 /* Assets.xcassets in Sources */,
 				9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */,
-				6BFF7DE12B889B010037C9C0 /* Feedback.swift in Sources */,
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
-				9D81EDAB2B838D52003B7CD1 /* BadgeDetailView.swift in Sources */,
+				9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
+				9D8C39322B88F05400FFB72F /* Session.swift in Sources */,
 				9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */,
-				9D81EDAD2B838D94003B7CD1 /* Badge.swift in Sources */,
-				9DB2146D2B83B7C500FB0AAE /* Badges.swift in Sources */,
-				9D4940372B7FA88D001AA714 /* ConditionalModifier.swift in Sources */,
-				9D7411A82B7F559A00869BF8 /* BadgeObtainedView.swift in Sources */,
-				9D7411B22B7F96BD00869BF8 /* BadgesView.swift in Sources */,
+				9D8C39362B89006400FFB72F /* Extensions.swift in Sources */,
+				9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */,
+				9D7411A82B7F559A00869BF8 /* AchievementObtainedView.swift in Sources */,
+				9D7411B22B7F96BD00869BF8 /* AchievementsView.swift in Sources */,
 				9D71880F2B7E419B002C02B0 /* CanShakerApp.swift in Sources */,
+				9DA6A84A2B8C8AED009737D7 /* AchievementList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,22 +651,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = CanShaker;
+				INFOPLIST_KEY_CFBundleDisplayName = "Can Shaker";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires usage of Health.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires usage of Health.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -663,22 +686,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = CanShaker;
+				INFOPLIST_KEY_CFBundleDisplayName = "Can Shaker";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires usage of Health.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires usage of Health.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -700,11 +723,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = CanShaker;
+				INFOPLIST_KEY_CFBundleDisplayName = "Can Shaker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires usage of Health.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires usage of Health.";
@@ -719,7 +742,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -738,11 +761,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = CanShaker;
+				INFOPLIST_KEY_CFBundleDisplayName = "Can Shaker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires usage of Health.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires usage of Health.";
@@ -757,7 +780,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;

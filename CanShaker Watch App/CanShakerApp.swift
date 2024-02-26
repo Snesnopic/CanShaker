@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-
+import SwiftData
 @main
 struct CanShaker_Watch_AppApp: App {
     @State var firstTabView:Int = 0
     @State var currentState:SessionState = .start
+    
     var body: some Scene {
         WindowGroup {
             if currentState == .shaking {
@@ -32,12 +33,12 @@ struct CanShaker_Watch_AppApp: App {
                     LastStatsView()
                         .tabItem { Label("Last session", systemImage: "chart.bar.xaxis") }
                         .tag(1)
-                    BadgesView()
-                        .tabItem { Label("Badges", systemImage: "trophy.fill") }
+                    AchievementsView()
+                        .tabItem { Label("Achievements", systemImage: "trophy.fill") }
                         .tag(2)
                 })
                 .tabViewStyle(.verticalPage)
             }
-        }
+        }.modelContainer(for: [Session.self])
     }
 }

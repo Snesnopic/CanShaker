@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 
 class Achievement: Identifiable{
     let id: UUID = UUID()
@@ -15,6 +15,7 @@ class Achievement: Identifiable{
     let subTitle: String
     let description: String
     let completion: Int
+    let color: Color = Color.random()
     var isAchieved: Bool
     
     init(badge: String, title: String, subTitle: String, description: String, completion: Int, isAchieved: Bool) {

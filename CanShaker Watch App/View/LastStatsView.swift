@@ -7,25 +7,48 @@
 
 import SwiftUI
 import Charts
+import CoreMotion
+import SwiftData
 
 struct LastStatsView: View {
-    @ObservedObject var motionDataManager = MotionDataManager.shared
+    @Query var sessions:[Session]
     var body: some View {
         NavigationStack {
-            Chart {
-                ForEach(motionDataManager.accelData.keys.sorted(),id: \.self) {
-                    time in
-                    BarMark (x: .value("Time",time),
-                             y: .value("Acceleration", motionDataManager.accelData[time]!.x))
+            if !sessions.isEmpty {
+                Chart {
+                    ForEach(sessions.last!.accelData.keys.sorted(),id: \.self) {
+                        time in
+                        BarMark (x:
+    //                            .value("Time", time),
+                            .value("Time", Date(timeIntervalSince1970: time),unit: .second),
+                                 y: .value("Acceleration", sessions.last!.accelData[time]!.getTotalAcceleration()))
+                    }
                 }
+                .chartXAxis{
+                    AxisMarks(values: .automatic(desiredCount: 5)) {
+                        AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits)).offset(x: -5)
+                    }
+                }
+                .chartYAxis {
+                    AxisMarks(values: .automatic(desiredCount: 5))
+                }
+                .chartXAxisLabel("Time")
+                .chartYAxisLabel("Speed")
+                .chartLegend(content: {
+                    Text("Acceleration")
+                })
+                .chartForegroundStyleScale([
+                    "Test": .blue
+                ])
+                .navigationTitle("Last session")
+
+    
             }
-            .chartLegend(content: {
-                Text("Prova")
-            })
-            .chartForegroundStyleScale([
-                "Test": .blue
-            ])
-            .navigationTitle("Last session")
+            else {
+                Text("No sessions yet!")
+                    .navigationTitle("Last session")
+
+            }
         }
     }
 }
