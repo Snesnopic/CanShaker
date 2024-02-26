@@ -21,14 +21,13 @@ struct SessionView: View {
     @Binding var firstTabView:Int
     @State var secondTabView:Int = 2
     @State var circleAnimationAmount:Double = 1.0
-    
     @State var sprayCanRotationAmount:Double = 0
     @State var sprayCanTranslationAmount:Double = 0
     @ObservedObject var motionManager = MotionDataManager.shared
+    var connectivity:Connectivity = Connectivity.shared
     var body: some View {
         NavigationStack {
             switch currentState {
-                
             case .start:
                 Button(action: {
                     currentState = .shaking
@@ -97,10 +96,6 @@ struct SessionView: View {
             }
             
         }
-    }
-    
-    func sendData(){
-        
     }
 }
 
