@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AdvicesListView: View {
     @State var advCategory: String
+    
     var body: some View {
         NavigationStack{
             ZStack{
