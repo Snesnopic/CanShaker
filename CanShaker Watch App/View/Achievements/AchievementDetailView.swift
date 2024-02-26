@@ -31,5 +31,5 @@ struct AchievementDetailView: View {
 }
 
 #Preview {
-    AchievementDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), achievement: .constant(Achievement.allAchievements.randomElement()))
+    AchievementDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), achievement: .constant(Achievement.list.randomElement()))
 }

@@ -27,5 +27,5 @@ struct AchievementObtainedView: View {
 }
 
 #Preview {
-    AchievementObtainedView(achievement: Achievement.allAchievements.randomElement()!)
+    AchievementObtainedView(achievement: Achievement.list.randomElement()!)
 }

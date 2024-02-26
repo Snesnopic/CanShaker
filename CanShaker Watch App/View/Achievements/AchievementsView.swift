@@ -16,40 +16,40 @@ struct AchievementsView: View {
             if !isPresented {
                 ScrollView {
                     Grid() {
-                        ForEach(1...Achievement.allAchievements.count/3, id: \.self){
+                        ForEach(1...Achievement.list.count/3, id: \.self){
                             i in
                             GridRow {
                                 Button(action: {
-                                    selectedAchievement = Achievement.allAchievements[(i-1)*3]
+                                    selectedAchievement = Achievement.list[(i-1)*3]
                                     withAnimation {
                                         isPresented = true
                                     }
                                 }, label: {
-                                    ExtractedView(achievement: Achievement.allAchievements[(i-1)*3], animation: animation)
-                                        .opacity(selectedAchievement == nil || selectedAchievement!.id == Achievement.allAchievements[(i-1)*3].id ? 1.0 : 0.0)
+                                    ExtractedView(achievement: Achievement.list[(i-1)*3], animation: animation)
+                                        .opacity(selectedAchievement == nil || selectedAchievement!.id == Achievement.list[(i-1)*3].id ? 1.0 : 0.0)
                                 })
                                 .buttonStyle(.plain)
                                 Button(action: {
-                                    selectedAchievement = Achievement.allAchievements[(i-1)*3 + 1]
+                                    selectedAchievement = Achievement.list[(i-1)*3 + 1]
                                     withAnimation {
                                         isPresented = true
                                     }
                                 }, label: {
                                     
-                                    ExtractedView(achievement: Achievement.allAchievements[(i-1)*3+1],animation: animation)
-                                        .opacity(selectedAchievement == nil || selectedAchievement!.id == Achievement.allAchievements[(i-1)*3+1].id ? 1.0 : 0.0)
+                                    ExtractedView(achievement: Achievement.list[(i-1)*3+1],animation: animation)
+                                        .opacity(selectedAchievement == nil || selectedAchievement!.id == Achievement.list[(i-1)*3+1].id ? 1.0 : 0.0)
                                     
                                 })
                                 .buttonStyle(.plain)
                                 Button(action: {
-                                    selectedAchievement = Achievement.allAchievements[(i-1)*3+2]
+                                    selectedAchievement = Achievement.list[(i-1)*3+2]
                                     withAnimation {
                                         isPresented = true
                                     }
                                 }, label: {
                                     
-                                    ExtractedView(achievement: Achievement.allAchievements[(i-1)*3+2],animation: animation)
-                                        .opacity(selectedAchievement == nil || selectedAchievement!.id == Achievement.allAchievements[(i-1)*3+2].id ? 1.0 : 0.0)
+                                    ExtractedView(achievement: Achievement.list[(i-1)*3+2],animation: animation)
+                                        .opacity(selectedAchievement == nil || selectedAchievement!.id == Achievement.list[(i-1)*3+2].id ? 1.0 : 0.0)
                                     
                                 })
                                 .buttonStyle(.plain)
