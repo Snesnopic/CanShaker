@@ -19,6 +19,15 @@ struct LastSessionView: View {
                       Color.clear ]
         ),
         startPoint: .top, endPoint: .bottom)
+    
+    let speedGradient = LinearGradient(
+        gradient: Gradient (
+            colors: [ Color("speedColor").opacity(0.75),
+                      Color("speedColor")
+                .opacity(0.25),
+                      Color.clear ]
+        ),
+        startPoint: .top, endPoint: .bottom)
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 25.0)
@@ -44,31 +53,33 @@ struct LastSessionView: View {
                 //TODO: filter based on data to sho
                 HStack{
                     if !connectivity.sessions.isEmpty {
-                        Chart{
-                            ForEach(connectivity.sessions.last!.accelData.keys.sorted(),id: \.self){ time in
-                                
-                                AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                                          y: .value("Acceleration", (connectivity.sessions.last!.accelData[time]!.getTotalAcceleration())))
-                                
-                                .interpolationMethod(.catmullRom)
-                                .foregroundStyle(heartGradient)
+                        if(statToShow == 1){
+                            Chart{
+                                ForEach(connectivity.sessions.last!.accelData.keys.sorted(),id: \.self){ time in
+                                    
+                                    AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
+                                              y: .value("Acceleration", (connectivity.sessions.last!.accelData[time]!.getTotalAcceleration())))
+                                    
+                                    .interpolationMethod(.catmullRom)
+                                    .foregroundStyle(speedGradient)
+                                    
+                                }
                                 
                             }
                             
-                        }
-                        .chartXAxis{
-                            AxisMarks(values: .automatic(desiredCount: 7)) {
-                                AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
+                            .chartXAxis{
+                                AxisMarks(values: .automatic(desiredCount: 7)) {
+                                    AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
+                                }
                             }
-                        }
-                        .chartYAxis {
-                            AxisMarks(position: .leading) { _ in
-                                AxisValueLabel()
+                            .chartYAxis {
+                                AxisMarks(position: .leading) { _ in
+                                    AxisValueLabel()
+                                }
                             }
+                            .responsiveFrame(widthPercentage: 75, aspectRatio: (2,1))
+                            .padding(.vertical)
                         }
-                        .responsiveFrame(widthPercentage: 75, aspectRatio: (2,1))
-                        .padding(.vertical)
-                        
                         Spacer()
                     }
                 }
