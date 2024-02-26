@@ -10,7 +10,24 @@ import CoreMotion
 import SwiftData
 
 @Model 
-class Session{
+class Session: Codable {
+    enum CodingKeys: CodingKey {
+        case date, accelData, duration
+    }
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(date, forKey: .date)
+        try container.encode(accelData, forKey: .accelData)
+        try container.encode(duration, forKey: .duration)
+    }
+    
+    required public convenience init(from decoder: Decoder) throws {
+        self.init()
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        date = try container.decode(Date.self, forKey: .date)
+        accelData = try container.decode([TimeInterval:CMAcceleration].self, forKey: .accelData)
+        duration = try container.decode(TimeInterval.self, forKey: .duration)
+    }
     var date: Date
     var accelData: [TimeInterval:CMAcceleration]
     var duration: TimeInterval
@@ -19,6 +36,4 @@ class Session{
         self.accelData = accelData
         self.duration = duration
     }
-    
 }
-
