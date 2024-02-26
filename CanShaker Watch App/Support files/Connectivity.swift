@@ -7,73 +7,60 @@
 
 import Foundation
 import WatchConnectivity
-
-final class Connectivity: NSObject, ObservableObject {
-    @Published var allSessions:[Session] = []
-    static let shared = Connectivity()
-    
-    //inizializza e controlla se l'iPhone ha un Apple Watch
-    private override init() {
-        super.init()
-#if !os(watchOS)
-        guard WCSession.isSupported() else {
-            return
-        }
+import CoreMotion
+final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
+    //se iOS perde la connessione con watchOS, riprova
+#if os(iOS)
+    public func sessionDidBecomeInactive(_ session: WCSession) { }
+    public func sessionDidDeactivate(_ session: WCSession) {
+        session.activate()
+    }
 #endif
-        
-        WCSession.default.delegate = self
-        WCSession.default.activate()
+    //variabile che iOS userà per accedere alle sessioni
+    @Published var sessions:[Session] = []
+    
+    static let shared = Connectivity()
+    override private init() {
+        super.init()
+        let session = WCSession.default
+        session.delegate = self
+        session.activate()
     }
     
-    //prova a mandare una
-    public func send(sessions: [Session]) {
-#if os(watchOS)
-        guard WCSession.default.isCompanionAppInstalled else {
-            return
-        }
-#else
-        guard WCSession.default.isWatchAppInstalled else {
-            return
-        }
-#endif
+    // funzione per mandare tutte le sessioni
+    func send(sessions: [Session]) {
+        print("Current activation state: \(WCSession.default.activationState.rawValue)")
         guard WCSession.default.activationState == .activated else {
             return
         }
-        var userInfo: [String: Session] = [:]
+        print("Has content pending: \(WCSession.default.hasContentPending.description)")
+#if os(watchOS)
+        print("Is companion app installed\(WCSession.default.isCompanionAppInstalled)")
+#endif
+        var message:[String: Any] = [:]
+        let jsonEncoder = JSONEncoder()
         sessions.forEach { session in
-            userInfo[UUID().uuidString] = session
+            message[UUID().uuidString] = session
         }
-        WCSession.default.transferUserInfo(userInfo)
-    }
-    
-    
-}
-
-extension Connectivity: WCSessionDelegate {
-    func session(
-        _ session: WCSession,
-        activationDidCompleteWith activationState: WCSessionActivationState,
-        error: Error?
-    ) {
+        let data = try! jsonEncoder.encode(sessions)
+        WCSession.default.sendMessageData(data,replyHandler: nil, errorHandler: { error in
+            print(error)
+        })
         
     }
-    func session(
-        _ session: WCSession,
-        didReceiveUserInfo userInfo: [String: Any] = [:]
-    ) {
-        print("Userinfo: \(userInfo)")
-        userInfo.forEach { (key: String, value: Any) in
-            var session = value as! Session
-            allSessions.append(session)
-        }
-    }
- 
-#if os(iOS)
-    func sessionDidBecomeInactive(_ session: WCSession) {
+    //funzione per quando ricevi sessioni da watchOS
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
+        print("Received \(messageData)")
+        let jsonDecoder = JSONDecoder()
+        
+        sessions = try! jsonDecoder.decode([Session].self, from: messageData)
+        print("Ho ricevuto \(sessions.count) sessioni")
+        
     }
     
-    func sessionDidDeactivate(_ session: WCSession) {
-        WCSession.default.activate()
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
     }
-#endif
+    
+    
 }
