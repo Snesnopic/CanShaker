@@ -22,7 +22,7 @@ struct LastStatsView: View {
                         BarMark (x:
     //                            .value("Time", time),
                             .value("Time", Date(timeIntervalSince1970: time),unit: .second),
-                                 y: .value("Acceleration", (sessions.last!.accelData[time]!.getTotalAcceleration())))
+                                 y: .value("Acceleration", (sessions.last!.accelData[time]!)))
                     }
                 }
                 .chartXAxis{

@@ -49,7 +49,9 @@ class MotionDataManager: ObservableObject {
                 newValue.z = abs(newValue.z)
                 accelData[key] = newValue
             }
-            session!.accelData = accelData
+            accelData.forEach { (key: TimeInterval, value: CMAcceleration) in
+                session!.accelData[key] = value.getTotalAcceleration()
+            }
             session!.duration = (session!.date.timeIntervalSinceNow)
             print(session!.duration)
         }
