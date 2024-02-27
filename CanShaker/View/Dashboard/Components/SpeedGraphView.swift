@@ -34,7 +34,7 @@ struct SpeedGraphView: View {
                         
                     }
                     .chartXAxis{
-                        AxisMarks(values: .automatic(desiredCount: 7)) {
+                        AxisMarks(values: .automatic(desiredCount: 3)) {
                             AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
                         }
                     }
@@ -43,7 +43,7 @@ struct SpeedGraphView: View {
                             AxisValueLabel()
                         }
                     }
-                    .chartYScale(type: .power(exponent: 0.3))
+                    .chartYScale(type: .power(exponent: 0.6))
                     .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
                     .padding(.vertical)
    
@@ -52,8 +52,8 @@ struct SpeedGraphView: View {
 
 #Preview {
     var accelData:[TimeInterval:Double] = [:]
-    for i in 1...10 {
-        accelData[Double(i)*0.3] = Double.random(in: 1...2)
+    for i in 1...50 {
+        accelData[Double(i)*0.5] = Double.random(in: 1...2)
     }
     Connectivity.shared.sessions = [
         Session(date: Date(), accelData: accelData, duration: 50.0/3.0)

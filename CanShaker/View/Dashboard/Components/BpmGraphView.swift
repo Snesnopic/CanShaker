@@ -33,7 +33,7 @@ struct BpmGraphView: View {
             
         }
         .chartXAxis{
-            AxisMarks(values: .automatic(desiredCount: 7)) {
+            AxisMarks(values: .automatic(desiredCount: 4)) {
                 AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
             }
         }
@@ -50,8 +50,8 @@ struct BpmGraphView: View {
 }
 #Preview {
     var heartRate:[TimeInterval:Double] = [:]
-    for i in 1...10 {
-        heartRate[Double(i)*0.3] = Double.random(in: 1...2)
+    for i in 1...50 {
+        heartRate[Double(i)*1] = Double.random(in: 50...140)
     }
     Connectivity.shared.sessions = [
         Session(date: Date(), duration: 50.0/3, heartRateData: heartRate)
