@@ -20,7 +20,7 @@ struct AchievementsView: View {
         filteringAchievements == 1 ? Achievement.list : (filteringAchievements == 2 ? achievedAchievements : [])
     }
     
-    @State private var filteringAchievements: Int = 0
+    @State var filteringAchievements: Int = 0
     @State var isPresented = false
     @State var selectedAchievement:Achievement? = nil
     @Namespace private var animation
@@ -174,45 +174,45 @@ struct AchievementsView: View {
                     }
                 }
                 .padding()
-                
-                HStack{
-                    VStack(alignment: .leading) {
-                        switch filteringAchievements {
-                        case 1:
-                            let achievements = Achievement.sortAlmostCompleted()
-                            displayAchievementsInThreeColumns(achievements: achievements)
-                        case 2:
-                            let achievements = Achievement.sortLastAchieved()
-                            displayAchievementsInThreeColumns(achievements: achievements)
-                        default:
-                            let achievements = Achievement.sortAlmostCompleted()
-                            displayAchievementsInThreeColumns(achievements: achievements)
+                .offset(y: 20)
+                switch filteringAchievements {
+                case 1:
+                    let achievements = Achievement.list
+                    threeColumnDisplayAchievements(achievements: achievements)
+                case 2:
+                    let achievements = Achievement.sortLastAchieved()
+                    threeColumnDisplayAchievements(achievements: achievements)
+                default:
+                    let achievements = Achievement.list
+                    threeColumnDisplayAchievements(achievements: achievements)
+                }
+            }
+            .padding()
+            .offset(y: -40)
+        }
+    }
+    
+    func threeColumnDisplayAchievements(achievements: [Achievement]) -> some View {
+        let numberOfColumns = 3
+        let numberOfRows = (achievements.count + numberOfColumns - 1) / numberOfColumns
+        return VStack {
+            ForEach(0..<numberOfRows, id: \.self) { rowIndex in
+                HStack {
+                    ForEach(0..<numberOfColumns, id: \.self) { columnIndex in
+                        let index = rowIndex * numberOfColumns + columnIndex
+                        if index < achievements.count {
+                            AchievementViewModel(achievement: achievements[index], sorting: filteringAchievements)
                         }
                     }
                 }
             }
-            .padding()
-            .offset(y: -20)
         }
     }
 }
 
 
-func displayAchievementsInThreeColumns(achievements: [Achievement]) -> some View {
-    let numberOfColumns = 3
-    let numberOfRows = (achievements.count + numberOfColumns - 1) / numberOfColumns
-    return ForEach(0..<numberOfRows) { rowIndex in
-        HStack {
-            ForEach(0..<numberOfColumns) { columnIndex in
-                let index = rowIndex * numberOfColumns + columnIndex
-                if index < achievements.count {
-                    AchievementViewModel(achievement: achievements[index])
-                }
-            }
-        }
 
-    }
-}
+
 
 
 #Preview {
