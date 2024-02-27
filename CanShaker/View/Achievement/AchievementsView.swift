@@ -12,7 +12,6 @@ import SwiftUI
 struct AchievementsView: View {
     
     let achievedAchievements = Achievement.list.filter { $0.isAchieved }
-    let groupedAchievements = stride(from: 0, to: Achievement.list.count, by: 3).map { Array(Achievement.list[$0..<min($0 + 3, Achievement.list.count)]) }
     
     
     
@@ -168,11 +167,6 @@ struct AchievementsView: View {
         }
     }
 }
-
-
-
-
-
 
 #Preview {
     AchievementsView()
