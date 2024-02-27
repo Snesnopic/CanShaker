@@ -30,9 +30,9 @@ struct AchievementDetailView: View {
 //                Text("\(achievement!.completion)")
 //                    .font(.headline)
 //                    .matchedGeometryEffect(id: achievement!.completion, in: animation)
-//                Text(achievement!.achievingDate!, style: .date)
-//                    .font(.headline)
-//                    .matchedGeometryEffect(id: achievement!.completion, in: animation)
+                Text("Date: \(achievement!.achievingDate != nil ? "\(achievement!.achievingDate!)" : "N/A")")
+                    .font(.headline)
+                    .matchedGeometryEffect(id: achievement!.achievingDate, in: animation)
             }
         }
         .onTapGesture {
