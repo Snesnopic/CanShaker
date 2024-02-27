@@ -10,7 +10,7 @@ import SwiftUI
 struct UserInfo: View {
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 25.0)
+            RoundedRectangle(cornerRadius: 15.0)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 15)
                 .foregroundStyle(Color("boxColor"))
                 .opacity(0.2)
@@ -22,10 +22,11 @@ struct UserInfo: View {
                     .opacity(0.3)
                     .responsiveFrame(widthPercentage: 18, aspectRatio: (1,1))
                 VStack{
-                    Text("Achievement complited: ").bold() + Text("10/150")
-                    Text("Streak: ").bold() + Text("3")
-                    Text("Session this week: ").bold() + Text("17")
+                    Text("**Streak**: 0") + Text("\n") +
+                    Text("**Session this week**: 1") + Text("\n") +
+                    Text("**Achievement complited**: 10/150")
                 }
+                .responsiveFrame(widthPercentage: 60)
                 .font(.callout)
                 .multilineTextAlignment(.leading)
                 Spacer()

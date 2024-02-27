@@ -20,32 +20,32 @@ struct BpmGraphView: View {
         startPoint: .top, endPoint: .bottom)
     
     var body: some View {
-              Chart{
-                   ForEach(connectivity.sessions.last!.heartRateData.keys.sorted(),id: \.self){ time in
-                       
-                      AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                                 y: .value("BPM", (connectivity.sessions.last!.heartRateData[time]!)))
-                       
-                       .interpolationMethod(.catmullRom)
-                        .foregroundStyle(heartGradient)
-                        
-                    }
-                   
-                }
-                .chartXAxis{
-                    AxisMarks(values: .automatic(desiredCount: 7)) {
-                        AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
-                    }
-                }
-                .chartYAxis {
-                   AxisMarks(position: .leading) { _ in
-                        AxisValueLabel()
-                    }
-                }
-                .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
-                .padding(.vertical)
+        Chart{
+            ForEach(connectivity.sessions.last!.heartRateData.keys.sorted(),id: \.self){ time in
+                
+                AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
+                          y: .value("BPM", (connectivity.sessions.last!.heartRateData[time]!)))
+                
+                .interpolationMethod(.catmullRom)
+                .foregroundStyle(heartGradient)
+                
+            }
             
-            
+        }
+        .chartXAxis{
+            AxisMarks(values: .automatic(desiredCount: 7)) {
+                AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
+            }
+        }
+        .chartYAxis {
+            AxisMarks(position: .leading) { _ in
+                AxisValueLabel()
+            }
+        }
+        .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
+        .padding(.vertical)
+        
+        
     }
 }
 #Preview {
