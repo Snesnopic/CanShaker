@@ -75,6 +75,9 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
         do {
             let decompressedData = try (messageData as NSData).decompressed(using: .lzma) as Data
             sessions = try! jsonDecoder.decode([Session].self, from: decompressedData)
+            sessions.sort { session1, session2 in
+                return session1.date > session2.date
+            }
             print("Ho ricevuto \(sessions.count) sessioni")
         }
         catch {

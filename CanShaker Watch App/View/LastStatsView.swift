@@ -11,7 +11,7 @@ import CoreMotion
 import SwiftData
 
 struct LastStatsView: View {
-    @Query var sessions:[Session]
+    @Query(sort: \Session.date) var sessions:[Session]
     let connectivity = Connectivity.shared
     let heartGradient = LinearGradient(
         gradient: Gradient (
