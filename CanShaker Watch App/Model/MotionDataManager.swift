@@ -52,8 +52,8 @@ class MotionDataManager: ObservableObject {
             accelData.forEach { (key: TimeInterval, value: CMAcceleration) in
                 session!.accelData[key] = value.getTotalAcceleration()
             }
-            session!.duration = (session!.date.timeIntervalSinceNow)
-            print(session!.duration)
+            session!.duration = abs((session!.date.timeIntervalSinceNow))
+            print("Session duration: \(session!.duration)")
         }
         else {
             print("Motion updates are NOT happening!")
