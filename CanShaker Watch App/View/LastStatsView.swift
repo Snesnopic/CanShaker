@@ -51,7 +51,9 @@ struct LastStatsView: View {
 
             }
         }.onAppear {
-            connectivity.send(sessions: sessions)
+            if !sessions.isEmpty {
+                connectivity.send(sessions: sessions)
+            }
         }
     }
 }
