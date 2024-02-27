@@ -16,14 +16,16 @@ class Achievement: Identifiable{
     let description: String
     let completion: Int
     let color: Color = Color.random()
+    var achievingDate: Date?
     var isAchieved: Bool
     
-    init(badge: String, title: String, subTitle: String, description: String, completion: Int, isAchieved: Bool) {
+    init(badge: String, title: String, subTitle: String, description: String, completion: Int, achievingDate: Date? = nil, isAchieved: Bool) {
         self.badge = badge
         self.title = title
         self.subTitle = subTitle
         self.description = description
         self.completion = completion
+        self.achievingDate = achievingDate
         self.isAchieved = isAchieved
     }
 }
