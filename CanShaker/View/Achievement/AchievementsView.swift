@@ -32,7 +32,7 @@ struct AchievementsView: View {
                 .ignoresSafeArea().overlay {
                     if !isPresented {
                         ScrollView {
-                            VStack() {
+                            VStack {
                                 almostThere
                                     .offset(y: 10)
                                 listOfAchievements
@@ -58,36 +58,22 @@ struct AchievementsView: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(Color("boxColor"))
-                    .frame(width: 360, height: 200)
+                    .frame(width: 360, height: 180)
                     .padding()
                 Text("Almost There!")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                     .padding()
-                    .padding(.bottom, 145)
+                    .padding(.bottom, 130)
                     .padding(.trailing, 195)
             }
             
             HStack{
-                ForEach(Achievement.sortAlmostCompleted()) { achievement in
+                ForEach(Achievement.sortAlmostCompleted(prefixInt: 3)) { achievement in
                     ZStack{
-                        VStack {
-                            Circle()
-                                .frame(width: 80, height: 80)
-                                .foregroundStyle(.black)
-                                .matchedGeometryEffect(id: achievement.id, in: animation)
-                            Text(achievement.title)
-                                .font(.title3)
-                                .foregroundStyle(.white)
-                            
-                            Text(achievement.subTitle)
-                                .font(.subheadline)
-                                .foregroundStyle(.white)
-                            
-                        }
-                        .padding(.top ,30)
-                        .padding()
+                        AchievementViewModel(achievement: achievement, sorting: -1)
+                        .padding(.top, 30)
                         .onTapGesture {
                             selectedAchievement = achievement
                             withAnimation {
@@ -99,44 +85,12 @@ struct AchievementsView: View {
                             .font(.title2)
                             .foregroundStyle(.white)
                             .fontWeight(.bold)
-                            .offset(y: -10)
+                            .offset(y: -7)
                     }
                     .padding(.top, 10)
                 }
             }
             .padding()
-        }
-    }
-    
-    var recentlyCompleted: some View {
-        
-        ZStack(alignment: .leading) {
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundStyle(.white)
-                .padding()
-            Text("Recently achieved")
-                .font(.title2)
-                .fontWeight(.semibold)
-                .offset(y: -105)
-                .padding()
-            //TODO: It probably works fine while we will update .isAchieved, but idk
-            if(!achievedAchievements.isEmpty) {
-                HStack{
-                    ForEach(achievedAchievements){ achievement in
-                        VStack() {
-                            Circle()
-                                .frame(width: 80, height: 80)
-                            Text(achievement.title)
-                                .font(.title3)
-                            Text(achievement.subTitle)
-                                .font(.subheadline)
-                            
-                        }
-                        .padding()
-                    }
-                }
-                .padding()
-            }
         }
     }
     
@@ -146,7 +100,7 @@ struct AchievementsView: View {
             
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(Color("boxColor"))
-                .frame(width: 360, height: .infinity)
+                .frame(width: .infinity, height: .infinity)
                 .padding()
             VStack{
                 HStack{
@@ -167,6 +121,7 @@ struct AchievementsView: View {
                         Picker(selection: $filteringAchievements, label: Text("Picker")) {
                             Text("All").tag(1)
                             Text("Achieved").tag(2)
+                            Text("Progress").tag(3)
                         }
                         .tint(.white)
                         .padding(.trailing)
@@ -182,6 +137,10 @@ struct AchievementsView: View {
                 case 2:
                     let achievements = Achievement.sortLastAchieved()
                     threeColumnDisplayAchievements(achievements: achievements)
+                case 3:
+                    let achievements = Achievement.sortAlmostCompleted(prefixInt: nil)
+                    threeColumnDisplayAchievements(achievements: achievements)
+                    
                 default:
                     let achievements = Achievement.list
                     threeColumnDisplayAchievements(achievements: achievements)
@@ -195,7 +154,7 @@ struct AchievementsView: View {
     func threeColumnDisplayAchievements(achievements: [Achievement]) -> some View {
         let numberOfColumns = 3
         let numberOfRows = (achievements.count + numberOfColumns - 1) / numberOfColumns
-        return VStack {
+        return VStack(alignment: .leading) {
             ForEach(0..<numberOfRows, id: \.self) { rowIndex in
                 HStack {
                     ForEach(0..<numberOfColumns, id: \.self) { columnIndex in

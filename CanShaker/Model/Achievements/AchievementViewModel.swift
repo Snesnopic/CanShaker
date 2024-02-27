@@ -12,24 +12,32 @@ struct AchievementViewModel: View {
     let sorting: Int
     
     var body: some View {
-        VStack {
+        VStack() {
             Circle()
                 .frame(width: 80, height: 80)
                 .foregroundStyle(.black)
             Text(achievement.title)
                 .font(.title3)
                 .fontWeight(.semibold)
-            Text(achievement.subTitle)
-                .font(.subheadline)
-                .fontWeight(.semibold)
-            Text(sorting == 1 ? "Completion: \(achievement.completion)%" : "Date: \(achievement.achievingDate != nil ? "\(achievement.achievingDate!)" : "N/A")")
-                .font(.caption)
-                .fontWeight(.bold)
+            
+            switch sorting {
+            case 1:
+                Text("Progress")
+                Text("\(achievement.completion)%")
+                
+            case 2:
+                Text("Date: \(achievement.achievingDate != nil ? "\(achievement.achievingDate!)" : "N/A")")
+            case 3:
+                Text("Progress")
+                Text("\(achievement.completion)%")
+            default: Text("")
+            }
+            
         }
         .padding()
     }
 }
 
 #Preview {
-    AchievementViewModel(achievement: Achievement(badge: "", title: "title1", subTitle: "subtitle1", description: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true), sorting: 1)
+    AchievementViewModel(achievement: Achievement(badge: "", title: "title1", subTitle: "subtitle1", description: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true), sorting: 3)
 }
