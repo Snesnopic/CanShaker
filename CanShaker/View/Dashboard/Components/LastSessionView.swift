@@ -12,11 +12,14 @@ struct LastSessionView: View {
     @State private var statToShow = 0
     @State private var averageBpm = 0.0
     @State private var averageSpd = 0.0
+    @State private var calories = 0
+    @State private var time: String = "00"
+    
     var connectivity = Connectivity.shared
     
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 25.0)
+            RoundedRectangle(cornerRadius: 15.0)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 37)
                 .foregroundStyle(.box)
                 .opacity(0.3)
@@ -52,13 +55,15 @@ struct LastSessionView: View {
                     HStack{
                         //TODO: add and align text
                         VStack{
-                            Text("**Average BPM:** ") + Text(String(averageBpm))
+                            Text("**Average BPM:** ") + Text(String(averageBpm)) + Text("\n") +
                             Text("**Average speed:** ") + Text(String(averageSpd))
                         }
+                        
                         Spacer()
                         VStack{
-                            Text("**Calories:** ")
-                            Text("**Time:** ")
+                            Text("**Calories:** ") + Text(String(calories)) +
+                            Text("\n") +
+                            Text("**Time:** ")  + Text(String(time))
                         }
                         Spacer()
                     }
@@ -66,6 +71,8 @@ struct LastSessionView: View {
                     .onAppear{
                         averageBpm = getAverage(dataset: connectivity.sessions.last?.heartRateData.values)
                         averageSpd = getAverage(dataset: connectivity.sessions.last?.accelData.values)
+                        calories = Int(connectivity.sessions.last!.calories)
+                        time = doubleToTime(doubleNumber: &connectivity.sessions.last!.duration)
                     }
                     
                 }
@@ -86,7 +93,6 @@ struct LastSessionView: View {
     
     func getAverage(dataset: Optional<Dictionary<Double, Double>.Values>) -> Double{
         var average = 0.0
-        
         
         if(dataset?.isEmpty == false){
             var temp = 0.0
