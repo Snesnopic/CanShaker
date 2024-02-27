@@ -13,7 +13,8 @@ struct LastSessionView: View {
     @State private var averageBpm = 0.0
     @State private var averageSpd = 0.0
     @State private var calories = 0
-    @State private var time = 0.0
+    @State private var time: String = "00"
+    
     var connectivity = Connectivity.shared
     
     var body: some View {
@@ -71,7 +72,7 @@ struct LastSessionView: View {
                         averageBpm = getAverage(dataset: connectivity.sessions.last?.heartRateData.values)
                         averageSpd = getAverage(dataset: connectivity.sessions.last?.accelData.values)
                         calories = Int(connectivity.sessions.last!.calories)
-                        time = round(connectivity.sessions.last!.duration)
+                        time = doubleToTime(doubleNumber: &connectivity.sessions.last!.duration)
                     }
                     
                 }
