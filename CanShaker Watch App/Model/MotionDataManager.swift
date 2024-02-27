@@ -85,16 +85,28 @@ class MotionDataManager: ObservableObject {
                     return
                 }
                 print("Statistics count: \(workout!.allStatistics.count)")
-                workout!.allStatistics.forEach { (key: HKQuantityType, value: HKStatistics) in
-                    print("Key: \(key.description)")
-                    if let quantity = value.maximumQuantity() {
-                           let unit = key.getAssociatedUnit()
-                           let valueInUnit = quantity.doubleValue(for: unit)
-                           print("Type: \(key.identifier), Value: \(valueInUnit) \(unit)")
-                       }
-//                    if let quantity = value.
-                }
+                let calories = workout!.totalEnergyBurned
+                print("Calories: \(calories!.doubleValue(for: HKUnit.smallCalorie()))")
+                self.session!.calories = calories!.doubleValue(for: HKUnit.smallCalorie())
                 
+                let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate)!
+                let predicate = HKQuery.predicateForSamples(withStart: workout!.startDate, end: workout!.endDate, options: .strictStartDate)
+                let query = HKSampleQuery(sampleType: heartRateType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: .none) { (query, results, error) in
+                    guard let samples = results as? [HKQuantitySample], error == nil else {
+                        print("Error: \(error!.localizedDescription)")
+                        return
+                    }
+                    
+                    for sample in samples {
+                        let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
+                        let value = sample.quantity.doubleValue(for: heartRateUnit)
+                        let date = sample.startDate
+                        print("Heart Rate: \(value) bpm at \(date)")
+                        let dateAsTimeInterval = date.timeIntervalSince(self.workoutSession!.startDate!)
+                        self.session!.heartRateData[dateAsTimeInterval] = value
+                    }
+                }
+                self.healthStore.execute(query)
             })
         })
         if motion.isDeviceMotionActive {
