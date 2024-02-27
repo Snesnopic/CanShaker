@@ -10,6 +10,8 @@ import Charts
 import CoreMotion
 struct LastSessionView: View {
     @State private var statToShow = 0
+    @State private var averageBpm = 0.0
+    @State private var averageSpd = 0.0
     var connectivity = Connectivity.shared
     
     var body: some View {
@@ -35,30 +37,70 @@ struct LastSessionView: View {
                 }
                 .padding(.vertical, 5)
                 
-                // CHART
-                HStack{
-                    if !connectivity.sessions.isEmpty {
+                // CHART + STATS
+                if !connectivity.sessions.isEmpty {
+                    HStack{
                         if(statToShow == 1){
                             SpeedGraphView()
                         }else{
                             BpmGraphView()
                         }
                         Spacer()
+                        
                     }
+                    
+                    HStack{
+                        //TODO: add and align text
+                        VStack{
+                            Text("**Average BPM:** ") + Text(String(averageBpm))
+                            Text("**Average speed:** ") + Text(String(averageSpd))
+                        }
+                        Spacer()
+                        VStack{
+                            Text("**Calories:** ")
+                            Text("**Time:** ")
+                        }
+                        Spacer()
+                    }
+                    .font(.caption)
+                    .onAppear{
+                        averageBpm = getAverage(dataset: connectivity.sessions.last?.heartRateData.values)
+                        averageSpd = getAverage(dataset: connectivity.sessions.last?.accelData.values)
+                    }
+                    
                 }
-                
-                // STATS RESUMEE
-                HStack{
-                    //TODO: add text
-                }
-                
                 Spacer()
             }
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
             
         }
+        
         .preferredColorScheme(.dark)
     }
+    
+    
+    
+    
+    
+    
+    
+    func getAverage(dataset: Optional<Dictionary<Double, Double>.Values>) -> Double{
+        var average = 0.0
+        
+        
+        if(dataset?.isEmpty == false){
+            var temp = 0.0
+            for data in dataset! {
+                average += data
+                temp += 1
+            }
+            
+            average = average/temp
+        }
+        
+        return round(average)
+    }
+    
 }
 
 
@@ -71,7 +113,7 @@ struct LastSessionView: View {
         heartRate[Double(i)*0.3] = Double.random(in: 1...2)
         accelData[Double(i)*0.3] = Double.random(in: 1...2)
     }
-
+    
     Connectivity.shared.sessions = [
         Session(date: Date(), accelData: accelData, duration: 50.0/3.0, heartRateData: heartRate)
     ]
