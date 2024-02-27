@@ -15,8 +15,10 @@ struct AdviceDetailView: View {
                 .ignoresSafeArea()
             
             VStack{
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                Text(adv.description)
+                    .padding()
                 
+                Spacer()
             }
         }
         .preferredColorScheme(.dark)

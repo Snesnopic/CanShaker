@@ -7,23 +7,20 @@
 
 import SwiftUI
 import Charts
+import CoreMotion
 struct LastSessionView: View {
     @State private var statToShow = 0
-    let heartGradient = LinearGradient(
-        gradient: Gradient (
-            colors: [ Color("heartColor").opacity(0.75),
-                      Color("heartColor")
-                .opacity(0.25),
-                      Color.clear ]
-        ),
-        startPoint: .top, endPoint: .bottom)
+    var connectivity = Connectivity.shared
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 25.0)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 37)
                 .foregroundStyle(.box)
                 .opacity(0.3)
+            
             VStack{
+                
                 // PICKER
                 HStack{
                     Picker("", selection: $statToShow){
@@ -38,35 +35,16 @@ struct LastSessionView: View {
                 }
                 .padding(.vertical, 5)
                 
-                //CHART
-                //TODO: filter based on data to show
+                // CHART
                 HStack{
-                    Chart{
-                        ForEach(Session.list[0].bpmData){ data in
-                            
-                            AreaMark(x: .value("Time", data.time),
-                                     y: .value("BPM", data.heartRate))
-                            
-                            .interpolationMethod(.catmullRom)
-                            .foregroundStyle(heartGradient)
-                            
+                    if !connectivity.sessions.isEmpty {
+                        if(statToShow == 1){
+                            SpeedGraphView()
+                        }else{
+                            BpmGraphView()
                         }
-                        
+                        Spacer()
                     }
-                    .chartXAxis{
-                        AxisMarks(values: .automatic(desiredCount: 7)) { _ in
-                            AxisValueLabel()
-                        }
-                    }
-                    .chartYAxis {
-                        AxisMarks(position: .leading) { _ in
-                            AxisValueLabel()
-                        }
-                    }
-                    .responsiveFrame(widthPercentage: 75, aspectRatio: (2,1))
-                    .padding(.vertical)
-                    
-                    Spacer()
                 }
                 
                 // STATS RESUMEE
@@ -83,6 +61,21 @@ struct LastSessionView: View {
     }
 }
 
+
+
+
 #Preview {
-    LastSessionView()
+    var accelData:[TimeInterval:Double] = [:]
+    var heartRate:[TimeInterval:Double] = [:]
+    for i in 1...10 {
+        heartRate[Double(i)*0.3] = Double.random(in: 1...2)
+        accelData[Double(i)*0.3] = Double.random(in: 1...2)
+    }
+
+    Connectivity.shared.sessions = [
+        Session(date: Date(), accelData: accelData, duration: 50.0/3.0, heartRateData: heartRate)
+    ]
+    
+    
+    return LastSessionView()
 }

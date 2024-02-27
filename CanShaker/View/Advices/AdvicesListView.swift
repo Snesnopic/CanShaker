@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AdvicesListView: View {
-    @State var advCategory: String
+    @State var advCategory: adviceCategory
     
     var body: some View {
         NavigationStack{
@@ -20,32 +20,38 @@ struct AdvicesListView: View {
                 //TODO: filter list based on advCategory
                 List{
                     ForEach(Advice.list){ adv in
-                        NavigationLink(destination: AdviceDetailView(adv: adv), label: {
-                            VStack{
-                                Text(adv.title)
-                                    .font(.title2)
-                                    .bold() +
-                                Text("\n" + adv.description)
-                                    .font(.headline)
-                            }
-                            
-                        })
-                        .listRowBackground(Color.clear)
+                        if(adv.category == advCategory){
+                            NavigationLink(destination: AdviceDetailView(adv: adv), label: {
+                                VStack{
+                                    Text(adv.title)
+                                        .font(.title2)
+                                        .bold() +
+                                    Text("\n" + adv.description)
+                                        .font(.headline)
+                                }
+                                .responsiveFrame(heightPercentage: 10)
+                                
+                            })
+                            .listRowBackground(Color.clear)
+                        }
                     }
                 }
-               
                 .listStyle(.plain)
                 
             }
             .preferredColorScheme(.dark)
-            .navigationTitle(advCategory)
+            .navigationTitle(advCategory.str)
             
         }
         
         
     }
+    
+//    func adviceFilter(adv: adviceCategory) -> Advice {
+//        if(adv == sel)
+//    }
 }
 
 #Preview {
-    AdvicesListView(advCategory: "Hygiene")
+    AdvicesListView(advCategory: .hygiene)
 }

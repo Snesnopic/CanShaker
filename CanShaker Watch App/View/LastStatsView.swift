@@ -12,6 +12,7 @@ import SwiftData
 
 struct LastStatsView: View {
     @Query var sessions:[Session]
+    let connectivity = Connectivity.shared
     var body: some View {
         NavigationStack {
             if !sessions.isEmpty {
@@ -21,7 +22,7 @@ struct LastStatsView: View {
                         BarMark (x:
     //                            .value("Time", time),
                             .value("Time", Date(timeIntervalSince1970: time),unit: .second),
-                                 y: .value("Acceleration", sessions.last!.accelData[time]!.getTotalAcceleration()))
+                                 y: .value("Acceleration", (sessions.last!.accelData[time]!)))
                     }
                 }
                 .chartXAxis{
@@ -49,6 +50,8 @@ struct LastStatsView: View {
                     .navigationTitle("Last session")
 
             }
+        }.onAppear {
+            connectivity.send(sessions: sessions)
         }
     }
 }

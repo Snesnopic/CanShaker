@@ -1,48 +1,46 @@
 //
 //  Session.swift
-//  CanShaker
+//  CanShaker Watch App
 //
-//  Created by Giuseppe Casillo on 25/02/24.
+//  Created by Giuseppe Francione on 23/02/24.
 //
 
 import Foundation
+import CoreMotion
+import SwiftData
 
-class Bpm: Identifiable {
-    let id: UUID = UUID()
-    let time: Double
-    let heartRate: Double
-    
-    init(time: Double, heartRate: Double) {
-        self.time = time
-        self.heartRate = heartRate
+class Session: Codable {
+    enum CodingKeys: CodingKey {
+        case date, accelData, duration, heartRateData, calories
     }
-}
-class Session: Identifiable {
-    let id: UUID = UUID()
-    let averageSpeed: Double
-    let averageBPM: Double
-    let calories: Double
-    let bpmData: [Bpm]
-    let speedData: [(Double, Double)]
-    let time: Double
-    let date: Date
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(date, forKey: .date)
+        try container.encode(accelData, forKey: .accelData)
+        try container.encode(duration, forKey: .duration)
+        try container.encode(heartRateData, forKey: .heartRateData)
+        try container.encode(calories, forKey: .calories)
+    }
     
-    init(averageSpeed: Double, averageBPM: Double, calories: Double, bpmData: [Bpm], speedData: [(Double, Double)], time: Double, date: Date) {
-        self.averageSpeed = averageSpeed
-        self.averageBPM = averageBPM
-        self.calories = calories
-        self.bpmData = bpmData
-        self.speedData = speedData
-        self.time = time
+    required public convenience init(from decoder: Decoder) throws {
+        self.init()
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        date = try container.decode(Date.self, forKey: .date)
+        accelData = try container.decode([TimeInterval:Double].self, forKey: .accelData)
+        duration = try container.decode(TimeInterval.self, forKey: .duration)
+        heartRateData = try container.decode([TimeInterval:Double].self, forKey: .heartRateData)
+        calories = try container.decode(Double.self, forKey: .calories)
+    }
+    var date: Date
+    var accelData: [TimeInterval:Double]
+    var duration: TimeInterval
+    var heartRateData: [TimeInterval:Double]
+    var calories: Double
+    init(date: Date = Date(), accelData: [TimeInterval : Double] = [:], duration: TimeInterval = 0.0, heartRateData: [TimeInterval : Double] = [:], calories: Double = 0.0) {
         self.date = date
+        self.accelData = accelData
+        self.duration = duration
+        self.heartRateData = heartRateData
+        self.calories = calories
     }
-}
-
-
-//TODO: to delete after implementing SwiftData
-extension Session {
-    static let list = [
-        Session(averageSpeed: 13, averageBPM: 90, calories: 999, bpmData: [Bpm(time: 0, heartRate: 65), Bpm(time: 0.5, heartRate: 75), Bpm(time: 1, heartRate: 95), Bpm(time: 1.5, heartRate: 100), Bpm(time: 2, heartRate: 90), Bpm(time: 2.5, heartRate: 75), Bpm(time: 3, heartRate: 85)],
-                speedData: [(12, 0), (10, 0.5), (12, 1), (12, 1.5), (11, 2), (10, 2.5), (6, 3), (4, 3.5)], time: 3, date: .now)
-    ]
 }

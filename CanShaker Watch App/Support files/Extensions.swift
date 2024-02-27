@@ -8,6 +8,7 @@
 import Foundation
 import CoreMotion
 import SwiftUI
+import HealthKit
 
 extension Color {
     static func random() -> Color {
@@ -87,4 +88,15 @@ extension CMAcceleration: Codable {
         return totalAccel
     }
     
+}
+
+extension HKQuantityType {
+    func getAssociatedUnit() -> HKUnit {
+        if self.description == "HKQuantityTypeIdentifierHeartRate" {
+            return HKUnit.init(from: "count/s")
+        }
+        else {
+            return HKUnit.smallCalorie()
+        }
+    }
 }
