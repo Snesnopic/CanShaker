@@ -9,7 +9,7 @@ import SwiftUI
 import Charts
 import CoreMotion
 struct LastSessionView: View {
-    @State private var statToShow = 1
+    @State private var statToShow = 0
     var connectivity = Connectivity.shared
     
     var body: some View {
@@ -66,11 +66,16 @@ struct LastSessionView: View {
 
 #Preview {
     var accelData:[TimeInterval:Double] = [:]
+    var heartRate:[TimeInterval:Double] = [:]
     for i in 1...10 {
+        heartRate[Double(i)*0.3] = Double.random(in: 1...2)
         accelData[Double(i)*0.3] = Double.random(in: 1...2)
     }
+
     Connectivity.shared.sessions = [
-        Session(date: Date(), accelData: accelData, duration: 50.0/3.0)
+        Session(date: Date(), accelData: accelData, duration: 50.0/3.0, heartRateData: heartRate)
     ]
+    
+    
     return LastSessionView()
 }
