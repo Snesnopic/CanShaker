@@ -26,7 +26,6 @@ class MotionDataManager: ObservableObject {
         //HealthKit part
         healthStore = HKHealthStore()
         let typesToShare:Set = [HKQuantityType.workoutType()]
-        print("Types to share: \(typesToShare)")
         let typesToRead:Set = [HKQuantityType.quantityType(forIdentifier: .heartRate)!,.quantityType(forIdentifier: .activeEnergyBurned)!]
         healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) {(success,error) in
             guard success else {
