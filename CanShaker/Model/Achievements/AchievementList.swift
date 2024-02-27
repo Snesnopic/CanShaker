@@ -18,15 +18,21 @@ extension Achievement {
         Achievement(badge: "", title: "title7", subTitle: "subtitle7", description: "Something something", completion: 99, isAchieved: false)
     ]
     
-    static func sortAlmostCompleted() -> [Achievement] {
+    static func sortAlmostCompleted(prefixInt: Int!) -> [Achievement] {
         let sortedAchievements = list.sorted { $0.completion > $1.completion }
         
-        let almostCompleted = sortedAchievements.prefix(3)
-        return Array(almostCompleted)
+        if (prefixInt == nil) {
+            return sortedAchievements
+        } else {
+            let almostCompleted = sortedAchievements.prefix(3)
+            return Array(almostCompleted)
+        }
     }
     
     static func sortLastAchieved() -> [Achievement] {
         let sortedAchievements = list.sorted { $0.id.uuidString > $1.id.uuidString }
         return sortedAchievements
     }
+    
+    
 }
