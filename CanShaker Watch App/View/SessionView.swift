@@ -51,7 +51,6 @@ struct SessionView: View {
                             .padding()
                         Text("Start")
                             .bold()
-                            .foregroundStyle(.background)
                             .font(.title)
                     }
                 })
@@ -78,7 +77,7 @@ struct SessionView: View {
                         .rotationEffect(.degrees(sprayCanRotationAmount))
                         .onAppear{
                             withAnimation(.easeInOut(duration: 0.3).repeatForever(autoreverses: true)) {
-                                sprayCanRotationAmount += 20
+                                sprayCanRotationAmount += 30
                                 sprayCanTranslationAmount += 20
                             }
                         }
