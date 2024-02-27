@@ -27,7 +27,19 @@ class MotionDataManager: ObservableObject {
         //HealthKit part
         healthStore = HKHealthStore()
         let typesToShare:Set = [HKQuantityType.workoutType()]
-        print("Types to share: \(typesToShare)")
+        let typesToRead:Set = [HKQuantityType.quantityType(forIdentifier: .heartRate)!,.quantityType(forIdentifier: .activeEnergyBurned)!]
+        healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) {(success,error) in
+            guard success else {
+                print("Errore alla richiesta di autorizzazioni: \(error!.localizedDescription)")
+                return
+            }
+        }
+    }
+    func startQueuedUpdates() {
+        print("Prima di startDeviceMotionUpdates")
+        session = Session()
+        
+        let typesToShare:Set = [HKQuantityType.workoutType()]
         let typesToRead:Set = [HKQuantityType.quantityType(forIdentifier: .heartRate)!,.quantityType(forIdentifier: .activeEnergyBurned)!]
         healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) {(success,error) in
             guard success else {
@@ -48,10 +60,6 @@ class MotionDataManager: ObservableObject {
             return
         }
         
-    }
-    func startQueuedUpdates() {
-        print("Prima di startDeviceMotionUpdates")
-        session = Session()
         workoutSession!.startActivity(with: Date())
         workoutBuilder!.beginCollection(withStart: Date(), completion: { (success,error) in
             guard success else {

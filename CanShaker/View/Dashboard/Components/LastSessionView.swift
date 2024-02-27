@@ -55,8 +55,8 @@ struct LastSessionView: View {
                     HStack{
                         //TODO: add and align text
                         VStack{
-                            Text("**Average BPM:** ") + Text(String(averageBpm)) + Text("\n") +
-                            Text("**Average speed:** ") + Text(String(averageSpd))
+                            Text("**Average BPM:** ") + Text(String(format: "%.1f", averageBpm)) + Text("\n") +
+                            Text("**Average speed:** ") + Text(String(format: "%.1f", averageSpd))
                         }
                         
                         Spacer()
@@ -104,7 +104,7 @@ struct LastSessionView: View {
             average = average/temp
         }
         
-        return round(average)
+        return average
     }
     
 }
@@ -116,8 +116,8 @@ struct LastSessionView: View {
     var accelData:[TimeInterval:Double] = [:]
     var heartRate:[TimeInterval:Double] = [:]
     for i in 1...10 {
-        heartRate[Double(i)*0.3] = Double.random(in: 1...2)
-        accelData[Double(i)*0.3] = Double.random(in: 1...2)
+        heartRate[Double(i)*0.3] = Double.random(in: 50...140)
+        accelData[Double(i)*0.3] = Double.random(in: 1...6)
     }
     
     Connectivity.shared.sessions = [
