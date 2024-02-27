@@ -24,6 +24,15 @@ struct AchievementDetailView: View {
                 Text(achievement!.subTitle)
                     .font(.title2)
                     .matchedGeometryEffect(id: achievement!.subTitle, in: animation)
+                Text(achievement!.description)
+                    .font(.title3)
+                    .matchedGeometryEffect(id: achievement!.description, in: animation)
+//                Text("\(achievement!.completion)")
+//                    .font(.headline)
+//                    .matchedGeometryEffect(id: achievement!.completion, in: animation)
+//                Text(achievement!.achievingDate!, style: .date)
+//                    .font(.headline)
+//                    .matchedGeometryEffect(id: achievement!.completion, in: animation)
             }
         }
         .onTapGesture {

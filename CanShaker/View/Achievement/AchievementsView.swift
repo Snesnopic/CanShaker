@@ -11,17 +11,9 @@ import SwiftUI
 
 struct AchievementsView: View {
     
-    let achievedAchievements = Achievement.list.filter { $0.isAchieved }
-    
-    
-    
-    var filteredAchievements: [Achievement] {
-        filteringAchievements == 1 ? Achievement.list : (filteringAchievements == 2 ? achievedAchievements : [])
-    }
-    
     @State var filteringAchievements: Int = 0
     @State var isPresented = false
-    @State var selectedAchievement:Achievement? = nil
+    @State var selectedAchievement: Achievement? = nil
     @Namespace private var animation
     var body: some View {
         
@@ -71,14 +63,15 @@ struct AchievementsView: View {
             HStack{
                 ForEach(Achievement.sortAlmostCompleted(prefixInt: 3)) { achievement in
                     ZStack{
+                        
                         AchievementViewModel(achievement: achievement, sorting: -1)
-                        .padding(.top, 30)
-                        .onTapGesture {
-                            selectedAchievement = achievement
-                            withAnimation {
-                                isPresented = true
+                            .padding(.top, 30)
+                            .onTapGesture {
+                                selectedAchievement = achievement
+                                withAnimation {
+                                    isPresented = true
+                                }
                             }
-                        }
                         
                         Text("\(achievement.completion)%")
                             .font(.title2)
