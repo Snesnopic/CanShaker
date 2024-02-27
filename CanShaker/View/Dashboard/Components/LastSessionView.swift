@@ -12,13 +12,13 @@ struct LastSessionView: View {
     @State private var statToShow = 0
     @State private var averageBpm = 0.0
     @State private var averageSpd = 0.0
-    @State private var calories = 0.0
+    @State private var calories = 0
     @State private var time = 0.0
     var connectivity = Connectivity.shared
     
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 25.0)
+            RoundedRectangle(cornerRadius: 15.0)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 37)
                 .foregroundStyle(.box)
                 .opacity(0.3)
@@ -70,7 +70,7 @@ struct LastSessionView: View {
                     .onAppear{
                         averageBpm = getAverage(dataset: connectivity.sessions.last?.heartRateData.values)
                         averageSpd = getAverage(dataset: connectivity.sessions.last?.accelData.values)
-                        calories = connectivity.sessions.last!.calories
+                        calories = Int(connectivity.sessions.last!.calories)
                         time = round(connectivity.sessions.last!.duration)
                     }
                     
