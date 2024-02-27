@@ -45,8 +45,8 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
         let data = try! jsonEncoder.encode(sessions)
         print("Data to send before compression: \(data)")
         do {
-            let compressedData = try (data as NSData).compressed(using: .lzma) as Data
-            print("Data to send after compression: \(compressedData)")
+//            let compressedData = try (data as NSData).compressed(using: .lzma) as Data
+//            print("Data to send after compression: \(compressedData)")
             WCSession.default.sendMessageData(data,replyHandler: nil, errorHandler: { error in
                 print(error)
             })
@@ -60,8 +60,8 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
         
         let jsonDecoder = JSONDecoder()
         do {
-            let decompressedData = try (messageData as NSData).decompressed(using: .lzma) as Data
-            sessions = try! jsonDecoder.decode([Session].self, from: decompressedData)
+            //let decompressedData = try (messageData as NSData).decompressed(using: .lzma) as Data
+            sessions = try! jsonDecoder.decode([Session].self, from: messageData)
             print("Ho ricevuto \(sessions.count) sessioni")
         }
         catch {
