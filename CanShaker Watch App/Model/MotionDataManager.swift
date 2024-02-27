@@ -24,11 +24,10 @@ class MotionDataManager: ObservableObject {
         session = Session()
         motion.startDeviceMotionUpdates(to: queue, withHandler: {
             motion, error in
-            print("Qua ci arrivo?")
             if motion != nil {
                 let currentUpdateTimeStamp = self.motion.deviceMotionUpdateInterval * Double(self.accelData.count)
                 self.accelData[currentUpdateTimeStamp] = motion!.userAcceleration
-                print("I have appended \(motion!.userAcceleration), now the array has \(self.accelData.count) elements")
+                print("The array of movements now has \(self.accelData.count) elements")
             }
             if error != nil {
                 print("ERROR: \(error!.localizedDescription)")
