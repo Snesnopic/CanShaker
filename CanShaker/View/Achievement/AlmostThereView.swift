@@ -1,48 +1,19 @@
 //
-//  AchievementsView.swift
+//  AlmostThereView.swift
 //  CanShaker
 //
-//  Created by Giuseppe Francione on 16/02/24.
+//  Created by Davide Castaldi on 27/02/24.
 //
 
 import SwiftUI
 
-
-
-struct AchievementsView: View {
+struct AlmostThereView: View {
     
-    @State var filteringAchievements: Int = 0
     @State var isPresented = false
     @State var selectedAchievement: Achievement? = nil
     @Namespace private var animation
-    var body: some View {
-        
-        NavigationStack {
-            
-            LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
-                .ignoresSafeArea().overlay {
-                    if !isPresented {
-                        ScrollView {
-                            VStack {
-                                almostThere
-                                    .offset(y: 10)
-                                AllAchievementsView()
-                                
-                            }
-                        }
-                    }
-//                    else {
-//                        AchievementDetailView(animation: animation, achievement: $selectedAchievement, isPresented: $isPresented)
-//                    }
-                    
-                }
-                .preferredColorScheme(.dark)
-                .navigationTitle("Achievements")
-        }
-        
-    }
     
-    var almostThere: some View {
+    var body: some View {
         
         //TODO: The way it shows data is a placeholder
         ZStack(alignment: .leading){
@@ -88,5 +59,5 @@ struct AchievementsView: View {
 }
 
 #Preview {
-    AchievementsView()
+    AlmostThereView()
 }

@@ -10,27 +10,45 @@ import SwiftUI
 struct AchievementViewModel: View {
     let achievement: Achievement
     let sorting: Int
+    @State var filteringAchievements: Int = 0
+    @State var isPresented = false
+    @State var selectedAchievement: Achievement?
+    @Namespace private var animation
+    @State private var isDetailPresented = false
     
     var body: some View {
-        VStack() {
-            Circle()
-                .frame(width: 80, height: 80)
-                .foregroundStyle(.black)
-            Text(achievement.title)
-                .font(.title3)
-                .fontWeight(.semibold)
+        NavigationStack{
             
-            switch sorting {
-            case 1:
-                Text("Progress")
-                Text("\(achievement.completion)%")
+            VStack() {
+                Button(action: {
+                    isDetailPresented.toggle()
+                    selectedAchievement = achievement
+                }, label: {
+                    Circle()
+                        .frame(width: 80, height: 80)
+                        .foregroundStyle(.black)
+                })
                 
-            case 2:
-                Text("Date: \(achievement.achievingDate != nil ? "\(achievement.achievingDate!)" : "N/A")")
-            case 3:
-                Text("Progress")
-                Text("\(achievement.completion)%")
-            default: Text("")
+                Text(achievement.title)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                
+                switch sorting {
+                case 1:
+                    Text("Progress")
+                    Text("\(achievement.completion)%")
+                    
+                case 2:
+                    Text("Date: \(achievement.achievingDate != nil ? "\(achievement.achievingDate!)" : "N/A")")
+                case 3:
+                    Text("Progress")
+                    Text("\(achievement.completion)%")
+                default: Text("")
+                }
+                
+            }
+            .sheet(isPresented: $isDetailPresented) {
+                AchievementDetailView(achievement: $selectedAchievement)
             }
             
         }
