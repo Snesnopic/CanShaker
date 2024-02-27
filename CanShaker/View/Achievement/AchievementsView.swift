@@ -7,11 +7,20 @@
 
 import SwiftUI
 
+
+
 struct AchievementsView: View {
     
     let achievedAchievements = Achievement.list.filter { $0.isAchieved }
     let groupedAchievements = stride(from: 0, to: Achievement.list.count, by: 3).map { Array(Achievement.list[$0..<min($0 + 3, Achievement.list.count)]) }
     
+    
+    
+    var filteredAchievements: [Achievement] {
+        filteringAchievements == 1 ? Achievement.list : (filteringAchievements == 2 ? achievedAchievements : [])
+    }
+    
+    @State private var filteringAchievements: Int = 0
     @State var isPresented = false
     @State var selectedAchievement:Achievement? = nil
     @Namespace private var animation
@@ -21,23 +30,23 @@ struct AchievementsView: View {
             
             LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea().overlay {
-                if !isPresented {
-                    ScrollView {
-                        VStack() {
-                            almostThere
-                                .offset(y: 10)
-                            listOfAchievements
+                    if !isPresented {
+                        ScrollView {
+                            VStack() {
+                                almostThere
+                                    .offset(y: 10)
+                                listOfAchievements
                                 
+                            }
                         }
                     }
+                    else {
+                        AchievementDetailView(animation: animation, achievement: $selectedAchievement, isPresented: $isPresented)
+                    }
+                    
                 }
-                else {
-                    AchievementDetailView(animation: animation, achievement: $selectedAchievement, isPresented: $isPresented)
-                }
-                
-            }
-            .preferredColorScheme(.dark)
-            .navigationTitle("Achievements")
+                .preferredColorScheme(.dark)
+                .navigationTitle("Achievements")
         }
         
     }
@@ -46,23 +55,24 @@ struct AchievementsView: View {
         
         //TODO: The way it shows data is a placeholder
         ZStack(alignment: .leading){
-            
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Color("boxColor"))
-                .frame(width: 360, height: 200)
-                .padding()
-            Text("Almost There!")
-                .font(.title2)
-                .fontWeight(.semibold)
-                .foregroundStyle(.white)
-                .padding()
-                .padding(.bottom, 150)
-                .padding(.leading, 10)
+            ZStack{
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(Color("boxColor"))
+                    .frame(width: 360, height: 200)
+                    .padding()
+                Text("Almost There!")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                    .padding()
+                    .padding(.bottom, 145)
+                    .padding(.trailing, 195)
+            }
             
             HStack{
                 ForEach(Achievement.sortAlmostCompleted()) { achievement in
                     ZStack{
-                        VStack() {
+                        VStack {
                             Circle()
                                 .frame(width: 80, height: 80)
                                 .foregroundStyle(.black)
@@ -132,63 +142,78 @@ struct AchievementsView: View {
     
     var listOfAchievements: some View {
         
-        ZStack(alignment: .leading){
+        ZStack(alignment: .leading) {
             
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(Color("boxColor"))
                 .frame(width: 360, height: .infinity)
                 .padding()
-            Text("All achievements")
-                .font(.title2)
-                .fontWeight(.semibold)
-                .foregroundStyle(.white)
+            VStack{
+                HStack{
+                    Text("All achievements")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.white)
+                    Spacer()
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 6)
+                            .foregroundColor(.black)
+                            .frame(width: 100, height: 30)
+                            .padding()
+                            .padding(.trailing)
+                            .opacity(0.5)
+                            .offset(x: 15)
+                        
+                        Picker(selection: $filteringAchievements, label: Text("Picker")) {
+                            Text("All").tag(1)
+                            Text("Achieved").tag(2)
+                        }
+                        .tint(.white)
+                        .padding(.trailing)
+                        .offset(x: 15)
+                    }
+                }
                 .padding()
-                .padding(.bottom, 500)
-                .padding(.leading, 10)
-            
-            RoundedRectangle(cornerRadius: 6)
-                .foregroundColor(.black)
-                .frame(width: 128, height: 28)
-                .padding()
-                .padding(.bottom, 499)
-                .padding(.leading, 220)
-                .opacity(0.5)
-            Picker(selection: .constant(1), label: Text("Picker")) {
-                Text("All").tag(1)
-                Text("Achieved").tag(2)
-            }
-            .pickerStyle(.segmented)
-            .frame(width: 130)
-            .padding(.bottom, 500)
-            .padding(.leading, 234)
-            
-            HStack{
-                VStack(alignment: .leading) {
-                    ForEach(0..<groupedAchievements.count, id: \.self) { rowIndex in
-                        HStack {
-                            ForEach(groupedAchievements[rowIndex], id: \.id) { achievement in
-                                VStack() {
-                                    Circle()
-                                        .frame(width: 80, height: 80)
-                                        .foregroundStyle(.black)
-                                    Text(achievement.title)
-                                        .font(.title3)
-                                    Text(achievement.subTitle)
-                                        .font(.subheadline)
-                                }
-                                .padding()
-                                
-                            }
-                            
+                
+                HStack{
+                    VStack(alignment: .leading) {
+                        switch filteringAchievements {
+                        case 1:
+                            let achievements = Achievement.sortAlmostCompleted()
+                            displayAchievementsInThreeColumns(achievements: achievements)
+                        case 2:
+                            let achievements = Achievement.sortLastAchieved()
+                            displayAchievementsInThreeColumns(achievements: achievements)
+                        default:
+                            let achievements = Achievement.sortAlmostCompleted()
+                            displayAchievementsInThreeColumns(achievements: achievements)
                         }
                     }
                 }
             }
-            .padding(.top, 50)
             .padding()
+            .offset(y: -20)
         }
     }
 }
+
+
+func displayAchievementsInThreeColumns(achievements: [Achievement]) -> some View {
+    let numberOfColumns = 3
+    let numberOfRows = (achievements.count + numberOfColumns - 1) / numberOfColumns
+    return ForEach(0..<numberOfRows) { rowIndex in
+        HStack {
+            ForEach(0..<numberOfColumns) { columnIndex in
+                let index = rowIndex * numberOfColumns + columnIndex
+                if index < achievements.count {
+                    AchievementViewModel(achievement: achievements[index])
+                }
+            }
+        }
+
+    }
+}
+
 
 #Preview {
     AchievementsView()

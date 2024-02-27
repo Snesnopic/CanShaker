@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EE90F1D2B8DE0B200482881 /* AchievementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE90F1C2B8DE0B200482881 /* AchievementViewModel.swift */; };
 		6B3A23A22B874C8400E03F41 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
 		6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3EE90F1C2B8DE0B200482881 /* AchievementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewModel.swift; sourceTree = "<group>"; };
 		6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
 		6B8AA10F2B84B9100088E5E4 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				9DA6A8482B8C8ABA009737D7 /* AchievementList.swift */,
 				6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */,
+				3EE90F1C2B8DE0B200482881 /* AchievementViewModel.swift */,
 			);
 			path = Achievements;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				9DA6A8532B8C8B43009737D7 /* UserInfo.swift in Sources */,
 				9DA6A8492B8C8ABA009737D7 /* AchievementList.swift in Sources */,
 				9DA6A8602B8C8F92009737D7 /* Extensions.swift in Sources */,
+				3EE90F1D2B8DE0B200482881 /* AchievementViewModel.swift in Sources */,
 				9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */,
 				9DA6A85E2B8C8B77009737D7 /* Feedback.swift in Sources */,
 				6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */,
