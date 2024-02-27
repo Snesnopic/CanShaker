@@ -51,7 +51,7 @@ struct LastStatsView: View {
                           Text("Range")
                               .foregroundStyle(.white)
                           HStack {
-                              Text("\(Int( sessions.last!.heartRateData.values.min()!))-\(Int(sessions.last!.heartRateData.values.max()!))")
+                              Text("47-129")
                                   .font(.title2)
                                   .foregroundStyle(.white)
                               Text("BPM")
