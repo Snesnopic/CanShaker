@@ -43,7 +43,7 @@ struct SpeedGraphView: View {
                             AxisValueLabel()
                         }
                     }
-                    .responsiveFrame(widthPercentage: 75, aspectRatio: (2,1))
+                    .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
                     .padding(.vertical)
                 
                 
