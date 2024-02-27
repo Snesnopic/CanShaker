@@ -43,18 +43,30 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
             message[UUID().uuidString] = session
         }
         let data = try! jsonEncoder.encode(sessions)
-        WCSession.default.sendMessageData(data,replyHandler: nil, errorHandler: { error in
-            print(error)
-        })
-        
+        print("Data to send before compression: \(data)")
+        do {
+            let compressedData = try (data as NSData).compressed(using: .lzma) as Data
+            print("Data to send after compression: \(compressedData)")
+            WCSession.default.sendMessageData(data,replyHandler: nil, errorHandler: { error in
+                print(error)
+            })
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     //funzione per quando ricevi sessioni da watchOS
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
         print("Received \(messageData)")
-        let jsonDecoder = JSONDecoder()
         
-        sessions = try! jsonDecoder.decode([Session].self, from: messageData)
-        print("Ho ricevuto \(sessions.count) sessioni")
+        let jsonDecoder = JSONDecoder()
+        do {
+            let decompressedData = try (messageData as NSData).decompressed(using: .lzma) as Data
+            sessions = try! jsonDecoder.decode([Session].self, from: decompressedData)
+            print("Ho ricevuto \(sessions.count) sessioni")
+        }
+        catch {
+            print(error)
+        }
         
     }
     
