@@ -15,6 +15,7 @@ class MotionDataManager: ObservableObject {
     let motion = CMMotionManager()
     let queue = OperationQueue()
     var accelData: [TimeInterval:CMAcceleration] = [:]
+    var tempAccelData: [TimeInterval:CMAcceleration] = [:]
     var session:Session? = nil
     let healthStore:HKHealthStore
     var workoutSession: HKWorkoutSession?
@@ -122,6 +123,9 @@ class MotionDataManager: ObservableObject {
             accelData.forEach { (key: TimeInterval, value: CMAcceleration) in
                 session!.accelData[key] = value.getTotalAcceleration()
             }
+            
+            
+            
             session!.duration = abs((session!.date.timeIntervalSinceNow))
             print("Session duration: \(session!.duration)")
         }
