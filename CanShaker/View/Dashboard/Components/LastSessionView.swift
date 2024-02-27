@@ -15,7 +15,7 @@ struct LastSessionView: View {
     @State private var calories = 0
     @State private var time: String = "00"
     
-    var connectivity = Connectivity.shared
+    @ObservedObject var connectivity = Connectivity.shared
     
     var body: some View {
         ZStack{
