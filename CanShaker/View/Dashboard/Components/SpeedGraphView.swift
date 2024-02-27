@@ -45,10 +45,7 @@ struct SpeedGraphView: View {
                     }
                     .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
                     .padding(.vertical)
-                
-                
-            
-        
+   
     }
 }
 
