@@ -43,6 +43,7 @@ struct SpeedGraphView: View {
                             AxisValueLabel()
                         }
                     }
+                    .chartYScale(type: .power(exponent: 0.3))
                     .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
                     .padding(.vertical)
    
