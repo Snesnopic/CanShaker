@@ -25,52 +25,55 @@ struct LastStatsView: View {
         NavigationStack {
             if !sessions.isEmpty {
                 Chart{
-                     ForEach(sessions.last!.heartRateData.keys.sorted(),id: \.self){ time in
-                         
+                    ForEach(sessions.last!.heartRateData.keys.sorted(),id: \.self){ time in
+                        
                         AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                                   y: .value("BPM", (sessions.last!.heartRateData[time]!)))
-                         
-                         .interpolationMethod(.catmullRom)
-                          .foregroundStyle(heartGradient)
-                          
-                      }
-                     
-                  }
-                  .chartXAxis{
-                      AxisMarks(values: .automatic(desiredCount: 6)) {
-                          AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
-                      }
-                  }
-                  .chartYAxis {
-                     AxisMarks(position: .trailing) { _ in
-                          AxisValueLabel()
-                      }
-                  }
-                  .chartLegend(content: {
-                      VStack (alignment: .leading){
-                          Text("Range")
-                              .foregroundStyle(.white)
-                          HStack {
-                              Text("47-129")
-                                  .font(.title2)
-                                  .foregroundStyle(.white)
-                              Text("BPM")
-                                  .foregroundStyle(Color("heartColor"))
-                          }
-                      }
-                  })
-                  .chartForegroundStyleScale([
+                                  y: .value("BPM", (sessions.last!.heartRateData[time]!)))
+                        
+                        .interpolationMethod(.catmullRom)
+                        .foregroundStyle(heartGradient)
+                        
+                    }
+                    
+                }
+                .chartXAxis{
+                    AxisMarks(values: .automatic(desiredCount: 6)) {
+                        AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
+                    }
+                }
+                .chartYAxis {
+                    AxisMarks(position: .trailing) { _ in
+                        AxisValueLabel()
+                    }
+                }
+                .chartLegend(content: {
+                    if !sessions.last!.heartRateData.isEmpty {
+                        VStack (alignment: .leading){
+                            Text("Range")
+                                .foregroundStyle(.white)
+                            HStack {
+                                Text("\(Int(sessions.last!.heartRateData.values.min()!))-\(Int(sessions.last!.heartRateData.values.min()!))")
+                                    .font(.title2)
+                                    .foregroundStyle(.white)
+                                Text("BPM")
+                                    .foregroundStyle(Color("heartColor"))
+                            }
+                            
+                        }
+                    }
+                })
+                .chartForegroundStyleScale([
                     "Heart Rate": Color("heartColor")
-                  ])
-                  .navigationTitle("Last session")
-                  .padding(.trailing)
-                  
-    
+                ])
+                .navigationTitle("Last session")
+                .padding(.trailing)
+                
+                
             }
             else {
                 Text("No sessions yet!")
                     .navigationTitle("Last session")
-
+                
             }
         }.onAppear {
             if !sessions.isEmpty {
