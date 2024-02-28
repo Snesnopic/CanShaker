@@ -18,7 +18,8 @@ struct AchievementsView: View{
                     Text("Near accomplishment")
                         .bold()
                         .font(.title2)
-                    
+                        .padding(.top, 25)
+
                     Spacer()
                 }
                 .padding(.horizontal)
@@ -28,7 +29,7 @@ struct AchievementsView: View{
                     Text("All achievements")
                         .bold()
                         .font(.title2)
-                    
+                        .padding(.top, 25)
                     Spacer()
                 }
                 .padding(.horizontal)
@@ -36,9 +37,9 @@ struct AchievementsView: View{
                 AllAchievementsView()
                 Spacer()
             }
-            
+            .navigationTitle("Achievements")
         }
-        .navigationTitle("Achievements")
+        
         .preferredColorScheme(.dark)
         
     }
