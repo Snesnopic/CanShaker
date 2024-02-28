@@ -17,7 +17,7 @@ struct AdviceButtonStyle: View {
             RoundedRectangle(cornerRadius: 15.0)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 15)
                 .foregroundStyle(Color("boxColor"))
-                .opacity(0.2)
+                .opacity(0.4)
                 .shadow(radius: 20)
                 
             VStack{
