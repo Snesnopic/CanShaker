@@ -11,7 +11,8 @@ import SwiftData
 struct CanShaker_Watch_AppApp: App {
     @State var firstTabView:Int = 0
     @State var currentState:SessionState = .start
-    
+    @Environment(\.modelContext) private var context
+
     var body: some Scene {
         WindowGroup {
             if currentState == .shaking {
