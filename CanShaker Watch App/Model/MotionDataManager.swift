@@ -121,6 +121,22 @@ class MotionDataManager: ObservableObject {
             print("Motion updates are happening. Stopping...")
             motion.stopDeviceMotionUpdates()
             session!.duration = abs((session!.date.timeIntervalSinceNow))
+            var clampedData: [TimeInterval: Double] = [:]
+            let keys = Array(session!.accelData.keys)
+
+            for i in stride(from: 0, to: keys.count, by: 5) {
+                let endIndex = min(i + 5, keys.count)
+                let slice = keys[i..<endIndex]
+                
+                var sum:Double = 0.0
+                for key in slice {
+                    if let value = session!.accelData[key] {
+                        sum += value
+                    }
+                }
+                clampedData[slice.min()!] = (sum/Double(slice.count))
+            }
+            session!.accelData = clampedData
             print("Session duration: \(session!.duration)")
         }
         else {
