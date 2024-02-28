@@ -14,7 +14,6 @@ struct AchievementDetailView: View {
         LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
             .ignoresSafeArea().overlay {
                 VStack{
-                    
                         Circle()
                             .frame(width: 300, height: 300)
                             .foregroundStyle(.black)

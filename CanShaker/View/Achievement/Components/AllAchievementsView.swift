@@ -19,18 +19,14 @@ struct AllAchievementsView: View {
                     .responsiveFrame(widthPercentage: 95, heightPercentage: 35)
                     .foregroundStyle(Color("boxColor"))
                     .opacity(0.2)
-                
-                VStack{
-    
-                    
-                    
+                 
                     LazyVGrid(columns: col, spacing: 40){
                         ForEach(Achievement.list){ achievement in
                             NavigationLink(destination: AchievementDetailView(achievement: achievement), label: {
                                 AchievementStyle(title: achievement.title)
                             })
                         }
-                    }
+                    
                     .padding(.horizontal)
                     
                 }
