@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
-
+import SwiftData
 struct NaAchievementView: View {
-    @State private var naAchievements: [Achievement] = []
+    @Query private var achievements: [Achievement]
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 15.0)
@@ -17,7 +17,7 @@ struct NaAchievementView: View {
                 .opacity(0.4)
                 .shadow(radius: 20)
             HStack{
-                ForEach(naAchievements){ achievement in
+                ForEach(achievements.sorted {$0.completion > $1.completion}.prefix(3)){ achievement in
                     
                     NavigationLink(destination: AchievementDetailView(achievement: achievement), label: {
                         AchievementStyle(title: achievement.title)
@@ -26,11 +26,6 @@ struct NaAchievementView: View {
                     
                 }
             }
-            .onAppear{
-                naAchievements = Achievement.list.sorted { $0.completion > $1.completion }
-                naAchievements = Array(naAchievements.prefix(3))
-            }
-            
         }
         .preferredColorScheme(.dark)
     }
