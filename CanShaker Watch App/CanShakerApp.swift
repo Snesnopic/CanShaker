@@ -39,6 +39,7 @@ struct CanShaker_Watch_AppApp: App {
                 })
                 .tabViewStyle(.verticalPage)
             }
-        }.modelContainer(for: [Session.self])
+        }
+        .modelContainer(for: [Session.self, Achievement.self])
     }
 }

@@ -78,6 +78,6 @@ struct ExtractedView: View {
         Circle()
             .frame(width: 50)
             .matchedGeometryEffect(id: achievement.id, in: animation)
-            .foregroundStyle(achievement.color)
+            .foregroundStyle(Color.random())
     }
 }

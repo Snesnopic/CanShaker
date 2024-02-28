@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct AchievementsView: View{
-    @State var selectedAchievement: Achievement =  (Achievement(badge: "", title: "", subTitle: "", description: "", completion: 0, isAchieved: false))
+    @State var selectedAchievement: Achievement =  (Achievement(badge: "", title: "", subTitle: "", desc: "", completion: 0, isAchieved: false))
     var body: some View{
         NavigationStack{
             
@@ -45,5 +45,5 @@ struct AchievementsView: View{
 }
 
 #Preview {
-    AchievementsView( selectedAchievement: (Achievement(badge: "", title: "", subTitle: "", description: "", completion: 0, isAchieved: false)))
+    AchievementsView( selectedAchievement: (Achievement(badge: "", title: "", subTitle: "", desc: "", completion: 0, isAchieved: false)))
 }
