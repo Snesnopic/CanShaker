@@ -120,7 +120,7 @@ class MotionDataManager: ObservableObject {
         if motion.isDeviceMotionActive {
             print("Motion updates are happening. Stopping...")
             motion.stopDeviceMotionUpdates()
-            session!.duration = abs((session!.date.timeIntervalSinceNow))
+            session!.duration = abs(session!.date.distance(to: Date()))
             var clampedData: [TimeInterval: Double] = [:]
             let keys = Array(session!.accelData.keys)
 
