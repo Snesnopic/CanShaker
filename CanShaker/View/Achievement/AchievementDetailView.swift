@@ -18,14 +18,13 @@ struct AchievementDetailView: View {
                         Circle()
                             .frame(width: 300, height: 300)
                             .foregroundStyle(.black)
-                            .padding()
                         Text(achievement.title)
                             .font(.title)
                             .foregroundStyle(.white)
                         Text(achievement.subTitle)
                             .font(.title2)
                             .foregroundStyle(.white)
-                        Text(achievement.descriptionOfAchievement)
+                        Text(achievement.description)
                             .font(.title3)
                             .foregroundStyle(.white)
                         Text("Progress: \(achievement.completion)%")
@@ -35,7 +34,7 @@ struct AchievementDetailView: View {
                             .foregroundStyle(.white)
                     
                 }
-                .padding()
+                
                 .foregroundStyle(.white)
             }
         
