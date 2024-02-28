@@ -8,9 +8,10 @@
 import SwiftUI
 import Charts
 import CoreMotion
+import SwiftData
 
 struct SpeedGraphView: View {
-    var connectivity = Connectivity.shared
+    @Query private var sessions:[Session]
     let speedGradient = LinearGradient(
         gradient: Gradient (
             colors: [ Color("speedColor").opacity(0.75),
@@ -22,10 +23,10 @@ struct SpeedGraphView: View {
     
     var body: some View {
                     Chart{
-                        ForEach(connectivity.sessions.last!.accelData.keys.sorted(),id: \.self){ time in
+                        ForEach(sessions.last!.accelData.keys.sorted(),id: \.self){ time in
                             
                             AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                                      y: .value("Acceleration", (connectivity.sessions.last!.accelData[time]!)))
+                                      y: .value("Acceleration", (sessions.last!.accelData[time]!)))
                             
                             .interpolationMethod(.catmullRom)
                             .foregroundStyle(speedGradient)

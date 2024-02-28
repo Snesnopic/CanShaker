@@ -7,9 +7,10 @@
 
 import SwiftUI
 import Charts
+import SwiftData
 
 struct BpmGraphView: View {
-    var connectivity = Connectivity.shared
+    @Query private var sessions:[Session]
     let heartGradient = LinearGradient(
         gradient: Gradient (
             colors: [ Color("heartColor").opacity(0.75),
@@ -21,10 +22,10 @@ struct BpmGraphView: View {
     
     var body: some View {
         Chart{
-            ForEach(connectivity.sessions.last!.heartRateData.keys.sorted(),id: \.self){ time in
+            ForEach(sessions.last!.heartRateData.keys.sorted(),id: \.self){ time in
                 
                 AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                          y: .value("BPM", (connectivity.sessions.last!.heartRateData[time]!)))
+                          y: .value("BPM", (sessions.last!.heartRateData[time]!)))
                 
                 .interpolationMethod(.catmullRom)
                 .foregroundStyle(heartGradient)
