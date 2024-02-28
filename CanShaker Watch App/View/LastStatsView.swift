@@ -37,7 +37,7 @@ struct LastStatsView: View {
                     
                 }
                 .chartXAxis{
-                    AxisMarks(values: .automatic(desiredCount: 6)) {
+                    AxisMarks(values: .automatic(desiredCount: 3)) {
                         AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
                     }
                 }
