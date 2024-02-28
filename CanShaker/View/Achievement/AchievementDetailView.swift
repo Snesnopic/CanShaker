@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AchievementDetailView: View {
     @Binding var achievement: Achievement?
+    
+    
     var body: some View {
         
         LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
@@ -20,27 +22,25 @@ struct AchievementDetailView: View {
                             .foregroundStyle(.black)
                         Text(achievement!.title)
                             .font(.title)
-                            .foregroundStyle(.white)
                         Text(achievement!.subTitle)
                             .font(.title2)
-                            .foregroundStyle(.white)
                         Text(achievement!.description)
                             .font(.title3)
-                            .foregroundStyle(.white)
                         Text("Progress: \(achievement!.completion)%")
                             .font(.headline)
                         Text("Date: \(achievement!.achievingDate != nil ? "\(achievement!.achievingDate!)" : "N/A")")
                             .font(.headline)
-                            .foregroundStyle(.white)
                     }
                 }
-                
+                .padding()
                 .foregroundStyle(.white)
             }
+            .padding()
         
     }
 }
 
-//#Preview {
-//    AchievementDetailView(animation: Namespace.wrappedValue,achievement: Achievement(id: UUID(), badge: "", title: "title1", subTitle: "subtitle1", description: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true))
-//}
+#Preview {
+    let achievement = Binding<Achievement?>.constant(Achievement(badge: "", title: "Title", subTitle: "Subtitle", description: "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription", completion: 50, isAchieved: true))
+    return AchievementDetailView(achievement: achievement)
+}

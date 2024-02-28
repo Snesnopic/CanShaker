@@ -31,10 +31,6 @@ struct AchievementsView: View {
                             }
                         }
                     }
-//                    else {
-//                        AchievementDetailView(animation: animation, achievement: $selectedAchievement, isPresented: $isPresented)
-//                    }
-                    
                 }
                 .preferredColorScheme(.dark)
                 .navigationTitle("Achievements")

@@ -47,10 +47,11 @@ struct AchievementViewModel: View {
                 }
                 
             }
+            .padding()
             .sheet(isPresented: $isDetailPresented) {
                 AchievementDetailView(achievement: $selectedAchievement)
             }
-            
+            .padding()
         }
         .padding()
     }
