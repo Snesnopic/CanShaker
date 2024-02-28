@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+
 class Achievement: Identifiable{
     let id: UUID = UUID()
     let badge: String

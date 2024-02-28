@@ -8,12 +8,16 @@
 import SwiftUI
 import Charts
 import CoreMotion
+import SwiftData
+
 struct LastSessionView: View {
     @State private var statToShow = 0
     @State private var averageBpm = 0.0
     @State private var averageSpd = 0.0
     @State private var calories = 0
     @State private var time: String = "00"
+
+    @Environment(\.modelContext) var modelContext
     
     var connectivity = Connectivity.shared
     
@@ -73,6 +77,7 @@ struct LastSessionView: View {
                         averageSpd = getAverage(dataset: connectivity.sessions.last?.accelData.values)
                         calories = Int(connectivity.sessions.last!.calories)
                         time = doubleToTime(doubleNumber: &connectivity.sessions.last!.duration)
+                        
                     }
                     
                 }
