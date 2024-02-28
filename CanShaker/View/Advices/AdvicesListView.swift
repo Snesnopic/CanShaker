@@ -12,11 +12,7 @@ struct AdvicesListView: View {
     
     var body: some View {
         NavigationStack{
-            ZStack{
-                LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
-                    .ignoresSafeArea()
-                
-                
+           
                 //TODO: filter list based on advCategory
                 List{
                     ForEach(Advice.list){ adv in
@@ -38,7 +34,6 @@ struct AdvicesListView: View {
                 }
                 .listStyle(.plain)
                 
-            }
             .preferredColorScheme(.dark)
             .navigationTitle(advCategory.str)
             

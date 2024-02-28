@@ -12,36 +12,33 @@ struct AchievementsView: View{
     @State var selectedAchievement: Achievement =  (Achievement(badge: "", title: "", subTitle: "", description: "", completion: 0, isAchieved: false))
     var body: some View{
         NavigationStack{
-            ZStack{
-                LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
-                    .ignoresSafeArea()
-                VStack{
-                    HStack{
-                        Text("Near accomplishment")
-                            .bold()
-                            .font(.title2)
-                        
-                        Spacer()
-                    }
-                    .padding(.horizontal)
-                    NaAchievementView()
+            
+            VStack{
+                HStack{
+                    Text("Near accomplishment")
+                        .bold()
+                        .font(.title2)
                     
-                    HStack{
-                        Text("All achievements")
-                            .bold()
-                            .font(.title2)
-                        
-                        Spacer()
-                    }
-                    .padding(.horizontal)
-                    
-                    AllAchievementsView()
                     Spacer()
                 }
+                .padding(.horizontal)
+                NaAchievementView()
                 
+                HStack{
+                    Text("All achievements")
+                        .bold()
+                        .font(.title2)
+                    
+                    Spacer()
+                }
+                .padding(.horizontal)
+                
+                AllAchievementsView()
+                Spacer()
             }
-            .navigationTitle("Achievements")
+            
         }
+        .navigationTitle("Achievements")
         .preferredColorScheme(.dark)
         
     }

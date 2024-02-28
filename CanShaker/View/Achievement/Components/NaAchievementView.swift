@@ -14,7 +14,7 @@ struct NaAchievementView: View {
             RoundedRectangle(cornerRadius: 15.0)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 18)
                 .foregroundStyle(Color("boxColor"))
-                .opacity(0.2)
+                .opacity(0.4)
                 .shadow(radius: 20)
             HStack{
                 ForEach(naAchievements){ achievement in

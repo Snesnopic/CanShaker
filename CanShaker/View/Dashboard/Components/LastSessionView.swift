@@ -22,7 +22,7 @@ struct LastSessionView: View {
             RoundedRectangle(cornerRadius: 15.0)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 37)
                 .foregroundStyle(.box)
-                .opacity(0.3)
+                .opacity(0.4)
             
             VStack{
                 

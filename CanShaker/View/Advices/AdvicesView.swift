@@ -10,9 +10,6 @@ import SwiftUI
 struct AdvicesView: View {
     var body: some View {
         NavigationStack {
-            ZStack{
-                LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
-                    .ignoresSafeArea()
                 
                 //TODO: add list destination with advices category
                 VStack{
@@ -32,7 +29,6 @@ struct AdvicesView: View {
                     Spacer()
                     
                 }
-            }
             .navigationTitle("Advices")
             .preferredColorScheme(.dark)
             
