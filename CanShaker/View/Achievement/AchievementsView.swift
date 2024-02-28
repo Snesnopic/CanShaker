@@ -8,85 +8,45 @@
 import SwiftUI
 
 
-
-struct AchievementsView: View {
-    
-    @State var filteringAchievements: Int = 0
-    @State var isPresented = false
-    @State var selectedAchievement: Achievement? = nil
-    @Namespace private var animation
-    var body: some View {
-        
-        NavigationStack {
-            
-            LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
-                .ignoresSafeArea().overlay {
-                    if !isPresented {
-                        ScrollView {
-                            VStack {
-                                almostThere
-                                    .offset(y: 10)
-                                AllAchievementsView()
-                                
-                            }
-                        }
-                    }
-//                    else {
-//                        AchievementDetailView(animation: animation, achievement: $selectedAchievement, isPresented: $isPresented)
-//                    }
-                    
-                }
-                .preferredColorScheme(.dark)
-                .navigationTitle("Achievements")
-        }
-        
-    }
-    
-    var almostThere: some View {
-        
-        //TODO: The way it shows data is a placeholder
-        ZStack(alignment: .leading){
+struct AchievementsView: View{
+    @State var selectedAchievement: Achievement =  (Achievement(badge: "", title: "", subTitle: "", description: "", completion: 0, isAchieved: false))
+    var body: some View{
+        NavigationStack{
             ZStack{
-                RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(Color("boxColor"))
-                    .frame(width: 360, height: 180)
-                    .padding()
-                Text("Almost There!")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.white)
-                    .padding()
-                    .padding(.bottom, 130)
-                    .padding(.trailing, 195)
-            }
-            
-            HStack{
-                ForEach(Achievement.sortAlmostCompleted(prefixInt: 3)) { achievement in
-                    ZStack{
-                        
-                        AchievementViewModel(achievement: achievement, sorting: -1)
-                            .padding(.top, 30)
-                            .onTapGesture {
-                                selectedAchievement = achievement
-                                withAnimation {
-                                    isPresented = true
-                                }
-                            }
-                        
-                        Text("\(achievement.completion)%")
+                LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
+                    .ignoresSafeArea()
+                VStack{
+                    HStack{
+                        Text("Near accomplishment")
+                            .bold()
                             .font(.title2)
-                            .foregroundStyle(.white)
-                            .fontWeight(.bold)
-                            .offset(y: -7)
+                        
+                        Spacer()
                     }
-                    .padding(.top, 10)
+                    .padding(.horizontal)
+                    NaAchievementView()
+                    
+                    HStack{
+                        Text("All achievements")
+                            .bold()
+                            .font(.title2)
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    
+                    AllAchievementsView()
+                    Spacer()
                 }
+                
             }
-            .padding()
+            .navigationTitle("Achievements")
         }
+        .preferredColorScheme(.dark)
+        
     }
 }
 
 #Preview {
-    AchievementsView()
+    AchievementsView( selectedAchievement: (Achievement(badge: "", title: "", subTitle: "", description: "", completion: 0, isAchieved: false)))
 }

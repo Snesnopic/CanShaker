@@ -9,13 +9,20 @@ import Foundation
 
 func doubleToTime(doubleNumber: inout Double) -> String{
     
-    if(doubleNumber < 60){
-        return (String(Int(doubleNumber)) + String("s"))
+    var dbn = Int(doubleNumber)
+    
+    if(dbn < 60){
+        return (String(dbn) + String("s"))
     }else {
-        let reminder = (doubleNumber.truncatingRemainder(dividingBy: 60.0))
-        doubleNumber /= 60.0
+        let reminder = dbn % 60
+        var strReminder = String(reminder)
+        dbn /= 60
         
-        return (String(Int(doubleNumber)) + String(":") + String(Int(reminder)) + String("m"))
+        if(reminder < 10){
+            strReminder = "0" + strReminder
+        }
+        
+        return (String(dbn) + String(":") + strReminder + String("m"))
     }
     
 }
