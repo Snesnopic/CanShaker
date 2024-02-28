@@ -25,7 +25,7 @@ struct AchievementObtainedView: View {
         }
     }
 }
-
-#Preview {
-    AchievementObtainedView(achievement: Achievement.list.randomElement()!)
-}
+//
+//#Preview {
+//    AchievementObtainedView(achievement: Achievement.list.randomElement()!)
+//}
