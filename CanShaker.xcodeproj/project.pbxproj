@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E42BDA32B8F4F98005B8AF3 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E42BDA22B8F4F98005B8AF3 /* History.swift */; };
+		3E42BDA52B8F5327005B8AF3 /* InsultComplimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E42BDA42B8F5327005B8AF3 /* InsultComplimentView.swift */; };
 		3ECF618F2B8E1C0F0007E8F7 /* AllAchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF618E2B8E1C0F0007E8F7 /* AllAchievementsView.swift */; };
 		6B3A23A22B874C8400E03F41 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		6B6C8A002B8F2E24008C880C /* AchievementStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C89FF2B8F2E24008C880C /* AchievementStyle.swift */; };
@@ -43,7 +45,7 @@
 		9DA6A84D2B8C8B2C009737D7 /* AdviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */; };
 		9DA6A84E2B8C8B2C009737D7 /* AdvicesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A84C2B8C8B2C009737D7 /* AdvicesListView.swift */; };
 		9DA6A8502B8C8B34009737D7 /* AdviceButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A84F2B8C8B34009737D7 /* AdviceButtonStyle.swift */; };
-		9DA6A8532B8C8B43009737D7 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8512B8C8B43009737D7 /* UserInfo.swift */; };
+		9DA6A8532B8C8B43009737D7 /* Infos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8512B8C8B43009737D7 /* Infos.swift */; };
 		9DA6A8542B8C8B43009737D7 /* LastSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8522B8C8B43009737D7 /* LastSessionView.swift */; };
 		9DA6A8582B8C8B5F009737D7 /* SessionCompanion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8572B8C8B5F009737D7 /* SessionCompanion.swift */; };
 		9DA6A85A2B8C8B6E009737D7 /* AdviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A8592B8C8B6E009737D7 /* AdviceList.swift */; };
@@ -80,6 +82,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E42BDA22B8F4F98005B8AF3 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		3E42BDA42B8F5327005B8AF3 /* InsultComplimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultComplimentView.swift; sourceTree = "<group>"; };
 		3ECF618E2B8E1C0F0007E8F7 /* AllAchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAchievementsView.swift; sourceTree = "<group>"; };
 		6B6C89FF2B8F2E24008C880C /* AchievementStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementStyle.swift; sourceTree = "<group>"; };
 		6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
@@ -117,7 +121,7 @@
 		9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceDetailView.swift; sourceTree = "<group>"; };
 		9DA6A84C2B8C8B2C009737D7 /* AdvicesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvicesListView.swift; sourceTree = "<group>"; };
 		9DA6A84F2B8C8B34009737D7 /* AdviceButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceButtonStyle.swift; sourceTree = "<group>"; };
-		9DA6A8512B8C8B43009737D7 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		9DA6A8512B8C8B43009737D7 /* Infos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Infos.swift; sourceTree = "<group>"; };
 		9DA6A8522B8C8B43009737D7 /* LastSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastSessionView.swift; sourceTree = "<group>"; };
 		9DA6A8552B8C8B57009737D7 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		9DA6A8572B8C8B5F009737D7 /* SessionCompanion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCompanion.swift; sourceTree = "<group>"; };
@@ -293,10 +297,12 @@
 		6BF3EEC32B8B61DA00B52687 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9DA6A8512B8C8B43009737D7 /* UserInfo.swift */,
+				9DA6A8512B8C8B43009737D7 /* Infos.swift */,
+				3E42BDA42B8F5327005B8AF3 /* InsultComplimentView.swift */,
 				9DA6A8522B8C8B43009737D7 /* LastSessionView.swift */,
 				6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */,
 				6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */,
+				3E42BDA22B8F4F98005B8AF3 /* History.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -479,12 +485,14 @@
 			files = (
 				9D7187FF2B7E419A002C02B0 /* DashboardView.swift in Sources */,
 				9DA6A84D2B8C8B2C009737D7 /* AdviceDetailView.swift in Sources */,
+				3E42BDA32B8F4F98005B8AF3 /* History.swift in Sources */,
 				6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */,
 				6B984F982B8E44B900B2ECD7 /* NaAchievementView.swift in Sources */,
 				6BD11A9E2B8CF519008FA32D /* SpeedGraphView.swift in Sources */,
 				9DA6A8502B8C8B34009737D7 /* AdviceButtonStyle.swift in Sources */,
 				9DA6A85D2B8C8B77009737D7 /* FeedbackList.swift in Sources */,
 				3ECF618F2B8E1C0F0007E8F7 /* AllAchievementsView.swift in Sources */,
+				3E42BDA52B8F5327005B8AF3 /* InsultComplimentView.swift in Sources */,
 				6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */,
 				6BBD95582B8E1B1400712380 /* DoubleToTime.swift in Sources */,
 				6BDF79BC2B8C8CCA00E9663D /* ResponsiveFrame.swift in Sources */,
@@ -494,7 +502,7 @@
 				9D7411A42B7F51BE00869BF8 /* AdvicesView.swift in Sources */,
 				9DA6A85F2B8C8F7D009737D7 /* Session.swift in Sources */,
 				9DA6A85A2B8C8B6E009737D7 /* AdviceList.swift in Sources */,
-				9DA6A8532B8C8B43009737D7 /* UserInfo.swift in Sources */,
+				9DA6A8532B8C8B43009737D7 /* Infos.swift in Sources */,
 				9DA6A8492B8C8ABA009737D7 /* AchievementList.swift in Sources */,
 				9DA6A8602B8C8F92009737D7 /* Extensions.swift in Sources */,
 				9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */,

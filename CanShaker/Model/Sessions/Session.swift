@@ -9,7 +9,6 @@ import Foundation
 import CoreMotion
 import SwiftData
 
-@Model
 class Session: Codable {
     enum CodingKeys: CodingKey {
         case date, accelData, duration, heartRateData, calories

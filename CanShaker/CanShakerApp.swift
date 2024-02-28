@@ -23,8 +23,5 @@ struct CanShakerApp: App {
                 }
             }
         }
-
-        .modelContainer(for: [Session.self])
-//        .modelContainer(for: [Achievement.self])
     }
 }

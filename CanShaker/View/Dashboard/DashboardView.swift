@@ -14,16 +14,14 @@ struct DashboardView: View {
         NavigationStack{
 
                 VStack{
-                    UserInfo()
-                    
+                    Infos()
                     HStack{
                         Text("Last Session")
                             .bold()
-                            .font(.title)
+                            .font(.title2)
                             .padding(.horizontal)
                         Spacer()
                     }
-                    
                     //TODO: Adjust the view
                     LastSessionView()
                     Spacer()

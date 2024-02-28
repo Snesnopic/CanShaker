@@ -16,8 +16,6 @@ struct LastSessionView: View {
     @State private var averageSpd = 0.0
     @State private var calories = 0
     @State private var time: String = "00"
-
-    @Environment(\.modelContext) var modelContext
     
     var connectivity = Connectivity.shared
     
