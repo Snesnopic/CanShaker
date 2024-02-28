@@ -85,12 +85,6 @@ struct LastSessionView: View {
         .preferredColorScheme(.dark)
     }
     
-    
-    
-    
-    
-    
-    
     func getAverage(dataset: Optional<Dictionary<Double, Double>.Values>) -> Double{
         var average = 0.0
         
@@ -112,7 +106,27 @@ struct LastSessionView: View {
 
 
 
+//#Preview {
+//    var accelData:[TimeInterval:Double] = [:]
+//    var heartRate:[TimeInterval:Double] = [:]
+//    for i in 1...10 {
+//        heartRate[Double(i)*0.3] = Double.random(in: 50...140)
+//        accelData[Double(i)*0.3] = Double.random(in: 1...6)
+//    }
+//
+//    Connectivity.shared.sessions = [
+//        Session(date: Date(), accelData: accelData, duration: 50.0/3.0, heartRateData: heartRate)
+//    ]
+//
+//
+//    return LastSessionView()
+//}
+
+//MARK: This is to make the preview work, the graph doesn't show for some reason but anyway the working stuff is right before these lines
 #Preview {
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Session.self, configurations: config)
+    
     var accelData:[TimeInterval:Double] = [:]
     var heartRate:[TimeInterval:Double] = [:]
     for i in 1...10 {
@@ -124,6 +138,7 @@ struct LastSessionView: View {
         Session(date: Date(), accelData: accelData, duration: 50.0/3.0, heartRateData: heartRate)
     ]
     
-    
+    let preview = Connectivity.shared.sessions
     return LastSessionView()
+        .modelContainer(container)
 }

@@ -29,7 +29,7 @@ struct AchievementDetailView: View {
         }
     }
 }
-//
-//#Preview {
-//    AchievementDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), achievement: .constant(Achievement.list.randomElement()))
-//}
+
+#Preview {
+    AchievementDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), achievement: .constant(Achievement(badge: "", title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true)))
+}

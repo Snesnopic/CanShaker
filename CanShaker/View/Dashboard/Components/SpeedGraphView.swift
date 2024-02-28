@@ -51,7 +51,22 @@ struct SpeedGraphView: View {
     }
 }
 
+//#Preview {
+//    var accelData:[TimeInterval:Double] = [:]
+//    for i in 1...50 {
+//        accelData[Double(i)*0.5] = Double.random(in: 1...2)
+//    }
+//    Connectivity.shared.sessions = [
+//        Session(date: Date(), accelData: accelData, duration: 50.0/3.0)
+//    ]
+//    return SpeedGraphView()
+//}
+
+//MARK: This is to make the preview work, the graph doesn't show for some reason but anyway the working stuff is right before these lines
 #Preview {
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Session.self, configurations: config)
+    
     var accelData:[TimeInterval:Double] = [:]
     for i in 1...50 {
         accelData[Double(i)*0.5] = Double.random(in: 1...2)
@@ -59,5 +74,8 @@ struct SpeedGraphView: View {
     Connectivity.shared.sessions = [
         Session(date: Date(), accelData: accelData, duration: 50.0/3.0)
     ]
-    return SpeedGraphView()
+    
+    let preview = Connectivity.shared.sessions
+    return LastSessionView()
+        .modelContainer(container)
 }

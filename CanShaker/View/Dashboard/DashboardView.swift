@@ -17,7 +17,6 @@ struct DashboardView: View {
 
                 VStack{
                     Infos()
-                        
                     HStack{
                         Text("Activity")
                             .bold()
@@ -49,10 +48,6 @@ struct DashboardView: View {
     }
     
 }
-
-
-
-
 
 #Preview {
     DashboardView()

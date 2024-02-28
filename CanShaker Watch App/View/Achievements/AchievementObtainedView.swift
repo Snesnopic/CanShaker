@@ -25,7 +25,7 @@ struct AchievementObtainedView: View {
         }
     }
 }
-//
-//#Preview {
-//    AchievementObtainedView(achievement: Achievement.list.randomElement()!)
-//}
+
+#Preview {
+    AchievementObtainedView(achievement: Achievement(badge: "", title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true))
+}
