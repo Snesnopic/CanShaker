@@ -33,11 +33,13 @@ struct AchievementsView: View{
                         
                         Spacer()
                     }
+                    .padding(.top, 25)
                     .padding(.horizontal)
                     
                     AllAchievementsView()
                     Spacer()
                 }
+                .padding(.top, 25)
                 
             }
             .navigationTitle("Achievements")
