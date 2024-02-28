@@ -10,6 +10,8 @@ import HealthKit
 import Charts
 
 struct DashboardView: View {
+    @Environment(\.modelContext) private var context
+    
     var body: some View {
         
         NavigationStack{
@@ -33,6 +35,9 @@ struct DashboardView: View {
                 
             .preferredColorScheme(.dark)
             .navigationTitle("Dashboard")
+            .onAppear {
+                Connectivity.shared.context = self.context
+            }
         }
     }
     
