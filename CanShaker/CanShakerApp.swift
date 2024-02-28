@@ -11,17 +11,6 @@ import SwiftData
 @main
 struct CanShakerApp: App {
     var connectivity = Connectivity.shared
-    let modelContainer: ModelContainer
-   
-    init(){
-       do{
-           modelContainer = try ModelContainer(for: Achievement.self)
-       } catch {
-           fatalError()
-       }
-       
-   }
-    
     var body: some Scene {
         WindowGroup {
             TabView(selection: .constant(1)) {
@@ -35,10 +24,8 @@ struct CanShakerApp: App {
                     Label("Achievements", systemImage: "trophy")
                 }
             }
+            .modelContainer(for: [Session.self,Achievement.self])
         }
-        .modelContainer(modelContainer)
-        .onChange(of: connectivity, {
-            
-        })
+        
     }
 }
