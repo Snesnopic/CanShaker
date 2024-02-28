@@ -122,7 +122,7 @@ class MotionDataManager: ObservableObject {
             motion.stopDeviceMotionUpdates()
             session!.duration = abs(session!.date.distance(to: Date()))
             var clampedData: [TimeInterval: Double] = [:]
-            let keys = Array(session!.accelData.keys)
+            let keys = Array(session!.accelData.keys.sorted())
 
             for i in stride(from: 0, to: keys.count, by: 5) {
                 let endIndex = min(i + 5, keys.count)
