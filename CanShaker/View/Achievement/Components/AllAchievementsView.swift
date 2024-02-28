@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AllAchievementsView: View {
-    
+    @Query private var achievements:[Achievement]
     let col = [
         GridItem(.adaptive(minimum: 100))
     ]
@@ -21,7 +22,7 @@ struct AllAchievementsView: View {
                     .opacity(0.4)
                  
                     LazyVGrid(columns: col, spacing: 40){
-                        ForEach(Achievement.list){ achievement in
+                        ForEach(achievements){ achievement in
                             NavigationLink(destination: AchievementDetailView(achievement: achievement), label: {
                                 AchievementStyle(title: achievement.title)
                             })
