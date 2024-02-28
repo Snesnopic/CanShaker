@@ -9,6 +9,8 @@ import SwiftUI
 
 struct UserInfo: View {
     var body: some View {
+        
+        @State var sessions = Session()
         ZStack{
             RoundedRectangle(cornerRadius: 15.0)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 15)
@@ -17,13 +19,10 @@ struct UserInfo: View {
                 .shadow(radius: 20)
             
             HStack{
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .opacity(0.3)
-                    .responsiveFrame(widthPercentage: 18, aspectRatio: (1,1))
-                VStack{
-                    Text("**Streak**: 0") + Text("\n") +
-                    Text("**Session this week**: 1") + Text("\n") +
+                VStack(alignment: .leading){
+                    //TODO: This is subject to change with swift data
+                    Text("2")
+                    Text("**Session this week**: 1")
                     Text("**Achievement complited**: 10/150")
                 }
                 .responsiveFrame(widthPercentage: 60)
