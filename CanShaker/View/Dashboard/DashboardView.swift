@@ -12,10 +12,7 @@ import Charts
 struct DashboardView: View {
     var body: some View {
         NavigationStack{
-            ZStack{
-                    LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
-                        .ignoresSafeArea()
-        
+
                 VStack{
                     UserInfo()
                     
@@ -33,7 +30,6 @@ struct DashboardView: View {
                     
                 }
                 
-            }
             .preferredColorScheme(.dark)
             .navigationTitle("Dashboard")
         }

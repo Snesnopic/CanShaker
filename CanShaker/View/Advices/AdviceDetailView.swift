@@ -10,9 +10,7 @@ import SwiftUI
 struct AdviceDetailView: View {
     @State var adv: Advice
     var body: some View {
-        ZStack{
-            LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
-                .ignoresSafeArea()
+    
             
             VStack{
                 Text(adv.description)
@@ -20,7 +18,6 @@ struct AdviceDetailView: View {
                 
                 Spacer()
             }
-        }
         .preferredColorScheme(.dark)
         .navigationTitle(adv.title)
         

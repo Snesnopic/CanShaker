@@ -10,14 +10,11 @@ import SwiftUI
 struct AchievementDetailView: View {
     @State var achievement: Achievement
     var body: some View {
-        
-        LinearGradient(gradient: Gradient(colors: [.lightBP, .darkBP]), startPoint: .top, endPoint: .bottom)
-            .ignoresSafeArea().overlay {
+
                 VStack{
-                    
                         Circle()
                             .frame(width: 300, height: 300)
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.white)
                         Text(achievement.title)
                             .font(.title)
                             .foregroundStyle(.white)
@@ -34,13 +31,14 @@ struct AchievementDetailView: View {
                             .foregroundStyle(.white)
                     
                 }
-                
+                .padding()
+                .preferredColorScheme(.dark)
                 .foregroundStyle(.white)
-            }
-        
+                .multilineTextAlignment(.center)
+            
     }
 }
 
-//#Preview {
-//    AchievementDetailView(animation: Namespace.wrappedValue,achievement: Achievement(id: UUID(), badge: "", title: "title1", subTitle: "subtitle1", description: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true))
-//}
+#Preview {
+    AchievementDetailView(achievement: Achievement(badge: "", title: "title1", subTitle: "subtitle1", description: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true))
+}
