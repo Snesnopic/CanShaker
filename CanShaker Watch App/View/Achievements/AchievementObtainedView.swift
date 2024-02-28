@@ -11,7 +11,7 @@ struct AchievementObtainedView: View {
     @State var achievement:Achievement
     var body: some View {
         NavigationStack {
-            Circle().foregroundStyle(achievement.color).overlay(content: {
+            Circle().foregroundStyle(Color.random()).overlay(content: {
                 VStack {
                     Image(systemName: "trophy")
                         .foregroundStyle(.black)
@@ -25,7 +25,7 @@ struct AchievementObtainedView: View {
         }
     }
 }
-
-#Preview {
-    AchievementObtainedView(achievement: Achievement.list.randomElement()!)
-}
+//
+//#Preview {
+//    AchievementObtainedView(achievement: Achievement.list.randomElement()!)
+//}

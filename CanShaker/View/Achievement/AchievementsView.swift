@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
-
+import SwiftData
 
 struct AchievementsView: View{
-    @State var selectedAchievement: Achievement =  (Achievement(badge: "", title: "", subTitle: "", description: "", completion: 0, isAchieved: false))
+    @State var selectedAchievement: Achievement?
+    @Query var achievements: [Achievement]
+    @Environment(\.modelContext) var context
     var body: some View{
         NavigationStack{
             
@@ -41,10 +43,13 @@ struct AchievementsView: View{
         }
         
         .preferredColorScheme(.dark)
+        .onAppear {
+            Achievement.ensureAchievementsExist(context: context, achievements: achievements)
+        }
         
     }
 }
-
-#Preview {
-    AchievementsView( selectedAchievement: (Achievement(badge: "", title: "", subTitle: "", description: "", completion: 0, isAchieved: false)))
-}
+//
+//#Preview {
+//    AchievementsView( selectedAchievement: (Achievement(badge: "", title: "", subTitle: "", desc: "", completion: 0, isAchieved: false)))
+//}

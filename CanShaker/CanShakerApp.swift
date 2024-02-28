@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct CanShakerApp: App {
+    var connectivity = Connectivity.shared
     var body: some Scene {
         WindowGroup {
             TabView(selection: .constant(1)) {
@@ -22,6 +24,8 @@ struct CanShakerApp: App {
                     Label("Achievements", systemImage: "trophy")
                 }
             }
+            .modelContainer(for: [Session.self,Achievement.self])
         }
+        
     }
 }

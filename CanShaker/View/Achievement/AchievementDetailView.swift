@@ -21,7 +21,7 @@ struct AchievementDetailView: View {
                         Text(achievement.subTitle)
                             .font(.title2)
                             .foregroundStyle(.white)
-                        Text(achievement.description)
+                        Text(achievement.desc)
                             .font(.title3)
                             .foregroundStyle(.white)
                         Text("Progress: \(achievement.completion)%")
@@ -40,5 +40,5 @@ struct AchievementDetailView: View {
 }
 
 #Preview {
-    AchievementDetailView(achievement: Achievement(badge: "", title: "title1", subTitle: "subtitle1", description: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true))
+    AchievementDetailView(achievement: Achievement(badge: "", title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true))
 }

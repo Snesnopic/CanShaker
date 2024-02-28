@@ -14,8 +14,6 @@ class MotionDataManager: ObservableObject {
     static var shared = MotionDataManager()
     let motion = CMMotionManager()
     let queue = OperationQueue()
-    var accelData: [TimeInterval:CMAcceleration] = [:]
-    var tempAccelData: [TimeInterval:CMAcceleration] = [:]
     var session:Session? = nil
     let healthStore:HKHealthStore
     var workoutSession: HKWorkoutSession?
@@ -70,9 +68,10 @@ class MotionDataManager: ObservableObject {
         motion.startDeviceMotionUpdates(to: queue, withHandler: {
             motion, error in
             if motion != nil {
-                let currentUpdateTimeStamp = self.motion.deviceMotionUpdateInterval * Double(self.accelData.count)
-                self.accelData[currentUpdateTimeStamp] = motion!.userAcceleration
-                print("The array of movements now has \(self.accelData.count) elements")
+                let currentUpdateTimeStamp = self.motion.deviceMotionUpdateInterval * Double(self.session!.accelData.count)
+                print("Current updatetimestamp: \(currentUpdateTimeStamp)")
+                self.session!.accelData[currentUpdateTimeStamp] = motion!.userAcceleration.getTotalAcceleration()
+                print("The array of movements now has \(self.session!.accelData.count) elements")
             }
             if error != nil {
                 print("ERROR: \(error!.localizedDescription)")
@@ -121,21 +120,22 @@ class MotionDataManager: ObservableObject {
         if motion.isDeviceMotionActive {
             print("Motion updates are happening. Stopping...")
             motion.stopDeviceMotionUpdates()
-            
-            accelData.forEach { (key: TimeInterval, value: CMAcceleration) in
-                var newValue:CMAcceleration = value
-                newValue.x = abs(newValue.x)
-                newValue.y = abs(newValue.y)
-                newValue.z = abs(newValue.z)
-                accelData[key] = newValue
+            session!.duration = abs(session!.date.distance(to: Date()))
+            var clampedData: [TimeInterval: Double] = [:]
+            let keys = Array(session!.accelData.keys.sorted())
+            for i in stride(from: 0, to: keys.count, by: 5) {
+                let endIndex = min(i + 5, keys.count)
+                let slice = keys[i..<endIndex]
+                
+                var sum:Double = 0.0
+                for key in slice {
+                    if let value = session!.accelData[key] {
+                        sum += value
+                    }
+                }
+                clampedData[slice.min()!] = (sum/Double(slice.count))
             }
-            accelData.forEach { (key: TimeInterval, value: CMAcceleration) in
-                session!.accelData[key] = value.getTotalAcceleration()
-            }
-            
-            
-            
-            session!.duration = abs((session!.date.timeIntervalSinceNow))
+            session!.accelData = clampedData
             print("Session duration: \(session!.duration)")
         }
         else {

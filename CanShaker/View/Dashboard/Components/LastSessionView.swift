@@ -9,7 +9,6 @@ import SwiftUI
 import Charts
 import CoreMotion
 import SwiftData
-
 struct LastSessionView: View {
     @State private var statToShow = 0
     @State private var averageBpm = 0.0
@@ -17,8 +16,7 @@ struct LastSessionView: View {
     @State private var calories = 0
     @State private var time: String = "00"
     
-    var connectivity = Connectivity.shared
-    
+    @Query private var sessions:[Session]
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 15.0)
@@ -36,13 +34,14 @@ struct LastSessionView: View {
                         Text("Speed")
                             .tag(1)
                     }
-                    .responsiveFrame(widthPercentage: 40)
+                    .responsiveFrame(widthPercentage: 35)
                     .pickerStyle(.segmented)
+                    Spacer()
                 }
                 .padding(.vertical, 5)
                 
                 // CHART + STATS
-                if !connectivity.sessions.isEmpty {
+                if !sessions.isEmpty {
                     HStack{
                         if(statToShow == 1){
                             SpeedGraphView()
@@ -70,11 +69,10 @@ struct LastSessionView: View {
                     }
                     .font(.caption)
                     .onAppear{
-                        averageBpm = getAverage(dataset: connectivity.sessions.last?.heartRateData.values)
-                        averageSpd = getAverage(dataset: connectivity.sessions.last?.accelData.values)
-                        calories = Int(connectivity.sessions.last!.calories)
-                        time = doubleToTime(doubleNumber: &connectivity.sessions.last!.duration)
-                        
+                        averageBpm = getAverage(dataset: sessions.last?.heartRateData.values)
+                        averageSpd = getAverage(dataset: sessions.last?.accelData.values)
+                        calories = Int(sessions.last!.calories)
+                        time = doubleToTime(doubleNumber: &sessions.last!.duration)
                     }
                     
                 }

@@ -11,7 +11,7 @@ import CoreMotion
 import SwiftData
 
 struct LastStatsView: View {
-    @Query var sessions:[Session]
+    @Query(sort: \Session.date) var sessions:[Session]
     let connectivity = Connectivity.shared
     let heartGradient = LinearGradient(
         gradient: Gradient (
@@ -37,7 +37,7 @@ struct LastStatsView: View {
                     
                 }
                 .chartXAxis{
-                    AxisMarks(values: .automatic(desiredCount: 6)) {
+                    AxisMarks(values: .automatic(desiredCount: 3)) {
                         AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
                     }
                 }
@@ -52,7 +52,7 @@ struct LastStatsView: View {
                             Text("Range")
                                 .foregroundStyle(.white)
                             HStack {
-                                Text("\(Int(sessions.last!.heartRateData.values.min()!))-\(Int(sessions.last!.heartRateData.values.min()!))")
+                                Text("\(Int(sessions.last!.heartRateData.values.min()!))-\(Int(sessions.last!.heartRateData.values.max()!))")
                                     .font(.title2)
                                     .foregroundStyle(.white)
                                 Text("BPM")

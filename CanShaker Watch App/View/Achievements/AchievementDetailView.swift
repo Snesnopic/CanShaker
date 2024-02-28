@@ -16,8 +16,8 @@ struct AchievementDetailView: View {
                 if achievement != nil {
                     Circle()
                         .matchedGeometryEffect(id: achievement!.id, in: animation)
-                        .foregroundStyle(achievement!.color)
-                    Text(achievement!.description).multilineTextAlignment(.center)
+                        .foregroundStyle(Color.random())
+                    Text(achievement!.desc).multilineTextAlignment(.center)
                 }
             }
             .navigationTitle(achievement != nil ? achievement!.title : "Achievements")
@@ -29,7 +29,7 @@ struct AchievementDetailView: View {
         }
     }
 }
-
-#Preview {
-    AchievementDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), achievement: .constant(Achievement.list.randomElement()))
-}
+//
+//#Preview {
+//    AchievementDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), achievement: .constant(Achievement.list.randomElement()))
+//}
