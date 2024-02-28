@@ -8,6 +8,7 @@
 import Foundation
 import WatchConnectivity
 import CoreMotion
+import SwiftData
 final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
     //se iOS perde la connessione con watchOS, riprova
 #if os(iOS)
@@ -20,6 +21,7 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
     @Published var sessions:[Session] = []
     var phoneSessionCount:Int = 0
     static let shared = Connectivity()
+    var context:ModelContext? = nil
     override private init() {
         super.init()
         let session = WCSession.default
@@ -74,7 +76,11 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
         let jsonDecoder = JSONDecoder()
         do {
             let decompressedData = try (messageData as NSData).decompressed(using: .lzma) as Data
-            sessions = try! jsonDecoder.decode([Session].self, from: decompressedData)
+                sessions = try! jsonDecoder.decode([Session].self, from: decompressedData)
+            for se in sessions{
+                context!.insert(se)
+            }
+            
             print("Ho ricevuto \(sessions.count) sessioni")
         }
         catch {

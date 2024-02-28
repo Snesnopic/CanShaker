@@ -10,7 +10,7 @@ import SwiftData
 
 @main
 struct CanShakerApp: App {
-    
+    var connectivity = Connectivity.shared
     let modelContainer: ModelContainer
    
     init(){
@@ -37,5 +37,8 @@ struct CanShakerApp: App {
             }
         }
         .modelContainer(modelContainer)
+        .onChange(of: connectivity, {
+            
+        })
     }
 }
