@@ -13,10 +13,10 @@ struct Infos: View {
             ZStack{
                 
                 RoundedRectangle(cornerRadius: 15)
-                    .frame(width: 180, height: 100)
+                    .responsiveFrame(widthPercentage: 45, heightPercentage: 10, alignment: .center)
                     .foregroundStyle(Color("boxColor"))
                     .opacity(0.4)
-                VStack(alignment: .center, spacing: 15){
+                VStack(alignment: .center, spacing: 10){
                     Text("Sessions this week")
                         .font(.headline)
                     //TODO: This is subject to change with swift data
@@ -27,10 +27,10 @@ struct Infos: View {
             }
             ZStack{
                 RoundedRectangle(cornerRadius: 15)
-                    .frame(width: 180, height: 100)
+                    .responsiveFrame(widthPercentage: 45, heightPercentage: 10, alignment: .center)
                     .foregroundStyle(Color("boxColor"))
                     .opacity(0.4)
-                VStack(alignment: .center, spacing: 15){
+                VStack(alignment: .center, spacing: 10){
                     Text("Achievements")
                         .font(.headline)
                     //TODO: This is subject to change with swift data

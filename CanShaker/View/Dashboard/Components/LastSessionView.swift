@@ -36,9 +36,8 @@ struct LastSessionView: View {
                         Text("Speed")
                             .tag(1)
                     }
-                    .responsiveFrame(widthPercentage: 35)
+                    .responsiveFrame(widthPercentage: 40)
                     .pickerStyle(.segmented)
-                    Spacer()
                 }
                 .padding(.vertical, 5)
                 

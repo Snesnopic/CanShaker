@@ -14,35 +14,36 @@ struct AdviceButtonStyle: View {
     var body: some View {
         
         ZStack{
-            RoundedRectangle(cornerRadius: 15.0)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 15)
+            RoundedRectangle(cornerRadius: 15)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 30)
                 .foregroundStyle(Color("boxColor"))
                 .opacity(0.4)
                 .shadow(radius: 20)
-                
-            VStack{
+            //TODO: This will be the image ^
+            RoundedRectangle(cornerRadius: 15)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 8)
+                .foregroundStyle(Color("boxColor"))
+                .opacity(0.4)
+                .shadow(radius: 20)
+                .padding(.top, 190)
+            VStack(alignment: .leading) {
                 HStack{
                     Image(systemName: img)
                         .font(.largeTitle)
                     Text(category)
                         .bold()
                         .font(.title)
-                    Spacer()
                 }
-                HStack{
-                    Text(cDescription)
-                    Spacer()
-                }
+                .padding(.bottom, 20)
+                Text(cDescription)
             }
-            .responsiveFrame(widthPercentage: 90, heightPercentage: 13, alignment: .topLeading)
-            .multilineTextAlignment(.leading)
+            .responsiveFrame(widthPercentage: 90, heightPercentage: 30, alignment: .bottomLeading)
+            .padding(.bottom, 20)
             .foregroundStyle(.white)
-            
         }
         .preferredColorScheme(.dark)
     }
 }
-
 
 #Preview{
     AdviceButtonStyle(img: "book.closed.fill", category: "Methods", cDescription: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")

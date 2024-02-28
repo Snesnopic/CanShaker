@@ -15,18 +15,28 @@ struct DashboardView: View {
 
                 VStack{
                     Infos()
+                        
                     HStack{
-                        Text("Last Session")
+                        Text("Activity")
                             .bold()
                             .font(.title2)
-                            .padding(.horizontal)
                         Spacer()
+                        Button {
+                            //TODO: archive
+//                            NavigationLink(destination: ArchiveView())
+                        } label: {
+                            Text("See all")
+                                .foregroundStyle(.white)
+                        }
                     }
+                    InsultComplimentView()
                     //TODO: Adjust the view
                     LastSessionView()
+                        .padding(.top, 5)
                     Spacer()
-                    
+
                 }
+                .padding()
                 
             .preferredColorScheme(.dark)
             .navigationTitle("Dashboard")
