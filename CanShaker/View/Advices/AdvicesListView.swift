@@ -46,10 +46,7 @@ struct AdvicesListView: View {
         
         
     }
-    
-//    func adviceFilter(adv: adviceCategory) -> Advice {
-//        if(adv == sel)
-//    }
+
 }
 
 #Preview {
