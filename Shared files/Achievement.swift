@@ -38,8 +38,8 @@ class Achievement: Identifiable{
                     Achievement(title: "title3", subTitle: "subtitle3", desc: "Something something", completion: 84, isAchieved: true, imageName: "flameRed"),
                     Achievement(title: "title4", subTitle: "subtitle4", desc: "Something something", completion: 77, isAchieved: false, imageName: "flameRed"),
                     Achievement(title: "title5", subTitle: "subtitle5", desc: "Something something", completion: 99, isAchieved: false, imageName: "flameRed"),
-                    Achievement(title: "title6", subTitle: "subtitle6", desc: "Something something", completion: 77, isAchieved: false),
-                    Achievement(title: "title7", subTitle: "subtitle7", desc: "Something something", completion: 76, isAchieved: false)
+                    Achievement(title: "title6", subTitle: "subtitle6", desc: "Something something", completion: 77, isAchieved: false, imageName: "splashBlue"),
+                    Achievement(title: "title7", subTitle: "subtitle7", desc: "Something something", completion: 76, isAchieved: false, imageName: "splashBlue")
                 ]
                 list.forEach { achievement in
                     context.insert(achievement)

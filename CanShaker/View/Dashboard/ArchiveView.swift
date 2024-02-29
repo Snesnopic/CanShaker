@@ -13,10 +13,10 @@ struct ArchiveView: View {
     var body: some View {
         List{
             ForEach(dates(), id: \.self) { date in
-                Section(header: Text(String(describing: date))){
+                Section(header: Text(String(describing: date.relativeToNow))){
                     ForEach(sessions){ session in
-                        if(session.date == date){
-                            Text("adsad")
+                        if(session.date.formatted(.dateTime.day()) == date.formatted(.dateTime.day())){
+                            Text("Sessione durata \(session.duration)")
                         }
                         
                     }
@@ -57,7 +57,7 @@ struct ArchiveView: View {
         heartRate[Double(i)*0.3] = Double.random(in: 50...140)
     }
     for i in 0..<3{
-        container.mainContext.insert(Session(date: Date(timeIntervalSince1970: 0.0) + TimeInterval(i*2000000), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate))
+        container.mainContext.insert(Session(date: Date(timeIntervalSinceNow: 0.0) + TimeInterval(i*2000000), accelData: accelD, duration: Double.random(in: (0.0)...(100.0)), heartRateData: heartRate))
         container.mainContext.insert(Session(date: Date(timeIntervalSince1970: 0.0) + TimeInterval(i*2000000), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate))
     }
     return ArchiveView()

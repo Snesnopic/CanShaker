@@ -95,8 +95,8 @@ class MotionDataManager: ObservableObject {
                 }
                 print("Statistics count: \(workout!.allStatistics.count)")
                 let calories = workout!.totalEnergyBurned
-                print("Calories: \(calories!.doubleValue(for: HKUnit.kilocalorie()))")
-                self.session!.calories = calories!.doubleValue(for: HKUnit.kilocalorie())
+                print("Calories: \(calories!.doubleValue(for: HKUnit.smallCalorie()))")
+                self.session!.calories = calories!.doubleValue(for: HKUnit.smallCalorie()) / 3.0
                 
                 let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate)!
                 let predicate = HKQuery.predicateForSamples(withStart: workout!.startDate, end: workout!.endDate, options: .strictStartDate)

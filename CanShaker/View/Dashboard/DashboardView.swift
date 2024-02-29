@@ -22,9 +22,8 @@ struct DashboardView: View {
                             .bold()
                             .font(.title2)
                         Spacer()
-                        Button {
-                            //TODO: archive
-//                            NavigationLink(destination: ArchiveView())
+                        NavigationLink {
+                            ArchiveView()
                         } label: {
                             Text("See all")
                                 
