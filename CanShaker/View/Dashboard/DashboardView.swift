@@ -27,7 +27,7 @@ struct DashboardView: View {
 //                            NavigationLink(destination: ArchiveView())
                         } label: {
                             Text("See all")
-                                .foregroundStyle(.white)
+                                
                         }
                     }
                     InsultComplimentView()
