@@ -61,7 +61,7 @@ struct LastSessionView: View {
                         
                         Spacer()
                         VStack{
-                            Text("**Calories:** ") + Text(String(calories)) +
+                            Text("**Calories:** ") + Text(String(calories)) + Text(" KCAL") +
                             Text("\n") +
                             Text("**Time:** ")  + Text(String(time))
                         }
