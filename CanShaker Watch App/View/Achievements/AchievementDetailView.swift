@@ -29,9 +29,12 @@ struct AchievementDetailView: View {
         }
         .navigationTitle(achievement != nil ? achievement!.title : "Achievements")
         .onTapGesture {
-            withAnimation {
+            withAnimation(.linear(duration: 0.2)) {
                 isPresented = false
-                achievement = nil
+            } completion: {
+                withAnimation(.linear(duration: 0.2)){
+                    achievement = nil
+                }
             }
         }
     }
