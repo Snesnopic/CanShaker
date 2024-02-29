@@ -14,11 +14,13 @@ struct AdviceButtonStyle: View {
     var body: some View {
         
         ZStack{
-            
-            //TODO: This will be the image ^
-            
+            UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 14)
+                .foregroundColor(Color("boxColor"))
+                .opacity(0.4)
+                .shadow(radius: 20)
+            Spacer()
             VStack(alignment: .leading) {
-                Spacer()
                 HStack{
                     Image(systemName: img)
                         .font(.largeTitle)
@@ -26,18 +28,17 @@ struct AdviceButtonStyle: View {
                         .bold()
                         .font(.title)
                 }
-                Text(cDescription)
-                    .font(.subheadline)
-                    .fontWeight(.medium)
+                .padding()
                 ZStack(alignment: .leading) {
                     UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
                         .responsiveFrame(widthPercentage: 95, heightPercentage: 5)
                         .foregroundColor(Color("boxColor"))
                         .opacity(0.4)
                         .shadow(radius: 20)
-
-                    Text("Footer")
-                        .font(.footnote)
+                    Text(cDescription)
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                        .padding()
                 }
                 
             }

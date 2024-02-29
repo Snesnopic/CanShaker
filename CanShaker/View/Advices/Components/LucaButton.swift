@@ -13,8 +13,13 @@ struct LucaButton: View {
             UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
                 .foregroundStyle(.blue)
             VStack(alignment: .leading) {
+                Spacer()
+                HStack{
                     Text("Luca")
                         .font(.title3)
+                    Text("Luca")
+                        .font(.title3)
+                }
                 ZStack(alignment: .leading) {
                     UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
                         .foregroundStyle(.gray)
