@@ -8,10 +8,10 @@
 import SwiftUI
 import HealthKit
 import Charts
-
+import SwiftData
 struct DashboardView: View {
     @Environment(\.modelContext) private var context
-    
+    @Query private var sessions: [Session]
     var body: some View {
         NavigationStack{
 
@@ -23,7 +23,7 @@ struct DashboardView: View {
                             .font(.title2)
                         Spacer()
                         NavigationLink {
-                            ArchiveView()
+                            ArchiveView(sessions: sessions)
                         } label: {
                             Text("See all")
                                 
