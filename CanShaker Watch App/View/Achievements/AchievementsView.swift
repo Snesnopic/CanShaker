@@ -14,58 +14,27 @@ struct AchievementsView: View {
     @State var selectedAchievement:Achievement? = nil
     @Query var achievements:[Achievement]
     @Environment(\.modelContext) private var context
+    
+    let columns = [
+        GridItem(.fixed(50)),
+        GridItem(.fixed(50)),
+        GridItem(.fixed(50))
+    ]
+    
     var body: some View {
         NavigationStack {
             if !isPresented {
-                ScrollView {
-                    Grid() {
-                        if !achievements.isEmpty {
-                            ForEach(1...achievements.count/3, id: \.self){
-                                i in
-                                GridRow {
-                                    Button(action: {
-                                        selectedAchievement = achievements[(i-1)*3]
-                                        withAnimation {
-                                            isPresented = true
-                                        }
-                                    }, label: {
-                                        ExtractedView(achievement: achievements[(i-1)*3], animation: animation)
-                                            .opacity(selectedAchievement == nil || selectedAchievement!.id == achievements[(i-1)*3].id ? 1.0 : 0.0)
-                                    })
-                                    .buttonStyle(.plain)
-                                    Button(action: {
-                                        selectedAchievement = achievements[(i-1)*3 + 1]
-                                        withAnimation {
-                                            isPresented = true
-                                        }
-                                    }, label: {
-                                        
-                                        ExtractedView(achievement: achievements[(i-1)*3+1],animation: animation)
-                                            .opacity(selectedAchievement == nil || selectedAchievement!.id == achievements[(i-1)*3+1].id ? 1.0 : 0.0)
-                                        
-                                    })
-                                    .buttonStyle(.plain)
-                                    Button(action: {
-                                        selectedAchievement = achievements[(i-1)*3+2]
-                                        withAnimation {
-                                            isPresented = true
-                                        }
-                                    }, label: {
-                                        
-                                        ExtractedView(achievement: achievements[(i-1)*3+2],animation: animation)
-                                            .opacity(selectedAchievement == nil || selectedAchievement!.id == achievements[(i-1)*3+2].id ? 1.0 : 0.0)
-                                        
-                                    })
-                                    .buttonStyle(.plain)
-                                }
-                            }
+                    LazyVGrid(columns: columns){
+                        ForEach(achievements, id: \.self ){ achievement in
+                            AchievementButton(selectedAchievement: $selectedAchievement, achievement: achievement, isPresented: $isPresented, animation: animation)
+                            
                         }
                     }
                     .navigationTitle("Achievements")
                     .onAppear {
                         Achievement.ensureAchievementsExist(context: context, achievements: achievements)
                     }
-                }
+                    .scrollDisabled(false)
             }
             else {
                 AchievementDetailView(animation: animation, isPresented: $isPresented, achievement: $selectedAchievement)
@@ -79,13 +48,3 @@ struct AchievementsView: View {
     AchievementsView()
 }
 
-struct ExtractedView: View {
-    var achievement:Achievement
-    var animation:Namespace.ID
-    var body: some View {
-        Circle()
-            .frame(width: 50)
-            .matchedGeometryEffect(id: achievement.id, in: animation)
-            .foregroundStyle(Color.random())
-    }
-}
