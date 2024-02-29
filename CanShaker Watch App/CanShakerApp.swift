@@ -10,15 +10,15 @@ import SwiftData
 @main
 struct CanShaker_Watch_AppApp: App {
     @State var firstTabView:Int = 0
-    @State var currentState:SessionState = .start
+    @State var isShaking:Bool = false
     @Environment(\.modelContext) private var context
 
     var body: some Scene {
         WindowGroup {
-            if currentState == .shaking {
+            if isShaking {
                 TabView(selection: $firstTabView,
                         content:  {
-                    SessionView(currentState: $currentState,firstTabView: $firstTabView)
+                    SessionView(firstTabView: $firstTabView, isShaking: $isShaking)
                         .tabItem { Label("Session", systemImage: "figure") }
                         .tag(0)
                 })
@@ -28,7 +28,7 @@ struct CanShaker_Watch_AppApp: App {
             else {
                 TabView(selection: $firstTabView,
                         content:  {
-                    SessionView(currentState: $currentState,firstTabView: $firstTabView)
+                    SessionView(firstTabView: $firstTabView, isShaking: $isShaking)
                         .tabItem { Label("Session", systemImage: "figure") }
                         .tag(0)
                     LastStatsView()

@@ -10,27 +10,21 @@ import HealthKit
 import CoreMotion
 import SwiftData
 
-enum SessionState {
-    case start
-    case shaking
-    case done
-}
 struct SessionView: View {
     @Environment(\.modelContext) var modelContext
-    @Binding var currentState: SessionState
     @Binding var firstTabView:Int
     @State var secondTabView:Int = 2
     @State var circleAnimationAmount:Double = 1.0
     @State var sprayCanRotationAmount:Double = 0
     @State var sprayCanTranslationAmount:Double = 0
     @ObservedObject var motionManager = MotionDataManager.shared
+    @Binding var isShaking:Bool
     var connectivity:Connectivity = Connectivity.shared
     var body: some View {
         NavigationStack {
-            switch currentState {
-            case .start:
+            if !isShaking {
                 Button(action: {
-                    currentState = .shaking
+                    isShaking = true
                     motionManager.startQueuedUpdates()
                 }, label: {
                     ZStack {
@@ -55,15 +49,15 @@ struct SessionView: View {
                     }
                 })
                 .buttonStyle(.plain)
-                
-            case .shaking:
+            }
+            else {
                 TabView(selection: $secondTabView){
                     Button(role: .destructive,
                            action: {
                         print("Done!")
                         motionManager.stopQueuedUpdates()
                         modelContext.insert(motionManager.session!)
-                        currentState = .done
+                        isShaking = false
                         self.firstTabView = 1
                     }, label: {
                         Text("I'm done")
@@ -89,15 +83,11 @@ struct SessionView: View {
                         .tag(2)
                 }
                 .tabViewStyle(.page)
-                
-            case .done:
-                Text("You just finished a session!")
             }
-            
         }
     }
 }
 
 #Preview {
-    SessionView(currentState: .constant(.shaking), firstTabView: .constant(0))
+    SessionView(firstTabView: .constant(0),isShaking: .constant(false))
 }
