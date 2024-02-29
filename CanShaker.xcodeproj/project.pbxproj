@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E2E8C142B8F6FDF003C609A /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E8C132B8F6FDF003C609A /* Info.swift */; };
 		3ECF618F2B8E1C0F0007E8F7 /* AllAchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF618E2B8E1C0F0007E8F7 /* AllAchievementsView.swift */; };
+		6B1F6D832B9096E800C7EE6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
+		6B1F6D852B90970200C7EE6B /* AchievementButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F6D842B90970200C7EE6B /* AchievementButton.swift */; };
 		6B6C8A002B8F2E24008C880C /* AchievementStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C89FF2B8F2E24008C880C /* AchievementStyle.swift */; };
 		6B6C8A022B8F4CEB008C880C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39312B88F05400FFB72F /* Session.swift */; };
 		6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
@@ -77,6 +79,7 @@
 /* Begin PBXFileReference section */
 		3E2E8C132B8F6FDF003C609A /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		3ECF618E2B8E1C0F0007E8F7 /* AllAchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAchievementsView.swift; sourceTree = "<group>"; };
+		6B1F6D842B90970200C7EE6B /* AchievementButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementButton.swift; sourceTree = "<group>"; };
 		6B6C89FF2B8F2E24008C880C /* AchievementStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementStyle.swift; sourceTree = "<group>"; };
 		6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
@@ -274,7 +277,7 @@
 		9D3C22CE2B908AD900279EBC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9D3C22CF2B908AE300279EBC /* AchievementButton.swift */,
+				6B1F6D842B90970200C7EE6B /* AchievementButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -445,8 +448,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B1F6D832B9096E800C7EE6B /* Assets.xcassets in Resources */,
 				9D7188162B7E419C002C02B0 /* Preview Assets.xcassets in Resources */,
-				9D3C22D12B9091AE00279EBC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +494,7 @@
 			files = (
 				9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */,
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
+				6B1F6D852B90970200C7EE6B /* AchievementButton.swift in Sources */,
 				9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
 				9D8C39322B88F05400FFB72F /* Session.swift in Sources */,
@@ -499,7 +503,6 @@
 				9D8C39362B89006400FFB72F /* Extensions.swift in Sources */,
 				9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */,
 				9D7411A82B7F559A00869BF8 /* AchievementObtainedView.swift in Sources */,
-				9D3C22D02B908AE300279EBC /* AchievementButton.swift in Sources */,
 				9D7411B22B7F96BD00869BF8 /* AchievementsView.swift in Sources */,
 				9D71880F2B7E419B002C02B0 /* CanShakerApp.swift in Sources */,
 			);
