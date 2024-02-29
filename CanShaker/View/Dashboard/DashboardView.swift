@@ -16,7 +16,7 @@ struct DashboardView: View {
         NavigationStack{
 
                 VStack{
-                    Infos()
+                    Info()
                     HStack{
                         Text("Activity")
                             .bold()
