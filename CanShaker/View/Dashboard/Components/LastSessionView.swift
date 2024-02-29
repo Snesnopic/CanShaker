@@ -81,7 +81,6 @@ struct LastSessionView: View {
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
             
         }
-        
         .preferredColorScheme(.dark)
     }
     
