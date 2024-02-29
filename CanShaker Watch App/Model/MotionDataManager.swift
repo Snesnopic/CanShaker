@@ -139,7 +139,7 @@ class MotionDataManager: ObservableObject {
             session!.accelData = clampedData
             print("Session duration: \(session!.duration)")
             while doneWithHealth == false {
-                print("Waiting for health data to be processed")
+                
             }
         }
         else {
