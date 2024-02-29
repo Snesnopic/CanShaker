@@ -12,33 +12,34 @@ import SwiftData
 @Model
 class Achievement: Identifiable{
     let id: UUID = UUID()
-    let badge: String
     let title: String
     let subTitle: String
     let desc: String
     let completion: Int
     var achievingDate: Date?
     var isAchieved: Bool
+    var imageName: String? = nil
     
-    init(badge: String, title: String, subTitle: String, desc: String, completion: Int, achievingDate: Date? = nil, isAchieved: Bool) {
-        self.badge = badge
+    init(title: String, subTitle: String, desc: String, completion: Int, achievingDate: Date? = nil, isAchieved: Bool, imageName: String? = nil) {
         self.title = title
         self.subTitle = subTitle
         self.desc = desc
         self.completion = completion
         self.achievingDate = achievingDate
         self.isAchieved = isAchieved
+        self.imageName = imageName
     }
     static func ensureAchievementsExist(context:ModelContext, achievements:[Achievement]) {
         if achievements.isEmpty {
             do{
                 let list = [
-                    Achievement(badge: "", title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true),
-                    Achievement(badge: "", title: "title2", subTitle: "subtitle2", desc: "You have shaked your can really fast!", completion: 22, isAchieved: false),
-                    Achievement(badge: "", title: "title3", subTitle: "subtitle3", desc: "Something something", completion: 84, isAchieved: true),
-                    Achievement(badge: "", title: "title4", subTitle: "subtitle4", desc: "Something something", completion: 77, isAchieved: false),
-                    Achievement(badge: "", title: "title5", subTitle: "subtitle5", desc: "Something something", completion: 99, isAchieved: false),
-                    Achievement(badge: "", title: "title6", subTitle: "subtitle6", desc: "Something something", completion: 77, isAchieved: false)
+                    Achievement(title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true, imageName: "flameRed"),
+                    Achievement(title: "title2", subTitle: "subtitle2", desc: "You have shaked your can really fast!", completion: 22, isAchieved: false, imageName: "flameRed"),
+                    Achievement(title: "title3", subTitle: "subtitle3", desc: "Something something", completion: 84, isAchieved: true, imageName: "flameRed"),
+                    Achievement(title: "title4", subTitle: "subtitle4", desc: "Something something", completion: 77, isAchieved: false, imageName: "flameRed"),
+                    Achievement(title: "title5", subTitle: "subtitle5", desc: "Something something", completion: 99, isAchieved: false, imageName: "flameRed"),
+                    Achievement(title: "title6", subTitle: "subtitle6", desc: "Something something", completion: 77, isAchieved: false),
+                    Achievement(title: "title7", subTitle: "subtitle7", desc: "Something something", completion: 76, isAchieved: false)
                 ]
                 list.forEach { achievement in
                     context.insert(achievement)

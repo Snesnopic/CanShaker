@@ -54,6 +54,6 @@ struct AchievementsView: View{
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Achievement.self, configurations: config)
 
-    return AchievementsView( selectedAchievement: (Achievement(badge: "", title: "", subTitle: "", desc: "", completion: 0, isAchieved: false)))
+    return AchievementsView(selectedAchievement: (Achievement(title: "", subTitle: "", desc: "", completion: 0, isAchieved: false)))
         .modelContainer(container)
 }
