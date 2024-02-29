@@ -19,8 +19,9 @@ class Achievement: Identifiable{
     let completion: Int
     var achievingDate: Date?
     var isAchieved: Bool
+    var imageName: String? = nil
     
-    init(badge: String, title: String, subTitle: String, desc: String, completion: Int, achievingDate: Date? = nil, isAchieved: Bool) {
+    init(badge: String, title: String, subTitle: String, desc: String, completion: Int, achievingDate: Date? = nil, isAchieved: Bool, imageName: String? = nil) {
         self.badge = badge
         self.title = title
         self.subTitle = subTitle
@@ -33,7 +34,7 @@ class Achievement: Identifiable{
         if achievements.isEmpty {
             do{
                 let list = [
-                    Achievement(badge: "", title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true),
+                    Achievement(badge: "", title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true, imageName: "flameRed"),
                     Achievement(badge: "", title: "title2", subTitle: "subtitle2", desc: "You have shaked your can really fast!", completion: 22, isAchieved: false),
                     Achievement(badge: "", title: "title3", subTitle: "subtitle3", desc: "Something something", completion: 84, isAchieved: true),
                     Achievement(badge: "", title: "title4", subTitle: "subtitle4", desc: "Something something", completion: 77, isAchieved: false),
