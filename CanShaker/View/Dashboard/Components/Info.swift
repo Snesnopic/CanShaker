@@ -1,5 +1,5 @@
 //
-//  UserInfo.swift
+//  Info.swift
 //  CanShaker
 //
 //  Created by Giuseppe Casillo on 25/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Infos: View {
+struct Info: View {
     var body: some View {
         HStack{
             ZStack{
@@ -45,5 +45,5 @@ struct Infos: View {
 }
 
 #Preview {
-    Infos()
+    Info()
 }

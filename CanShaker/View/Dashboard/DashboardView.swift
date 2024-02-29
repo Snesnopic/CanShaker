@@ -16,7 +16,7 @@ struct DashboardView: View {
         NavigationStack{
 
                 VStack{
-                    Infos()
+                    Info()
                     HStack{
                         Text("Activity")
                             .bold()
@@ -27,7 +27,7 @@ struct DashboardView: View {
 //                            NavigationLink(destination: ArchiveView())
                         } label: {
                             Text("See all")
-                                .foregroundStyle(.white)
+                                
                         }
                     }
                     InsultComplimentView()
