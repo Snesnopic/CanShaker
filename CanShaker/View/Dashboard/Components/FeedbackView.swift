@@ -1,5 +1,5 @@
 //
-//  InsultComplimentView.swift
+//  FeedbackView.swift
 //  CanShaker
 //
 //  Created by Davide Castaldi on 28/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InsultComplimentView: View {
+struct FeedbackView: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 15)
@@ -27,5 +27,5 @@ struct InsultComplimentView: View {
 }
 
 #Preview {
-    InsultComplimentView()
+    FeedbackView()
 }

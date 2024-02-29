@@ -30,7 +30,7 @@ struct DashboardView: View {
                                 
                         }
                     }
-                    InsultComplimentView()
+                    FeedbackView()
                     //TODO: Adjust the view
                     LastSessionView()
                         .padding(.top, 5)
