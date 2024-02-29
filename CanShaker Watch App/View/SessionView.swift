@@ -29,7 +29,7 @@ struct SessionView: View {
                 }, label: {
                     ZStack {
                         Circle()
-                            .foregroundStyle(.graffiti.opacity(0.5))
+                            .foregroundStyle(.accent.opacity(0.5))
                             .scaleEffect(circleAnimationAmount)
                             .onAppear{
                                 withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
@@ -41,7 +41,7 @@ struct SessionView: View {
                             }
                             .padding()
                         Circle()
-                            .foregroundStyle(.graffiti)
+                            .foregroundStyle(.accent)
                             .padding()
                         Text("Start")
                             .bold()
