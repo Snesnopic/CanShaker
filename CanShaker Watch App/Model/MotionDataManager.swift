@@ -81,6 +81,7 @@ class MotionDataManager: ObservableObject {
     }
     
     func stopQueuedUpdates() {
+        var doneWithHealth:Bool = false
         workoutSession!.end()
         workoutBuilder!.endCollection(withEnd: Date(), completion: { (success, error) in
             guard success else {
@@ -104,15 +105,15 @@ class MotionDataManager: ObservableObject {
                         print("Error: \(error!.localizedDescription)")
                         return
                     }
-                    
                     for sample in samples {
                         let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
                         let value = sample.quantity.doubleValue(for: heartRateUnit)
                         let date = sample.startDate
-                        print("Heart Rate: \(value) bpm at \(date)")
                         let dateAsTimeInterval = date.timeIntervalSince(self.workoutSession!.startDate!)
                         self.session!.heartRateData[dateAsTimeInterval] = value
                     }
+                    print("I'm done with health data")
+                    doneWithHealth = true
                 }
                 self.healthStore.execute(query)
             })
@@ -137,6 +138,9 @@ class MotionDataManager: ObservableObject {
             }
             session!.accelData = clampedData
             print("Session duration: \(session!.duration)")
+            while doneWithHealth == false {
+                print("Waiting for health data to be processed")
+            }
         }
         else {
             print("Motion updates are NOT happening!")
