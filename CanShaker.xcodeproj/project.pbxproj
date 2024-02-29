@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E2E8C142B8F6FDF003C609A /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E8C132B8F6FDF003C609A /* Info.swift */; };
 		3ECF618F2B8E1C0F0007E8F7 /* AllAchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF618E2B8E1C0F0007E8F7 /* AllAchievementsView.swift */; };
-		6B3A23A22B874C8400E03F41 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		6B6C8A002B8F2E24008C880C /* AchievementStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C89FF2B8F2E24008C880C /* AchievementStyle.swift */; };
 		6B6C8A022B8F4CEB008C880C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39312B88F05400FFB72F /* Session.swift */; };
 		6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
@@ -36,7 +35,6 @@
 		9D7411B02B7F960600869BF8 /* LastStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411AE2B7F960600869BF8 /* LastStatsView.swift */; };
 		9D7411B22B7F96BD00869BF8 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */; };
 		9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B324D2B889142003B08A7 /* MotionDataManager.swift */; };
-		9D81EDA72B8372A5003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188122B7E419C002C02B0 /* Assets.xcassets */; };
 		9D81EDA92B8372C2003B7CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
 		9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */; };
 		9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
@@ -101,7 +99,6 @@
 		9D7188092B7E419B002C02B0 /* CanShaker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CanShaker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D71880E2B7E419B002C02B0 /* CanShakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanShakerApp.swift; sourceTree = "<group>"; };
 		9D7188102B7E419B002C02B0 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
-		9D7188122B7E419C002C02B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D7188152B7E419C002C02B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9D7411A12B7F515200869BF8 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		9D7411A32B7F51BE00869BF8 /* AdvicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesView.swift; sourceTree = "<group>"; };
@@ -154,23 +151,14 @@
 			isa = PBXGroup;
 			children = (
 				9D7B324D2B889142003B08A7 /* MotionDataManager.swift */,
-				9D8C39312B88F05400FFB72F /* Session.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		6B3A23A02B874B4700E03F41 /* Support files */ = {
-			isa = PBXGroup;
-			children = (
-				9D8C39352B89006400FFB72F /* Extensions.swift */,
-				9DA6A8612B8C9587009737D7 /* Connectivity.swift */,
-			);
-			path = "Support files";
 			sourceTree = "<group>";
 		};
 		6B3A23A12B874B6200E03F41 /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
+				9D3C22CE2B908AD900279EBC /* Components */,
 				9D7411A72B7F559A00869BF8 /* AchievementObtainedView.swift */,
 				9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */,
 				9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */,
@@ -191,7 +179,6 @@
 		6B8AA1082B84AD790088E5E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6BF3EEBA2B8B54ED00B52687 /* Achievements */,
 				6BF3EEB72B8B54D000B52687 /* Advices */,
 			);
 			path = Model;
@@ -265,14 +252,6 @@
 			path = Advices;
 			sourceTree = "<group>";
 		};
-		6BF3EEBA2B8B54ED00B52687 /* Achievements */ = {
-			isa = PBXGroup;
-			children = (
-				6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */,
-			);
-			path = Achievements;
-			sourceTree = "<group>";
-		};
 		6BF3EEC22B8B605800B52687 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,9 +271,30 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		9D3C22CE2B908AD900279EBC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9D3C22CF2B908AE300279EBC /* AchievementButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9D3C22D22B90924100279EBC /* Shared files */ = {
+			isa = PBXGroup;
+			children = (
+				9D8C39312B88F05400FFB72F /* Session.swift */,
+				9DA6A8612B8C9587009737D7 /* Connectivity.swift */,
+				9D8C39352B89006400FFB72F /* Extensions.swift */,
+				9D7188002B7E419B002C02B0 /* Assets.xcassets */,
+				6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */,
+			);
+			path = "Shared files";
+			sourceTree = "<group>";
+		};
 		9D7187F02B7E419A002C02B0 = {
 			isa = PBXGroup;
 			children = (
+				9D3C22D22B90924100279EBC /* Shared files */,
 				9D7187FB2B7E419A002C02B0 /* CanShaker */,
 				9D71880D2B7E419B002C02B0 /* CanShaker Watch App */,
 				9D7187FA2B7E419A002C02B0 /* Products */,
@@ -319,7 +319,6 @@
 				6BDF79BA2B8C8CBB00E9663D /* Support files */,
 				6B8AA1082B84AD790088E5E4 /* Model */,
 				6B8AA1092B84AD870088E5E4 /* View */,
-				9D7188002B7E419B002C02B0 /* Assets.xcassets */,
 				9D7188022B7E419B002C02B0 /* Preview Content */,
 			);
 			path = CanShaker;
@@ -339,9 +338,7 @@
 				9D5360EA2B7E4E3800BE628C /* CanShaker Watch App.entitlements */,
 				9D71880E2B7E419B002C02B0 /* CanShakerApp.swift */,
 				6B3A239E2B874B1B00E03F41 /* View */,
-				9D7188122B7E419C002C02B0 /* Assets.xcassets */,
 				9D7188142B7E419C002C02B0 /* Preview Content */,
-				6B3A23A02B874B4700E03F41 /* Support files */,
 				6B3A239F2B874B3300E03F41 /* Model */,
 			);
 			path = "CanShaker Watch App";
@@ -449,7 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7188162B7E419C002C02B0 /* Preview Assets.xcassets in Resources */,
-				9D81EDA72B8372A5003B7CD1 /* Assets.xcassets in Resources */,
+				9D3C22D12B9091AE00279EBC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +489,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B3A23A22B874C8400E03F41 /* Assets.xcassets in Sources */,
 				9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */,
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
 				9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */,
@@ -503,6 +499,7 @@
 				9D8C39362B89006400FFB72F /* Extensions.swift in Sources */,
 				9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */,
 				9D7411A82B7F559A00869BF8 /* AchievementObtainedView.swift in Sources */,
+				9D3C22D02B908AE300279EBC /* AchievementButton.swift in Sources */,
 				9D7411B22B7F96BD00869BF8 /* AchievementsView.swift in Sources */,
 				9D71880F2B7E419B002C02B0 /* CanShakerApp.swift in Sources */,
 			);
@@ -640,7 +637,7 @@
 		9D71881A2B7E419C002C02B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconWatch;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "CanShaker Watch App/CanShaker Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -675,7 +672,7 @@
 		9D71881B2B7E419C002C02B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconWatch;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "CanShaker Watch App/CanShaker Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;

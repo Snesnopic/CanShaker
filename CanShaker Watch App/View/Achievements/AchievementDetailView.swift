@@ -12,24 +12,34 @@ struct AchievementDetailView: View {
     @Binding var isPresented:Bool
     @Binding var achievement:Achievement?
     var body: some View {
-            VStack {
-                if achievement != nil {
+        VStack {
+            if achievement != nil {
+                ZStack {
                     Circle()
-                        .matchedGeometryEffect(id: achievement!.id, in: animation)
                         .foregroundStyle(Color.random())
-                    Text(achievement!.desc).multilineTextAlignment(.center)
+                    if achievement!.imageName != nil {
+                        Image(achievement!.imageName!)
+                            .resizable()
+                            .scaledToFit()
+                    }
                 }
+                .matchedGeometryEffect(id: achievement!.id, in: animation)
+                Text(achievement!.desc).multilineTextAlignment(.center)
             }
-            .navigationTitle(achievement != nil ? achievement!.title : "Achievements")
+        }
+        .navigationTitle(achievement != nil ? achievement!.title : "Achievements")
         .onTapGesture {
-            withAnimation {
+            withAnimation(.linear(duration: 0.2)) {
                 isPresented = false
-                achievement = nil
+            } completion: {
+                withAnimation(.linear(duration: 0.2)){
+                    achievement = nil
+                }
             }
         }
     }
 }
 
 #Preview {
-    AchievementDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), achievement: .constant(Achievement(badge: "", title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true)))
+    AchievementDetailView(animation: Namespace().wrappedValue, isPresented: .constant(true), achievement: .constant(Achievement(title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true)))
 }

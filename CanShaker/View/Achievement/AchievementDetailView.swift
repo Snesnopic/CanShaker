@@ -40,5 +40,5 @@ struct AchievementDetailView: View {
 }
 
 #Preview {
-    AchievementDetailView(achievement: Achievement(badge: "", title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true))
+    AchievementDetailView(achievement: Achievement(title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true))
 }
