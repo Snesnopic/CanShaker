@@ -22,6 +22,7 @@
 		6BDF79BC2B8C8CCA00E9663D /* ResponsiveFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF79BB2B8C8CCA00E9663D /* ResponsiveFrame.swift */; };
 		9D3C22CB2B8F7AF000279EBC /* InsultComplimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3C22CA2B8F7AF000279EBC /* InsultComplimentView.swift */; };
 		9D3C22CD2B8F7B1700279EBC /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3C22CC2B8F7B1700279EBC /* History.swift */; };
+		9D3C22D02B908AE300279EBC /* AchievementButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3C22CF2B908AE300279EBC /* AchievementButton.swift */; };
 		9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */; };
 		9D7187FF2B7E419A002C02B0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FE2B7E419A002C02B0 /* DashboardView.swift */; };
 		9D7188042B7E419B002C02B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188032B7E419B002C02B0 /* Preview Assets.xcassets */; };
@@ -90,6 +91,7 @@
 		6BDF79BB2B8C8CCA00E9663D /* ResponsiveFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveFrame.swift; sourceTree = "<group>"; };
 		9D3C22CA2B8F7AF000279EBC /* InsultComplimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultComplimentView.swift; sourceTree = "<group>"; };
 		9D3C22CC2B8F7B1700279EBC /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		9D3C22CF2B908AE300279EBC /* AchievementButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementButton.swift; sourceTree = "<group>"; };
 		9D5360EA2B7E4E3800BE628C /* CanShaker Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CanShaker Watch App.entitlements"; sourceTree = "<group>"; };
 		9D5360EB2B7E4E9100BE628C /* CanShaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CanShaker.entitlements; sourceTree = "<group>"; };
 		9D7135712B85EB7900650827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		6B3A23A12B874B6200E03F41 /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
+				9D3C22CE2B908AD900279EBC /* Components */,
 				9D7411A72B7F559A00869BF8 /* AchievementObtainedView.swift */,
 				9D7411B12B7F96BD00869BF8 /* AchievementsView.swift */,
 				9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */,
@@ -280,6 +283,14 @@
 				9DA6A8522B8C8B43009737D7 /* LastSessionView.swift */,
 				6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */,
 				6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9D3C22CE2B908AD900279EBC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9D3C22CF2B908AE300279EBC /* AchievementButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -495,6 +506,7 @@
 				9D8C39362B89006400FFB72F /* Extensions.swift in Sources */,
 				9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */,
 				9D7411A82B7F559A00869BF8 /* AchievementObtainedView.swift in Sources */,
+				9D3C22D02B908AE300279EBC /* AchievementButton.swift in Sources */,
 				9D7411B22B7F96BD00869BF8 /* AchievementsView.swift in Sources */,
 				9D71880F2B7E419B002C02B0 /* CanShakerApp.swift in Sources */,
 			);
