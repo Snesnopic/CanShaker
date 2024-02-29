@@ -19,7 +19,8 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
 #endif
     //variabile che iOS userà per accedere alle sessioni
     @Published var sessions:[Session] = []
-    var phoneSessionCount:Int = 0
+    var phoneSessionIds:Set<String> = []
+    var isListReady:Bool = false
     static let shared = Connectivity()
     var context:ModelContext? = nil
     override private init() {
@@ -45,26 +46,33 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
             message[UUID().uuidString] = session
         }
         let data:Data!
-        if phoneSessionCount == 0 {
+        isListReady = false
+        while isListReady == false {
+            
+        }
+        if phoneSessionIds.count == 0 {
+            print("Mando tutto perché il telefono ha 0 sessioni")
             data = try! jsonEncoder.encode(sessions)
         }
         else {
-            if phoneSessionCount == sessions.count {
-                print("Il telefono ha \(phoneSessionCount), il watch ha \(sessions.count), non devo mandare niente!")
-                return
+            let reducedSessions = sessions.filter { session in
+                return !phoneSessionIds.contains(session.uuid.uuidString)
             }
-            else {
-                let reducedSessions = sessions.dropLast(sessions.count - phoneSessionCount)
-                data = try! jsonEncoder.encode(Array(reducedSessions))
+            print("Ho \(sessions.count - reducedSessions.count) da mandare")
+            reducedSessions.forEach { session in
+                print("ID sessione da mandare: \(session.uuid)")
             }
+            data = try! jsonEncoder.encode(Array(reducedSessions))
         }
         print("Data to send before compression: \(data!)")
         do {
             let compressedData = try (data as NSData).compressed(using: .lzma) as Data
             print("Data to send after compression: \(compressedData)")
+            isListReady = true
             WCSession.default.sendMessageData(compressedData,replyHandler: nil, errorHandler: { error in
                 print(error)
             })
+            
         } catch {
             print(error.localizedDescription)
         }
@@ -93,11 +101,24 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
     //ricevi quante sessioni ha il watch e manda quante ne hai tu
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         print("Received \(message)")
+        //non mi importa di quante sessioni ha il watch
+        //        let sessionsCount = message["count"] as? Int ?? 0
         
-        let sessionsCount = message["count"] as? Int ?? 0
-        
-        let replyMessage: [String: Any] = ["replyMessage": sessions.count]
-        replyHandler(replyMessage)
+        do {
+            var replyMessage: [String:String] = [:]
+            let sessions:[Session] = try context!.fetch(FetchDescriptor<Session>())
+            sessions.forEach { session in
+                replyMessage[UUID().uuidString] = session.uuid.uuidString
+            }
+            replyMessage.forEach { (key: String, value: String) in
+                print("ID che già ho sul telefono: \(value)")
+            }
+            replyHandler(replyMessage)
+        }
+        catch {
+            print("Error: \(error)")
+        }
+        //        let replyMessage: [String: Any] = ["replyMessage": sessions.count]
         
     }
     //manda il numero di sessioni del watch all'iOS e si aspetta la risposta del suo numero
@@ -111,7 +132,13 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
 #endif
         let message:[String: Any] = ["count":sessions.count]
         WCSession.default.sendMessage(message) { reply in
-            self.phoneSessionCount = reply["replyMessage"] as! Int
+            self.isListReady = false
+            print("Reply: \(reply)")
+            reply.forEach { (key: String, value: Any) in
+                print("ID ricevuto dell'iPhone = \(value as! String)")
+                self.phoneSessionIds.insert(value as! String)
+            }
+            self.isListReady = true
         } errorHandler: { error in
             print("Errore nel mandare il session count ad iOS: \(error)")
         }
