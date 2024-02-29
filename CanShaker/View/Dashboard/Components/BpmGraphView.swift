@@ -46,34 +46,21 @@ struct BpmGraphView: View {
         .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
         .padding(.vertical)
         
-        
     }
+    
 }
-//#Preview {
-//    var heartRate:[TimeInterval:Double] = [:]
-//    for i in 1...50 {
-//        heartRate[Double(i)*1] = Double.random(in: 50...140)
-//    }
-//    Connectivity.shared.sessions = [
-//        Session(date: Date(), duration: 50.0/3, heartRateData: heartRate)
-//    ]
-//    return BpmGraphView()
-//}
 
-//MARK: This is to make the preview work, the graph doesn't show for some reason but anyway the working stuff is right before these lines
+
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Session.self, configurations: config)
     
     var heartRate:[TimeInterval:Double] = [:]
-    for i in 1...50 {
-        heartRate[Double(i)*1] = Double.random(in: 50...140)
+    for i in 1...10 {
+        heartRate[Double(i)*0.3] = Double.random(in: 50...140)
     }
-    Connectivity.shared.sessions = [
-        Session(date: Date(), duration: 50.0/3, heartRateData: heartRate)
-    ]
     
-    let preview = Connectivity.shared.sessions
-    return LastSessionView()
+    container.mainContext.insert(Session(date: Date(), duration: 50.0/3.0, heartRateData: heartRate))
+    return BpmGraphView()
         .modelContainer(container)
 }
