@@ -100,3 +100,9 @@ extension HKQuantityType {
         }
     }
 }
+
+extension Date {
+    func isTheSame(_ component: Calendar.Component, as date: Date) -> Bool {
+        return Calendar.current.compare(self, to: date, toGranularity: component) == .orderedSame
+    }
+}
