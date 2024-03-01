@@ -239,17 +239,9 @@
 			children = (
 				9D6261D92B91E7E100CF01F1 /* History */,
 				9D7187FE2B7E419A002C02B0 /* DashboardView.swift */,
-				6BACB1772B91E5080098F263 /* History */,
 				6BF3EEC32B8B61DA00B52687 /* Components */,
 			);
 			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		6BACB1772B91E5080098F263 /* History */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = History;
 			sourceTree = "<group>";
 		};
 		6BACB1782B91E5710098F263 /* Feedbacks */ = {
