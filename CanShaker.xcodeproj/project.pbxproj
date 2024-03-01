@@ -19,6 +19,10 @@
 		6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */; };
 		6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10F2B84B9100088E5E4 /* Advice.swift */; };
 		6B984F982B8E44B900B2ECD7 /* NaAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B984F972B8E44B900B2ECD7 /* NaAchievementView.swift */; };
+		6BACB17B2B91E5710098F263 /* FeedbackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACB1792B91E5710098F263 /* FeedbackList.swift */; };
+		6BACB17C2B91E5710098F263 /* FeedbackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACB1792B91E5710098F263 /* FeedbackList.swift */; };
+		6BACB17D2B91E5710098F263 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACB17A2B91E5710098F263 /* Feedback.swift */; };
+		6BACB17E2B91E5710098F263 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACB17A2B91E5710098F263 /* Feedback.swift */; };
 		6BBD95582B8E1B1400712380 /* DoubleToTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBD95572B8E1B1400712380 /* DoubleToTime.swift */; };
 		6BD11A9E2B8CF519008FA32D /* SpeedGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */; };
 		6BD11AA02B8CF6BF008FA32D /* BpmGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */; };
@@ -90,6 +94,8 @@
 		6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
 		6B8AA10F2B84B9100088E5E4 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
 		6B984F972B8E44B900B2ECD7 /* NaAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaAchievementView.swift; sourceTree = "<group>"; };
+		6BACB1792B91E5710098F263 /* FeedbackList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackList.swift; sourceTree = "<group>"; };
+		6BACB17A2B91E5710098F263 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		6BBD95572B8E1B1400712380 /* DoubleToTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleToTime.swift; sourceTree = "<group>"; };
 		6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedGraphView.swift; sourceTree = "<group>"; };
 		6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BpmGraphView.swift; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 		6B8AA1082B84AD790088E5E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BACB1782B91E5710098F263 /* Feedbacks */,
 				6BF3EEB72B8B54D000B52687 /* Advices */,
 			);
 			path = Model;
@@ -229,11 +236,29 @@
 			isa = PBXGroup;
 			children = (
 				9D7187FE2B7E419A002C02B0 /* DashboardView.swift */,
+				6BACB1772B91E5080098F263 /* History */,
 				6BF3EEC32B8B61DA00B52687 /* Components */,
-				6BE5F87F2B907D3500D4E1EB /* HistoryView.swift */,
-				3E145B832B90989E00F9AF33 /* HistoryElementStyle.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		6BACB1772B91E5080098F263 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				3E145B832B90989E00F9AF33 /* HistoryElementStyle.swift */,
+				6BE5F87F2B907D3500D4E1EB /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		6BACB1782B91E5710098F263 /* Feedbacks */ = {
+			isa = PBXGroup;
+			children = (
+				6BACB1792B91E5710098F263 /* FeedbackList.swift */,
+				6BACB17A2B91E5710098F263 /* Feedback.swift */,
+			);
+			name = Feedbacks;
+			path = Advices/Feedbacks;
 			sourceTree = "<group>";
 		};
 		6BDF79BA2B8C8CBB00E9663D /* Support files */ = {
@@ -471,6 +496,7 @@
 			files = (
 				9D7187FF2B7E419A002C02B0 /* DashboardView.swift in Sources */,
 				9DA6A84D2B8C8B2C009737D7 /* AdviceDetailView.swift in Sources */,
+				6BACB17D2B91E5710098F263 /* Feedback.swift in Sources */,
 				6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */,
 				6B984F982B8E44B900B2ECD7 /* NaAchievementView.swift in Sources */,
 				6B1F6D872B909A1500C7EE6B /* DateFormatter.swift in Sources */,
@@ -479,6 +505,7 @@
 				3ECF618F2B8E1C0F0007E8F7 /* AllAchievementsView.swift in Sources */,
 				6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */,
 				6BBD95582B8E1B1400712380 /* DoubleToTime.swift in Sources */,
+				6BACB17B2B91E5710098F263 /* FeedbackList.swift in Sources */,
 				9D9A65002B91E267003FA073 /* AuthenticationView.swift in Sources */,
 				3E145B842B90989E00F9AF33 /* HistoryElementStyle.swift in Sources */,
 				6BDF79BC2B8C8CCA00E9663D /* ResponsiveFrame.swift in Sources */,
@@ -506,6 +533,7 @@
 			files = (
 				9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */,
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
+				6BACB17E2B91E5710098F263 /* Feedback.swift in Sources */,
 				6B1F6D852B90970200C7EE6B /* AchievementButton.swift in Sources */,
 				9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
@@ -516,6 +544,7 @@
 				9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */,
 				9D7411A82B7F559A00869BF8 /* AchievementObtainedView.swift in Sources */,
 				9D7411B22B7F96BD00869BF8 /* AchievementsView.swift in Sources */,
+				6BACB17C2B91E5710098F263 /* FeedbackList.swift in Sources */,
 				9D71880F2B7E419B002C02B0 /* CanShakerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,7 +687,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = TRT3963W92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
@@ -667,13 +696,13 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires permission to write to properly track and give you statistics about your heart rate and energy spent during the session.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.giuseppecasillo.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppecasillo.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -693,7 +722,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = TRT3963W92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
@@ -702,7 +731,7 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires permission to write to properly track and give you statistics about your heart rate and energy spent during the session.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.giuseppecasillo.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -730,7 +759,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FRYF657J2;
+				DEVELOPMENT_TEAM = TRT3963W92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;
@@ -748,7 +777,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppecasillo.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;

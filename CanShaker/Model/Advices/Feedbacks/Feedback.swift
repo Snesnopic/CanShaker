@@ -12,9 +12,9 @@ class Feedback: Identifiable {
     let sentence: String
     let type: feedbackType
     let category: feedbackCategory
-    let condition: String
+    let condition: condition
     
-    init(sentence: String, type: feedbackType, category: feedbackCategory, condition: String) {
+    init(sentence: String, type: feedbackType, category: feedbackCategory, condition: condition) {
         self.sentence = sentence
         self.type = type
         self.category = category
@@ -32,4 +32,9 @@ enum feedbackCategory {
     case speed
     case heartBeat
     case calories
+}
+
+enum condition {
+    case low
+    case high
 }
