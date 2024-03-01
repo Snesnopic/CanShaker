@@ -6,16 +6,22 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AchievementStyle: View {
     @State var achievement: Achievement
     var body: some View {
         VStack{
-            Image(systemName: "circle.inset.filled")
-                .resizable()
+            Circle()
                 .responsiveFrame(widthPercentage: 20, aspectRatio: (1,1))
-                .foregroundStyle(.green)
-            Text(title)
+                .foregroundStyle(Color.box.opacity(0.4))
+                .overlay {
+                    Image(achievement.imageName!)
+                        .resizable()
+                        .padding(.all)
+                }
+                
+            Text(achievement.title)
                 .foregroundStyle(.white)
                 .bold()
         }
