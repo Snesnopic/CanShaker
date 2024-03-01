@@ -14,7 +14,7 @@ struct AdviceButtonStyle: View {
     var body: some View {
         
         ZStack{
-            UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
+            RoundedRectangle(cornerRadius: 14)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 14)
                 .foregroundColor(Color("boxColor"))
                 .opacity(0.4)
