@@ -104,6 +104,13 @@ extension Date {
         }.string(from: self, to: date)!
     }
 
+    var formattedDayMonth: String{
+        self.formatter {
+            $0.dateStyle = .long
+            $0.timeStyle = .none
+            $0.formattingContext = .standalone
+        }
+    }
     var formattedHour: String {
         self.formatter {
             $0.dateStyle = .none
