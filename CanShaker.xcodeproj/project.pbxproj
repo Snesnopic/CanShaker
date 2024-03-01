@@ -7,25 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E145B842B90989E00F9AF33 /* HistoryElementStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E145B832B90989E00F9AF33 /* HistoryElementStyle.swift */; };
 		3E2E8C142B8F6FDF003C609A /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E8C132B8F6FDF003C609A /* Info.swift */; };
 		3ECF618F2B8E1C0F0007E8F7 /* AllAchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF618E2B8E1C0F0007E8F7 /* AllAchievementsView.swift */; };
 		6B1F6D832B9096E800C7EE6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
 		6B1F6D852B90970200C7EE6B /* AchievementButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F6D842B90970200C7EE6B /* AchievementButton.swift */; };
 		6B1F6D872B909A1500C7EE6B /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F6D862B909A1500C7EE6B /* DateFormatter.swift */; };
-		6B57A3B52B91CE7600EA81C5 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B57A3B42B91CE7600EA81C5 /* AuthenticationView.swift */; };
 		6B6C8A002B8F2E24008C880C /* AchievementStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C89FF2B8F2E24008C880C /* AchievementStyle.swift */; };
 		6B6C8A022B8F4CEB008C880C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39312B88F05400FFB72F /* Session.swift */; };
 		6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
 		6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */; };
 		6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10F2B84B9100088E5E4 /* Advice.swift */; };
 		6B984F982B8E44B900B2ECD7 /* NaAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B984F972B8E44B900B2ECD7 /* NaAchievementView.swift */; };
+		6BACB17B2B91E5710098F263 /* FeedbackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACB1792B91E5710098F263 /* FeedbackList.swift */; };
+		6BACB17C2B91E5710098F263 /* FeedbackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACB1792B91E5710098F263 /* FeedbackList.swift */; };
+		6BACB17D2B91E5710098F263 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACB17A2B91E5710098F263 /* Feedback.swift */; };
+		6BACB17E2B91E5710098F263 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACB17A2B91E5710098F263 /* Feedback.swift */; };
 		6BBD95582B8E1B1400712380 /* DoubleToTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBD95572B8E1B1400712380 /* DoubleToTime.swift */; };
 		6BD11A9E2B8CF519008FA32D /* SpeedGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */; };
 		6BD11AA02B8CF6BF008FA32D /* BpmGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */; };
 		6BDF79BC2B8C8CCA00E9663D /* ResponsiveFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF79BB2B8C8CCA00E9663D /* ResponsiveFrame.swift */; };
-		6BE5F8802B907D3500D4E1EB /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5F87F2B907D3500D4E1EB /* HistoryView.swift */; };
 		9D3C22CB2B8F7AF000279EBC /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3C22CA2B8F7AF000279EBC /* FeedbackView.swift */; };
+		9D6261D72B91E7DD00CF01F1 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6261D52B91E7DD00CF01F1 /* HistoryView.swift */; };
+		9D6261D82B91E7DD00CF01F1 /* HistoryElementStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6261D62B91E7DD00CF01F1 /* HistoryElementStyle.swift */; };
 		9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */; };
 		9D7187FF2B7E419A002C02B0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FE2B7E419A002C02B0 /* DashboardView.swift */; };
 		9D7188042B7E419B002C02B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188032B7E419B002C02B0 /* Preview Assets.xcassets */; };
@@ -45,6 +48,7 @@
 		9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
 		9D8C39322B88F05400FFB72F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39312B88F05400FFB72F /* Session.swift */; };
 		9D8C39362B89006400FFB72F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39352B89006400FFB72F /* Extensions.swift */; };
+		9D9A65002B91E267003FA073 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A64FF2B91E267003FA073 /* AuthenticationView.swift */; };
 		9DA6A84D2B8C8B2C009737D7 /* AdviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */; };
 		9DA6A84E2B8C8B2C009737D7 /* AdvicesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A84C2B8C8B2C009737D7 /* AdvicesListView.swift */; };
 		9DA6A8502B8C8B34009737D7 /* AdviceButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6A84F2B8C8B34009737D7 /* AdviceButtonStyle.swift */; };
@@ -80,25 +84,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3E145B832B90989E00F9AF33 /* HistoryElementStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryElementStyle.swift; sourceTree = "<group>"; };
 		3E2E8C132B8F6FDF003C609A /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		3ECF618E2B8E1C0F0007E8F7 /* AllAchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAchievementsView.swift; sourceTree = "<group>"; };
 		6B1F6D842B90970200C7EE6B /* AchievementButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementButton.swift; sourceTree = "<group>"; };
 		6B1F6D862B909A1500C7EE6B /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
-		6B57A3B42B91CE7600EA81C5 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		6B6C89FF2B8F2E24008C880C /* AchievementStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementStyle.swift; sourceTree = "<group>"; };
 		6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
 		6B8AA10F2B84B9100088E5E4 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
 		6B984F972B8E44B900B2ECD7 /* NaAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaAchievementView.swift; sourceTree = "<group>"; };
+		6BACB1792B91E5710098F263 /* FeedbackList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackList.swift; sourceTree = "<group>"; };
+		6BACB17A2B91E5710098F263 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		6BBD95572B8E1B1400712380 /* DoubleToTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleToTime.swift; sourceTree = "<group>"; };
 		6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedGraphView.swift; sourceTree = "<group>"; };
 		6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BpmGraphView.swift; sourceTree = "<group>"; };
 		6BDF79BB2B8C8CCA00E9663D /* ResponsiveFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveFrame.swift; sourceTree = "<group>"; };
-		6BE5F87F2B907D3500D4E1EB /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		9D3C22CA2B8F7AF000279EBC /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		9D5360EA2B7E4E3800BE628C /* CanShaker Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CanShaker Watch App.entitlements"; sourceTree = "<group>"; };
 		9D5360EB2B7E4E9100BE628C /* CanShaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CanShaker.entitlements; sourceTree = "<group>"; };
+		9D6261D52B91E7DD00CF01F1 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		9D6261D62B91E7DD00CF01F1 /* HistoryElementStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryElementStyle.swift; sourceTree = "<group>"; };
 		9D7135712B85EB7900650827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9D7187F92B7E419A002C02B0 /* CanShaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanShaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanShakerApp.swift; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 		9D81EDAA2B838D52003B7CD1 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
 		9D8C39312B88F05400FFB72F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		9D8C39352B89006400FFB72F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9D9A64FF2B91E267003FA073 /* AuthenticationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceDetailView.swift; sourceTree = "<group>"; };
 		9DA6A84C2B8C8B2C009737D7 /* AdvicesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvicesListView.swift; sourceTree = "<group>"; };
 		9DA6A84F2B8C8B34009737D7 /* AdviceButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceButtonStyle.swift; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 		6B8AA1082B84AD790088E5E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BACB1782B91E5710098F263 /* Feedbacks */,
 				6BF3EEB72B8B54D000B52687 /* Advices */,
 			);
 			path = Model;
@@ -196,6 +203,7 @@
 		6B8AA1092B84AD870088E5E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D9A64FF2B91E267003FA073 /* AuthenticationView.swift */,
 				6B8AA10E2B84B50F0088E5E4 /* Dashboard */,
 				6B8AA10D2B84B5020088E5E4 /* Advices */,
 				6B8AA10C2B84B4EC0088E5E4 /* Achievement */,
@@ -219,7 +227,6 @@
 				9D7411A32B7F51BE00869BF8 /* AdvicesView.swift */,
 				9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */,
 				9DA6A84C2B8C8B2C009737D7 /* AdvicesListView.swift */,
-				6B57A3B42B91CE7600EA81C5 /* AuthenticationView.swift */,
 				6BF3EEC22B8B605800B52687 /* Components */,
 			);
 			path = Advices;
@@ -228,12 +235,31 @@
 		6B8AA10E2B84B50F0088E5E4 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				9D6261D92B91E7E100CF01F1 /* History */,
 				9D7187FE2B7E419A002C02B0 /* DashboardView.swift */,
+				6BACB1772B91E5080098F263 /* History */,
 				6BF3EEC32B8B61DA00B52687 /* Components */,
-				6BE5F87F2B907D3500D4E1EB /* HistoryView.swift */,
-				3E145B832B90989E00F9AF33 /* HistoryElementStyle.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		6BACB1772B91E5080098F263 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				3E145B832B90989E00F9AF33 /* HistoryElementStyle.swift */,
+				6BE5F87F2B907D3500D4E1EB /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		6BACB1782B91E5710098F263 /* Feedbacks */ = {
+			isa = PBXGroup;
+			children = (
+				6BACB1792B91E5710098F263 /* FeedbackList.swift */,
+				6BACB17A2B91E5710098F263 /* Feedback.swift */,
+			);
+			name = Feedbacks;
+			path = Advices/Feedbacks;
 			sourceTree = "<group>";
 		};
 		6BDF79BA2B8C8CBB00E9663D /* Support files */ = {
@@ -301,6 +327,15 @@
 				6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */,
 			);
 			path = "Shared files";
+			sourceTree = "<group>";
+		};
+		9D6261D92B91E7E100CF01F1 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				9D6261D62B91E7DD00CF01F1 /* HistoryElementStyle.swift */,
+				9D6261D52B91E7DD00CF01F1 /* HistoryView.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		9D7187F02B7E419A002C02B0 = {
@@ -471,17 +506,20 @@
 			files = (
 				9D7187FF2B7E419A002C02B0 /* DashboardView.swift in Sources */,
 				9DA6A84D2B8C8B2C009737D7 /* AdviceDetailView.swift in Sources */,
+				6BACB17D2B91E5710098F263 /* Feedback.swift in Sources */,
 				6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */,
 				6B984F982B8E44B900B2ECD7 /* NaAchievementView.swift in Sources */,
 				6B1F6D872B909A1500C7EE6B /* DateFormatter.swift in Sources */,
 				6BD11A9E2B8CF519008FA32D /* SpeedGraphView.swift in Sources */,
 				9DA6A8502B8C8B34009737D7 /* AdviceButtonStyle.swift in Sources */,
+				9D6261D72B91E7DD00CF01F1 /* HistoryView.swift in Sources */,
 				3ECF618F2B8E1C0F0007E8F7 /* AllAchievementsView.swift in Sources */,
 				6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */,
 				6BBD95582B8E1B1400712380 /* DoubleToTime.swift in Sources */,
-				6B57A3B52B91CE7600EA81C5 /* AuthenticationView.swift in Sources */,
-				3E145B842B90989E00F9AF33 /* HistoryElementStyle.swift in Sources */,
+				6BACB17B2B91E5710098F263 /* FeedbackList.swift in Sources */,
+				9D9A65002B91E267003FA073 /* AuthenticationView.swift in Sources */,
 				6BDF79BC2B8C8CCA00E9663D /* ResponsiveFrame.swift in Sources */,
+				9D6261D82B91E7DD00CF01F1 /* HistoryElementStyle.swift in Sources */,
 				9D7411A22B7F515200869BF8 /* AchievementsView.swift in Sources */,
 				9DA6A8542B8C8B43009737D7 /* LastSessionView.swift in Sources */,
 				9D7411A42B7F51BE00869BF8 /* AdvicesView.swift in Sources */,
@@ -494,7 +532,6 @@
 				6B6C8A022B8F4CEB008C880C /* Session.swift in Sources */,
 				9DA6A84E2B8C8B2C009737D7 /* AdvicesListView.swift in Sources */,
 				9D3C22CB2B8F7AF000279EBC /* FeedbackView.swift in Sources */,
-				6BE5F8802B907D3500D4E1EB /* HistoryView.swift in Sources */,
 				9DA6A8632B8C95A7009737D7 /* Connectivity.swift in Sources */,
 				6BD11AA02B8CF6BF008FA32D /* BpmGraphView.swift in Sources */,
 			);
@@ -506,6 +543,7 @@
 			files = (
 				9D7B324E2B889142003B08A7 /* MotionDataManager.swift in Sources */,
 				9D7411A62B7F534E00869BF8 /* HighFreqAlert.swift in Sources */,
+				6BACB17E2B91E5710098F263 /* Feedback.swift in Sources */,
 				6B1F6D852B90970200C7EE6B /* AchievementButton.swift in Sources */,
 				9D81EDAB2B838D52003B7CD1 /* AchievementDetailView.swift in Sources */,
 				9D7188112B7E419B002C02B0 /* SessionView.swift in Sources */,
@@ -516,6 +554,7 @@
 				9D8C39302B88E7E700FFB72F /* Achievement.swift in Sources */,
 				9D7411A82B7F559A00869BF8 /* AchievementObtainedView.swift in Sources */,
 				9D7411B22B7F96BD00869BF8 /* AchievementsView.swift in Sources */,
+				6BACB17C2B91E5710098F263 /* FeedbackList.swift in Sources */,
 				9D71880F2B7E419B002C02B0 /* CanShakerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,7 +697,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = TRT3963W92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
@@ -667,13 +706,13 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires permission to write to properly track and give you statistics about your heart rate and energy spent during the session.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.giuseppecasillo.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppecasillo.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -693,7 +732,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = TRT3963W92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
@@ -702,13 +741,13 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires permission to write to properly track and give you statistics about your heart rate and energy spent during the session.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.giuseppecasillo.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppecasillo.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -730,7 +769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = TRT3963W92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;
@@ -748,7 +787,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppecasillo.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -767,7 +806,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;
