@@ -65,7 +65,7 @@ struct HistoryView: View {
                     if partition.first!.date.isToday {
                         Text("Today")
                     }
-                    else if containAnyTimeWord(partition.first!.date.addingTimeInterval(86400).relativeToNow){
+                    else if Calendar.current.isDateInYesterday(partition.first!.date){
                         Text("Yesterday")
                     }
                     else {
