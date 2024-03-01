@@ -11,7 +11,7 @@ import CoreMotion
 import SwiftData
 
 struct SpeedGraphView: View {
-    @Query private var sessions:[Session]
+    var session:Session
     let speedGradient = LinearGradient(
         gradient: Gradient (
             colors: [ Color("speedColor").opacity(0.75),
@@ -23,10 +23,10 @@ struct SpeedGraphView: View {
     
     var body: some View {
                     Chart{
-                        ForEach(sessions.last!.accelData.keys.sorted(),id: \.self){ time in
+                        ForEach(session.accelData.keys.sorted(),id: \.self){ time in
                             
                             AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                                      y: .value("Acceleration", (sessions.last!.accelData[time]!)))
+                                      y: .value("Acceleration", (session.accelData[time]!)))
                             
                             .interpolationMethod(.catmullRom)
                             .foregroundStyle(speedGradient)
@@ -57,11 +57,11 @@ struct SpeedGraphView: View {
     let container = try! ModelContainer(for: Session.self, configurations: config)
     
     var accelD:[TimeInterval:Double] = [:]
-    for i in 1...10 {
+    for i in 1...100 {
         accelD[Double(i)*0.3] = Double.random(in: 50...140)
     }
-
-    container.mainContext.insert(Session(date: Date(), accelData: accelD, duration: 50.0/3.0))
-    return SpeedGraphView()
+    let session = Session(date: Date(), accelData: accelD, duration: 50.0/3.0)
+    container.mainContext.insert(session)
+    return SpeedGraphView(session: session)
         .modelContainer(container)
 }
