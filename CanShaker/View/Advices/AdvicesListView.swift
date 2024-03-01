@@ -36,6 +36,10 @@ struct AdvicesListView: View {
                 
             .preferredColorScheme(.dark)
             .navigationTitle(advCategory.str)
+            .frame(maxWidth: .infinity)
+            .background{
+                Color(Color("bgGray"))
+            }
             
         }
         
