@@ -22,7 +22,14 @@ struct HistoryView: View {
         
         return containsWord1 && containsWord2
     }
+    func containAnyTimeWord(_ string1: String) -> Bool {
+        let timeWords = ["hour", "minute", "second"]
+        
+        return timeWords.contains { word in
+            string1.lowercased().contains(word)
+        }
     
+    }
     var sessions: [Session]
     private var partitionedDates: [[Session]] = [[]]
     init(sessions:[Session]) {
@@ -57,6 +64,9 @@ struct HistoryView: View {
                 {
                     if partition.first!.date.isToday {
                         Text("Today")
+                    }
+                    else if containAnyTimeWord(partition.first!.date.addingTimeInterval(86400).relativeToNow){
+                        Text("Yesterday")
                     }
                     else {
                         Text(partition.first!.date.relativeToNow)
