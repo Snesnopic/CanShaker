@@ -25,7 +25,12 @@ class Achievement: Identifiable{
         self.subTitle = subTitle
         self.desc = desc
         self.completion = completion
-        self.achievingDate = achievingDate
+        if isAchieved && achievingDate == nil{
+            self.achievingDate = Date()
+        }
+        else {
+            self.achievingDate = achievingDate
+        }
         self.isAchieved = isAchieved
         self.imageName = imageName
     }
