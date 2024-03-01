@@ -10,13 +10,8 @@ import SwiftData
 
 struct HistoryElementStyle: View {
     
-    @State private var statToShow = 0
-    @State private var averageBpm = 0.0
-    @State private var averageSpd = 0.0
-    @State private var calories = 0
-    @State private var time: String = "00:03"
     
-    @Query private var sessions: [Session]
+    @State var session: Session
     
     var body: some View {
         
@@ -24,26 +19,28 @@ struct HistoryElementStyle: View {
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 15)
                 .opacity(0.4)
+                .shadow(radius: 15)
                 .foregroundStyle(Color("boxColor"))
-            HStack{
-                VStack(alignment: .center) {
-                    Text("Duration")
-                        .font(.title)
-                        .fontWeight(.medium)
-                    Text("\(time)")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color.accentColor, .black)
+                .overlay{
+                    HStack{
+                        VStack{
+                            Text(session.date.formattedDayMonth + " - " + session.date.formattedHour)
+                                .bold()
+                                .font(.title2) +
+                            Text("\nDuration: " + session.duration.doubleToTime())
+                                .foregroundStyle(.gray)
+                                .font(.title3)
+                            Spacer()
+                        }
+                        Spacer()
+                        
+                        
+                    }
+                    .padding()
                 }
-                
-                Spacer()
-                
-                Text("\(Date())")
-                
-            }
-            .padding()
+            
         }
-        .padding()
+        
     }
 }
 
@@ -60,6 +57,6 @@ struct HistoryElementStyle: View {
     }
     
     container.mainContext.insert(Session(date: Date(), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate))
-    return HistoryElementStyle()
+    return HistoryElementStyle(session: Session(date: Date(), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate))
         .modelContainer(container)
 }

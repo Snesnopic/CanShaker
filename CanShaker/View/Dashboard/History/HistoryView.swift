@@ -25,6 +25,7 @@ struct HistoryView: View {
         partitionedDates = groups
     }
     var body: some View {
+        
         List{
             ForEach(partitionedDates.sorted(by: { array1, array2 in
                 array1.first!.date > array2.first!.date
@@ -35,7 +36,7 @@ struct HistoryView: View {
                         session1.date > session2.date
                     }), id: \.self) {
                         session in
-                        Text("Durata sessione: \(session.duration)")
+                        HistoryElementStyle(session: session)
                     }
                 } header:
                 {
@@ -44,26 +45,30 @@ struct HistoryView: View {
             }
         }
         .listStyle(.plain)
+        .preferredColorScheme(.dark)
     }
+    
 }
-//
-//#Preview {
-//    
-//    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-//    let container = try! ModelContainer(for: Session.self, configurations: config)
-//
-//    
-//    var accelD:[TimeInterval:Double] = [:]
-//    var heartRate:[TimeInterval:Double] = [:]
-//    for i in 1...10 {
-//        accelD[Double(i)*0.3] = Double.random(in: 50...140)
-//        heartRate[Double(i)*0.3] = Double.random(in: 50...140)
-//    }
-//    for i in 0..<3{
-//        container.mainContext.insert(Session(date: Date(timeIntervalSinceNow: 0.0) + TimeInterval(i*2000000), accelData: accelD, duration: Double.random(in: (0.0)...(100.0)), heartRateData: heartRate))
-//        container.mainContext.insert(Session(date: Date(timeIntervalSince1970: 0.0) + TimeInterval(i*2000000), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate))
-//    }
-//    return HistoryView()
-//        .modelContainer(container)
-//    
-//}
+
+#Preview {
+    
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Session.self, configurations: config)
+    
+    var sessioni: [Session] = []
+    var accelD:[TimeInterval:Double] = [:]
+    var heartRate:[TimeInterval:Double] = [:]
+    for i in 1...10 {
+        accelD[Double(i)*0.3] = Double.random(in: 50...140)
+        heartRate[Double(i)*0.3] = Double.random(in: 50...140)
+    }
+    for i in 0..<3{
+        container.mainContext.insert(Session(date: Date(timeIntervalSinceNow: 0.0) + TimeInterval(i*2000000), accelData: accelD, duration: Double.random(in: (0.0)...(100.0)), heartRateData: heartRate))
+        container.mainContext.insert(Session(date: Date(timeIntervalSince1970: 0.0) + TimeInterval(i*2000000), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate))
+        sessioni.append(Session(date: Date(timeIntervalSinceNow: 0.0) + TimeInterval(i*2000000), accelData: accelD, duration: Double.random(in: (0.0)...(100.0)), heartRateData: heartRate))
+    }
+    
+    return HistoryView(sessions: sessioni)
+        .modelContainer(container)
+    
+}
