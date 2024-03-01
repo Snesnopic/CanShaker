@@ -24,7 +24,7 @@ struct AllAchievementsView: View {
                     LazyVGrid(columns: col, spacing: 40){
                         ForEach(achievements){ achievement in
                             NavigationLink(destination: AchievementDetailView(achievement: achievement), label: {
-                                AchievementStyle(title: achievement.title)
+                                AchievementStyle(achievement: achievement)
                             })
                         }
                     

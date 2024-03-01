@@ -20,7 +20,7 @@ struct NaAchievementView: View {
                 ForEach(achievements.sorted {$0.completion > $1.completion}.prefix(3)){ achievement in
                     
                     NavigationLink(destination: AchievementDetailView(achievement: achievement), label: {
-                        AchievementStyle(title: achievement.title)
+                        AchievementStyle(achievement: achievement)
                     })
                     .padding()
                     

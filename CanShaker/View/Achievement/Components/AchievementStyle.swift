@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AchievementStyle: View {
-    @State var title: String
+    @State var achievement: Achievement
     var body: some View {
         VStack{
             Image(systemName: "circle.inset.filled")
