@@ -12,18 +12,21 @@ struct AchievementStyle: View {
     @State var achievement: Achievement
     var body: some View {
         VStack{
-            Circle()
-                .responsiveFrame(widthPercentage: 20, aspectRatio: (1,1))
-                .foregroundStyle(Color.box.opacity(0.4))
-                .overlay {
-                    Image(achievement.imageName)
-                        .resizable()
-                        .padding(.all)
-                }
+                Circle()
+                    .responsiveFrame(widthPercentage: 20, aspectRatio: (1,1))
+                    .foregroundStyle(Color.box.opacity(0.4))
+                    .overlay {
+                        Image(achievement.imageName)
+                            .resizable()
+                            .padding(.all)
+                    }
                 
             Text(achievement.title)
                 .foregroundStyle(.white)
                 .bold()
+                .font(.title3)
+                .padding(.horizontal)
+            Spacer()
         }
     }
 }
