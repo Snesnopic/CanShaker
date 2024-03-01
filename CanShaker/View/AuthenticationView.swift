@@ -9,7 +9,9 @@ import SwiftUI
 
 struct AuthenticationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image("Soap")
+            .resizable()
+            .responsiveFrame(widthPercentage: 95, aspectRatio: (1, 0.3))
     }
 }
 
