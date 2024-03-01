@@ -65,11 +65,12 @@ struct LastSessionView: View {
                         Spacer()
                         
                     }
+                
                 HStack{
                         VStack (alignment: .leading){
                             Text("**Avg. BPM:** \(String(format: "%.1f", getAverage(dataset: sessions.last?.heartRateData.values)))")
                             Spacer()
-                            Text("**Avg. speed:** \(String(format: "%.1f", getAverage(dataset: sessions.last?.accelData.values)))")
+                            Text("**Avg. speed:** \(String(format: "%.1f", getAverage(dataset: sessions.last?.accelData.values))) m/s²")
                         }
                         Spacer()
                         VStack (alignment: .leading){
