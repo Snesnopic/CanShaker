@@ -14,34 +14,38 @@ struct AdviceButtonStyle: View {
     var body: some View {
         
         ZStack{
-            UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 14)
+            RoundedRectangle(cornerRadius: 15)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 20)
                 .foregroundColor(Color("boxColor"))
                 .opacity(0.4)
                 .shadow(radius: 20)
-            Spacer()
+            
             VStack(alignment: .leading) {
+                Spacer()
                 HStack{
                     Image(systemName: img)
-                        .font(.largeTitle)
+                        .font(.title)
                     Text(category)
                         .bold()
-                        .font(.title)
+                        .font(.title2)
                 }
-                .padding()
+                .padding(.horizontal)
+                
                 ZStack(alignment: .leading) {
                     UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
-                        .responsiveFrame(widthPercentage: 95, heightPercentage: 5)
+                        .responsiveFrame(widthPercentage: 95, heightPercentage: 6)
                         .foregroundColor(Color("boxColor"))
                         .opacity(0.4)
                         .shadow(radius: 20)
                     Text(cDescription)
                         .font(.subheadline)
                         .fontWeight(.medium)
-                        .padding()
+                        .padding(.horizontal)
+                        
                 }
                 
             }
+            .responsiveFrame(widthPercentage: 92, heightPercentage: 20)
         }
         .preferredColorScheme(.dark)
     }

@@ -1,5 +1,5 @@
 //
-//  ArchiveView.swift
+//  HistoryView.swift
 //  CanShaker
 //
 //  Created by Giuseppe Casillo on 29/02/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 import Charts
-struct ArchiveView: View {
+struct HistoryView: View {
     var sessions: [Session]
     private var partitionedDates: [[Session]] = [[]]
     init(sessions:[Session]) {
@@ -63,7 +63,7 @@ struct ArchiveView: View {
 //        container.mainContext.insert(Session(date: Date(timeIntervalSinceNow: 0.0) + TimeInterval(i*2000000), accelData: accelD, duration: Double.random(in: (0.0)...(100.0)), heartRateData: heartRate))
 //        container.mainContext.insert(Session(date: Date(timeIntervalSince1970: 0.0) + TimeInterval(i*2000000), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate))
 //    }
-//    return ArchiveView()
+//    return HistoryView()
 //        .modelContainer(container)
 //    
 //}

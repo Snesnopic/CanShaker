@@ -23,7 +23,7 @@ struct DashboardView: View {
                             .font(.title2)
                         Spacer()
                         NavigationLink {
-                            ArchiveView(sessions: sessions)
+                            HistoryView(sessions: sessions)
                         } label: {
                             Text("See all")
                                 
