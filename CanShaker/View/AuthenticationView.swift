@@ -8,12 +8,37 @@
 import SwiftUI
 
 struct AuthenticationView: View {
+    @State private var isUnlocked = false
     var body: some View {
-        Image("Soap")
-            .resizable()
-            .responsiveFrame(widthPercentage: 95, aspectRatio: (1, 0.3))
+        VStack{
+            Button(action: {
+                faceIdAuthentication()
+            }, label: {
+               
+                    RoundedRectangle(cornerRadius: 20)
+                        .responsiveFrame(widthPercentage: 70, heightPercentage: 7)
+                        .foregroundStyle(Color("boxColor"))
+                        .opacity(0.5)
+                        .overlay{
+                            HStack{
+                                Image(systemName: "faceid")
+                                    .font(.largeTitle)
+                                Text("Authenticate with face ID")
+                                    .foregroundStyle(.white)
+                            }
+                        }
+                    
+                    
+            })
+        }
+        .preferredColorScheme(.dark)
     }
+    
+    
 }
+
+
+
 
 #Preview {
     AuthenticationView()
