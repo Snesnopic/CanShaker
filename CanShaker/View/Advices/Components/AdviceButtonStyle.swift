@@ -21,15 +21,16 @@ struct AdviceButtonStyle: View {
                 .shadow(radius: 20)
             
             VStack(alignment: .leading) {
+                Spacer()
                 HStack{
                     Image(systemName: img)
-                        .font(.largeTitle)
+                        .font(.title)
                     Text(category)
                         .bold()
-                        .font(.title)
+                        .font(.title2)
                 }
-                .padding()
-                Spacer()
+                .padding(.horizontal)
+                
                 ZStack(alignment: .leading) {
                     UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
                         .responsiveFrame(widthPercentage: 95, heightPercentage: 6)
