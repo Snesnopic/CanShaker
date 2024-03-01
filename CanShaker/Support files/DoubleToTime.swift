@@ -7,22 +7,24 @@
 
 import Foundation
 
-func doubleToTime(doubleNumber: inout Double) -> String{
-    
-    var dbn = Int(doubleNumber)
-    
-    if(dbn < 60){
-        return (String(dbn) + String("s"))
-    }else {
-        let reminder = dbn % 60
-        var strReminder = String(reminder)
-        dbn /= 60
+extension Double {
+    func doubleToTime() -> String{
         
-        if(reminder < 10){
-            strReminder = "0" + strReminder
+        var dbn = Int(self)
+        
+        if(dbn < 60){
+            return (String(dbn) + String("s"))
+        }else {
+            let reminder = dbn % 60
+            var strReminder = String(reminder)
+            dbn /= 60
+            
+            if(reminder < 10){
+                strReminder = "0" + strReminder
+            }
+            
+            return (String(dbn) + String(":") + strReminder + String("m"))
         }
         
-        return (String(dbn) + String(":") + strReminder + String("m"))
     }
-    
 }
