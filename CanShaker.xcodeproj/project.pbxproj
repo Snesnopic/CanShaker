@@ -704,7 +704,7 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires permission to write to properly track and give you statistics about your heart rate and energy spent during the session.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.giuseppecasillo.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.gCanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -739,7 +739,7 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires permission to write to properly track and give you statistics about your heart rate and energy spent during the session.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.giuseppecasillo.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.gCanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
