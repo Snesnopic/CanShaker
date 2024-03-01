@@ -13,6 +13,7 @@
 		6B1F6D832B9096E800C7EE6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7188002B7E419B002C02B0 /* Assets.xcassets */; };
 		6B1F6D852B90970200C7EE6B /* AchievementButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F6D842B90970200C7EE6B /* AchievementButton.swift */; };
 		6B1F6D872B909A1500C7EE6B /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F6D862B909A1500C7EE6B /* DateFormatter.swift */; };
+		6B57A3B52B91CE7600EA81C5 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B57A3B42B91CE7600EA81C5 /* AuthenticationView.swift */; };
 		6B6C8A002B8F2E24008C880C /* AchievementStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C89FF2B8F2E24008C880C /* AchievementStyle.swift */; };
 		6B6C8A022B8F4CEB008C880C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C39312B88F05400FFB72F /* Session.swift */; };
 		6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
@@ -84,6 +85,7 @@
 		3ECF618E2B8E1C0F0007E8F7 /* AllAchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAchievementsView.swift; sourceTree = "<group>"; };
 		6B1F6D842B90970200C7EE6B /* AchievementButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementButton.swift; sourceTree = "<group>"; };
 		6B1F6D862B909A1500C7EE6B /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		6B57A3B42B91CE7600EA81C5 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		6B6C89FF2B8F2E24008C880C /* AchievementStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementStyle.swift; sourceTree = "<group>"; };
 		6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				9D7411A32B7F51BE00869BF8 /* AdvicesView.swift */,
 				9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */,
 				9DA6A84C2B8C8B2C009737D7 /* AdvicesListView.swift */,
+				6B57A3B42B91CE7600EA81C5 /* AuthenticationView.swift */,
 				6BF3EEC22B8B605800B52687 /* Components */,
 			);
 			path = Advices;
@@ -476,6 +479,7 @@
 				3ECF618F2B8E1C0F0007E8F7 /* AllAchievementsView.swift in Sources */,
 				6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */,
 				6BBD95582B8E1B1400712380 /* DoubleToTime.swift in Sources */,
+				6B57A3B52B91CE7600EA81C5 /* AuthenticationView.swift in Sources */,
 				3E145B842B90989E00F9AF33 /* HistoryElementStyle.swift in Sources */,
 				6BDF79BC2B8C8CCA00E9663D /* ResponsiveFrame.swift in Sources */,
 				9D7411A22B7F515200869BF8 /* AchievementsView.swift in Sources */,
@@ -654,7 +658,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = TRT3963W92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
@@ -663,13 +667,13 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires permission to write to properly track and give you statistics about your heart rate and energy spent during the session.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.giuseppecasillo.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppecasillo.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -689,7 +693,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = TRT3963W92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
@@ -698,13 +702,13 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires permission to write to properly track and give you statistics about your heart rate and energy spent during the session.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.giuseppecasillo.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppecasillo.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -726,7 +730,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = TRT3963W92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;
@@ -744,7 +748,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppecasillo.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -763,7 +767,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = TRT3963W92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;
@@ -781,7 +785,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppecasillo.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
