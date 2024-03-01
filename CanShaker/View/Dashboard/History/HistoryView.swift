@@ -66,6 +66,8 @@ struct HistoryView: View {
         }
         .navigationTitle("History")
         .listStyle(.plain)
+        .preferredColorScheme(.dark)
+        .navigationTitle("History")
     }
 }
 
