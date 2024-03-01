@@ -57,9 +57,9 @@ struct LastSessionView: View {
                         }
                         else {
                             if(statToShow == 1){
-                                SpeedGraphView()
+                                SpeedGraphView(session: sessions.last!)
                             }else{
-                                BpmGraphView()
+                                BpmGraphView(session: sessions.last!)
                             }
                         }
                         Spacer()

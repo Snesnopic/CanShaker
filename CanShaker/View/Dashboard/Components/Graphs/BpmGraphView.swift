@@ -10,7 +10,7 @@ import Charts
 import SwiftData
 
 struct BpmGraphView: View {
-    @Query private var sessions:[Session]
+    var session: Session
     let heartGradient = LinearGradient(
         gradient: Gradient (
             colors: [ Color("heartColor").opacity(0.75),
@@ -22,10 +22,10 @@ struct BpmGraphView: View {
     
     var body: some View {
         Chart{
-            ForEach(sessions.last!.heartRateData.keys.sorted(),id: \.self){ time in
+            ForEach(session.heartRateData.keys.sorted(),id: \.self){ time in
                 
                 AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                          y: .value("BPM", (sessions.last!.heartRateData[time]!)))
+                          y: .value("BPM", (session.heartRateData[time]!)))
                 
                 .interpolationMethod(.catmullRom)
                 .foregroundStyle(heartGradient)
@@ -56,11 +56,11 @@ struct BpmGraphView: View {
     let container = try! ModelContainer(for: Session.self, configurations: config)
     
     var heartRate:[TimeInterval:Double] = [:]
-    for i in 1...10 {
+    for i in 1...100 {
         heartRate[Double(i)*0.3] = Double.random(in: 50...140)
     }
-    
-    container.mainContext.insert(Session(date: Date(), duration: 50.0/3.0, heartRateData: heartRate))
-    return BpmGraphView()
+    let session = Session(date: Date(), duration: 50.0/3.0, heartRateData: heartRate)
+    container.mainContext.insert(session)
+    return BpmGraphView(session: session)
         .modelContainer(container)
 }
