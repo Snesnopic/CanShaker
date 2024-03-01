@@ -26,7 +26,7 @@ struct AdvicesView: View {
                 .navigationTitle("Advices")
                 .preferredColorScheme(.dark)
             //accentColor changes backButton color
-        }.accentColor(.white)
+        }
         
     }
 }
