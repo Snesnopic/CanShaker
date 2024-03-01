@@ -17,18 +17,18 @@ struct HistoryElementStyle: View {
         
         ZStack {
             RoundedRectangle(cornerRadius: 15)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 15)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 13)
                 .opacity(0.4)
                 .shadow(radius: 15)
                 .foregroundStyle(Color("boxColor"))
                 .overlay{
                     HStack{
                         VStack{
-                            Text(session.date.formattedDayMonth + " - " + session.date.formattedHour)
+                            Text(session.date.formattedDayMonth)
                                 .bold()
                                 .font(.title2) +
                             Text("\nDuration: " + session.duration.doubleToTime())
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(Color("boxColor"))
                                 .font(.title3)
                             Spacer()
                         }
@@ -37,6 +37,18 @@ struct HistoryElementStyle: View {
                         
                     }
                     .padding()
+                }
+                .overlay{
+                    VStack{
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            Text(session.date.formattedHour)
+                                .foregroundStyle(Color("boxColor"))
+                                .font(.title3)
+                        }
+                        .padding()
+                    }
                 }
             
         }
