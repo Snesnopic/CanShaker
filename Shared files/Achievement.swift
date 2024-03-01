@@ -18,9 +18,9 @@ class Achievement: Identifiable{
     let completion: Int
     var achievingDate: Date?
     var isAchieved: Bool
-    var imageName: String? = nil
+    var imageName: String
     
-    init(title: String, subTitle: String, desc: String, completion: Int, achievingDate: Date? = nil, isAchieved: Bool, imageName: String? = nil) {
+    init(title: String, subTitle: String, desc: String, completion: Int, achievingDate: Date? = nil, isAchieved: Bool, imageName: String) {
         self.title = title
         self.subTitle = subTitle
         self.desc = desc

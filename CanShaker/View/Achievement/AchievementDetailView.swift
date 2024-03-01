@@ -44,6 +44,6 @@ struct AchievementDetailView: View {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Achievement.self, configurations: config)
 
-    return AchievementDetailView(achievement: Achievement(title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true))
+    return AchievementDetailView(achievement: Achievement(title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true, imageName: "splashBlue"))
         .modelContainer(container)
 }

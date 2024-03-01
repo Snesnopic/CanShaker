@@ -16,7 +16,7 @@ struct AchievementStyle: View {
                 .responsiveFrame(widthPercentage: 20, aspectRatio: (1,1))
                 .foregroundStyle(Color.box.opacity(0.4))
                 .overlay {
-                    Image(achievement.imageName!)
+                    Image(achievement.imageName)
                         .resizable()
                         .padding(.all)
                 }
