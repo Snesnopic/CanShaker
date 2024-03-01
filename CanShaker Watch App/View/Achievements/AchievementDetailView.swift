@@ -17,12 +17,11 @@ struct AchievementDetailView: View {
             if achievement != nil {
                 ZStack {
                     Circle()
-                        .foregroundStyle(Color.random())
-                    if achievement!.imageName != nil {
-                        Image(achievement!.imageName!)
-                            .resizable()
-                            .scaledToFit()
-                    }
+                        .foregroundStyle(Color.box.opacity(0.4))
+                    Image(achievement!.imageName!)
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.all, 20)
                 }
                 .matchedGeometryEffect(id: achievement!.id, in: animation)
                 Text(achievement!.desc).multilineTextAlignment(.center)

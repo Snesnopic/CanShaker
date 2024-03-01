@@ -22,13 +22,14 @@ struct AchievementButton: View {
             }
         }, label: {
             ZStack {
-                Circle()
-                    .foregroundStyle(Color.random())
-                if achievement.imageName != nil {
+                    Circle()
+                        .foregroundStyle(Color.box.opacity(0.4))
+               
                     Image(achievement.imageName!)
                         .resizable()
-                        .frame(width: 50, height: 50, alignment: .center)
-                }
+                        .scaledToFit()
+                        .padding(.all)
+                
             }.matchedGeometryEffect(id: achievement.id, in: animation)
                 .opacity(selectedAchievement == nil || selectedAchievement!.id == achievement.id ? 1.0 : 0.0)
         })
