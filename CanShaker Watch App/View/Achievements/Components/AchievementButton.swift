@@ -25,7 +25,7 @@ struct AchievementButton: View {
                     Circle()
                         .foregroundStyle(Color.box.opacity(0.4))
                
-                    Image(achievement.imageName!)
+                Image(achievement.imageName)
                         .resizable()
                         .scaledToFit()
                         .padding(.all)

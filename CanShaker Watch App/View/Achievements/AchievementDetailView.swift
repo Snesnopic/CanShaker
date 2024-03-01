@@ -18,7 +18,7 @@ struct AchievementDetailView: View {
                 ZStack {
                     Circle()
                         .foregroundStyle(Color.box.opacity(0.4))
-                    Image(achievement!.imageName!)
+                    Image(achievement!.imageName)
                         .resizable()
                         .scaledToFit()
                         .padding(.all, 20)
