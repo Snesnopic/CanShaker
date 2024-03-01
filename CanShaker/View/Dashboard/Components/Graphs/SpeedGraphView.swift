@@ -35,7 +35,7 @@ struct SpeedGraphView: View {
                         
                     }
                     .chartXAxis{
-                        AxisMarks(values: .automatic(desiredCount: 3)) {
+                        AxisMarks(values: .automatic(desiredCount: 6)) {
                             AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
                         }
                     }
