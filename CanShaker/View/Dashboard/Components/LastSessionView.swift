@@ -11,11 +11,6 @@ import CoreMotion
 import SwiftData
 struct LastSessionView: View {
     @State private var statToShow = 0
-    @State private var averageBpm = 0.0
-    @State private var averageSpd = 0.0
-    @State private var calories = 0
-    @State private var time: String = "00"
-    
     @Query private var sessions:[Session]
     var body: some View {
         ZStack{
@@ -24,62 +19,73 @@ struct LastSessionView: View {
                 .foregroundStyle(.box)
                 .opacity(0.4)
             
-            VStack{
+            VStack(alignment: .center){
                 
                 // PICKER
+                    HStack{
+                        Picker("", selection: $statToShow){
+                            Text("BPM")
+                                .tag(0)
+                            Text("Speed")
+                                .tag(1)
+                        }
+                        .responsiveFrame(widthPercentage: 35)
+                        .pickerStyle(.segmented)
+                    }
+                    .padding(.vertical, 5)
+                    
+                    // CHART + STATS
+                    HStack{
+                        if sessions.isEmpty {
+                            Chart{
+                                AreaMark (x: .value("Time", Date()),
+                                          y: .value("BPM", 40))
+                                .foregroundStyle(Color.clear)
+                                AreaMark (x: .value("Time", Date()),
+                                          y: .value("BPM", 140))
+                            }
+                            .chartYAxis {
+                                AxisMarks(position: .leading) { _ in
+                                    AxisValueLabel()
+                                }
+                            }
+                            .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
+                            .padding(.vertical)
+                            .overlay {
+                                Text("No data yet!").bold()
+                            }
+                        }
+                        else {
+                            if(statToShow == 1){
+                                SpeedGraphView()
+                            }else{
+                                BpmGraphView()
+                            }
+                        }
+                        Spacer()
+                        
+                    }
                 HStack{
-                    Picker("", selection: $statToShow){
-                        Text("BPM")
-                            .tag(0)
-                        Text("Speed")
-                            .tag(1)
-                    }
-                    .responsiveFrame(widthPercentage: 35)
-                    .pickerStyle(.segmented)
+                        VStack (alignment: .leading){
+                            Text("**Avg. BPM:** \(String(format: "%.1f", getAverage(dataset: sessions.last?.heartRateData.values)))")
+                            Spacer()
+                            Text("**Avg. speed:** \(String(format: "%.1f", getAverage(dataset: sessions.last?.accelData.values)))")
+                        }
+                        Spacer()
+                        VStack (alignment: .leading){
+                            Text("**KCALs:** \(Int(sessions.last?.calories ?? 0))")
+                            Spacer()
+                            Text("**Time:** ") + Text(sessions.last?.duration.doubleToTime() ?? "0s")
+                        }
                     Spacer()
-                }
-                .padding(.vertical, 5)
+                    }
+                    .font(.subheadline)
+                    Spacer()
                 
-                // CHART + STATS
-                if !sessions.isEmpty {
-                    HStack{
-                        if(statToShow == 1){
-                            SpeedGraphView()
-                        }else{
-                            BpmGraphView()
-                        }
-                        Spacer()
-                        
-                    }
-                    
-                    HStack{
-                        //TODO: add and align text
-                        VStack{
-                            Text("**Average BPM:** ") + Text(String(format: "%.1f", averageBpm)) + Text("\n") +
-                            Text("**Average speed:** ") + Text(String(format: "%.1f", averageSpd))
-                        }
-                        
-                        Spacer()
-                        VStack{
-                            Text("**Calories:** ") + Text(String(calories)) + Text(" KCAL") +
-                            Text("\n") +
-                            Text("**Time:** ")  + Text(String(time))
-                        }
-                        Spacer()
-                    }
-                    .font(.caption)
-                    .onAppear{
-                        averageBpm = getAverage(dataset: sessions.last?.heartRateData.values)
-                        averageSpd = getAverage(dataset: sessions.last?.accelData.values)
-                        calories = Int(sessions.last!.calories)
-                        time = doubleToTime(doubleNumber: &sessions.last!.duration)
-                    }
-                    
-                }
-                Spacer()
+            
+                
             }
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
-            
         }
         .preferredColorScheme(.dark)
     }
@@ -107,7 +113,7 @@ struct LastSessionView: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Session.self, configurations: config)
-
+    
     
     var accelD:[TimeInterval:Double] = [:]
     var heartRate:[TimeInterval:Double] = [:]
@@ -116,7 +122,7 @@ struct LastSessionView: View {
         heartRate[Double(i)*0.3] = Double.random(in: 50...140)
     }
     
-    container.mainContext.insert(Session(date: Date(), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate))
+    container.mainContext.insert(Session(date: Date(), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate,calories: Double.random(in: (5.0)...(20.0))))
     return LastSessionView()
         .modelContainer(container)
 }
