@@ -11,12 +11,13 @@ import Charts
 import SwiftData
 struct DashboardView: View {
     @Environment(\.modelContext) private var context
+    @Query var achievements: [Achievement]
     @Query private var sessions: [Session]
     var body: some View {
         NavigationStack{
 
                 VStack{
-                    Info()
+                    Info(sessions: sessions)
                     HStack{
                         Text("Activity")
                             .bold()
@@ -42,6 +43,7 @@ struct DashboardView: View {
             .navigationTitle("Dashboard")
             .onAppear {
                 Connectivity.shared.context = self.context
+                Achievement.ensureAchievementsExist(context: context, achievements: achievements)
             }
         }
     }

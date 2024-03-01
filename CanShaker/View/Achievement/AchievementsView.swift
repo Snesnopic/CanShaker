@@ -41,12 +41,7 @@ struct AchievementsView: View{
             }
             .navigationTitle("Achievements")
         }
-        
         .preferredColorScheme(.dark)
-        .onAppear {
-            Achievement.ensureAchievementsExist(context: context, achievements: achievements)
-        }
-        
     }
 }
 
