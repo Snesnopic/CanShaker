@@ -11,7 +11,7 @@ struct AdvicesView: View {
     var body: some View {
         NavigationStack {
                 //TODO: add list destination with advices category
-            VStack(spacing: 50){
+            VStack(spacing: 15){
                     NavigationLink(destination: AdvicesListView(advCategory: .hygiene), label: {
                         AdviceButtonStyle(img: "heart.text.square.fill", category: "Hygiene", cDescription: "Learn how to keep your can always in top shape")
                     })
@@ -21,6 +21,7 @@ struct AdvicesView: View {
                     NavigationLink(destination: AdvicesListView(advCategory: .safety), label: {
                         AdviceButtonStyle(img: "exclamationmark.triangle.fill", category: "Safety", cDescription: "You have to keep your can safe")
                     })
+                Spacer()
                 }
                 .navigationTitle("Advices")
                 .preferredColorScheme(.dark)

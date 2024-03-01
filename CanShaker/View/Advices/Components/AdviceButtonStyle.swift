@@ -14,12 +14,12 @@ struct AdviceButtonStyle: View {
     var body: some View {
         
         ZStack{
-            RoundedRectangle(cornerRadius: 14)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 14)
+            RoundedRectangle(cornerRadius: 15)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 20)
                 .foregroundColor(Color("boxColor"))
                 .opacity(0.4)
                 .shadow(radius: 20)
-            Spacer()
+            
             VStack(alignment: .leading) {
                 HStack{
                     Image(systemName: img)
@@ -29,19 +29,22 @@ struct AdviceButtonStyle: View {
                         .font(.title)
                 }
                 .padding()
+                Spacer()
                 ZStack(alignment: .leading) {
                     UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
-                        .responsiveFrame(widthPercentage: 95, heightPercentage: 5)
+                        .responsiveFrame(widthPercentage: 95, heightPercentage: 6)
                         .foregroundColor(Color("boxColor"))
                         .opacity(0.4)
                         .shadow(radius: 20)
                     Text(cDescription)
                         .font(.subheadline)
                         .fontWeight(.medium)
-                        .padding()
+                        .padding(.horizontal)
+                        
                 }
                 
             }
+            .responsiveFrame(widthPercentage: 92, heightPercentage: 20)
         }
         .preferredColorScheme(.dark)
     }
