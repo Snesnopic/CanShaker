@@ -39,14 +39,14 @@ struct AuthenticationView: View {
         var error: NSError?
         
         // Check if the device can evaluate the policy.
-        if authenticationContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+        if authenticationContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthentication, error: &error) {
             
-            authenticationContext.evaluatePolicy( .deviceOwnerAuthenticationWithBiometrics, localizedReason: "Use youre face to unlock.", reply: { (success, evalPolicyError) in
+            authenticationContext.evaluatePolicy( .deviceOwnerAuthentication, localizedReason: "Use youre face to unlock.", reply: { (success, evalPolicyError) in
                 
                 if success {
-                    test = "good with faceID"
+                    test = "good "
                 } else {
-                    test = "failed face ID"
+                    test = "failed "
                 }
                 
             })
@@ -54,19 +54,7 @@ struct AuthenticationView: View {
         }else {
             
             test = "no auth found"
-//            if authenticationContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthentication, error: &error) {
-//                
-//                authenticationContext.evaluatePolicy( .deviceOwnerAuthentication, localizedReason: "Touch the Touch ID sensor to unlock.", reply: { (success, evalPolicyError) in
-//                    
-//                    if success {
-//                        test = "good with passcode"
-//                    } else {
-//                        test = "failed passcode"
-//                    }
-//                    
-//                })
-//                
-//            }
+
         }
     }
 }
