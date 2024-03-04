@@ -13,18 +13,7 @@ struct CanShakerApp: App {
     var connectivity = Connectivity.shared
     var body: some Scene {
         WindowGroup {
-            TabView(selection: .constant(1)) {
-                DashboardView().tabItem {
-                    Label("Dashboard", systemImage: "chart.bar.xaxis")
-                }
-                AdvicesView().tabItem {
-                    Label("Advices", systemImage: "lightbulb.fill")
-                }
-                AchievementsView().tabItem {
-                    Label("Achievements", systemImage: "trophy")
-                }
-            }
-            .modelContainer(for: [Session.self,Achievement.self])
+            AuthenticationView()
         }
         
     }
