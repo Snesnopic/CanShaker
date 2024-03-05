@@ -15,12 +15,23 @@ struct LastSessionView: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 15.0)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 37)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 49)
                 .foregroundStyle(.box)
                 .opacity(0.4)
             
             VStack(alignment: .center){
                 
+                // FEEDBACK
+                Text("You were so fast that Flash had to change job!")
+                    .responsiveFrame(widthPercentage: 93, heightPercentage: 10)
+                    .font(.title3)
+                    .multilineTextAlignment(.center)
+                    .fontWeight(.semibold)
+                    
+                Line()
+                    .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
+                    .frame(height: 1)
+                    .foregroundStyle(Color("boxColor"))
                 // PICKER
                     HStack{
                         Picker("", selection: $statToShow){
@@ -32,7 +43,7 @@ struct LastSessionView: View {
                         .responsiveFrame(widthPercentage: 35)
                         .pickerStyle(.segmented)
                     }
-                    .padding(.vertical, 5)
+                    .padding(.vertical, 10)
                     
                     // CHART + STATS
                     HStack{

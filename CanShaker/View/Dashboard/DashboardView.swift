@@ -18,10 +18,11 @@ struct DashboardView: View {
 
                 VStack{
                     Info(sessions: sessions)
+                        .padding(.bottom, 2)
                     HStack{
                         Text("Activity")
                             .bold()
-                            .font(.title2)
+                            .font(.title)
                         Spacer()
                         NavigationLink {
                             HistoryView(sessions: sessions)
@@ -30,9 +31,9 @@ struct DashboardView: View {
                                 
                         }
                     }
-                    FeedbackView()
+                    
                     LastSessionView()
-                        .padding(.top, 5)
+                        
                     Spacer()
 
                 }
@@ -43,6 +44,10 @@ struct DashboardView: View {
             .onAppear {
                 Connectivity.shared.context = self.context
                 Achievement.ensureAchievementsExist(context: context, achievements: achievements)
+            }
+            .frame(maxWidth: .infinity)
+            .background{
+                Color(Color("bgGray"))
             }
         }
     }
