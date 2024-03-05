@@ -28,6 +28,39 @@ class Feedback: Identifiable {
         }
         return filteredSentences.randomElement()?.sentence
     }
+    
+    func feedbackToShaker(sessions: [Session]) -> String {
+        
+        
+        guard let lastSession = sessions.last else {
+            return filterFeedback(byType: .neutral, byCategory: .random, byCondition: .random)!
+        }
+        
+        let duration = lastSession.duration
+        let calories = Int(lastSession.calories)
+        let heartRate = sessions.last?.getAverage(dataset: lastSession.heartRateData.values)
+        let accel = sessions.last?.getAverage(dataset: lastSession.accelData.values)
+        
+        if duration > 300.0 {
+            if calories > 80 {
+                if heartRate! > 105 {
+                    if accel! > 2 {
+                        return filterFeedback(byType: .compliment, byCategory: .heartBeat, byCondition: .high)!
+                    } else if accel! <= 0.3 {
+                        return filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)!
+                    }
+                } else if heartRate! < 70 {
+                    return filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)!
+                }
+            } else if calories < 40 {
+                return filterFeedback(byType: .insult, byCategory: .calories, byCondition: .low)!
+            }
+        } else if duration < 120.0 {
+            return filterFeedback(byType: .insult, byCategory: .speed, byCondition: .high)!
+        }
+        
+        return filterFeedback(byType: .neutral, byCategory: .random, byCondition: .random)!
+    }
 
 }
 

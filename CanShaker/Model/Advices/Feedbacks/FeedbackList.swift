@@ -22,7 +22,7 @@ extension Feedback {
         
         //MARK: CALORIES
         Feedback(sentence: String(localized: "You burned fewer calories than a sloth doing slow-motion yoga"), type: .insult, category: .calories, condition: .low),
-        Feedback(sentence: String(localized: "Someone wanted to burn calories in an unorthodox way..."), type: .compliment, category: .calories, condition: .high)
+        Feedback(sentence: String(localized: "Someone wanted to burn calories in an unorthodox way..."), type: .compliment, category: .calories, condition: .high),
         
         //MARK: ACCEL
         Feedback(sentence: "Slow and steady wins the race.", type: .insult, category: .accel, condition: .low),

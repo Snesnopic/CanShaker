@@ -23,7 +23,7 @@ struct LastSessionView: View {
             VStack(alignment: .center){
                 
                 // FEEDBACK
-                FeedbackView(feedback: feedbackToShaker())
+                Text(feedbackToGive.feedbackToShaker(sessions: sessions))
                     .responsiveFrame(widthPercentage: 93, heightPercentage: 10)
                     .font(.title3)
                     .multilineTextAlignment(.center)
@@ -80,9 +80,9 @@ struct LastSessionView: View {
                 
                 HStack{
                     VStack (alignment: .leading){
-                        Text("**Avg. BPM:** \(String(format: "%.1f", getAverage(dataset: sessions.last?.heartRateData.values)))")
+                        Text("**Avg. BPM:** \(String(format: "%.1f", (sessions.last?.getAverage(dataset: sessions.last?.heartRateData.values))!))")
                         Spacer()
-                        Text("**Avg. speed:** \(String(format: "%.1f", getAverage(dataset: sessions.last?.accelData.values))) m/s²")
+                        Text("**Avg. speed:** \(String(format: "%.1f", (sessions.last?.getAverage(dataset: sessions.last?.accelData.values))!)) m/s²")
                     }
                     Spacer()
                     VStack (alignment: .leading){
@@ -102,63 +102,6 @@ struct LastSessionView: View {
         }
         .preferredColorScheme(.dark)
     }
-    
-    //prototype function
-    //    func feedbackToPlayer() -> String {
-    //        if((sessions.last?.duration ?? 0) < 5) {
-    //            return "Ascanio"
-    //        }
-    //        return "Casillox"
-    //    }
- 
-    func feedbackToShaker() -> String {
-        guard let lastSession = sessions.last else {
-            return feedbackToGive.filterFeedback(byType: .neutral, byCategory: .random, byCondition: .random)!
-        }
-        
-        let duration = lastSession.duration 
-        let calories = Int(lastSession.calories)
-        let heartRate = getAverage(dataset: lastSession.heartRateData.values)
-        let accel = getAverage(dataset: lastSession.accelData.values)
-        
-        if duration > 300.0 {
-            if calories > 80 {
-                if heartRate > 105 {
-                    if accel > 2 {
-                        return feedbackToGive.filterFeedback(byType: .compliment, byCategory: .heartBeat, byCondition: .high)!
-                    } else if accel <= 0.3 {
-                        return feedbackToGive.filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)!
-                    }
-                } else if heartRate < 70 {
-                    return feedbackToGive.filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)!
-                }
-            } else if calories < 40 {
-                return feedbackToGive.filterFeedback(byType: .insult, byCategory: .calories, byCondition: .low)!
-            }
-        } else if duration < 120.0 {
-            return feedbackToGive.filterFeedback(byType: .insult, byCategory: .speed, byCondition: .high)!
-        }
-        
-        return feedbackToGive.filterFeedback(byType: .neutral, byCategory: .random, byCondition: .random)!
-    }
-
-    
-    func getAverage(dataset: Optional<Dictionary<Double, Double>.Values>) -> Double{
-        var average = 0.0
-        
-        if(dataset?.isEmpty == false){
-            var temp = 0.0
-            for data in dataset! {
-                average += data
-                temp += 1
-            }
-            
-            average = average/temp
-        }
-        
-        return average
-    }
-    
 }
 
 
