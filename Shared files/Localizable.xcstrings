@@ -567,6 +567,9 @@
         }
       }
     },
+    "It looks like we have a marathon runner here!" : {
+
+    },
     "Last session" : {
       "localizations" : {
         "es-419" : {
@@ -776,6 +779,7 @@
       }
     },
     "Placeholder" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
@@ -1015,6 +1019,9 @@
         }
       }
     },
+    "Someone wanted to burn calories in an unorthodox way..." : {
+
+    },
     "Speed" : {
       "localizations" : {
         "es-419" : {
@@ -1042,7 +1049,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inizio"
+            "value" : "Inizia"
           }
         }
       }
@@ -1175,6 +1182,9 @@
         }
       }
     },
+    "Wow, your heartbeat is so fast, I bet even Usain Bolt would struggle to keep up with it in a sprint!" : {
+
+    },
     "Yesterday" : {
       "localizations" : {
         "es-419" : {
@@ -1190,6 +1200,12 @@
           }
         }
       }
+    },
+    "You burned fewer calories than a sloth doing slow-motion yoga" : {
+
+    },
+    "You were so fast that Flash had to change job!" : {
+
     },
     "You've achieved a perfect score on all metrics: heartbeats, burned calories, and speed!" : {
       "localizations" : {
@@ -1286,6 +1302,9 @@
           }
         }
       }
+    },
+    "Your post-workout heartbeat is so chill, even a meditation guru would envy your cardio-nap routine!" : {
+
     }
   },
   "version" : "1.0"
