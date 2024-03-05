@@ -18,10 +18,11 @@ struct DashboardView: View {
 
                 VStack{
                     Info(sessions: sessions)
+                        .padding(.bottom, 5)
                     HStack{
                         Text("Activity")
                             .bold()
-                            .font(.title2)
+                            .font(.title)
                         Spacer()
                         NavigationLink {
                             HistoryView(sessions: sessions)
