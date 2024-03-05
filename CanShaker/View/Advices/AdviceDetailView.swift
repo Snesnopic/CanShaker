@@ -20,7 +20,10 @@ struct AdviceDetailView: View {
             }
         .preferredColorScheme(.dark)
         .navigationTitle(adv.title)
-        
+        .frame(maxWidth: .infinity)
+        .background{
+            Color(Color("bgGray"))
+        }
     }
 }
 
