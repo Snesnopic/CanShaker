@@ -461,7 +461,6 @@
 				en,
 				Base,
 				it,
-				nap,
 				"es-419",
 			);
 			mainGroup = 9D7187F02B7E419A002C02B0;
