@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import Charts
 struct HistoryView: View {
+    let dateFormatter = RelativeDateTimeFormatter()
     func containAnyTimeWord(_ string1: String, _ string2: String) -> Bool {
         let timeWords = ["hour", "minute", "second"]
         
@@ -28,31 +29,38 @@ struct HistoryView: View {
         return timeWords.contains { word in
             string1.lowercased().contains(word)
         }
-    
+        
     }
     var sessions: [Session]
-    private var partitionedDates: [[Session]] = [[]]
+    private var partitionedDates: [String: [Session]] = [:]
     init(sessions:[Session]) {
+        dateFormatter.dateTimeStyle = .named
         self.sessions = sessions
-        partitionedDates = sessions.reduce(into: [[Session]]()) { acc, session in
-            for i in acc.indices {
-                if acc[i][0].date.relativeToNow == session.date.relativeToNow ||
-                   containAnyTimeWord(acc[i][0].date.relativeToNow, session.date.relativeToNow)
-                {
-                    acc[i].append(session)
-                    return
-                }
+        partitionedDates = self.sessions.reduce(into: [String: [Session]]()) { result, session in
+            let relativeDate: String
+            if Calendar.current.isDateInToday(session.date) {
+                relativeDate = String(localized: "Today")
+            } else if session.date.formattedDayMonth == Calendar.current.date(byAdding: .day, value: -1, to: Date())!.formattedDayMonth {
+                relativeDate = String(localized: "Yesterday")
+            } else {
+                relativeDate = dateFormatter.localizedString(for: session.date, relativeTo: .now)
             }
-            acc.append([session])
+            
+            if var sessionsForDate = result[relativeDate] {
+                sessionsForDate.append(session)
+                result[relativeDate] = sessionsForDate
+            } else {
+                result[relativeDate] = [session]
+            }
         }
-
+        
     }
     var body: some View {
         List{
-            ForEach(partitionedDates.sorted(by: { array1, array2 in
-                array1.first!.date > array2.first!.date
-            }), id: \.self) {
-                partition in
+            ForEach(partitionedDates.sorted(by: { pair1, pair2 in
+                return pair1.value.first!.date > pair2.value.first!.date
+            }), id: \.key) {
+                header, partition in
                 Section {
                     ForEach(partition.sorted(by: { session1, session2 in
                         session1.date > session2.date
@@ -62,17 +70,9 @@ struct HistoryView: View {
                     }
                 } header:
                 {
-                    if partition.first!.date.isToday {
-                        Text("Today")
-                    }
-                    else if Calendar.current.isDateInYesterday(partition.first!.date){
-                        Text("Yesterday")
-                    }
-                    else {
-                        Text(partition.first!.date.relativeToNow)
-                    }
-                }
-            }
+                    Text(header)
+                }            }
+            
         }
         .navigationTitle("History")
         .listStyle(.plain)
@@ -86,7 +86,7 @@ struct HistoryView: View {
     
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Session.self, configurations: config)
-
+    
     
     var accelD:[TimeInterval:Double] = [:]
     var heartRate:[TimeInterval:Double] = [:]
