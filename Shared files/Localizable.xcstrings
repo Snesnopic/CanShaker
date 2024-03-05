@@ -586,6 +586,9 @@
         }
       }
     },
+    "Learn how to keep your can always in top shape" : {
+
+    },
     "Like any utensil, clean it after usage, gently wash the shaking area with warm water and a mild, unscented soap to remove any remaining lubricant or spray. Be sure to rinse thoroughly and pat dry with a clean towel. Keeping the shaking area clean helps prevent the buildup of bacteria and reduces the risk of skin irritation or infection." : {
       "localizations" : {
         "es-419" : {
@@ -1086,6 +1089,9 @@
         }
       }
     },
+    "There are secret graffiti techniques to explore" : {
+
+    },
     "Time" : {
       "localizations" : {
         "es-419" : {
@@ -1103,6 +1109,7 @@
       }
     },
     "Today" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
@@ -1186,6 +1193,7 @@
 
     },
     "Yesterday" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
@@ -1202,6 +1210,9 @@
       }
     },
     "You burned fewer calories than a sloth doing slow-motion yoga" : {
+
+    },
+    "You have to keep your can safe" : {
 
     },
     "You were so fast that Flash had to change job!" : {
