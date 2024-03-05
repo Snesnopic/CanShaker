@@ -14,8 +14,8 @@ struct SpeedGraphView: View {
     var session:Session
     let speedGradient = LinearGradient(
         gradient: Gradient (
-            colors: [ Color("speedColor").opacity(0.75),
-                      Color("speedColor")
+            colors: [ Color(.accent).opacity(0.75),
+                      Color(.accent)
                 .opacity(0.25),
                       Color.clear ]
         ),

@@ -3,6 +3,12 @@
   "strings" : {
     "" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13,6 +19,12 @@
     },
     "**Avg. BPM:** %@" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Promedio LPM:** %@"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23,6 +35,12 @@
     },
     "**Avg. speed:** %@ m/s²" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Promedio "
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33,6 +51,12 @@
     },
     "**KCALs:** %lld" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**KCALs**%11d"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43,6 +67,12 @@
     },
     "**Time:** " : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Tiempo**"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -53,6 +83,12 @@
     },
     "/" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -63,6 +99,12 @@
     },
     "%@!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -73,6 +115,12 @@
     },
     "%lld" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%11d"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -89,6 +137,12 @@
             "value" : "%1$lld-%2$lld"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld-%2$lld"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -99,6 +153,12 @@
     },
     "Acceleration" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aceleración"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -109,6 +169,12 @@
     },
     "Achievements" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logros"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -119,6 +185,12 @@
     },
     "Activity" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actividad"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -129,6 +201,12 @@
     },
     "Advices" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consejos"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -139,6 +217,12 @@
     },
     "All achievements" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mas logros"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -149,6 +233,12 @@
     },
     "Are you sure? Too many sessions can cause serious health issues!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Estás seguro? Muchas sesiones pueden causar severos problemas en la salud"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -159,6 +249,12 @@
     },
     "Authenticate" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autenticar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -169,6 +265,12 @@
     },
     "BPM" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LPM"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -179,6 +281,12 @@
     },
     "Calm Heartbeat" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latido tranquilo"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -189,6 +297,12 @@
     },
     "Clean hands" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manos limpias"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -199,6 +313,12 @@
     },
     "Dashboard" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tablero"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -209,6 +329,12 @@
     },
     "Date: %@" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha: %@"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -219,6 +345,12 @@
     },
     "Do it anyway" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hacerlo de todos modos"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -229,6 +361,12 @@
     },
     "Enhance pleasure and reduce friction-related discomfort by using natural lubricants." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mejora el placer y reduce las molestias relacionadas con la fricción mediante el uso de lubricantes naturales."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -239,6 +377,12 @@
     },
     "Fast as the Wind" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rapido como el viento"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -249,6 +393,12 @@
     },
     "Find a quiet, private area where you won't be disturbed or interrupted. Nobody likes doing graffiti when cops are around. Interruptions can cause instability during your experience and may lead to unpleasent discoveries" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encuentra un área tranquila y privada donde no te molesten ni te interrumpan. A nadie le gusta hacer graffitis cuando hay policías cerca. Las interrupciones pueden causar inestabilidad durante tu experiencia y pueden llevarte a descubrimientos desagradables."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -259,6 +409,12 @@
     },
     "Go back" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regresar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -269,6 +425,12 @@
     },
     "Heartbeats, Calories, Speed!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latidos, Calorias, Velocidad!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -279,6 +441,12 @@
     },
     "Hello World" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello World"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -289,6 +457,12 @@
     },
     "Heroic Shaker" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heroic Shaker"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -299,6 +473,12 @@
     },
     "History" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -309,6 +489,12 @@
     },
     "Hurting yourself" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lastimarte"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -319,6 +505,12 @@
     },
     "Hygiene" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Higiene"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -329,6 +521,12 @@
     },
     "I'm done" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terminé"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -339,6 +537,12 @@
     },
     "If you can’t complete a work task because you can’t stop thinking about shaking your can, that’s when it becomes an issue. If you’re consistently watching graffiti material at work or are you’re late to a meeting because you were shaking it in the bathroom, then you might have to consult an expert. This is the same if you can’t stick with plans made with friends." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si no puedes completar una tarea laboral porque no puedes dejar de pensar en agitar la lata, es cuando se convierte en un problema. Si constantemente ves material de graffiti en el trabajo o llegas tarde a una reunión porque lo estabas sacudiendo en el baño, es posible que tengas que consultar a un experto. Lo mismo ocurre si no puedes seguir los planes hechos con amigos."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -349,6 +553,12 @@
     },
     "If you start feeling hurt or you feel your can is dry, it is a great sign that you should stop painting." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si empiezas a sentirte herido o sientes que tu lata está seca, es una gran señal de que debes dejar de pintar."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -357,8 +567,17 @@
         }
       }
     },
+    "It looks like we have a marathon runner here!" : {
+
+    },
     "Last session" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sesión pasada"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -367,8 +586,17 @@
         }
       }
     },
+    "Learn how to keep your can always in top shape" : {
+
+    },
     "Like any utensil, clean it after usage, gently wash the shaking area with warm water and a mild, unscented soap to remove any remaining lubricant or spray. Be sure to rinse thoroughly and pat dry with a clean towel. Keeping the shaking area clean helps prevent the buildup of bacteria and reduces the risk of skin irritation or infection." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Como cualquier utensilio, límpialo después de su uso, lava suavemente la zona de agitación con agua tibia y un jabón suave sin perfume para eliminar cualquier resto de lubricante o spray. Asegúrate de enjuagar bien y secar con una toalla limpia. Mantener limpia el área de agitación ayuda a prevenir la acumulación de bacterias y reduce el riesgo de irritación o infección de la piel."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -379,6 +607,12 @@
     },
     "Lube up your can for comfort" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lubrica tu lata para mayor comodidad"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -389,6 +623,12 @@
     },
     "Master of Energy" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maestro de la Energía"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -399,6 +639,12 @@
     },
     "Master of Motion" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maestro del Movimiento"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -409,6 +655,12 @@
     },
     "Methods" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Métodos"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -419,6 +671,12 @@
     },
     "Near accomplishment" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerca del logro"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -429,6 +687,12 @@
     },
     "Never Give Up!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡No Te Rindas!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -439,6 +703,12 @@
     },
     "New achievement!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Nuevo logro!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -449,6 +719,12 @@
     },
     "No data yet!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Aún no hay datos!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -459,6 +735,12 @@
     },
     "No Moment of Pause" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No es momento de parar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -469,6 +751,12 @@
     },
     "No sessions yet!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Sin sesiones aún!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -479,6 +767,12 @@
     },
     "Persistence" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persistencia"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -488,7 +782,14 @@
       }
     },
     "Placeholder" : {
+      "extractionState" : "stale",
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placeholder"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -499,6 +800,12 @@
     },
     "Post shake hygiene" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Higiene después de agitar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -509,6 +816,12 @@
     },
     "Practice holding back when nearing climax of your inspiration, then resume stimulation. Repeating this pattern enhances artwork output intensity and duration." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practica aguantar cuando se acerque el clímax de tu inspiración y luego reanuda la estimulación. La repetición de este patrón mejora la intensidad y duración de la producción de la obra de arte."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -519,6 +832,12 @@
     },
     "Preview error" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preview error"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -529,6 +848,12 @@
     },
     "Progress: %lld%%" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progreso: %11d%%"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -539,6 +864,12 @@
     },
     "Quiet place" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lugar sielencioso"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -549,6 +880,12 @@
     },
     "Race Against Time" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carrera contra el tiempo"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -559,6 +896,12 @@
     },
     "Range" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rango"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -569,6 +912,12 @@
     },
     "Relationships and work-life impact" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relaciones e impacto en la vida laboral y personal"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -579,6 +928,12 @@
     },
     "Rushing to climax often leads to a brief peak followed by a quick decline. Taking your time to build up gradually results in more intense artwork." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apresurarse hacia el clímax a menudo conduce a un breve pico seguido de un rápido descenso. Tomarse su tiempo para desarrollar gradualmente da como resultado una obra de arte más intensa."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -589,6 +944,12 @@
     },
     "Safety" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seguridad"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -599,6 +960,12 @@
     },
     "See all" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver todo"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -609,6 +976,12 @@
     },
     "Session" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sesión "
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -619,6 +992,12 @@
     },
     "Sessions this week" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sesiones de esta semana"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -629,6 +1008,12 @@
     },
     "Slow Down" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Con calma"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -637,8 +1022,17 @@
         }
       }
     },
+    "Someone wanted to burn calories in an unorthodox way..." : {
+
+    },
     "Speed" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velocidad"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -649,16 +1043,28 @@
     },
     "Start" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicio"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inizio"
+            "value" : "Inizia"
           }
         }
       }
     },
     "State of Relaxation" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado de relajación"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -669,6 +1075,12 @@
     },
     "Steady Rhythm" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ritmo constante"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -677,8 +1089,17 @@
         }
       }
     },
+    "There are secret graffiti techniques to explore" : {
+
+    },
     "Time" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiempo"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -688,7 +1109,14 @@
       }
     },
     "Today" : {
+      "extractionState" : "stale",
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoy"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -699,6 +1127,12 @@
     },
     "Try Edging" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prueba Edging"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -709,6 +1143,12 @@
     },
     "Use Lube" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa lubricante"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -719,6 +1159,12 @@
     },
     "Using a water-based lubricant during the shaking can help reduce friction and irritation of the can. This is especially important if you're prone to dryness or sensitivity. Avoid using products like lotions, oils, or creams that may contain ingredients that could irritate the delicate skin of your poor can." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar un lubricante a base de agua durante la agitación puede ayudar a reducir la fricción y la irritación de la lata. Esto es especialmente importante si eres propenso a la sequedad o la sensibilidad. Evita el uso de productos como lociones, aceites o cremas que puedan contener ingredientes que puedan irritar la delicada piel de tu pobre lata."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -729,6 +1175,12 @@
     },
     "Wash hands before and after: Before engaging in shaking your can, ensure that your hands are clean to minimize the introduction of bacteria or other contaminants to the shaking area. Afterward, wash your hands thoroughly to remove any unwanted spray and reduce the risk of spreading bacteria." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lávate las manos antes y después: antes de agitar la lata, asegúrate de tener las manos limpias para minimizar la introducción de bacterias u otros contaminantes en el área de agitación. Luego, lávate bien las manos para eliminar cualquier mancha no deseada y reducir el riesgo de propagación de bacterias."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -737,8 +1189,18 @@
         }
       }
     },
+    "Wow, your heartbeat is so fast, I bet even Usain Bolt would struggle to keep up with it in a sprint!" : {
+
+    },
     "Yesterday" : {
+      "extractionState" : "stale",
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayer"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -747,8 +1209,23 @@
         }
       }
     },
+    "You burned fewer calories than a sloth doing slow-motion yoga" : {
+
+    },
+    "You have to keep your can safe" : {
+
+    },
+    "You were so fast that Flash had to change job!" : {
+
+    },
     "You've achieved a perfect score on all metrics: heartbeats, burned calories, and speed!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Has conseguido una puntuación perfecta en todas las métricas: latidos del corazón, calorías quemadas y velocidad!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -759,6 +1236,12 @@
     },
     "You've maintained a heartbeat below 100 bpm throughout the entire session!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Has mantenido un latido por debajo de 100 lpm durante toda la sesión!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -769,6 +1252,12 @@
     },
     "You've maintained a steady average speed for over 30 minutes!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Has mantenido una velocidad promedio constante durante más de 30 minutos!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -779,6 +1268,12 @@
     },
     "You've reached an average speed of over 15 km/h!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Has alcanzado una velocidad media de más de 15 km/h!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -789,6 +1284,12 @@
     },
     "You've shaken your can over 1000 times! Keep it up!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Has sacudido tu lata más de 1000 veces! ¡Sigue así!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -799,6 +1300,12 @@
     },
     "You've used the app for more than 7 consecutive days!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Has utilizado la aplicación durante más de 7 días consecutivos!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -806,6 +1313,9 @@
           }
         }
       }
+    },
+    "Your post-workout heartbeat is so chill, even a meditation guru would envy your cardio-nap routine!" : {
+
     }
   },
   "version" : "1.0"
