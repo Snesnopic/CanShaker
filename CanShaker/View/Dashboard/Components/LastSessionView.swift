@@ -15,7 +15,7 @@ struct LastSessionView: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 15.0)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 50)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 49)
                 .foregroundStyle(.box)
                 .opacity(0.4)
             

@@ -15,7 +15,7 @@ struct Info: View {
         
         ZStack{
             RoundedRectangle(cornerRadius: 15)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 12, alignment: .center)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 11, alignment: .center)
                 .foregroundStyle(Color("boxColor"))
                 .opacity(0.4)
             HStack{
