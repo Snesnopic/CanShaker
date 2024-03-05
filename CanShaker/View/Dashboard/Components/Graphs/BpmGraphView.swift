@@ -13,8 +13,8 @@ struct BpmGraphView: View {
     var session: Session
     let heartGradient = LinearGradient(
         gradient: Gradient (
-            colors: [ Color("heartColor").opacity(0.75),
-                      Color("heartColor")
+            colors: [ Color(.accent).opacity(0.75),
+                      Color(.accent)
                 .opacity(0.25),
                       Color.clear ]
         ),

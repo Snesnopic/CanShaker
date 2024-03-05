@@ -488,6 +488,7 @@
       }
     },
     "Placeholder" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
@@ -746,6 +747,9 @@
           }
         }
       }
+    },
+    "You were so fast that Flash had to change job!" : {
+
     },
     "You've achieved a perfect score on all metrics: heartbeats, burned calories, and speed!" : {
       "localizations" : {
