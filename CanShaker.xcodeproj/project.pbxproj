@@ -17,6 +17,7 @@
 		6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */; };
 		6B8AA10B2B84B24E0088E5E4 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */; };
 		6B8AA1102B84B9100088E5E4 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AA10F2B84B9100088E5E4 /* Advice.swift */; };
+		6B9666E62B9711A50052CAF1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9666E52B9711A50052CAF1 /* Line.swift */; };
 		6B984F982B8E44B900B2ECD7 /* NaAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B984F972B8E44B900B2ECD7 /* NaAchievementView.swift */; };
 		6BACB17B2B91E5710098F263 /* FeedbackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACB1792B91E5710098F263 /* FeedbackList.swift */; };
 		6BACB17C2B91E5710098F263 /* FeedbackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACB1792B91E5710098F263 /* FeedbackList.swift */; };
@@ -92,6 +93,7 @@
 		6B8AA1062B84AC5E0088E5E4 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		6B8AA10A2B84B24E0088E5E4 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
 		6B8AA10F2B84B9100088E5E4 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		6B9666E52B9711A50052CAF1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		6B984F972B8E44B900B2ECD7 /* NaAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaAchievementView.swift; sourceTree = "<group>"; };
 		6BACB1792B91E5710098F263 /* FeedbackList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackList.swift; sourceTree = "<group>"; };
 		6BACB17A2B91E5710098F263 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			children = (
 				6BDF79BB2B8C8CCA00E9663D /* ResponsiveFrame.swift */,
 				6B1F6D862B909A1500C7EE6B /* DateFormatter.swift */,
+				6B9666E52B9711A50052CAF1 /* Line.swift */,
 				6BBD95572B8E1B1400712380 /* DoubleToTime.swift */,
 			);
 			path = "Support files";
@@ -515,6 +518,7 @@
 				9D7411A42B7F51BE00869BF8 /* AdvicesView.swift in Sources */,
 				9DA6A85A2B8C8B6E009737D7 /* AdviceList.swift in Sources */,
 				9DA6A8602B8C8F92009737D7 /* Extensions.swift in Sources */,
+				6B9666E62B9711A50052CAF1 /* Line.swift in Sources */,
 				9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */,
 				6B6C8A002B8F2E24008C880C /* AchievementStyle.swift in Sources */,
 				6B8AA1072B84AC5E0088E5E4 /* Achievement.swift in Sources */,

@@ -20,13 +20,7 @@ struct AdviceButtonStyle: View {
                 .foregroundColor(Color("boxColor"))
                 .opacity(0.4)
                 .shadow(radius: 20)
-            VStack{
-                Image(backgroundImg)
-                    .resizable()
-                    .responsiveFrame(widthPercentage: 95, aspectRatio: (1, 0.3))
-                Spacer()
-            }
-            .responsiveFrame(heightPercentage: 20)
+            
             VStack(alignment: .leading) {
                 Spacer()
                 
@@ -58,11 +52,20 @@ struct AdviceButtonStyle: View {
             }
             .responsiveFrame(widthPercentage: 92, heightPercentage: 20)
             
+            HStack{
+                Spacer()
+                Image(backgroundImg)
+                    .resizable()
+                    .responsiveFrame(widthPercentage: 40, aspectRatio: (1,1))
+                
+            }
+            .padding(.bottom, 10)
+            
         }
         .preferredColorScheme(.dark)
     }
 }
 
 #Preview{
-    AdviceButtonStyle(img: "book.closed.fill", category: "Methods", cDescription: "Lorem ipsum lorem ipsum lorem", backgroundImg: "Soap")
+    AdviceButtonStyle(img: "book.closed.fill", category: "Methods", cDescription: "Lorem ipsum lorem ipsum lorem", backgroundImg: "safety")
 }

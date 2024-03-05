@@ -30,9 +30,9 @@ struct DashboardView: View {
                                 
                         }
                     }
-                    FeedbackView()
+                    
                     LastSessionView()
-                        .padding(.top, 5)
+                        
                     Spacer()
 
                 }
@@ -43,6 +43,10 @@ struct DashboardView: View {
             .onAppear {
                 Connectivity.shared.context = self.context
                 Achievement.ensureAchievementsExist(context: context, achievements: achievements)
+            }
+            .frame(maxWidth: .infinity)
+            .background{
+                Color(Color("bgGray"))
             }
         }
     }
