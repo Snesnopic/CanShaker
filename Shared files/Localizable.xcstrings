@@ -1,0 +1,812 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        }
+      }
+    },
+    "**Avg. BPM:** %@" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**BPM medi:** %@"
+          }
+        }
+      }
+    },
+    "**Avg. speed:** %@ m/s²" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Velocità media:** %@"
+          }
+        }
+      }
+    },
+    "**KCALs:** %lld" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**KCAL:** %lld"
+          }
+        }
+      }
+    },
+    "**Time:** " : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Tempo:**"
+          }
+        }
+      }
+    },
+    "/" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/"
+          }
+        }
+      }
+    },
+    "%@!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@!"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "%lld-%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld-%2$lld"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld-%2$lld"
+          }
+        }
+      }
+    },
+    "Acceleration" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accelerazione"
+          }
+        }
+      }
+    },
+    "Achievements" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obiettivi"
+          }
+        }
+      }
+    },
+    "Activity" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Attività"
+          }
+        }
+      }
+    },
+    "Advices" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consigli"
+          }
+        }
+      }
+    },
+    "All achievements" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutti gli obiettivi"
+          }
+        }
+      }
+    },
+    "Are you sure? Too many sessions can cause serious health issues!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sei sicuro? Troppe sessioni possono causare problemi di salute!"
+          }
+        }
+      }
+    },
+    "Authenticate" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autenticazione"
+          }
+        }
+      }
+    },
+    "BPM" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        }
+      }
+    },
+    "Calm Heartbeat" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Battito Calmo"
+          }
+        }
+      }
+    },
+    "Clean hands" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulisciti le mani"
+          }
+        }
+      }
+    },
+    "Dashboard" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dashboard"
+          }
+        }
+      }
+    },
+    "Date: %@" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data: %@"
+          }
+        }
+      }
+    },
+    "Do it anyway" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fallo lo stesso"
+          }
+        }
+      }
+    },
+    "Enhance pleasure and reduce friction-related discomfort by using natural lubricants." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Migliora il piacere e riduci il disagio legato all'attrito utilizzando lubrificanti naturali."
+          }
+        }
+      }
+    },
+    "Fast as the Wind" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veloce come il Vento"
+          }
+        }
+      }
+    },
+    "Find a quiet, private area where you won't be disturbed or interrupted. Nobody likes doing graffiti when cops are around. Interruptions can cause instability during your experience and may lead to unpleasent discoveries" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trova un'area tranquilla e privata dove non sarai disturbato o interrotto. A nessuno piace fare graffiti quando ci sono i poliziotti. Le interruzioni possono causare instabilità durante la tua esperienza e portare a scoperte spiacevoli"
+          }
+        }
+      }
+    },
+    "Go back" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torna indietro"
+          }
+        }
+      }
+    },
+    "Heartbeats, Calories, Speed!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Battiti, Calorie, Velocità!"
+          }
+        }
+      }
+    },
+    "Hello World" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello World"
+          }
+        }
+      }
+    },
+    "Heroic Shaker" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shaker Eroico"
+          }
+        }
+      }
+    },
+    "History" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cronologia"
+          }
+        }
+      }
+    },
+    "Hurting yourself" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farti male"
+          }
+        }
+      }
+    },
+    "Hygiene" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Igiene"
+          }
+        }
+      }
+    },
+    "I'm done" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ho finito"
+          }
+        }
+      }
+    },
+    "If you can’t complete a work task because you can’t stop thinking about shaking your can, that’s when it becomes an issue. If you’re consistently watching graffiti material at work or are you’re late to a meeting because you were shaking it in the bathroom, then you might have to consult an expert. This is the same if you can’t stick with plans made with friends." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se non riesci a completare un'attività lavorativa perché non riesci a smettere di pensare di scuotere la lattina, è allora che diventa un problema. Se guardi costantemente materiale contenente graffiti al lavoro o sei in ritardo a una riunione perché lo stavi scuotendo in bagno, potrebbe essere necessario consultare un esperto. Lo stesso vale se non riesci a rispettare i piani fatti con gli amici."
+          }
+        }
+      }
+    },
+    "If you start feeling hurt or you feel your can is dry, it is a great sign that you should stop painting." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se inizi a sentire dolore o hai la sensazione che la lattina sia asciutta, è un ottimo segno che dovresti smettere di dipingere."
+          }
+        }
+      }
+    },
+    "Last session" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultima sessione"
+          }
+        }
+      }
+    },
+    "Like any utensil, clean it after usage, gently wash the shaking area with warm water and a mild, unscented soap to remove any remaining lubricant or spray. Be sure to rinse thoroughly and pat dry with a clean towel. Keeping the shaking area clean helps prevent the buildup of bacteria and reduces the risk of skin irritation or infection." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Come qualsiasi utensile, puliscilo dopo l'uso, lava delicatamente la zona di agitazione con acqua tiepida e un sapone delicato e non profumato per rimuovere eventuali residui di lubrificante o spray. Assicurati di risciacquare abbondantemente e asciugare con un asciugamano pulito. Mantenere pulita l'area di agitazione aiuta a prevenire l'accumulo di batteri e riduce il rischio di irritazioni o infezioni della pelle."
+          }
+        }
+      }
+    },
+    "Lube up your can for comfort" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lubrifica la tua lattina per comodità"
+          }
+        }
+      }
+    },
+    "Master of Energy" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maestro dell'Energia"
+          }
+        }
+      }
+    },
+    "Master of Motion" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maestro del Movimento"
+          }
+        }
+      }
+    },
+    "Methods" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metodi"
+          }
+        }
+      }
+    },
+    "Near accomplishment" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quasi completati"
+          }
+        }
+      }
+    },
+    "Never Give Up!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Never Give Up!"
+          }
+        }
+      }
+    },
+    "New achievement!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nuovo obiettivo!"
+          }
+        }
+      }
+    },
+    "No data yet!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non ci sono ancora dati!"
+          }
+        }
+      }
+    },
+    "No Moment of Pause" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neanche Una Pausa"
+          }
+        }
+      }
+    },
+    "No sessions yet!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non ci sono ancora sessioni!"
+          }
+        }
+      }
+    },
+    "Persistence" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persistenza"
+          }
+        }
+      }
+    },
+    "Placeholder" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placeholder"
+          }
+        }
+      }
+    },
+    "Post shake hygiene" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Igiene post-shakerata"
+          }
+        }
+      }
+    },
+    "Practice holding back when nearing climax of your inspiration, then resume stimulation. Repeating this pattern enhances artwork output intensity and duration." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esercitati a trattenerti quando ti avvicini al culmine della tua ispirazione, quindi riprendi la stimolazione. La ripetizione di questo schema migliora l'intensità e la durata dell'output della grafica."
+          }
+        }
+      }
+    },
+    "Preview error" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Errore nella preview"
+          }
+        }
+      }
+    },
+    "Progress: %lld%%" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progresso: %lld%%"
+          }
+        }
+      }
+    },
+    "Quiet place" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posto tranquillo"
+          }
+        }
+      }
+    },
+    "Race Against Time" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Corsa Contro il Tempo"
+          }
+        }
+      }
+    },
+    "Range" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intervallo"
+          }
+        }
+      }
+    },
+    "Relationships and work-life impact" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relazioni e impatto sulla vita lavorativa"
+          }
+        }
+      }
+    },
+    "Rushing to climax often leads to a brief peak followed by a quick decline. Taking your time to build up gradually results in more intense artwork." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correre verso il culmine porta spesso a un breve picco seguito da un rapido declino. Prendersi il tempo per costruire gradualmente si traduce in opere d'arte più intense."
+          }
+        }
+      }
+    },
+    "Safety" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sicurezza"
+          }
+        }
+      }
+    },
+    "See all" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vedi tutto"
+          }
+        }
+      }
+    },
+    "Session" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sessione"
+          }
+        }
+      }
+    },
+    "Sessions this week" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sessioni questa settimana"
+          }
+        }
+      }
+    },
+    "Slow Down" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rallenta"
+          }
+        }
+      }
+    },
+    "Speed" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velocità"
+          }
+        }
+      }
+    },
+    "Start" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inizio"
+          }
+        }
+      }
+    },
+    "State of Relaxation" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stato Di Relax"
+          }
+        }
+      }
+    },
+    "Steady Rhythm" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ritmo Costante"
+          }
+        }
+      }
+    },
+    "Time" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
+          }
+        }
+      }
+    },
+    "Today" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oggi"
+          }
+        }
+      }
+    },
+    "Try Edging" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova l'Edging"
+          }
+        }
+      }
+    },
+    "Use Lube" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa Lubrificante"
+          }
+        }
+      }
+    },
+    "Using a water-based lubricant during the shaking can help reduce friction and irritation of the can. This is especially important if you're prone to dryness or sensitivity. Avoid using products like lotions, oils, or creams that may contain ingredients that could irritate the delicate skin of your poor can." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'uso di un lubrificante a base d'acqua durante l'agitazione può aiutare a ridurre l'attrito e l'irritazione della lattina. Ciò è particolarmente importante se sei incline alla secchezza o alla sensibilità. Evita di usare prodotti come lozioni, oli o creme che potrebbero contenere ingredienti che potrebbero irritare la pelle delicata della tua povera lattina."
+          }
+        }
+      }
+    },
+    "Wash hands before and after: Before engaging in shaking your can, ensure that your hands are clean to minimize the introduction of bacteria or other contaminants to the shaking area. Afterward, wash your hands thoroughly to remove any unwanted spray and reduce the risk of spreading bacteria." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lavarsi le mani prima e dopo: prima di iniziare ad agitare la lattina, assicurarsi che le mani siano pulite per ridurre al minimo l'introduzione di batteri o altri contaminanti nell'area di agitazione. Successivamente, lavati accuratamente le mani per rimuovere eventuali schizzi indesiderati e ridurre il rischio di diffusione di batteri."
+          }
+        }
+      }
+    },
+    "Yesterday" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ieri"
+          }
+        }
+      }
+    },
+    "You've achieved a perfect score on all metrics: heartbeats, burned calories, and speed!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai ottenuto un punteggio perfetto in tutti i parametri: battiti cardiaci, calorie bruciate e velocità!"
+          }
+        }
+      }
+    },
+    "You've maintained a heartbeat below 100 bpm throughout the entire session!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai mantenuto un battito cardiaco inferiore a 100 bpm per tutta la sessione!"
+          }
+        }
+      }
+    },
+    "You've maintained a steady average speed for over 30 minutes!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai mantenuto una velocità media costante per oltre 30 minuti!"
+          }
+        }
+      }
+    },
+    "You've reached an average speed of over 15 km/h!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai raggiunto una velocità media di oltre 15 m/s!"
+          }
+        }
+      }
+    },
+    "You've shaken your can over 1000 times! Keep it up!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai agitato la lattina più di 1000 volte! Continuate così!"
+          }
+        }
+      }
+    },
+    "You've used the app for more than 7 consecutive days!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai utilizzato l'app per più di 7 giorni consecutivi!"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

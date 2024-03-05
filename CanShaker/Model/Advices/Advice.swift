@@ -27,9 +27,9 @@ enum adviceCategory {
     
     var str: String {
         switch self {
-        case .hygiene: return "Hygiene"
-        case .methods: return "Methods"
-        case .safety: return "Safety"
+        case .hygiene: return String(localized: "Hygiene")
+        case .methods: return String(localized: "Methods")
+        case .safety: return String(localized: "Safety")
         }
     }
 }
