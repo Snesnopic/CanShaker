@@ -53,7 +53,7 @@ struct AuthenticationView: View {
             
         }else {
             
-            test = "no auth found"
+            test = "no auth a found"
 
         }
     }
