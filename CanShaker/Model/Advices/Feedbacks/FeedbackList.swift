@@ -16,7 +16,7 @@ extension Feedback {
         Feedback(sentence: "Wow, your heartbeat is so fast, I bet even Usain Bolt would struggle to keep up with it in a sprint!", type: .compliment, category: .heartBeat, condition: .high),
         
         Feedback(sentence: "You burned fewer calories than a sloth doing slow-motion yoga", type: .insult, category: .calories, condition: .low),
-        Feedback(sentence: "", type: .compliment, category: .calories, condition: .high)
+        Feedback(sentence: "Someone wanted to burn calories in an unorthodox way...", type: .compliment, category: .calories, condition: .high)
         
     ]
 }
