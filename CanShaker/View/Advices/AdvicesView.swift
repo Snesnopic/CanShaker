@@ -28,7 +28,7 @@ struct AdvicesView: View {
                     Spacer()
                 }
                 .accentColor(.white)
-                .navigationTitle(String(localized: "Advices"))
+                .navigationTitle(String(localized: "Advice"))
                 .preferredColorScheme(.dark)
                 .frame(maxWidth: .infinity)
                 .background{
