@@ -23,7 +23,6 @@ struct AdvicesListView: View {
                                         .font(.title2)
                                         .bold() +
                                     Text("\n" + adv.description)
-                                        .font(.headline)
                                 }
                                 .responsiveFrame(heightPercentage: 10)
                                 

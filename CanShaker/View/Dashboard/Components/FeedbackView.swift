@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FeedbackView: View {
+    
+    @State var feedback: String
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 15)
@@ -15,7 +18,7 @@ struct FeedbackView: View {
                 .foregroundStyle(Color("boxColor"))
                 .opacity(0.4)
             //MARK: this is the max length of the insult/compliment (it's around 90 letters space considering lowercase letters)
-            Text("You were so fast that Flash had to change job!")
+            Text(feedback)
                 .responsiveFrame(widthPercentage: 93, heightPercentage: 10)
                 .font(.title2)
                 .multilineTextAlignment(.center)
@@ -25,5 +28,5 @@ struct FeedbackView: View {
 }
 
 #Preview {
-    FeedbackView()
+    FeedbackView(feedback: "ciao")
 }

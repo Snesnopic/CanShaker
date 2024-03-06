@@ -47,4 +47,20 @@ class Session: Codable, Identifiable {
         self.heartRateData = heartRateData
         self.calories = calories
     }
+    
+    func getAverage(dataset: Optional<Dictionary<Double, Double>.Values>) -> Double{
+        var average = 0.0
+        
+        if(dataset?.isEmpty == false){
+            var temp = 0.0
+            for data in dataset! {
+                average += data
+                temp += 1
+            }
+            
+            average = average/temp
+        }
+        
+        return average
+    }
 }
