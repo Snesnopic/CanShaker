@@ -80,9 +80,9 @@ struct LastSessionView: View {
                 
                 HStack{
                     VStack (alignment: .leading){
-                        Text("**Avg. BPM:** \(String(format: "%.1f", (sessions.last?.getAverage(dataset: sessions.last?.heartRateData.values))!))")
+                        Text("**Avg. BPM:** \(String(format: "%.1f", (sessions.last?.getAverage(dataset: sessions.last?.heartRateData.values) ?? "")))")
                         Spacer()
-                        Text("**Avg. speed:** \(String(format: "%.1f", (sessions.last?.getAverage(dataset: sessions.last?.accelData.values))!)) m/s²")
+                        Text("**Avg. speed:** \(String(format: "%.1f", (sessions.last?.getAverage(dataset: sessions.last?.accelData.values) ?? ""))) m/s²")
                     }
                     Spacer()
                     VStack (alignment: .leading){
