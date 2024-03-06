@@ -17,7 +17,7 @@ struct Info: View {
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 11, alignment: .center)
                 .foregroundStyle(Color("boxColor"))
-                .opacity(0.4)
+                
             HStack{
                 VStack(alignment: .center, spacing: 10){
                     Text(sessions.filter({ session in
@@ -27,14 +27,13 @@ struct Info: View {
                     .fontWeight(.bold)
                     
                     Text("Sessions this week")
-                        .font(.headline)
+                        .font(.caption)
                     
                 }
-                
-                
+                .padding(.horizontal)
+                Spacer()
                 //TODO: add line in the middle
                 
-                Spacer()
                 
                 VStack(alignment: .center, spacing: 10){
                     HStack(spacing: 0.0) {
@@ -48,9 +47,11 @@ struct Info: View {
                     .fontWeight(.bold)
                     
                     Text("Achievements")
-                        .font(.headline)
+                        .font(.caption)
                     
                 }
+                .padding(.horizontal, 25)
+                
             }
             .responsiveFrame(widthPercentage: 85)
             //        HStack{
