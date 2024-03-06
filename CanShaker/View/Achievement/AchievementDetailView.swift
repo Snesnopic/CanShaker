@@ -20,9 +20,10 @@ struct AchievementDetailView: View {
                         .padding(.all,50)
                 }
             Text(achievement.title)
-                .padding(.all)
+                .bold()
                 .font(.title)
             Text(achievement.subTitle)
+                .padding(.bottom)
                 .font(.title2)
             Text(achievement.desc)
                 .font(.title3)
@@ -42,7 +43,6 @@ struct AchievementDetailView: View {
         .preferredColorScheme(.dark)
         .foregroundStyle(.white)
         .multilineTextAlignment(.center)
-        .navigationTitle(achievement.title)
     }
 }
 
