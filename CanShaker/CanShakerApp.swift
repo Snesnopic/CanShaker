@@ -18,7 +18,7 @@ struct CanShakerApp: App {
                     Label("Dashboard", systemImage: "chart.bar.xaxis")
                 }
                 AdvicesView().tabItem {
-                    Label("Advices", systemImage: "lightbulb.fill")
+                    Label("Advice", systemImage: "lightbulb.fill")
                 }
                 AchievementsView().tabItem {
                     Label("Achievements", systemImage: "trophy")
