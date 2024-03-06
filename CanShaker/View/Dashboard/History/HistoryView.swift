@@ -56,29 +56,35 @@ struct HistoryView: View {
         
     }
     var body: some View {
-        List{
-            ForEach(partitionedDates.sorted(by: { pair1, pair2 in
-                return pair1.value.first!.date > pair2.value.first!.date
-            }), id: \.key) {
-                header, partition in
-                Section {
-                    ForEach(partition.sorted(by: { session1, session2 in
-                        session1.date > session2.date
-                    }), id: \.self) {
-                        session in
-                        HistoryElementStyle(session: session)
-                    }
-                } header:
-                {
-                    Text(header)
-                }            }
-            
-        }
-        .navigationTitle("History")
-        .listStyle(.plain)
-        .preferredColorScheme(.dark)
-        .navigationTitle("History")
         
+            List{
+                ForEach(partitionedDates.sorted(by: { pair1, pair2 in
+                    return pair1.value.first!.date > pair2.value.first!.date
+                }), id: \.key) {
+                    header, partition in
+                    Section {
+                        ForEach(partition.sorted(by: { session1, session2 in
+                            session1.date > session2.date
+                        }), id: \.self) {
+                            session in
+                            HistoryElementStyle(session: session)
+                            
+                            
+                        }
+                        
+                    } header:
+                    {
+                        Text(header)
+                    }
+                }
+                
+            }
+            
+            .navigationTitle("History")
+            .listStyle(.plain)
+            .preferredColorScheme(.dark)
+            .navigationTitle("History")
+            
     }
 }
 

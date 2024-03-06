@@ -14,7 +14,7 @@ struct NaAchievementView: View {
             NavigationLink(destination: AchievementDetailView(achievement: achievement), label: {
                 Circle()
                     .responsiveFrame(widthPercentage: 25, aspectRatio: (1,1))
-                    .foregroundStyle(Color.box.opacity(0.4))
+                    .foregroundStyle(Color.boxDetail)
                     .overlay {
                         Image(achievement.imageName)
                             .resizable()
@@ -43,7 +43,6 @@ struct NaAchievementView: View {
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95)
                 .foregroundStyle(Color("boxColor"))
-                .opacity(0.4)
                 .responsiveFrame(widthPercentage: 95)
         }
         .preferredColorScheme(.dark)

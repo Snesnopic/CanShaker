@@ -14,7 +14,7 @@ struct AchievementStyle: View {
         VStack{
                 Circle()
                     .responsiveFrame(widthPercentage: 20, aspectRatio: (1,1))
-                    .foregroundStyle(Color.box.opacity(0.4))
+                    .foregroundStyle(Color.boxDetail)
                     .overlay {
                         Image(achievement.imageName)
                             .resizable()

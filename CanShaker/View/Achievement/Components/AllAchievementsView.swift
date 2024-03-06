@@ -29,7 +29,6 @@ struct AllAchievementsView: View {
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95)
                 .foregroundStyle(Color("boxColor"))
-                .opacity(0.4)
                 .responsiveFrame(widthPercentage: 95)
 
         }

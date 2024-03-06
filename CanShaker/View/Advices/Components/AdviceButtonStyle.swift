@@ -18,39 +18,7 @@ struct AdviceButtonStyle: View {
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 20)
                 .foregroundColor(Color("boxColor"))
-                .opacity(0.4)
                 .shadow(radius: 20)
-            
-            VStack(alignment: .leading) {
-                Spacer()
-                
-                
-                    HStack{
-                        Image(systemName: img)
-                            .font(.title)
-                        Text(category)
-                            .bold()
-                            .font(.title2)
-                    }
-                    .padding(.horizontal)
-                
-                
-                ZStack(alignment: .leading) {
-                    UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
-                        .responsiveFrame(widthPercentage: 95, heightPercentage: 6)
-                        .foregroundColor(Color("boxColor"))
-                        .opacity(0.4)
-                        .shadow(radius: 20)
-                    
-                    Text(cDescription)
-                        .font(.subheadline)
-                        .fontWeight(.medium)
-                        .padding(.horizontal)
-                        
-                }
-                
-            }
-            .responsiveFrame(widthPercentage: 92, heightPercentage: 20)
             
             HStack{
                 Spacer()
@@ -60,6 +28,35 @@ struct AdviceButtonStyle: View {
                 
             }
             .padding(.bottom, 10)
+            
+            VStack{
+                Spacer()
+                HStack{
+                    Image(systemName: img)
+                        .font(.title)
+                    Text(category)
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                }
+                .padding(.horizontal, 30)
+                
+                ZStack(alignment: .leading) {
+                    
+                    UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
+                        .responsiveFrame(widthPercentage: 95, heightPercentage: 6)
+                        .foregroundColor(Color("boxDetailColor"))
+                        .shadow(radius: 20)
+                    
+                    Text(cDescription)
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                        .padding(.horizontal)
+                    
+                }
+            }
+            .responsiveFrame(heightPercentage: 20)
+            
             
         }
         .preferredColorScheme(.dark)
