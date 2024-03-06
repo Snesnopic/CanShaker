@@ -18,7 +18,6 @@ struct HistoryElementStyle: View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 13)
-                .opacity(0.4)
                 .shadow(radius: 15)
                 .foregroundStyle(Color("boxColor"))
                 .overlay{
@@ -52,7 +51,6 @@ struct HistoryElementStyle: View {
                 }
             
         }
-        
     }
 }
 
