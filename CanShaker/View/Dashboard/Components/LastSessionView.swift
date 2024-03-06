@@ -28,16 +28,23 @@ struct LastSessionView: View {
             VStack(alignment: .center){
                 
                 // FEEDBACK
-                Text(feedbackToGive.feedbackToShaker(sessions: sessions))
-                    .responsiveFrame(widthPercentage: 93, heightPercentage: 10)
-                    .font(.title3)
-                    .multilineTextAlignment(.center)
-                    .fontWeight(.semibold)
+                HStack{
+                    Image(systemName: "bolt")
+                        .resizable()
+                        .scaledToFit()
+                        .responsiveFrame(widthPercentage: 4)
+                    Text(feedbackToGive.feedbackToShaker(sessions: sessions))
+                        .font(.title3)
+                        .multilineTextAlignment(.leading)
+                        .fontWeight(.semibold)
+                }
+                .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
+                
                 
                 Line()
                     .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
                     .frame(height: 1)
-                    .foregroundStyle(Color("boxColor"))
+                    .foregroundStyle(Color.unselectedTabBar)
                 // PICKER
                 HStack{
                     Picker("", selection: $statToShow){
