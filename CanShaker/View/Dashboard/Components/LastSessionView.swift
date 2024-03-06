@@ -13,6 +13,11 @@ struct LastSessionView: View {
     @State private var statToShow = 0
     @Query private var sessions:[Session]
     var feedbackToGive: Feedback
+    init(feedbackToGive: Feedback) {
+        self.feedbackToGive = feedbackToGive
+        UISegmentedControl.appearance().selectedSegmentTintColor = .unselectedTabBar
+    }
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 15.0)
