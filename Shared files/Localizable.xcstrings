@@ -568,7 +568,14 @@
       }
     },
     "It looks like we have a marathon runner here!" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Parece que tenemos un corredor de maratón aquí!"
+          }
+        }
+      }
     },
     "Last session" : {
       "localizations" : {
@@ -587,7 +594,14 @@
       }
     },
     "Learn how to keep your can always in top shape" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aprende cómo mantener tu lata siempre en forma"
+          }
+        }
+      }
     },
     "Like any utensil, clean it after usage, gently wash the shaking area with warm water and a mild, unscented soap to remove any remaining lubricant or spray. Be sure to rinse thoroughly and pat dry with a clean towel. Keeping the shaking area clean helps prevent the buildup of bacteria and reduces the risk of skin irritation or infection." : {
       "localizations" : {
@@ -1023,7 +1037,14 @@
       }
     },
     "Someone wanted to burn calories in an unorthodox way..." : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alguien quería quemar calorías de una forma poco ortodoxa..."
+          }
+        }
+      }
     },
     "Speed" : {
       "localizations" : {
@@ -1090,7 +1111,14 @@
       }
     },
     "There are secret graffiti techniques to explore" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hay técnicas secretas de graffiti para explorar."
+          }
+        }
+      }
     },
     "Time" : {
       "localizations" : {
@@ -1109,7 +1137,6 @@
       }
     },
     "Today" : {
-      "extractionState" : "stale",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
@@ -1190,10 +1217,16 @@
       }
     },
     "Wow, your heartbeat is so fast, I bet even Usain Bolt would struggle to keep up with it in a sprint!" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Wow, los latidos de tu corazón son tan rápidos que apuesto a que incluso a Usain Bolt le costaría seguirles el ritmo en una carrera de velocidad!"
+          }
+        }
+      }
     },
     "Yesterday" : {
-      "extractionState" : "stale",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
@@ -1210,13 +1243,34 @@
       }
     },
     "You burned fewer calories than a sloth doing slow-motion yoga" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quemaste menos calorías que un perezoso haciendo yoga a cámara lenta"
+          }
+        }
+      }
     },
     "You have to keep your can safe" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tienes que mantener tu lata segura."
+          }
+        }
+      }
     },
     "You were so fast that Flash had to change job!" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Fuiste tan rápido que Flash tuvo que cambiar de trabajo!"
+          }
+        }
+      }
     },
     "You've achieved a perfect score on all metrics: heartbeats, burned calories, and speed!" : {
       "localizations" : {
@@ -1315,7 +1369,14 @@
       }
     },
     "Your post-workout heartbeat is so chill, even a meditation guru would envy your cardio-nap routine!" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Tus latidos del corazón después del entrenamiento son tan tranquilos que incluso un gurú de la meditación envidiaría tu rutina de siesta cardiovascular!"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
