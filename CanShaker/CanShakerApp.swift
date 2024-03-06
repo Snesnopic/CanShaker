@@ -12,12 +12,14 @@ import SwiftData
 struct CanShakerApp: App {
     var connectivity = Connectivity.shared
     @State private var tabBarSelection:Int = 0
+    init() {
+        UITabBar.appearance().unselectedItemTintColor = UIColor(Color.unselectedTabBar)
+    }
     var body: some Scene {
         WindowGroup {
             TabView(selection: $tabBarSelection) {
                 DashboardView().tabItem {
                     Label("Dashboard", systemImage: "chart.bar.fill")
-                    
                 }
                 .tag(0)
                 AdvicesView().tabItem {
