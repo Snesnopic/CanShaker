@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Feedback: Identifiable {
     let id: UUID = UUID()
@@ -13,27 +14,28 @@ class Feedback: Identifiable {
     let type: feedbackType
     let category: feedbackCategory
     let condition: condition
+    let imageName: String
     
-    init(sentence: String, type: feedbackType, category: feedbackCategory, condition: condition) {
+    init(sentence: String, type: feedbackType, category: feedbackCategory, condition: condition, imageName: String) {
         self.sentence = sentence
         self.type = type
         self.category = category
         self.condition = condition
-        
+        self.imageName = imageName
     }
     
-    func filterFeedback(byType type: feedbackType, byCategory category: feedbackCategory, byCondition condition: condition) -> String? {
+    func filterFeedback(byType type: feedbackType, byCategory category: feedbackCategory, byCondition condition: condition) -> Feedback? {
         let filteredSentences = Feedback.list.filter { feedback in
             return feedback.type == type && feedback.category == category && feedback.condition == condition
         }
-        return filteredSentences.randomElement()?.sentence
+        return filteredSentences.randomElement()
     }
     
-    func feedbackToShaker(sessions: [Session]) -> String {
+    func feedbackToShaker(sessions: [Session]) -> Feedback {
         
         guard !sessions.isEmpty else {
-            //MARK: FIRST TIME
-            return "Hey there newcomer, start your first graffiti session on the watch app!"
+            //MARK: User downloaded the app for first time
+            return Feedback(sentence: String(localized: "Hey there newcomer, start a session from the watch app to gain data!"), type: .compliment, category: .speed, condition: .low, imageName: "face.smiling.inverse")
         }
         
         guard let lastSession = sessions.last else {

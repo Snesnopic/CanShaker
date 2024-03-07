@@ -28,18 +28,19 @@ struct LastSessionView: View {
             VStack(alignment: .center){
                 
                 // FEEDBACK
-                HStack{
-//                    Image(systemName: "bolt")
-//                        .resizable()
-//                        .scaledToFit()
-//                        .responsiveFrame(widthPercentage: 4)
-                    Text(feedbackToGive.feedbackToShaker(sessions: sessions))
+                //TODO: Align in fixed places images and text
+                HStack {
+                    Image(systemName: ("\(feedbackToGive.feedbackToShaker(sessions: sessions).imageName)"))
+                        .resizable()
+                        .scaledToFit()
+                        
+                        .responsiveFrame(widthPercentage: 4)
+                    Text(feedbackToGive.feedbackToShaker(sessions: sessions).sentence)
                         .font(.title3)
                         .multilineTextAlignment(.leading)
                         .fontWeight(.semibold)
                 }
                 .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
-                
                 
                 Line()
                     .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
@@ -132,6 +133,6 @@ struct LastSessionView: View {
     }
     
     container.mainContext.insert(Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories))
-    return LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low))
+    return LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low, imageName: "bolt.fill"))
         .modelContainer(container)
 }
