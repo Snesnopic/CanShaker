@@ -81,10 +81,9 @@ struct HistoryView: View {
                 .presentationDragIndicator(.visible)
                 .presentationBackground(Color.box)
         })
-        .navigationTitle("History")
         .listStyle(.plain)
         .preferredColorScheme(.dark)
-        .navigationTitle("History")
+        .navigationTitle(String(localized: "History"))
         
     }
 }
