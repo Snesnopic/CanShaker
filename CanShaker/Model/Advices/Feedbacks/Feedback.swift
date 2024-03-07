@@ -22,6 +22,7 @@ class Feedback: Identifiable {
  
     }
      
+    #warning("ALERT: shit code flooded the floor")
     func filterFeedback(byType type: feedbackType, byCategory category: feedbackCategory, byCondition condition: condition) -> String? {
         let filteredSentences = Feedback.list.filter { feedback in
             return feedback.type == type && feedback.category == category && feedback.condition == condition
