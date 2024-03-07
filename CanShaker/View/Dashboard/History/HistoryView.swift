@@ -35,7 +35,7 @@ struct HistoryView: View {
     private var partitionedDates: [String: [Session]] = [:]
     init(sessions:[Session]) {
         dateFormatter.dateTimeStyle = .named
-        var calendar = Calendar.current
+        let calendar = Calendar.current
         dateFormatter.calendar = calendar
         self.sessions = sessions
         partitionedDates = self.sessions.reduce(into: [String: [Session]]()) { result, session in
