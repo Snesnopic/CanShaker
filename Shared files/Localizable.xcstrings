@@ -9,6 +9,12 @@
             "value" : " "
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -191,6 +197,12 @@
             "value" : "Actividad"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فعالیت"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -205,6 +217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Consejos"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توصیه"
           }
         },
         "it" : {
@@ -223,6 +241,12 @@
             "value" : "Mas logros"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تمام دستاوردها "
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -237,6 +261,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¿Estás seguro? Muchas sesiones pueden causar severos problemas en la salud"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مطمئن هستید ؟  چون جلسات بیش از حد می تواند باعث مشکلات جدی سلامتی شود!"
           }
         },
         "it" : {
@@ -255,6 +285,12 @@
             "value" : "Autenticar"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "احراز هویت"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -269,6 +305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "LPM"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضربان قلب"
           }
         },
         "it" : {
@@ -287,6 +329,12 @@
             "value" : "Latido tranquilo"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضربان قلب آرام"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -303,6 +351,12 @@
             "value" : "Manos limpias"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دست های تمیز"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -317,6 +371,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tablero"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "داشبورد"
           }
         },
         "it" : {
@@ -367,6 +427,12 @@
             "value" : "Mejora el placer y reduce las molestias relacionadas con la fricción mediante el uso de lubricantes naturales."
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "افزایش لذت و کاهش ناراحتی ناشی از اصطکاک با استفاده از روان کننده های طبیعی."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -383,6 +449,12 @@
             "value" : "Rapido como el viento"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تند مثل باد"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -397,6 +469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Encuentra un área tranquila y privada donde no te molesten ni te interrumpan. A nadie le gusta hacer graffitis cuando hay policías cerca. Las interrupciones pueden causar inestabilidad durante tu experiencia y pueden llevarte a descubrimientos desagradables."
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "یک منطقه آرام و خصوصی پیدا کنید که در آن مزاحم نشوید. وقتی پلیس در اطراف است، هیچ کس دوست ندارد گرافیتی انجام دهد. وقفه ها می توانند باعث بی ثباتی در طول تجربه شما شوند و ممکن است منجر به تجربه ای ناخوشایند شوند."
           }
         },
         "it" : {
@@ -588,6 +666,12 @@
             "value" : "Sesión pasada"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " جلسه پیش"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -646,6 +730,12 @@
             "value" : "Maestro de la Energía"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استاد انرژی"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -660,6 +750,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Maestro del Movimiento"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استاد حرکت"
           }
         },
         "it" : {
@@ -678,6 +774,12 @@
             "value" : "Métodos"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " روش ها"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -692,6 +794,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cerca del logro"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نزدیک به موفقیت"
           }
         },
         "it" : {
@@ -710,6 +818,12 @@
             "value" : "¡No Te Rindas!"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هرگز جا نزن رفیق !"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -724,6 +838,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡Nuevo logro!"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دستاورد جدید!"
           }
         },
         "it" : {
@@ -742,6 +862,12 @@
             "value" : "¡Aún no hay datos!"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هنوز هیچ داده و اطلاعاتی  وجود ندارد!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -756,6 +882,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No es momento de parar"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " مکث نکن"
           }
         },
         "it" : {
@@ -848,7 +980,6 @@
       }
     },
     "Preview error" : {
-      "extractionState" : "stale",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
@@ -888,6 +1019,12 @@
             "value" : "Lugar sielencioso"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مکان ساکت"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -904,6 +1041,12 @@
             "value" : "Carrera contra el tiempo"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مسابقه با زمان"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -918,6 +1061,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rango"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دامنه"
           }
         },
         "it" : {
@@ -968,6 +1117,12 @@
             "value" : "Seguridad"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ایمنی"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -982,6 +1137,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ver todo"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دیدن همه"
           }
         },
         "it" : {
@@ -1000,6 +1161,12 @@
             "value" : "Sesión "
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جلسه"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1016,6 +1183,12 @@
             "value" : "Sesiones de esta semana"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جلسات در  این هفته"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1030,6 +1203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Con calma"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آهسته"
           }
         },
         "it" : {
@@ -1058,6 +1237,12 @@
             "value" : "Velocidad"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سرعت"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1072,6 +1257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inicio"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شروع "
           }
         },
         "it" : {
@@ -1090,6 +1281,12 @@
             "value" : "Estado de relajación"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حالت آرامش"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1104,6 +1301,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ritmo constante"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ریتم ثابت"
           }
         },
         "it" : {
@@ -1132,6 +1335,12 @@
             "value" : "Tiempo"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زمان"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1146,6 +1355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hoy"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "امروز"
           }
         },
         "it" : {
@@ -1164,6 +1379,12 @@
             "value" : "Prueba Edging"
           }
         },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "  روش(Edge) را امتحان کنید"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1178,6 +1399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usa lubricante"
+          }
+        },
+        "fa-IR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "  روش(Lube) را امتحان کنید"
           }
         },
         "it" : {
