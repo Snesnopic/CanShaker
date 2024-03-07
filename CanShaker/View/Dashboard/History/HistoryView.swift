@@ -10,27 +10,7 @@ import SwiftData
 import Charts
 struct HistoryView: View {
     let dateFormatter = RelativeDateTimeFormatter()
-    func containAnyTimeWord(_ string1: String, _ string2: String) -> Bool {
-        let timeWords = ["hour", "minute", "second"]
-        
-        let containsWord1 = timeWords.contains { word in
-            string1.lowercased().contains(word)
-        }
-        
-        let containsWord2 = timeWords.contains { word in
-            string2.lowercased().contains(word)
-        }
-        
-        return containsWord1 && containsWord2
-    }
-    func containAnyTimeWord(_ string1: String) -> Bool {
-        let timeWords = ["hour", "minute", "second"]
-        
-        return timeWords.contains { word in
-            string1.lowercased().contains(word)
-        }
-        
-    }
+    
     var sessions: [Session]
     private var partitionedDates: [String: [Session]] = [:]
     init(sessions:[Session]) {
