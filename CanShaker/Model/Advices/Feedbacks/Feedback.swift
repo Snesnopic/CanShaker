@@ -31,6 +31,7 @@ class Feedback: Identifiable {
         return filteredSentences.randomElement()
     }
     
+    #warning("ALERT: shit code flooded the floor")
     func feedbackToShaker(sessions: [Session]) -> Feedback {
         
         guard !sessions.isEmpty else {

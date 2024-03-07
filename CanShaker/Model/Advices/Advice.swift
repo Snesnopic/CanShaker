@@ -26,10 +26,10 @@ enum adviceCategory {
     case safety
     
     var str: String {
-        switch self {
-        case .hygiene: return String(localized: "Hygiene")
-        case .methods: return String(localized: "Methods")
-        case .safety: return String(localized: "Safety")
+        return switch self {
+        case .hygiene: String(localized: "Hygiene")
+        case .methods: String(localized: "Methods")
+        case .safety: String(localized: "Safety")
         }
     }
 }
