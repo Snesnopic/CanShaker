@@ -471,6 +471,9 @@
         }
       }
     },
+    "Hey there newcomer, start a session from the watch app to gain data!" : {
+
+    },
     "History" : {
       "localizations" : {
         "es-419" : {
@@ -845,6 +848,7 @@
       }
     },
     "Preview error" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
