@@ -35,15 +35,22 @@ struct HistoryView: View {
     private var partitionedDates: [String: [Session]] = [:]
     init(sessions:[Session]) {
         dateFormatter.dateTimeStyle = .named
+        var calendar = Calendar.current
+        calendar.timeZone = .gmt
+        dateFormatter.calendar = calendar
         self.sessions = sessions
         partitionedDates = self.sessions.reduce(into: [String: [Session]]()) { result, session in
             let relativeDate: String
             if Calendar.current.isDateInToday(session.date) {
                 relativeDate = String(localized: "Today")
-            } else if session.date.formattedDayMonth == Calendar.current.date(byAdding: .day, value: -1, to: Date())!.formattedDayMonth {
+            } else if session.date.isSameDayAs(date: Calendar.current.date(byAdding: .day, value: -1, to: Date())!) {
+                print("Actual date: \(session.date)")
                 relativeDate = String(localized: "Yesterday")
             } else {
-                relativeDate = dateFormatter.localizedString(for: session.date, relativeTo: .now)
+                relativeDate = dateFormatter.localizedString(for: session.date, relativeTo: Calendar.current.date(byAdding: .day, value: +1, to: Date().zero)!)
+                if relativeDate == "yesterday" {
+                    print("error found: \(session.date) is marked as yesterday")
+                }
             }
             
             if var sessionsForDate = result[relativeDate] {
