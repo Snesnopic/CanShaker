@@ -52,7 +52,6 @@ struct AuthenticationView: View {
             })
             
         }else {
-            
             test = "no auth a found"
 
         }
