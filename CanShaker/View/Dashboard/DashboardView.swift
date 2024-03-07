@@ -32,7 +32,7 @@ struct DashboardView: View {
                         }
                     }
                     
-                    LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low))
+                    LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low),sessionToShow: sessions.last)
                         
                     Spacer()
 
