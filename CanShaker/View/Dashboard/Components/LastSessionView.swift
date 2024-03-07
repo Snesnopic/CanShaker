@@ -133,6 +133,6 @@ struct LastSessionView: View {
     }
     var session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
     container.mainContext.insert(session)
-    return LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low),sessionToShow: session)
+    return LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low, imageName: "bolt"),sessionToShow: session)
         .modelContainer(container)
 }
