@@ -29,10 +29,10 @@ struct LastSessionView: View {
                 
                 // FEEDBACK
                 HStack{
-                    Image(systemName: "bolt")
-                        .resizable()
-                        .scaledToFit()
-                        .responsiveFrame(widthPercentage: 4)
+//                    Image(systemName: "bolt")
+//                        .resizable()
+//                        .scaledToFit()
+//                        .responsiveFrame(widthPercentage: 4)
                     Text(feedbackToGive.feedbackToShaker(sessions: sessions))
                         .font(.title3)
                         .multilineTextAlignment(.leading)

@@ -33,5 +33,6 @@ extension Feedback {
         //MARK: RANDOM
         Feedback(sentence: "Ascanio?!", type: .neutral, category: .random, condition: .random),
         Feedback(sentence: "There are clouds above your head, everybody knows your deed.", type: .neutral, category: .random, condition: .random)
+        
     ]
 }
