@@ -60,36 +60,47 @@ struct HistoryView: View {
         }
         
     }
+    @State private var showingSheet = false
+    private var screenHeight = UIWindow.current?.screen.bounds.height
     var body: some View {
         
-            List{
-                ForEach(partitionedDates.sorted(by: { pair1, pair2 in
-                    return pair1.value.first!.date > pair2.value.first!.date
-                }), id: \.key) {
-                    header, partition in
-                    Section {
-                        ForEach(partition.sorted(by: { session1, session2 in
-                            session1.date > session2.date
-                        }), id: \.self) {
-                            session in
-                            HistoryElementStyle(session: session)
-                            
-                            
-                        }
+        List{
+            ForEach(partitionedDates.sorted(by: { pair1, pair2 in
+                return pair1.value.first!.date > pair2.value.first!.date
+            }), id: \.key) {
+                header, partition in
+                Section {
+                    ForEach(partition.sorted(by: { session1, session2 in
+                        session1.date > session2.date
+                    }), id: \.self) {
+                        session in
+                        HistoryElementStyle(session: session)
+                            .onTapGesture {
+                                showingSheet.toggle()
+                            }
+                            .sheet(isPresented: $showingSheet) {
+                                LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low),sessionToShow: session)
+                                    .presentationDetents([.height(screenHeight!/1.8)])
+                                    .presentationCornerRadius(15)
+                                    .presentationDragIndicator(.visible)
+                                    .presentationBackground(Color.box)
+                            }
                         
-                    } header:
-                    {
-                        Text(header)
                     }
+                    
+                } header:
+                {
+                    Text(header)
                 }
-                
             }
             
-            .navigationTitle("History")
-            .listStyle(.plain)
-            .preferredColorScheme(.dark)
-            .navigationTitle("History")
-            
+        }
+        
+        .navigationTitle("History")
+        .listStyle(.plain)
+        .preferredColorScheme(.dark)
+        .navigationTitle("History")
+        
     }
 }
 
