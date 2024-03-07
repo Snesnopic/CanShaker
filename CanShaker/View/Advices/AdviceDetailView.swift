@@ -10,19 +10,18 @@ import SwiftUI
 struct AdviceDetailView: View {
     @State var adv: Advice
     var body: some View {
-    
-            
-            VStack{
-                Text(adv.description)
-                    .padding()
                 
-                Spacer()
-            }
+        VStack{
+            Text(adv.description)
+                .padding()
+            
+            Spacer()
+        }
         .preferredColorScheme(.dark)
         .navigationTitle(adv.title)
         .frame(maxWidth: .infinity)
         .background{
-            Color(Color("bgGray"))
+            Color.bgGray
         }
     }
 }

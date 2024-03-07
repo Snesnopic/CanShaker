@@ -37,7 +37,7 @@ struct AdvicesListView: View {
             .navigationTitle(advCategory.str)
             .frame(maxWidth: .infinity)
             .background{
-                Color(Color("bgGray"))
+                Color.bgGray
             }
             
         }
