@@ -41,6 +41,7 @@ struct HistoryView: View {
         
     }
     @State private var showingSheet = false
+    @State private var selectedSession: Session?
     private var screenHeight = UIWindow.current?.screen.bounds.height
     var body: some View {
         
@@ -56,15 +57,11 @@ struct HistoryView: View {
                         session in
                         HistoryElementStyle(session: session)
                             .onTapGesture {
-                                showingSheet.toggle()
+                                selectedSession = session
+                                showingSheet = true
                             }
-                            .sheet(isPresented: $showingSheet) {
-                                LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low),sessionToShow: session)
-                                    .presentationDetents([.height(screenHeight!/1.8)])
-                                    .presentationCornerRadius(15)
-                                    .presentationDragIndicator(.visible)
-                                    .presentationBackground(Color.box)
-                            }
+                           
+                           
                         
                     }
                     
@@ -75,7 +72,15 @@ struct HistoryView: View {
             }
             
         }
-        
+        .sheet(item: $selectedSession, onDismiss: {
+            showingSheet = false
+        }, content: { session in
+            LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low, imageName: "bolt"),sessionToShow: session)
+                .presentationDetents([.height(screenHeight!/1.8)])
+                .presentationCornerRadius(15)
+                .presentationDragIndicator(.visible)
+                .presentationBackground(Color.box)
+        })
         .navigationTitle("History")
         .listStyle(.plain)
         .preferredColorScheme(.dark)
