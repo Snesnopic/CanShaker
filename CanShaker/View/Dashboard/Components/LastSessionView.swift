@@ -36,11 +36,11 @@ struct LastSessionView: View {
                             .multilineTextAlignment(.leading)
                             .fontWeight(.semibold)
                     } else {
-                        Image(feedbackToGive.feedbackToShaker(session: sessionToShow!).imageName)
+                        Image(systemName: feedbackToGive.imageName)
                             .resizable()
                             .scaledToFit()
                             .responsiveFrame(widthPercentage: 4)
-                        Text(feedbackToGive.feedbackToShaker(session: sessionToShow!).sentence)
+                        Text(feedbackToGive.sentence)
                             .font(.title3)
                             .multilineTextAlignment(.leading)
                             .fontWeight(.semibold)
@@ -120,6 +120,9 @@ struct LastSessionView: View {
                 
             }
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
+            .task{
+                feedbackToGive = feedbackToGive.feedbackToShaker(session: sessionToShow!)
+            }
         }
         .preferredColorScheme(.dark)
     }
