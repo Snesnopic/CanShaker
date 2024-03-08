@@ -21,24 +21,23 @@ struct FeedbackView: View {
                 if sessionToShow == nil {
                     Image(systemName: "face.smiling")
                         .imageScale(.large)
+                        .offset(x:-10)
+                        .responsiveFrame(widthPercentage: 10)
                     Text("Hey there newcomer, start a session from the watch app to gain data!")
-                        .font(.title3)
-                        .multilineTextAlignment(.leading)
-                        .fontWeight(.semibold)
-                } else {
                     
+                } else {
                     Image(systemName: feedbackToGive.imageName)
                         .imageScale(.large)
                         .responsiveFrame(widthPercentage: 10)
-                    
+                        
                     Text(feedbackToGive.sentence)
-                        .font(.title3)
-                        .multilineTextAlignment(.leading)
-                        .fontWeight(.semibold)
-                        .padding(.horizontal)
+                        .offset(x: 5)
                     Spacer()
                 }
             }
+            .font(.title3)
+            .multilineTextAlignment(.leading)
+            .fontWeight(.semibold)
         }
         .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
         

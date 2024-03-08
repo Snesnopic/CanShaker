@@ -37,14 +37,16 @@ struct AllGraphsView: View {
                 }
             }
             else {
-                if(statToShow == 1){
+                if(statToShow == 1) {
                     SpeedGraphView(session: sessionToShow!)
-                }else{
+                } else {
                     BpmGraphView(session: sessionToShow!)
                 }
             }
             Spacer()
         }
+        //MARK: uncomment for debug if needed
+//        .preferredColorScheme(.dark)
     }
 }
 
@@ -62,7 +64,7 @@ struct AllGraphsView: View {
     }
     var session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
     container.mainContext.insert(session)
-    return LastSessionView(sessionToShow: session)
+    return AllGraphsView(sessionToShow: session)
         .modelContainer(container)
     
 }

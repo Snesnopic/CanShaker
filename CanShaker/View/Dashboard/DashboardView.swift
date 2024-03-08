@@ -67,14 +67,17 @@ struct DashboardView: View {
         container.mainContext.insert(achievement)
     }
     
+    var calories = Double.random(in: (2.0)...(150.0))
+    var duration = Double.random(in: 1...3600)
     var accelD:[TimeInterval:Double] = [:]
     var heartRate:[TimeInterval:Double] = [:]
     for i in 1...10 {
-        accelD[Double(i)*0.3] = Double.random(in: 50...140)
-        heartRate[Double(i)*0.3] = Double.random(in: 50...140)
+        accelD[Double(i)*0.3] = Double.random(in: 1...4)
+        heartRate[Double(i)*0.3] = Double.random(in: 60...150)
     }
+    var session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
+    container.mainContext.insert(session)
     
-    container.mainContext.insert(Session(date: Date(), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate))
     return DashboardView()
         .modelContainer(container)
 }

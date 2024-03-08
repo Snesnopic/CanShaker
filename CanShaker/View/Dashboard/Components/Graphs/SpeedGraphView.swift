@@ -22,33 +22,33 @@ struct SpeedGraphView: View {
         startPoint: .top, endPoint: .bottom)
     
     var body: some View {
-                    Chart{
-                        ForEach(session.accelData.keys.sorted(),id: \.self){ time in
-                            
-                            AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                                      y: .value("Acceleration", (session.accelData[time]!)))
-                            
-                            .interpolationMethod(.catmullRom)
-                            .foregroundStyle(speedGradient)
-                            
-                        }
-                        
-                    }
-                    .chartXAxis{
-                        AxisMarks(values: .automatic(desiredCount: 6)) {
-                            AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
-                        }
-                    }
-                    .chartYAxis {
-                        AxisMarks(position: .leading) { _ in
-                            AxisValueLabel()
-                        }
-                    }
-                    .chartYAxisLabel("m/s²")
-                    .chartYScale(type: .power(exponent: 0.6))
-                    .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
-                    .padding(.vertical)
-   
+        Chart{
+            ForEach(session.accelData.keys.sorted(),id: \.self){ time in
+                
+                AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
+                          y: .value("Acceleration", (session.accelData[time]!)))
+                
+                .interpolationMethod(.catmullRom)
+                .foregroundStyle(speedGradient)
+                
+            }
+            
+        }
+        .chartXAxis{
+            AxisMarks(values: .automatic(desiredCount: 6)) {
+                AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
+            }
+        }
+        .chartYAxis {
+            AxisMarks(position: .leading) { _ in
+                AxisValueLabel()
+            }
+        }
+        .chartYAxisLabel("m/s²")
+        .chartYScale(type: .power(exponent: 0.6))
+        .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
+        .padding(.vertical)
+        
     }
 }
 

@@ -44,21 +44,7 @@ struct LastSessionView: View {
                 // CHART + STATS
                 AllGraphsView(sessionToShow: sessionToShow!)
                 
-                HStack{
-                    VStack (alignment: .leading){
-                        Text("**Avg. BPM:** \(String(format: "%.1f", (sessionToShow?.getAverage(dataset: sessionToShow?.heartRateData.values) ?? "")))")
-                        Spacer()
-                        Text("**Avg. speed:** \(String(format: "%.1f", (sessionToShow?.getAverage(dataset: sessionToShow?.accelData.values) ?? ""))) m/s²")
-                    }
-                    Spacer()
-                    VStack (alignment: .leading){
-                        Text("**KCALs:** \(Int(sessionToShow?.calories ?? 0))")
-                        Spacer()
-                        Text("**Time:** ") + Text(sessionToShow?.duration.doubleToTime() ?? "0s")
-                    }
-                    Spacer()
-                }
-                .font(.subheadline)
+                DataView(sessionToShow: sessionToShow)
                 Spacer()
                 
                 
