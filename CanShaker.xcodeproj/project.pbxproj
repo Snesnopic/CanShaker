@@ -27,7 +27,6 @@
 		6BD11A9E2B8CF519008FA32D /* SpeedGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */; };
 		6BD11AA02B8CF6BF008FA32D /* BpmGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */; };
 		6BDF79BC2B8C8CCA00E9663D /* ResponsiveFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF79BB2B8C8CCA00E9663D /* ResponsiveFrame.swift */; };
-		9D3C22CB2B8F7AF000279EBC /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3C22CA2B8F7AF000279EBC /* FeedbackView.swift */; };
 		9D6261D72B91E7DD00CF01F1 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6261D52B91E7DD00CF01F1 /* HistoryView.swift */; };
 		9D6261D82B91E7DD00CF01F1 /* HistoryElementStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6261D62B91E7DD00CF01F1 /* HistoryElementStyle.swift */; };
 		9D7187FD2B7E419A002C02B0 /* CanShakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7187FC2B7E419A002C02B0 /* CanShakerApp.swift */; };
@@ -103,7 +102,6 @@
 		6BD11A9D2B8CF519008FA32D /* SpeedGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedGraphView.swift; sourceTree = "<group>"; };
 		6BD11A9F2B8CF6BF008FA32D /* BpmGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BpmGraphView.swift; sourceTree = "<group>"; };
 		6BDF79BB2B8C8CCA00E9663D /* ResponsiveFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveFrame.swift; sourceTree = "<group>"; };
-		9D3C22CA2B8F7AF000279EBC /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		9D5360EA2B7E4E3800BE628C /* CanShaker Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CanShaker Watch App.entitlements"; sourceTree = "<group>"; };
 		9D5360EB2B7E4E9100BE628C /* CanShaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CanShaker.entitlements; sourceTree = "<group>"; };
 		9D6261D52B91E7DD00CF01F1 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				3E2E8C132B8F6FDF003C609A /* Info.swift */,
-				9D3C22CA2B8F7AF000279EBC /* FeedbackView.swift */,
 				9DA6A8522B8C8B43009737D7 /* LastSessionView.swift */,
 				6BE5F8812B907F3200D4E1EB /* Graphs */,
 			);
@@ -531,7 +528,6 @@
 				3E2E8C142B8F6FDF003C609A /* Info.swift in Sources */,
 				6B6C8A022B8F4CEB008C880C /* Session.swift in Sources */,
 				9DA6A84E2B8C8B2C009737D7 /* AdvicesListView.swift in Sources */,
-				9D3C22CB2B8F7AF000279EBC /* FeedbackView.swift in Sources */,
 				9DA6A8632B8C95A7009737D7 /* Connectivity.swift in Sources */,
 				6BD11AA02B8CF6BF008FA32D /* BpmGraphView.swift in Sources */,
 			);
