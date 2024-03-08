@@ -10,7 +10,7 @@ import Charts
 import CoreMotion
 import SwiftData
 struct LastSessionView: View {
-    @State private var statToShow = 0
+    
     @State var feedbackToGive: Feedback
     var sessionToShow:Session?
     
@@ -29,17 +29,7 @@ struct LastSessionView: View {
             VStack(alignment: .center) {
                 FeedbackView(sessionToShow: sessionToShow, feedbackToGive: feedbackToGive)
                 // PICKER
-                HStack{
-                    Picker("", selection: $statToShow){
-                        Text("BPM")
-                            .tag(0)
-                        Text("Speed")
-                            .tag(1)
-                    }
-                    .responsiveFrame(widthPercentage: 35)
-                    .pickerStyle(.segmented)
-                }
-                .padding(.vertical, 10)
+                
                 
                 // CHART + STATS
                 AllGraphsView(sessionToShow: sessionToShow)
@@ -47,14 +37,11 @@ struct LastSessionView: View {
                 DataView(sessionToShow: sessionToShow)
                 Spacer()
                 
-                
-                
             }
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
             
         }
-        //debug purposes
-//        .preferredColorScheme(.dark)
+        .preferredColorScheme(.dark)
     }
 }
 

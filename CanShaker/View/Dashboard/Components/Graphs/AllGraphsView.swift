@@ -11,10 +11,22 @@ import SwiftData
 
 struct AllGraphsView: View {
     
-    @State private var statToShow = 0
+    @State var statToShow = 0
     @State var sessionToShow: Session?
     
     var body: some View {
+        
+        HStack{
+            Picker("", selection: $statToShow){
+                Text("BPM")
+                    .tag(0)
+                Text("Speed")
+                    .tag(1)
+            }
+            .responsiveFrame(widthPercentage: 35)
+            .pickerStyle(.segmented)
+        }
+        .padding(.vertical, 10)
         
         HStack{
             if sessionToShow == nil {
@@ -45,8 +57,7 @@ struct AllGraphsView: View {
             }
             Spacer()
         }
-        //MARK: uncomment for debug if needed
-//        .preferredColorScheme(.dark)
+        .preferredColorScheme(.dark)
     }
 }
 
