@@ -47,7 +47,7 @@ struct DashboardView: View {
             }
             .frame(maxWidth: .infinity)
             .background{
-                Color(Color("bgGray"))
+                Color.bgGray
             }
         }
     }

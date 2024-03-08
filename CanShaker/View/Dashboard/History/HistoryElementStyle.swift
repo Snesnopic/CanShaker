@@ -19,7 +19,7 @@ struct HistoryElementStyle: View {
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 13)
                 .shadow(radius: 15)
-                .foregroundStyle(Color("boxColor"))
+                .foregroundStyle(Color.box)
                 .overlay{
                     HStack{
                         VStack (alignment: .leading) {

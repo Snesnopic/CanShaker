@@ -32,7 +32,7 @@ struct AdvicesView: View {
                 .preferredColorScheme(.dark)
                 .frame(maxWidth: .infinity)
                 .background{
-                    Color(Color("bgGray"))
+                    Color.bgGray
                 }
         }
     }

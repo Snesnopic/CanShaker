@@ -42,7 +42,7 @@ struct NaAchievementView: View {
         .background {
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95)
-                .foregroundStyle(Color("boxColor"))
+                .foregroundStyle(Color.box)
                 .responsiveFrame(widthPercentage: 95)
         }
         .preferredColorScheme(.dark)

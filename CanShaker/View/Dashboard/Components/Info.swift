@@ -16,7 +16,7 @@ struct Info: View {
         ZStack{
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 11, alignment: .center)
-                .foregroundStyle(Color("boxColor"))
+                .foregroundStyle(Color.box)
                 
             HStack{
                 VStack(alignment: .center, spacing: 10){
@@ -54,43 +54,7 @@ struct Info: View {
                 
             }
             .responsiveFrame(widthPercentage: 85)
-            //        HStack{
-            //            ZStack{
-            //                RoundedRectangle(cornerRadius: 15)
-            //                    .responsiveFrame(widthPercentage: 45, heightPercentage: 10, alignment: .center)
-            //                    .foregroundStyle(Color("boxColor"))
-            //                    .opacity(0.4)
-            //                VStack(alignment: .center, spacing: 10){
-            //                    Text("Sessions this week")
-            //                        .font(.headline)
-            //                    Text(sessions.filter({ session in
-            //                        return session.date.isSameWeek(as: Date())
-            //                    }).count.description)
-            //                        .font(.title)
-            //                        .fontWeight(.bold)
-            //                }
-            //            }
-            //            ZStack{
-            //                RoundedRectangle(cornerRadius: 15)
-            //                    .responsiveFrame(widthPercentage: 45, heightPercentage: 10, alignment: .center)
-            //                    .foregroundStyle(Color("boxColor"))
-            //                    .opacity(0.4)
-            //                VStack(alignment: .center, spacing: 10){
-            //                    Text("Achievements")
-            //                        .font(.headline)
-            //                    HStack(spacing: 0.0) {
-            //                        Text(achievements.filter({ achievement in
-            //                            return achievement.isAchieved
-            //                        }).count.description)
-            //                        Text("/")
-            //                        Text("\(achievements.count)")
-            //                    }
-            //                    .font(.title)
-            //                    .fontWeight(.bold)
-            //                }
-            //            }
-            //        }
-            //        .padding()
+            
         }
     }
 }

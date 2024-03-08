@@ -17,7 +17,7 @@ struct AdviceButtonStyle: View {
         ZStack{
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 20)
-                .foregroundColor(Color("boxColor"))
+                .foregroundColor(Color.box)
                 .shadow(radius: 20)
             
             HStack{
@@ -45,7 +45,7 @@ struct AdviceButtonStyle: View {
                     
                     UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
                         .responsiveFrame(widthPercentage: 95, heightPercentage: 6)
-                        .foregroundColor(Color("boxDetailColor"))
+                        .foregroundColor(Color.boxDetail)
                         .shadow(radius: 20)
                     
                     Text(cDescription)

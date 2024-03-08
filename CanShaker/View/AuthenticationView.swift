@@ -20,7 +20,7 @@ struct AuthenticationView: View {
                 
                 RoundedRectangle(cornerRadius: 20)
                     .responsiveFrame(widthPercentage: 70, heightPercentage: 7)
-                    .foregroundStyle(Color("boxColor"))
+                    .foregroundStyle(Color.box)
                     .opacity(0.5)
                     .overlay{
                             Text("Authenticate")

@@ -49,7 +49,7 @@ struct AchievementsView: View{
             .navigationTitle(String(localized: "Achievements"))
             .frame(maxWidth: .infinity)
             .background{
-                Color(Color("bgGray"))
+                Color.bgGray
             }
         }
         .preferredColorScheme(.dark)

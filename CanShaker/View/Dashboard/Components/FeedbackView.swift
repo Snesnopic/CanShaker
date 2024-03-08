@@ -15,7 +15,7 @@ struct FeedbackView: View {
         ZStack{
             RoundedRectangle(cornerRadius: 15)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 12)
-                .foregroundStyle(Color("boxColor"))
+                .foregroundStyle(Color.box)
                 .opacity(0.4)
             //MARK: this is the max length of the insult/compliment (it's around 90 letters space considering lowercase letters)
             Text(feedback)
