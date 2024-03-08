@@ -31,31 +31,22 @@ class Feedback: Identifiable {
         return filteredSentences.randomElement()
     }
     
-    func feedbackToShaker(sessions: [Session]) -> Feedback {
+    func feedbackToShaker(session: Session) -> Feedback {
         
-        guard !sessions.isEmpty else {
-            //MARK: User downloaded the app for first time
-            return Feedback(sentence: String(localized: "Hey there newcomer, start a session from the watch app to gain data!"), type: .compliment, category: .speed, condition: .low, imageName: "face.smiling.inverse")
-        }
-        
-        guard let lastSession = sessions.last else {
-            return filterFeedback(byType: .neutral, byCategory: .random, byCondition: .random)!
-        }
-        
-        let duration = lastSession.duration
-        let calories = Int(lastSession.calories)
-        let heartRate = sessions.last?.getAverage(dataset: lastSession.heartRateData.values)
-        let accel = sessions.last?.getAverage(dataset: lastSession.accelData.values)
+        let duration = session.duration
+        let calories = Int(session.calories)
+        let heartRate = session.getAverage(dataset: session.heartRateData.values)
+        let accel = session.getAverage(dataset: session.accelData.values)
         
         if duration > 180.0 {
             if calories > 90 {
-                if heartRate! > 120 {
-                    if accel! > 3.5 {
+                if heartRate > 120 {
+                    if accel > 3.5 {
                         return filterFeedback(byType: .compliment, byCategory: .heartBeat, byCondition: .high)!
-                    } else if accel! <= 2.5 {
+                    } else if accel <= 2.5 {
                         return filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)!
                     }
-                } else if heartRate! <= 110 {
+                } else if heartRate <= 110 {
                     return filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)!
                 }
             } else if calories <= 80 {

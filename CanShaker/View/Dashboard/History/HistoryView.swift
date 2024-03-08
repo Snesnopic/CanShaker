@@ -75,7 +75,7 @@ struct HistoryView: View {
         .sheet(item: $selectedSession, onDismiss: {
             showingSheet = false
         }, content: { session in
-            LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low, imageName: "bolt"),sessionToShow: session)
+            LastSessionView(sessionToShow: session)
                 .presentationDetents([.height(screenHeight!/1.8)])
                 .presentationCornerRadius(15)
                 .presentationDragIndicator(.visible)

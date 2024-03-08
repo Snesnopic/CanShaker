@@ -18,7 +18,7 @@ struct DashboardView: View {
 
                 VStack{
                     Info(sessions: sessions)
-                        .padding(.bottom, 2)
+                        .padding(.bottom, 10)
                     HStack{
                         Text("Activity")
                             .bold()
@@ -28,12 +28,9 @@ struct DashboardView: View {
                             HistoryView(sessions: sessions)
                         } label: {
                             Text("See all")
-                                
                         }
                     }
-                    
-                    LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low, imageName: "bolt"),sessionToShow: sessions.last)
-                        
+                    LastSessionView(sessionToShow: sessions.last)
                     Spacer()
 
                 }
