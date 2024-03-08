@@ -15,6 +15,12 @@
             "value" : " "
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29,6 +35,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "**Promedio LPM:** %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**BPM Moy. :** %@"
           }
         },
         "it" : {
@@ -47,10 +59,27 @@
             "value" : "**Promedio "
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Vitesse Moy. :** %@ m/s²"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "**Velocità media:** %@"
+          }
+        }
+      }
+    },
+    "**Energy:** %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Energie :** %lld"
           }
         }
       }
@@ -61,6 +90,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "**KCALs**%11d"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
           }
         },
         "it" : {
@@ -79,6 +114,12 @@
             "value" : "**Tiempo**"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Temps :**"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -90,6 +131,12 @@
     "/" : {
       "localizations" : {
         "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/"
+          }
+        },
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "/"
@@ -111,6 +158,12 @@
             "value" : "%@!"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -125,6 +178,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%11d"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
         "it" : {
@@ -149,6 +208,12 @@
             "value" : "%1$lld-%2$lld"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld-%2$lld"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -165,6 +230,12 @@
             "value" : "Aceleración"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accéleration"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -179,6 +250,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Logros"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résultats"
           }
         },
         "it" : {
@@ -203,6 +280,12 @@
             "value" : "فعالیت"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activité"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -223,6 +306,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "توصیه"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conseils"
           }
         },
         "it" : {
@@ -247,6 +336,12 @@
             "value" : "تمام دستاوردها "
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tous les résultats"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -267,6 +362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "مطمئن هستید ؟  چون جلسات بیش از حد می تواند باعث مشکلات جدی سلامتی شود!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu es sûr(e) ? Trop de sessions de graffiti peuvent provoquer des problèmes de santé sérieux !"
           }
         },
         "it" : {
@@ -291,6 +392,12 @@
             "value" : "احراز هویت"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S'Authentifier"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -311,6 +418,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ضربان قلب"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
           }
         },
         "it" : {
@@ -335,6 +448,12 @@
             "value" : "ضربان قلب آرام"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rythme Cardiaque Calme"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -355,6 +474,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "دست های تمیز"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mains propres"
           }
         },
         "it" : {
@@ -379,6 +504,12 @@
             "value" : "داشبورد"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tableau de Bord"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -395,6 +526,12 @@
             "value" : "Fecha: %@"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date : %@"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -409,6 +546,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hacerlo de todos modos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fais-le quand même"
           }
         },
         "it" : {
@@ -433,6 +576,12 @@
             "value" : "افزایش لذت و کاهش ناراحتی ناشی از اصطکاک با استفاده از روان کننده های طبیعی."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'utilisation de lubrifiants naturels permet d'accroître le plaisir et de réduire l'inconfort lié aux frottements."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -453,6 +602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "تند مثل باد"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rapide comme le Vent"
           }
         },
         "it" : {
@@ -477,6 +632,12 @@
             "value" : "یک منطقه آرام و خصوصی پیدا کنید که در آن مزاحم نشوید. وقتی پلیس در اطراف است، هیچ کس دوست ندارد گرافیتی انجام دهد. وقفه ها می توانند باعث بی ثباتی در طول تجربه شما شوند و ممکن است منجر به تجربه ای ناخوشایند شوند."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trouve un endroit calme et privé où tu ne seras pas dérangé ou interrompu. Personne n'aime faire des graffitis en présence de policiers. Les interruptions peuvent perturber ton expérience et t'amener à faire des découvertes désagréables."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -491,6 +652,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Regresar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retourne"
           }
         },
         "it" : {
@@ -509,6 +676,12 @@
             "value" : "Latidos, Calorias, Velocidad!"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM, Calories, Vitesse !"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -523,6 +696,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hello World"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bonjour tout le Monde"
           }
         },
         "it" : {
@@ -541,6 +720,12 @@
             "value" : "Heroic Shaker"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secoueur Héroïque"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -550,7 +735,14 @@
       }
     },
     "Hey there newcomer, start a session from the watch app to gain data!" : {
-
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bonjour nouveau venu, démarre une session à partir de l'application sur la montre pour collecter des données !"
+          }
+        }
+      }
     },
     "History" : {
       "localizations" : {
@@ -558,6 +750,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Historial"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique"
           }
         },
         "it" : {
@@ -576,6 +774,12 @@
             "value" : "Lastimarte"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Douleurs"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -592,6 +796,12 @@
             "value" : "Higiene"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hygiène"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -603,6 +813,12 @@
     "I'm done" : {
       "localizations" : {
         "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terminé"
+          }
+        },
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terminé"
@@ -624,6 +840,12 @@
             "value" : "Si no puedes completar una tarea laboral porque no puedes dejar de pensar en agitar la lata, es cuando se convierte en un problema. Si constantemente ves material de graffiti en el trabajo o llegas tarde a una reunión porque lo estabas sacudiendo en el baño, es posible que tengas que consultar a un experto. Lo mismo ocurre si no puedes seguir los planes hechos con amigos."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si tu n'arrives pas à être productif au travail parce que tu ne peux pas arrêter de penser à secouer ta bombe, cela devient peut-être un problème. Si tu regardes régulièrement du contenu à propos du graffiti au travail ou si tu arrives en retard à une réunion parce que tu étais en train de secouer ta bombe dans les toilettes, alors tu devrait peut-être consulter un expert. C'est la même chose si tu ne peux pas respecter les plans faits avec tes amis."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -640,6 +862,12 @@
             "value" : "Si empiezas a sentirte herido o sientes que tu lata está seca, es una gran señal de que debes dejar de pintar."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si tu commences à avoir mal ou si tu sens que ta bombe est vide, c'est le signe qu'il faut arrêter de peindre."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -654,6 +882,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡Parece que tenemos un corredor de maratón aquí!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On dirait que nous avons un marathonien ici !"
           }
         }
       }
@@ -672,6 +906,12 @@
             "value" : " جلسه پیش"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dernière session"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -687,6 +927,12 @@
             "state" : "translated",
             "value" : "Aprende cómo mantener tu lata siempre en forma"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apprends à maintenir ta bombe de peinture en parfait état."
+          }
         }
       }
     },
@@ -696,6 +942,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Como cualquier utensilio, límpialo después de su uso, lava suavemente la zona de agitación con agua tibia y un jabón suave sin perfume para eliminar cualquier resto de lubricante o spray. Asegúrate de enjuagar bien y secar con una toalla limpia. Mantener limpia el área de agitación ayuda a prevenir la acumulación de bacterias y reduce el riesgo de irritación o infección de la piel."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comme tout outil, nettoie-le après utilisation, lave doucement la zone secouée avec de l'eau tiède et un savon doux et inodore pour éliminer tout lubrifiant ou spray restant. Assure-toi de bien rincer et sécher délicatement avec une serviette propre. Maintenir la zone secouée propre aide à prévenir l'accumulation de bactéries et réduit le risque d'irritation cutanée ou d'infection."
           }
         },
         "it" : {
@@ -712,6 +964,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lubrica tu lata para mayor comodidad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lubrifie ta bombe pour plus de confort"
           }
         },
         "it" : {
@@ -736,6 +994,12 @@
             "value" : "استاد انرژی"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maître d'Energie"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -756,6 +1020,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "استاد حرکت"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maître du Mouvement"
           }
         },
         "it" : {
@@ -780,6 +1050,12 @@
             "value" : " روش ها"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Méthodes"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -800,6 +1076,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "نزدیک به موفقیت"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proche de la réussite"
           }
         },
         "it" : {
@@ -824,6 +1106,12 @@
             "value" : "هرگز جا نزن رفیق !"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N'abandonne Jamais !"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -844,6 +1132,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "دستاورد جدید!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nouvelle réussite !"
           }
         },
         "it" : {
@@ -868,6 +1162,12 @@
             "value" : "هنوز هیچ داده و اطلاعاتی  وجود ندارد!"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas encore de données"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -890,6 +1190,12 @@
             "value" : " مکث نکن"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas de moment de pause"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -904,6 +1210,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡Sin sesiones aún!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas encore de sessions!"
           }
         },
         "it" : {
@@ -922,27 +1234,16 @@
             "value" : "Persistencia"
           }
         },
-        "it" : {
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Persistenza"
-          }
-        }
-      }
-    },
-    "Placeholder" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Placeholder"
+            "value" : "Persistance"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Placeholder"
+            "value" : "Persistenza"
           }
         }
       }
@@ -953,6 +1254,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Higiene después de agitar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hygiène après secousse"
           }
         },
         "it" : {
@@ -971,6 +1278,12 @@
             "value" : "Practica aguantar cuando se acerque el clímax de tu inspiración y luego reanuda la estimulación. La repetición de este patrón mejora la intensidad y duración de la producción de la obra de arte."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pratique l'edging lorsque tu approches du point culminant de ton inspiration, puis reprends la stimulation. Répéter ce schéma augmente l'intensité et la durée de la production artistique."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -980,12 +1293,17 @@
       }
     },
     "Preview error" : {
-      "extractionState" : "stale",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preview error"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
           }
         },
         "it" : {
@@ -1002,6 +1320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Progreso: %11d%%"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progression : %lld%%"
           }
         },
         "it" : {
@@ -1026,6 +1350,12 @@
             "value" : "مکان ساکت"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lieu calme"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1046,6 +1376,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "مسابقه با زمان"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cours Contre la Montre"
           }
         },
         "it" : {
@@ -1070,6 +1406,12 @@
             "value" : "دامنه"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intervalle"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1086,6 +1428,12 @@
             "value" : "Relaciones e impacto en la vida laboral y personal"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relations et impact sur la vie professionnelle et privée"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1100,6 +1448,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apresurarse hacia el clímax a menudo conduce a un breve pico seguido de un rápido descenso. Tomarse su tiempo para desarrollar gradualmente da como resultado una obra de arte más intensa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se précipiter vers l'apogée entraîne souvent un pic bref suivi d'un déclin rapide. Prendre votre temps pour monter progressivement donne lieu à des œuvres d'art plus intenses."
           }
         },
         "it" : {
@@ -1124,6 +1478,12 @@
             "value" : "ایمنی"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sureté"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1144,6 +1504,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "دیدن همه"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout voir"
           }
         },
         "it" : {
@@ -1168,6 +1534,12 @@
             "value" : "جلسه"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Session"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1188,6 +1560,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "جلسات در  این هفته"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sessions de la semaine"
           }
         },
         "it" : {
@@ -1212,6 +1590,12 @@
             "value" : "آهسته"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ralentis"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1226,6 +1610,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alguien quería quemar calorías de una forma poco ortodoxa..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quelqu'un voulait brûler des calories de manière non conventionnelle..."
           }
         }
       }
@@ -1242,6 +1632,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "سرعت"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vitesse"
           }
         },
         "it" : {
@@ -1266,6 +1662,12 @@
             "value" : "شروع "
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Démarre"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1286,6 +1688,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "حالت آرامش"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etat de Relaxation"
           }
         },
         "it" : {
@@ -1310,6 +1718,12 @@
             "value" : "ریتم ثابت"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rythme Stable"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1324,6 +1738,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hay técnicas secretas de graffiti para explorar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voici quelques techniques secrètes de graffiti à explorer"
           }
         }
       }
@@ -1340,6 +1760,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "زمان"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temps"
           }
         },
         "it" : {
@@ -1364,6 +1790,12 @@
             "value" : "امروز"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aujourd'hui"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1384,6 +1816,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "  روش(Edge) را امتحان کنید"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Essaye l'Edging"
           }
         },
         "it" : {
@@ -1408,6 +1846,12 @@
             "value" : "  روش(Lube) را امتحان کنید"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utilise du Lubrifiant"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1422,6 +1866,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usar un lubricante a base de agua durante la agitación puede ayudar a reducir la fricción y la irritación de la lata. Esto es especialmente importante si eres propenso a la sequedad o la sensibilidad. Evita el uso de productos como lociones, aceites o cremas que puedan contener ingredientes que puedan irritar la delicada piel de tu pobre lata."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'utilisation d'un lubrifiant à base d'eau pendant le secouage peut aider à réduire le frottement et l'irritation de la bombe. C'est particulièrement important si tu es sujet à la sécheresse ou à la sensibilité. Évite d'utiliser des produits comme les lotions, les huiles ou les crèmes qui peuvent contenir des ingrédients pouvant irriter la délicate peau de ta pauvre bombe."
           }
         },
         "it" : {
@@ -1440,6 +1890,12 @@
             "value" : "Lávate las manos antes y después: antes de agitar la lata, asegúrate de tener las manos limpias para minimizar la introducción de bacterias u otros contaminantes en el área de agitación. Luego, lávate bien las manos para eliminar cualquier mancha no deseada y reducir el riesgo de propagación de bacterias."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lave-toi les mains avant et après : Avant de commencer à secouer ta bombe, assure-toi que tes mains sont propres pour minimiser l'introduction de bactéries ou d'autres contaminants dans la zone de secouage. Ensuite, lave-toi soigneusement les mains pour éliminer tout spray indésirable et réduire le risque de propagation des bactéries."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1455,6 +1911,12 @@
             "state" : "translated",
             "value" : "¡Wow, los latidos de tu corazón son tan rápidos que apuesto a que incluso a Usain Bolt le costaría seguirles el ritmo en una carrera de velocidad!"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wow, ton rythme cardiaque est tellement rapide, je parie même qu'Usain Bolt aurait du mal à le suivre dans une course !"
+          }
         }
       }
     },
@@ -1464,6 +1926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ayer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier"
           }
         },
         "it" : {
@@ -1481,6 +1949,12 @@
             "state" : "translated",
             "value" : "Quemaste menos calorías que un perezoso haciendo yoga a cámara lenta"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu as brûlé moins de calories qu'un paresseux faisant du yoga au ralenti."
+          }
         }
       }
     },
@@ -1490,6 +1964,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tienes que mantener tu lata segura."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu dois garder ta bombe en sécurité"
           }
         }
       }
@@ -1501,6 +1981,12 @@
             "state" : "translated",
             "value" : "¡Fuiste tan rápido que Flash tuvo que cambiar de trabajo!"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu étais tellement rapide que Flash a dû changer de métier !"
+          }
         }
       }
     },
@@ -1510,6 +1996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡Has conseguido una puntuación perfecta en todas las métricas: latidos del corazón, calorías quemadas y velocidad!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu as obtenu un score parfait sur tous les critères : rythme cardiaque, calories brûlées et vitesse !"
           }
         },
         "it" : {
@@ -1528,6 +2020,12 @@
             "value" : "¡Has mantenido un latido por debajo de 100 lpm durante toda la sesión!"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu as maintenu un rythme cardiaque en dessous de 100 bpm pendant toute la session !"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1542,6 +2040,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡Has mantenido una velocidad promedio constante durante más de 30 minutos!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu as maintenu une vitesse moyenne constante pendant plus de 30 minutes !"
           }
         },
         "it" : {
@@ -1560,6 +2064,12 @@
             "value" : "¡Has alcanzado una velocidad media de más de 15 km/h!"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu as atteint une vitesse moyenne de plus de 15 km/h !"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1574,6 +2084,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡Has sacudido tu lata más de 1000 veces! ¡Sigue así!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu as secoué ta bombe plus de 1000 fois ! Continue comme ça !"
           }
         },
         "it" : {
@@ -1592,6 +2108,12 @@
             "value" : "¡Has utilizado la aplicación durante más de 7 días consecutivos!"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu as utilisé l'application pendant plus de 7 jours consécutifs !"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1606,6 +2128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡Tus latidos del corazón después del entrenamiento son tan tranquilos que incluso un gurú de la meditación envidiaría tu rutina de siesta cardiovascular!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ton rythme cardiaque après l'entraînement est tellement calme que même un gourou de la méditation envierait ta routine de cardio-dodo !"
           }
         }
       }
