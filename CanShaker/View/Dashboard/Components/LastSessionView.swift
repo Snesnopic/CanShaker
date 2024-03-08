@@ -11,11 +11,10 @@ import CoreMotion
 import SwiftData
 struct LastSessionView: View {
     @State private var statToShow = 0
-    @State var feedbackToGive: Feedback
     var sessionToShow:Session?
-    
-    init(sessionToShow: Session?) {
-        self.feedbackToGive = Feedback(sentence: "ciao", type: .compliment, category: .accel, condition: .high, imageName: "bolt.fill")
+    var feedbackToGive: Feedback
+    init(feedbackToGive: Feedback, sessionToShow: Session?) {
+        self.feedbackToGive = feedbackToGive
         self.sessionToShow = sessionToShow
         UISegmentedControl.appearance().selectedSegmentTintColor = .unselectedTabBar
     }
@@ -25,34 +24,28 @@ struct LastSessionView: View {
             RoundedRectangle(cornerRadius: 15.0)
                 .responsiveFrame(widthPercentage: 95, heightPercentage: 49)
                 .foregroundStyle(.box)
+                
             
             VStack(alignment: .center){
                 
                 // FEEDBACK
-                HStack {
-                    if sessionToShow == nil {
-                        Text("Hey there newcomer, start a session from the watch app to gain data!")
-                            .font(.title3)
-                            .multilineTextAlignment(.leading)
-                            .fontWeight(.semibold)
-                    } else {
-                        Image(feedbackToGive.feedbackToShaker(session: sessionToShow!).imageName)
-                            .resizable()
-                            .scaledToFit()
-                            .responsiveFrame(widthPercentage: 4)
-                        Text(feedbackToGive.feedbackToShaker(session: sessionToShow!).sentence)
-                            .font(.title3)
-                            .multilineTextAlignment(.leading)
-                            .fontWeight(.semibold)
-                    }
-                        
+                HStack{
+                    Image(systemName: "bolt")
+                        .resizable()
+                        .scaledToFit()
+                        .responsiveFrame(widthPercentage: 4)
+//                    Text(feedbackToGive.feedbackToShaker(sessions: sessions))
+//                        .font(.title3)
+//                        .multilineTextAlignment(.leading)
+//                        .fontWeight(.semibold)
                 }
+                .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
+                
                 
                 Line()
                     .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
                     .frame(height: 1)
                     .foregroundStyle(Color.unselectedTabBar)
-                
                 // PICKER
                 HStack{
                     Picker("", selection: $statToShow){
@@ -140,6 +133,6 @@ struct LastSessionView: View {
     }
     var session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
     container.mainContext.insert(session)
-    return LastSessionView(sessionToShow: session)
+    return LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low, imageName: "bolt"),sessionToShow: session)
         .modelContainer(container)
 }
