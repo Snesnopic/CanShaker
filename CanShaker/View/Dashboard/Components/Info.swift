@@ -70,15 +70,9 @@ struct Info: View {
         heartRate[Double(i)*0.3] = Double.random(in: 50...140)
     }
     
-    var sessions: [Session] = [Session(date: Date(), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate,calories: Double.random(in: (5.0)...(20.0)))]
-    var achievements: [Achievement] = [
-        Achievement(title: "title1", subTitle: "subtitle1", desc: "You have shaked your can for 5 times a day!", completion: 33, isAchieved: true, imageName: "splashBlue"),
-        Achievement(title: "title2", subTitle: "subtitle2", desc: "You have shaked your can really fast!", completion: 22, isAchieved: false, imageName: "flameRed"),
-        Achievement(title: "title3", subTitle: "subtitle3", desc: "Something something", completion: 84, isAchieved: true, imageName: "splashBlue"),
-        Achievement(title: "title4", subTitle: "subtitle4", desc: "Something something", completion: 77, isAchieved: false, imageName: "flameRed"),
-        Achievement(title: "title5", subTitle: "subtitle5", desc: "Something something", completion: 99, isAchieved: false, imageName: "flameRed"),
-        Achievement(title: "title6", subTitle: "subtitle6", desc: "Something something", completion: 77, isAchieved: false, imageName: "splashBlue"),
-    ]
+    let sessions: [Session] = [Session(date: Date(), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate,calories: Double.random(in: (5.0)...(20.0)))]
+   
+    //MARK: change the name to use it if needed
     return Info(sessions: sessions)
         .modelContainer(container)
 }

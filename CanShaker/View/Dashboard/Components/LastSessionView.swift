@@ -27,7 +27,7 @@ struct LastSessionView: View {
                 .foregroundStyle(.box)
             
             VStack(alignment: .center) {
-                FeedbackView(sessionToShow: sessionToShow!, feedbackToGive: feedbackToGive)
+                FeedbackView(sessionToShow: sessionToShow, feedbackToGive: feedbackToGive)
                 // PICKER
                 HStack{
                     Picker("", selection: $statToShow){
@@ -42,7 +42,7 @@ struct LastSessionView: View {
                 .padding(.vertical, 10)
                 
                 // CHART + STATS
-                AllGraphsView(sessionToShow: sessionToShow!)
+                AllGraphsView(sessionToShow: sessionToShow)
                 
                 DataView(sessionToShow: sessionToShow)
                 Spacer()
@@ -53,25 +53,24 @@ struct LastSessionView: View {
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
             
         }
-        .preferredColorScheme(.dark)
+        //debug purposes
+//        .preferredColorScheme(.dark)
     }
-    
-    
 }
 
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Session.self, configurations: config)
     
-    var calories = Double.random(in: (2.0)...(150.0))
-    var duration = Double.random(in: 1...3600)
+    let calories = Double.random(in: (2.0)...(150.0))
+    let duration = Double.random(in: 1...3600)
     var accelD:[TimeInterval:Double] = [:]
     var heartRate:[TimeInterval:Double] = [:]
     for i in 1...10 {
         accelD[Double(i)*0.3] = Double.random(in: 1...4)
         heartRate[Double(i)*0.3] = Double.random(in: 60...150)
     }
-    var session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
+    let session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
     container.mainContext.insert(session)
     return LastSessionView(sessionToShow: session)
         .modelContainer(container)
