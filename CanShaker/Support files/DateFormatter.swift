@@ -111,6 +111,11 @@ extension Date {
             $0.formattingContext = .standalone
         }
     }
+    
+    func isSameDayAs(date: Date) -> Bool {
+        return String(describing: self).prefix(10) == String(describing: date).prefix(10)
+    }
+    
     var formattedHour: String {
         self.formatter {
             $0.dateStyle = .none

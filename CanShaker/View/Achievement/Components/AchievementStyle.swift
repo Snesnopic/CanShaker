@@ -23,8 +23,9 @@ struct AchievementStyle: View {
                 
             Text(achievement.title)
                 .foregroundStyle(.white)
-                .font(.headline)
+                .font(.callout)
                 .padding(.horizontal)
+                .lineLimit(2)
             Spacer()
         }
     }

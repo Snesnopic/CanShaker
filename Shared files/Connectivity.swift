@@ -58,7 +58,11 @@ final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
             let reducedSessions = sessions.filter { session in
                 return !phoneSessionIds.contains(session.uuid.uuidString)
             }
-            print("Ho \(sessions.count - reducedSessions.count) da mandare")
+            print("Ho \(reducedSessions.count) da mandare")
+            if reducedSessions.count == 0 {
+                isListReady = true
+                return
+            }
             reducedSessions.forEach { session in
                 print("ID sessione da mandare: \(session.uuid)")
             }

@@ -11,10 +11,11 @@ import CoreMotion
 import SwiftData
 struct LastSessionView: View {
     @State private var statToShow = 0
-    @Query private var sessions:[Session]
+    var sessionToShow:Session?
     var feedbackToGive: Feedback
-    init(feedbackToGive: Feedback) {
+    init(feedbackToGive: Feedback, sessionToShow: Session?) {
         self.feedbackToGive = feedbackToGive
+        self.sessionToShow = sessionToShow
         UISegmentedControl.appearance().selectedSegmentTintColor = .unselectedTabBar
     }
     
@@ -28,19 +29,18 @@ struct LastSessionView: View {
             VStack(alignment: .center){
                 
                 // FEEDBACK
-                //TODO: Align in fixed places images and text
-                HStack {
-                    Image(systemName: ("\(feedbackToGive.feedbackToShaker(sessions: sessions).imageName)"))
+                HStack{
+                    Image(systemName: "bolt")
                         .resizable()
                         .scaledToFit()
-                        
                         .responsiveFrame(widthPercentage: 4)
-                    Text(feedbackToGive.feedbackToShaker(sessions: sessions).sentence)
-                        .font(.title3)
-                        .multilineTextAlignment(.leading)
-                        .fontWeight(.semibold)
+//                    Text(feedbackToGive.feedbackToShaker(sessions: sessions))
+//                        .font(.title3)
+//                        .multilineTextAlignment(.leading)
+//                        .fontWeight(.semibold)
                 }
                 .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
+                
                 
                 Line()
                     .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
@@ -61,7 +61,7 @@ struct LastSessionView: View {
                 
                 // CHART + STATS
                 HStack{
-                    if sessions.isEmpty {
+                    if sessionToShow == nil {
                         Chart{
                             AreaMark (x: .value("Time", Date()),
                                       y: .value("BPM", 40))
@@ -82,9 +82,9 @@ struct LastSessionView: View {
                     }
                     else {
                         if(statToShow == 1){
-                            SpeedGraphView(session: sessions.last!)
+                            SpeedGraphView(session: sessionToShow!)
                         }else{
-                            BpmGraphView(session: sessions.last!)
+                            BpmGraphView(session: sessionToShow!)
                         }
                     }
                     Spacer()
@@ -93,15 +93,15 @@ struct LastSessionView: View {
                 
                 HStack{
                     VStack (alignment: .leading){
-                        Text("**Avg. BPM:** \(String(format: "%.1f", (sessions.last?.getAverage(dataset: sessions.last?.heartRateData.values) ?? "")))")
+                        Text("**Avg. BPM:** \(String(format: "%.1f", (sessionToShow?.getAverage(dataset: sessionToShow?.heartRateData.values) ?? "")))")
                         Spacer()
-                        Text("**Avg. speed:** \(String(format: "%.1f", (sessions.last?.getAverage(dataset: sessions.last?.accelData.values) ?? ""))) m/s²")
+                        Text("**Avg. speed:** \(String(format: "%.1f", (sessionToShow?.getAverage(dataset: sessionToShow?.accelData.values) ?? ""))) m/s²")
                     }
                     Spacer()
                     VStack (alignment: .leading){
-                        Text("**KCALs:** \(Int(sessions.last?.calories ?? 0))")
+                        Text("**KCALs:** \(Int(sessionToShow?.calories ?? 0))")
                         Spacer()
-                        Text("**Time:** ") + Text(sessions.last?.duration.doubleToTime() ?? "0s")
+                        Text("**Time:** ") + Text(sessionToShow?.duration.doubleToTime() ?? "0s")
                     }
                     Spacer()
                 }
@@ -131,8 +131,8 @@ struct LastSessionView: View {
         accelD[Double(i)*0.3] = Double.random(in: 1...4)
         heartRate[Double(i)*0.3] = Double.random(in: 60...150)
     }
-    
-    container.mainContext.insert(Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories))
-    return LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low, imageName: "bolt.fill"))
+    var session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
+    container.mainContext.insert(session)
+    return LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low, imageName: "bolt"),sessionToShow: session)
         .modelContainer(container)
 }

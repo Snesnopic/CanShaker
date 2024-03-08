@@ -10,40 +10,25 @@ import SwiftData
 import Charts
 struct HistoryView: View {
     let dateFormatter = RelativeDateTimeFormatter()
-    func containAnyTimeWord(_ string1: String, _ string2: String) -> Bool {
-        let timeWords = ["hour", "minute", "second"]
-        
-        let containsWord1 = timeWords.contains { word in
-            string1.lowercased().contains(word)
-        }
-        
-        let containsWord2 = timeWords.contains { word in
-            string2.lowercased().contains(word)
-        }
-        
-        return containsWord1 && containsWord2
-    }
-    func containAnyTimeWord(_ string1: String) -> Bool {
-        let timeWords = ["hour", "minute", "second"]
-        
-        return timeWords.contains { word in
-            string1.lowercased().contains(word)
-        }
-        
-    }
+    
     var sessions: [Session]
     private var partitionedDates: [String: [Session]] = [:]
     init(sessions:[Session]) {
         dateFormatter.dateTimeStyle = .named
+        let calendar = Calendar.current
+        dateFormatter.calendar = calendar
         self.sessions = sessions
         partitionedDates = self.sessions.reduce(into: [String: [Session]]()) { result, session in
-            let relativeDate: String
-            if Calendar.current.isDateInToday(session.date) {
+            var relativeDate: String
+            if session.date.isSameDayAs(date: .now) {
                 relativeDate = String(localized: "Today")
-            } else if session.date.formattedDayMonth == Calendar.current.date(byAdding: .day, value: -1, to: Date())!.formattedDayMonth {
+            } else if session.date.isSameDayAs(date: calendar.date(byAdding: .hour, value: -1, to: Date().zero)!) {
                 relativeDate = String(localized: "Yesterday")
             } else {
-                relativeDate = dateFormatter.localizedString(for: session.date, relativeTo: .now)
+                relativeDate = dateFormatter.localizedString(for: session.date, relativeTo: calendar.date(byAdding: .day, value: +1, to: Date().zero)!)
+                if relativeDate == "yesterday" {
+                    relativeDate = "2 days ago"
+                }
             }
             
             if var sessionsForDate = result[relativeDate] {
@@ -55,36 +40,51 @@ struct HistoryView: View {
         }
         
     }
+    @State private var showingSheet = false
+    @State private var selectedSession: Session?
+    private var screenHeight = UIWindow.current?.screen.bounds.height
     var body: some View {
         
-            List{
-                ForEach(partitionedDates.sorted(by: { pair1, pair2 in
-                    return pair1.value.first!.date > pair2.value.first!.date
-                }), id: \.key) {
-                    header, partition in
-                    Section {
-                        ForEach(partition.sorted(by: { session1, session2 in
-                            session1.date > session2.date
-                        }), id: \.self) {
-                            session in
-                            HistoryElementStyle(session: session)
-                            
-                            
-                        }
+        List{
+            ForEach(partitionedDates.sorted(by: { pair1, pair2 in
+                return pair1.value.first!.date > pair2.value.first!.date
+            }), id: \.key) {
+                header, partition in
+                Section {
+                    ForEach(partition.sorted(by: { session1, session2 in
+                        session1.date > session2.date
+                    }), id: \.self) {
+                        session in
+                        HistoryElementStyle(session: session)
+                            .onTapGesture {
+                                selectedSession = session
+                                showingSheet = true
+                            }
+                           
+                           
                         
-                    } header:
-                    {
-                        Text(header)
                     }
+                    
+                } header:
+                {
+                    Text(header)
                 }
-                
             }
             
-            .navigationTitle("History")
-            .listStyle(.plain)
-            .preferredColorScheme(.dark)
-            .navigationTitle("History")
-            
+        }
+        .sheet(item: $selectedSession, onDismiss: {
+            showingSheet = false
+        }, content: { session in
+            LastSessionView(feedbackToGive: Feedback(sentence: "It looks like we have a marathon runner here!", type: .compliment, category: .speed, condition: .low, imageName: "bolt"),sessionToShow: session)
+                .presentationDetents([.height(screenHeight!/1.8)])
+                .presentationCornerRadius(15)
+                .presentationDragIndicator(.visible)
+                .presentationBackground(Color.box)
+        })
+        .listStyle(.plain)
+        .preferredColorScheme(.dark)
+        .navigationTitle(String(localized: "History"))
+        
     }
 }
 

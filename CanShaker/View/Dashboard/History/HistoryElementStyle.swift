@@ -22,35 +22,26 @@ struct HistoryElementStyle: View {
                 .foregroundStyle(Color("boxColor"))
                 .overlay{
                     HStack{
-                        VStack{
-                            Text(session.date.formattedDayMonth)
+                        VStack (alignment: .leading) {
+                            Text(session.date.formattedDayMonth + " - " + session.date.formattedHour)
                                 .bold()
-                                .font(.title2) +
-                            Text("\nDuration: " + session.duration.doubleToTime())
-                                .foregroundStyle(Color("boxColor"))
+                                .font(.title2)
+                            Text("Duration: " + session.duration.doubleToTime())
+                                .foregroundStyle(.secondary)
                                 .font(.title3)
+                            
                             Spacer()
+            
                         }
                         Spacer()
-                        
+                        Image(systemName: "info.circle")
+                            .font(.largeTitle)
+                            .foregroundStyle(.accent)
                         
                     }
                     .padding()
                 }
-                .overlay{
-                    VStack{
-                        Spacer()
-                        HStack{
-                            Spacer()
-                            Text(session.date.formattedHour)
-                                .foregroundStyle(Color("boxColor"))
-                                .font(.title3)
-                        }
-                        .padding()
-                    }
-                }
-            
-        }
+        }.preferredColorScheme(.dark)
     }
 }
 
