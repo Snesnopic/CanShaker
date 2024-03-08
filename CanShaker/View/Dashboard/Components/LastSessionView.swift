@@ -47,6 +47,7 @@ struct LastSessionView: View {
                     }
                         
                 }
+                .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
                 
                 Line()
                     .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
