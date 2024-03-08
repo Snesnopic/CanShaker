@@ -23,37 +23,11 @@ struct LastSessionView: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 15.0)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 49)
+                .responsiveFrame(widthPercentage: 95, heightPercentage: 50)
                 .foregroundStyle(.box)
             
-            VStack(alignment: .center){
-                
-                // FEEDBACK
-                HStack {
-                    if sessionToShow == nil {
-                        Text("Hey there newcomer, start a session from the watch app to gain data!")
-                            .font(.title3)
-                            .multilineTextAlignment(.leading)
-                            .fontWeight(.semibold)
-                    } else {
-                        Image(systemName: feedbackToGive.imageName)
-                            .resizable()
-                            .scaledToFit()
-                            .responsiveFrame(widthPercentage: 4)
-                        Text(feedbackToGive.sentence)
-                            .font(.title3)
-                            .multilineTextAlignment(.leading)
-                            .fontWeight(.semibold)
-                    }
-                        
-                }
-                .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
-                
-                Line()
-                    .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
-                    .frame(height: 1)
-                    .foregroundStyle(Color.unselectedTabBar)
-                
+            VStack(alignment: .center) {
+                FeedbackView(sessionToShow: sessionToShow!, feedbackToGive: feedbackToGive)
                 // PICKER
                 HStack{
                     Picker("", selection: $statToShow){
@@ -68,36 +42,7 @@ struct LastSessionView: View {
                 .padding(.vertical, 10)
                 
                 // CHART + STATS
-                HStack{
-                    if sessionToShow == nil {
-                        Chart{
-                            AreaMark (x: .value("Time", Date()),
-                                      y: .value("BPM", 40))
-                            .foregroundStyle(Color.clear)
-                            AreaMark (x: .value("Time", Date()),
-                                      y: .value("BPM", 140))
-                        }
-                        .chartYAxis {
-                            AxisMarks(position: .leading) { _ in
-                                AxisValueLabel()
-                            }
-                        }
-                        .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
-                        .padding(.vertical)
-                        .overlay {
-                            Text("No data yet!").bold()
-                        }
-                    }
-                    else {
-                        if(statToShow == 1){
-                            SpeedGraphView(session: sessionToShow!)
-                        }else{
-                            BpmGraphView(session: sessionToShow!)
-                        }
-                    }
-                    Spacer()
-                    
-                }
+                AllGraphsView(sessionToShow: sessionToShow!)
                 
                 HStack{
                     VStack (alignment: .leading){
@@ -120,15 +65,13 @@ struct LastSessionView: View {
                 
             }
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
-            .task{
-                feedbackToGive = feedbackToGive.feedbackToShaker(session: sessionToShow!)
-            }
+            
         }
         .preferredColorScheme(.dark)
     }
+    
+    
 }
-
-
 
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
