@@ -56,7 +56,7 @@
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "**Promedio "
+            "value" : "**Promedio velocidad:** %@ m/s²"
           }
         },
         "fr" : {
@@ -73,35 +73,24 @@
         }
       }
     },
-    "**Energy:** %lld" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Energie :** %lld"
-          }
-        }
-      }
-    },
-    "**KCALs:** %lld" : {
+    "**Energy:** %lld kcal" : {
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "**KCALs**%11d"
+            "value" : "**Energía:** %lld kcal"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "**Energie :** %lld kcal"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "**KCAL:** %lld"
+            "value" : "**Energia:** %lld kcal"
           }
         }
       }
@@ -111,7 +100,7 @@
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "**Tiempo**"
+            "value" : "**Tiempo:**"
           }
         },
         "fr" : {
@@ -741,6 +730,12 @@
             "state" : "translated",
             "value" : "Bonjour nouveau venu, démarre une session à partir de l'application sur la montre pour collecter des données !"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benvenuto! Avvia una sessione dalla app del Watch per raccogliere dati!"
+          }
         }
       }
     },
@@ -889,6 +884,12 @@
             "state" : "translated",
             "value" : "On dirait que nous avons un marathonien ici !"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbiamo un maratoneta!"
+          }
         }
       }
     },
@@ -932,6 +933,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apprends à maintenir ta bombe de peinture en parfait état."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scopri come mantenere la tua lattina sempre in perfetta forma"
           }
         }
       }
