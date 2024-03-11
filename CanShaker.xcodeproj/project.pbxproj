@@ -470,6 +470,7 @@
 				"es-419",
 				"fa-IR",
 				fr,
+				de,
 			);
 			mainGroup = 9D7187F02B7E419A002C02B0;
 			productRefGroup = 9D7187FA2B7E419A002C02B0 /* Products */;

@@ -97,6 +97,12 @@
     },
     "**Time:** " : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Dauer**"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -213,6 +219,12 @@
     },
     "Acceleration" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschleunigung"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -235,6 +247,12 @@
     },
     "Achievements" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meilensteine"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +275,12 @@
     },
     "Activity" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktivität"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -285,6 +309,12 @@
     },
     "Advice" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipps"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -313,6 +343,12 @@
     },
     "All achievements" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle Meilensteine"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -341,6 +377,12 @@
     },
     "Are you sure? Too many sessions can cause serious health issues!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bist du sicher? Zu viele Sitzungen können deine Gesundheit ernsthaft beeinträchtigen."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -369,6 +411,12 @@
     },
     "Authenticate" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Identitätscheck"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -397,6 +445,12 @@
     },
     "BPM" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -425,6 +479,12 @@
     },
     "Calm Heartbeat" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entspannter Puls"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -453,6 +513,12 @@
     },
     "Clean hands" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hände gewaschen?"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -481,6 +547,12 @@
     },
     "Dashboard" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übersicht"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -509,6 +581,12 @@
     },
     "Date: %@" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum: %@"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -531,6 +609,12 @@
     },
     "Do it anyway" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ja, trotzdem."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -553,6 +637,12 @@
     },
     "Enhance pleasure and reduce friction-related discomfort by using natural lubricants." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Natürliche Gleitmittel können unangenehme Reibung verhindern und zu mehr Vergnügen führen."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -581,6 +671,12 @@
     },
     "Fast as the Wind" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blitzschnell"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -609,6 +705,12 @@
     },
     "Find a quiet, private area where you won't be disturbed or interrupted. Nobody likes doing graffiti when cops are around. Interruptions can cause instability during your experience and may lead to unpleasent discoveries" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Such dir einen ruhigen Ort mit Privatsphäre, an dem dich niemand stört oder unterbricht. Graffiti wird nicht besser, wenn du dich ständig nach den Cops umschaust. Unterbrechungen können zu wackligen Ergebnissen oder unangenehmen Entdeckungen führen."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -637,6 +739,12 @@
     },
     "Go back" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -659,6 +767,12 @@
     },
     "Heartbeats, Calories, Speed!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puls, Kalorien, Geschwindigkeit!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -681,6 +795,12 @@
     },
     "Hello World" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hallo Welt"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -703,6 +823,12 @@
     },
     "Heroic Shaker" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schüttelheld"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -725,6 +851,12 @@
     },
     "Hey there newcomer, start a session from the watch app to gain data!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hallo Neuling! Starte eine Sitzung mit deiner Watch App, um ein paar Daten zu sammeln!"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -741,6 +873,12 @@
     },
     "History" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frühere Sitzungen"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -763,6 +901,12 @@
     },
     "Hurting yourself" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu dir nicht weh"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -785,6 +929,12 @@
     },
     "Hygiene" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hygiene"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -807,6 +957,12 @@
     },
     "I'm done" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fertig"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -829,6 +985,12 @@
     },
     "If you can’t complete a work task because you can’t stop thinking about shaking your can, that’s when it becomes an issue. If you’re consistently watching graffiti material at work or are you’re late to a meeting because you were shaking it in the bathroom, then you might have to consult an expert. This is the same if you can’t stick with plans made with friends." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn du anfängst, deine Arbeit zu vernachlässigen, weil du an nichts anderes mehr denken kannst als deine Spraydose zu schütteln, könnte das ein Anzeichen dafür sein, dass du etwas tun solltest. Bitte denk darüber nach, mit einem Profi zu sprechen, wenn du zum Beispiel bemerkst, dass du dir während der Arbeitszeit ständig neues Graffiti-Zubehör im Internet anschaust oder zu spät zu Terminen kommst weil du noch eine Session auf Toilette eingelegt hast. Das selbe gilt natürlich, wenn du anfängst, Verabredungen mit deinen Freunden abzusagen."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -851,6 +1013,12 @@
     },
     "If you start feeling hurt or you feel your can is dry, it is a great sign that you should stop painting." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn du Schmerzen hast oder bemerkst, dass deine Sprühdose trocken wird, ist das ein gutes Zeichen dafür, dass du für heute genug gesprüht hast."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -873,6 +1041,12 @@
     },
     "It looks like we have a marathon runner here!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sieht aus als wärst du ein Marathon-Läufer!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -895,6 +1069,12 @@
     },
     "Last session" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Letzte Sitzung"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -923,6 +1103,12 @@
     },
     "Learn how to keep your can always in top shape" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "So bleibt deine Sprühdose in Topform"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -945,6 +1131,12 @@
     },
     "Like any utensil, clean it after usage, gently wash the shaking area with warm water and a mild, unscented soap to remove any remaining lubricant or spray. Be sure to rinse thoroughly and pat dry with a clean towel. Keeping the shaking area clean helps prevent the buildup of bacteria and reduces the risk of skin irritation or infection." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach der Benutzung solltest du deine Sprühdose reinigen, wie jedes andere Werkzeug auch. Reinige den gesamten Arbeitsplatz mit warmem Wasser und einer milden, unparfümierten Seife um alle Reste von Gleitmittel und Farbe loszuwerden. Mit ordentlich klarem Wasser nachspülen und mit einem sauberen Handtuch trocken tupfen. Deinen Arbeitsbereich sauber zu halten verhindert größere Ansammlungen von Bakterien und hilft, Hautirritationen oder Infektionen zu vermeiden."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -967,6 +1159,12 @@
     },
     "Lube up your can for comfort" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schmier deine Sprühdose für angenehmeres arbeiten"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -989,6 +1187,12 @@
     },
     "Master of Energy" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "perfekte Balance"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1017,6 +1221,12 @@
     },
     "Master of Motion" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewegungskünstler"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1045,6 +1255,12 @@
     },
     "Methods" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Methoden"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1073,6 +1289,12 @@
     },
     "Near accomplishment" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fast da!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1101,6 +1323,12 @@
     },
     "Never Give Up!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nicht aufgeben!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1129,6 +1357,12 @@
     },
     "New achievement!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neuer Meilenstein!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1157,6 +1391,12 @@
     },
     "No data yet!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Daten!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1185,6 +1425,12 @@
     },
     "No Moment of Pause" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Pause"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1213,6 +1459,12 @@
     },
     "No sessions yet!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Sitzungen bisher!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1235,6 +1487,12 @@
     },
     "Persistence" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausdauer"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1257,6 +1515,12 @@
     },
     "Post shake hygiene" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hygiene für danach"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1279,6 +1543,12 @@
     },
     "Practice holding back when nearing climax of your inspiration, then resume stimulation. Repeating this pattern enhances artwork output intensity and duration." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versuche dich in regelmäßiger Zurückhaltung, kurz bevor du den Höhepunkt deiner Inspiration erreichst. Lege eine kurze Pause ein und mach weiter. Diese Übung intensiviert die Menge und Intensität deines Farbausstoßes."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
