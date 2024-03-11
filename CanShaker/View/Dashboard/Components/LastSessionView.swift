@@ -114,10 +114,9 @@ struct LastSessionView: View {
                 .font(.subheadline)
                 Spacer()
                 
-                
-                
             }
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
+            
         }
         .preferredColorScheme(.dark)
     }

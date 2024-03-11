@@ -88,7 +88,7 @@ struct LastStatsView: View {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Session.self, configurations: config)
    
-    let preview = Session(date: Date(), accelData: [:], duration: 10.0, heartRateData: [0.0:60.0,1.0:70.0,2.0:80.0], calories: 65)
+    let _ = Session(date: Date(), accelData: [:], duration: 10.0, heartRateData: [0.0:60.0,1.0:70.0,2.0:80.0], calories: 65)
     return LastStatsView()
         .modelContainer(container)
 }
