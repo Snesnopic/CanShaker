@@ -11,11 +11,9 @@ import CoreMotion
 import SwiftData
 struct LastSessionView: View {
     @State private var statToShow = 0
-    @State var feedbackToGive: Feedback
     var sessionToShow:Session?
     
     init(sessionToShow: Session?) {
-        self.feedbackToGive = Feedback(sentence: "ciao", type: .compliment, category: .accel, condition: .high, imageName: "bolt.fill")
         self.sessionToShow = sessionToShow
         UISegmentedControl.appearance().selectedSegmentTintColor = .unselectedTabBar
     }
@@ -36,11 +34,11 @@ struct LastSessionView: View {
                             .multilineTextAlignment(.leading)
                             .fontWeight(.semibold)
                     } else {
-                        Image(systemName: feedbackToGive.imageName)
+                        Image(systemName: Feedback(session: sessionToShow!).imageName)
                             .resizable()
                             .scaledToFit()
                             .responsiveFrame(widthPercentage: 4)
-                        Text(feedbackToGive.sentence)
+                        Text(Feedback(session: sessionToShow!).sentence)
                             .font(.title3)
                             .multilineTextAlignment(.leading)
                             .fontWeight(.semibold)
@@ -120,9 +118,6 @@ struct LastSessionView: View {
                 
             }
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
-            .task{
-                feedbackToGive = feedbackToGive.feedbackToShaker(session: sessionToShow!)
-            }
         }
         .preferredColorScheme(.dark)
     }
