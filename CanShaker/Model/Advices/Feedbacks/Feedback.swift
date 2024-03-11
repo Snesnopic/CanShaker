@@ -15,6 +15,7 @@ class Feedback: Identifiable {
     let category: feedbackCategory
     let condition: condition
     let imageName: String
+    var associatedSession: Session? = nil
     
     init(sentence: String, type: feedbackType, category: feedbackCategory, condition: condition, imageName: String) {
         self.sentence = sentence
@@ -23,61 +24,74 @@ class Feedback: Identifiable {
         self.condition = condition
         self.imageName = imageName
     }
-    
-    func filterFeedback(byType type: feedbackType, byCategory category: feedbackCategory, byCondition condition: condition) -> Feedback? {
-        let filteredSentences = Feedback.list.filter { feedback in
-            return feedback.type == type && feedback.category == category && feedback.condition == condition
-        }
-        return filteredSentences.randomElement()
+    private init(_ feedBack:Feedback) {
+        self.sentence = feedBack.sentence
+        self.type = feedBack.type
+        self.category = feedBack.category
+        self.condition = feedBack.condition
+        self.imageName = feedBack.imageName
     }
-    
-    func feedbackToShaker(session: Session) -> Feedback {
-        
+    init(session: Session) {
         let duration = session.duration
         let calories = Int(session.calories)
         let heartRate = session.getAverage(dataset: session.heartRateData.values)
         let accel = session.getAverage(dataset: session.accelData.values)
-        
+        var feedbackToCreate:Feedback?
         if duration > 180.0 {
             if calories > 90 {
                 if heartRate > 120 {
                     if accel > 3.5 {
-                        return filterFeedback(byType: .compliment, byCategory: .heartBeat, byCondition: .high)!
+                        feedbackToCreate = Feedback.filterFeedback(byType: .compliment, byCategory: .heartBeat, byCondition: .high)
                     } else if accel <= 2.5 {
-                        return filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)!
+                        feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)
                     }
                 } else if heartRate <= 110 {
-                    return filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)!
+                    feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)
                 }
             } else if calories <= 80 {
-                return filterFeedback(byType: .insult, byCategory: .calories, byCondition: .low)!
+                feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .calories, byCondition: .low)
             }
         } else if duration <= 60.0 {
-            return filterFeedback(byType: .insult, byCategory: .speed, byCondition: .high)!
+            feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .speed, byCondition: .high)
         }
-        return filterFeedback(byType: .neutral, byCategory: .random, byCondition: .random)!
+        else {
+            feedbackToCreate = Feedback.filterFeedback(byType: .neutral, byCategory: .random, byCondition: .random)
+        }
+        self.sentence = feedbackToCreate!.sentence
+        self.type = feedbackToCreate!.type
+        self.category = feedbackToCreate!.category
+        self.condition = feedbackToCreate!.condition
+        self.imageName = feedbackToCreate!.imageName
+        self.associatedSession = session
     }
+    
+    static func filterFeedback(byType type: feedbackType, byCategory category: feedbackCategory, byCondition condition: condition) -> Feedback {
+        let filteredSentences = Feedback.list.filter { feedback in
+            return feedback.type == type && feedback.category == category && feedback.condition == condition
+        }
+        return filteredSentences.randomElement()!
+    }
+    
+    
+    enum feedbackType {
+        case insult
+        case compliment
+        case neutral
+    }
+    
+    enum feedbackCategory {
+        case speed
+        case heartBeat
+        case calories
+        case accel
+        case random
+    }
+    
+    enum condition {
+        case low
+        case high
+        case random
+    }
+    
+    
 }
-
-
-enum feedbackType {
-    case insult
-    case compliment
-    case neutral
-}
-
-enum feedbackCategory {
-    case speed
-    case heartBeat
-    case calories
-    case accel
-    case random
-}
-
-enum condition {
-    case low
-    case high
-    case random
-}
-
-
