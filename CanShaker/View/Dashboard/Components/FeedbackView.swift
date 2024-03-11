@@ -40,14 +40,7 @@ struct FeedbackView: View {
             .fontWeight(.semibold)
         }
         .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
-        .task{
-            
-            let accelD:[TimeInterval:Double] = [Double(0)*0.0: 0]
-            let heartRate:[TimeInterval:Double] = [Double(0)*0.0: 0]
-            let session = Session(date: Date(), accelData: accelD, duration: 0, heartRateData: heartRate, calories: 0)
-            
-            feedbackToGive = feedbackToGive.feedbackToShaker(session: sessionToShow ?? session)
-        }
+    
         
         Line()
             .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
