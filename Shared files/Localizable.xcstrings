@@ -48,6 +48,12 @@
             "state" : "translated",
             "value" : "**BPM medi:** %@"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ort. BPM"
+          }
         }
       }
     },
@@ -70,6 +76,12 @@
             "state" : "translated",
             "value" : "**Velocità media:** %@"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ort. Hız"
+          }
         }
       }
     },
@@ -91,6 +103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "**Energia:** %lld kcal"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enerji"
           }
         }
       }
@@ -119,6 +137,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "**Tempo:**"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Süre"
           }
         }
       }
@@ -242,6 +266,12 @@
             "state" : "translated",
             "value" : "Accelerazione"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İvme"
+          }
         }
       }
     },
@@ -269,6 +299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obiettivi"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Başarılar"
           }
         }
       }
@@ -304,6 +340,12 @@
             "state" : "translated",
             "value" : "Attività"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktivite"
+          }
         }
       }
     },
@@ -337,6 +379,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Consigli"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öneri"
           }
         }
       }
@@ -372,6 +420,12 @@
             "state" : "translated",
             "value" : "Tutti gli obiettivi"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tüm başarılar"
+          }
         }
       }
     },
@@ -405,6 +459,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sei sicuro? Troppe sessioni possono causare problemi di salute!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Emin misiniz? Çok fazla seans ciddi sağlık sorunlarına neden olabilir!"
           }
         }
       }
@@ -440,6 +500,12 @@
             "state" : "translated",
             "value" : "Autenticazione"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kimlik Doğrulama"
+          }
         }
       }
     },
@@ -470,6 +536,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -508,6 +580,12 @@
             "state" : "translated",
             "value" : "Battito Calmo"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durağan Kalp Atışı"
+          }
         }
       }
     },
@@ -541,6 +619,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pulisciti le mani"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temiz Eller"
           }
         }
       }
@@ -576,6 +660,12 @@
             "state" : "translated",
             "value" : "Dashboard"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pano"
+          }
         }
       }
     },
@@ -604,6 +694,12 @@
             "state" : "translated",
             "value" : "Data: %@"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarih"
+          }
         }
       }
     },
@@ -631,6 +727,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fallo lo stesso"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yine de yap"
           }
         }
       }
@@ -666,6 +768,12 @@
             "state" : "translated",
             "value" : "Migliora il piacere e riduci il disagio legato all'attrito utilizzando lubrificanti naturali."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doğal kayganlaştırıcılar kullanarak zevki artırın ve sürtünmeye bağlı rahatsızlığı azaltın."
+          }
         }
       }
     },
@@ -699,6 +807,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Veloce come il Vento"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rüzgar kadar hızlı"
           }
         }
       }
@@ -734,6 +848,12 @@
             "state" : "translated",
             "value" : "Trova un'area tranquilla e privata dove non sarai disturbato o interrotto. A nessuno piace fare graffiti quando ci sono i poliziotti. Le interruzioni possono causare instabilità durante la tua esperienza e portare a scoperte spiacevoli"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rahatsız edilmeyeceğiniz sessiz, özel bir alan bulun. Polisler etraftayken kimse grafiti yapmaktan hoşlanmaz. Bölünmeler deneyiminiz sırasında istikrarsızlığa neden olabilir ve hoş olmayan keşiflere yol açabilir."
+          }
         }
       }
     },
@@ -761,6 +881,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Torna indietro"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geri dön"
           }
         }
       }
@@ -790,6 +916,12 @@
             "state" : "translated",
             "value" : "Battiti, Calorie, Velocità!"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalp Atışı, Kalori, Hız!"
+          }
         }
       }
     },
@@ -817,6 +949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hello World"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merhaba Dünya"
           }
         }
       }
@@ -846,6 +984,12 @@
             "state" : "translated",
             "value" : "Shaker Eroico"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kahraman Çalkalayıcı"
+          }
         }
       }
     },
@@ -867,6 +1011,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Benvenuto! Avvia una sessione dalla app del Watch per raccogliere dati!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hey yeni gelen, veri elde etmek için saat uygulamasından bir oturum başlatın!"
           }
         }
       }
@@ -896,6 +1046,12 @@
             "state" : "translated",
             "value" : "Cronologia"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geçmiş"
+          }
         }
       }
     },
@@ -923,6 +1079,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Farti male"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kendine zarar verme"
           }
         }
       }
@@ -952,6 +1114,12 @@
             "state" : "translated",
             "value" : "Igiene"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hijyen"
+          }
         }
       }
     },
@@ -980,6 +1148,12 @@
             "state" : "translated",
             "value" : "Ho finito"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bittim"
+          }
         }
       }
     },
@@ -1007,6 +1181,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se non riesci a completare un'attività lavorativa perché non riesci a smettere di pensare di scuotere la lattina, è allora che diventa un problema. Se guardi costantemente materiale contenente graffiti al lavoro o sei in ritardo a una riunione perché lo stavi scuotendo in bagno, potrebbe essere necessario consultare un esperto. Lo stesso vale se non riesci a rispettare i piani fatti con gli amici."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kutunuzu sallamayı aklınızdan çıkaramadığınız için bir işi tamamlayamıyorsanız, işte o zaman bir sorun haline gelir. İş yerinde sürekli grafiti malzemesi izliyorsanız veya banyoda salladığınız için bir toplantıya geç kalıyorsanız, bir uzmana danışmanız gerekebilir. Arkadaşlarınızla yaptığınız planlara sadık kalamıyorsanız da durum aynıdır."
           }
         }
       }
