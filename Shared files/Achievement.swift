@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import SwiftData
+import GameKit
 
 @Model
 class Achievement: Identifiable{
@@ -55,6 +56,43 @@ class Achievement: Identifiable{
             }
         }
     }
+    
+    //MARK: if anyone wants to implement the game center, know that we have to make the appstore connection from the user authentication, meaning that we have to create a sort of 'sign in with apple ID' or stuff like that. I'll leave the code if anyone is bold enough to do it, because im not going to soz
+    
+//    func reportAchievementProgress() {
+//        if GKLocalPlayer.local.isAuthenticated {
+//            let achievement = GKAchievement(identifier: "your_achievement_identifier")
+//            achievement.percentComplete = Double(completion) // progress
+//
+//            GKAchievement.report([achievement]) { error in
+//                let reportResult = (error != nil) ? "Failed to report achievement: \(error!)" : "Achievement reported successfully"
+//                print(reportResult)
+//
+//            }
+//        }
+//    }
+//    
+//    // Sync achievement status with Game Center
+//    static func syncAchievementsWithGameCenter() {
+//        if GKLocalPlayer.local.isAuthenticated {
+//            GKAchievement.loadAchievements { achievements, error in
+//                if let error = error {
+//                    print("Failed to load achievements: \(error)")
+//                    return
+//                }
+//                
+//                guard let achievements = achievements else { return }
+//                
+//                // Update local achievements based on Game Center data
+//                for _ in achievements {
+//                    // update status based on achievement.identifier
+//                    // if achievement.identifier == "your_achievement_identifier" {
+//                    //     // update
+//                    // }
+//                }
+//            }
+//        }
+//    }
 }
 
 

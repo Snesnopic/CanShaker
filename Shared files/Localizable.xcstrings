@@ -95,6 +95,9 @@
         }
       }
     },
+    "**KCALs:** %lld" : {
+
+    },
     "**Time:** " : {
       "localizations" : {
         "es-419" : {
@@ -1300,6 +1303,7 @@
       }
     },
     "Preview error" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
