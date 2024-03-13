@@ -1751,6 +1751,12 @@
     },
     "Preview error" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fehler in der Vorschau"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1773,6 +1779,12 @@
     },
     "Progress: %lld%%" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progress: %lld%%"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1795,6 +1807,12 @@
     },
     "Quiet place" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein ungestörter Ort"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1823,6 +1841,12 @@
     },
     "Race Against Time" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Wettlauf mit der Zeit"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1851,6 +1875,12 @@
     },
     "Range" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frequenzbereich"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1879,6 +1909,12 @@
     },
     "Relationships and work-life impact" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einfluss auf Beziehungen und Arbeitsleben"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1901,6 +1937,12 @@
     },
     "Rushing to climax often leads to a brief peak followed by a quick decline. Taking your time to build up gradually results in more intense artwork." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn du versuchst, den Höhepunkt schnell zu erreichen, führt das oft nur zu einem kurzen Höhenflug, dem ein schneller Abstieg folgt. Wenn du dir Zeit nimmst, den Prozess bewusst zu genießen, wird dein Ergebnis mit der Zeit intensiver."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1923,6 +1965,12 @@
     },
     "Safety" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sicherheitsmaßnahmen"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1951,6 +1999,12 @@
     },
     "See all" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle Aktivitäten"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1979,6 +2033,12 @@
     },
     "Session" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sitzung"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2007,6 +2067,12 @@
     },
     "Sessions this week" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sitzungen diese Woche"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2035,6 +2101,12 @@
     },
     "Slow Down" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mach langsam"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2063,6 +2135,12 @@
     },
     "Someone wanted to burn calories in an unorthodox way..." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jemand hat versucht Kalorien in ungewöhnlicher Art und Weise zu verbrennen..."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2079,6 +2157,12 @@
     },
     "Speed" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschwindigkeit"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2107,6 +2191,12 @@
     },
     "Start" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2135,6 +2225,12 @@
     },
     "State of Relaxation" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganz entspannt"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2163,6 +2259,12 @@
     },
     "Steady Rhythm" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausgeglichener Rhytmus"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2191,6 +2293,12 @@
     },
     "There are secret graffiti techniques to explore" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geheime Graffiti Techniken, die du ausprobieren kannst"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2207,6 +2315,12 @@
     },
     "Time" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeit"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2235,6 +2349,12 @@
     },
     "Today" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heute"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2263,6 +2383,12 @@
     },
     "Try Edging" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wandern im Grenzbereich"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2291,6 +2417,12 @@
     },
     "Use Lube" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schmiermittel"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2319,6 +2451,12 @@
     },
     "Using a water-based lubricant during the shaking can help reduce friction and irritation of the can. This is especially important if you're prone to dryness or sensitivity. Avoid using products like lotions, oils, or creams that may contain ingredients that could irritate the delicate skin of your poor can." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein wasserbasiertes Schmiermittel zu benutzen um dein Sprühdose zu schütteln, kann helfen, Reibung zu reduzieren und deine Sprühdose vor Irritationen zu schützen. Vor Allem wenn du zu trockener oder empfindlicher Haut neigst."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2341,6 +2479,12 @@
     },
     "Wash hands before and after: Before engaging in shaking your can, ensure that your hands are clean to minimize the introduction of bacteria or other contaminants to the shaking area. Afterward, wash your hands thoroughly to remove any unwanted spray and reduce the risk of spreading bacteria." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wasch deine Hände vorher und nachher: Bevor du mit der Dosenschüttelei loslegst, gehe sicher dass deine Hände sauber sind. So vermeidest du Bakterien und andere Verunreinigungen in deinem Arbeitsbereich. Wenn du dein Kunstwerk vollendet hast, wasche deine Hände gründlich, um Farbreste zu entfernen und nicht unabsichtlich Bakterien zu verbreiten."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2363,6 +2507,12 @@
     },
     "Wow, your heartbeat is so fast, I bet even Usain Bolt would struggle to keep up with it in a sprint!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wow, dein Herz schlägt so schnell, selbst Usain Bolt hätte Schwierigkeiten mit deiner Geschwindigkeit mit zu halten!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2379,6 +2529,12 @@
     },
     "Yesterday" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestern"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2401,6 +2557,12 @@
     },
     "You burned fewer calories than a sloth doing slow-motion yoga" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast weniger Kalorien verbrannt als ein Faultier beim Zeitlupen-Yoga"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2417,6 +2579,12 @@
     },
     "You have to keep your can safe" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pflege dein Arbeitsmaterial"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2433,6 +2601,12 @@
     },
     "You were so fast that Flash had to change job!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du warst so schnell, Flash musste sich einen neuen Job suchen!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2449,6 +2623,12 @@
     },
     "You've achieved a perfect score on all metrics: heartbeats, burned calories, and speed!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfektes Ergebnis in allen Bereichen: Puls, verbrauchte Kalorien und Geschwindigkeit!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2471,6 +2651,12 @@
     },
     "You've maintained a heartbeat below 100 bpm throughout the entire session!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast deinen Herzschlag die gesamte Sitzung unter 100 BPM gehalten!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2493,6 +2679,12 @@
     },
     "You've maintained a steady average speed for over 30 minutes!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast dein durchschnittliches Tempo für 30 Minuten auf einem ausgeglichenen Niveau gehalten!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2515,6 +2707,12 @@
     },
     "You've reached an average speed of over 15 km/h!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast ein durchnittliches Tempo von über 15 Km/h erreicht!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2537,6 +2735,12 @@
     },
     "You've shaken your can over 1000 times! Keep it up!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast deine Sprühdose mehr als 1000 Mal geschüttelt! Mach weiter so!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2559,6 +2763,12 @@
     },
     "You've used the app for more than 7 consecutive days!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast die App an mehr als 7 Tagen nacheinander benutzt!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2581,6 +2791,12 @@
     },
     "Your post-workout heartbeat is so chill, even a meditation guru would envy your cardio-nap routine!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Herzschlag nach getaner Arbeit ist so ruhig, selbst Meditations-Profis sind neidisch auf deine Cardio-Nickerchen Routine!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
