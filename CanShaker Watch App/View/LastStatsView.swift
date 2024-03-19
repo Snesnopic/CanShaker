@@ -66,15 +66,12 @@ struct LastStatsView: View {
                             }
                             
                         }
-                    }
-                })
-                .chartForegroundStyleScale([
-                    "Heart Rate": Color("heartColor")
-                ])
-                .navigationTitle("Last session")
-                .padding(.trailing)
-                
-                
+                    })
+                    .chartForegroundStyleScale([
+                        "Heart Rate": Color.accentColor
+                    ])
+                    .padding(.trailing)
+                }
             }
             else {
                 Text("No sessions yet!")
