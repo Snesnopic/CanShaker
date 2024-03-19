@@ -42,8 +42,7 @@ struct CanShakerApp: App {
                 }
                 .tag(2)
             }
-            .modelContainer(for: [Session.self,Achievement.self])
         }
-        
+        .modelContainer(for: [Session.self,Achievement.self])
     }
 }

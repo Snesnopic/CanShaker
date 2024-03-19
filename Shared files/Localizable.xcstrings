@@ -3,6 +3,12 @@
   "strings" : {
     "" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -149,6 +155,12 @@
     },
     "/" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -174,6 +186,12 @@
     },
     "%@!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -196,6 +214,12 @@
     },
     "%lld" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -218,6 +242,12 @@
     },
     "%lld-%lld" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld-%2$lld"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -1606,6 +1636,9 @@
         }
       }
     },
+    "No heart data for last session!" : {
+
+    },
     "No Moment of Pause" : {
       "localizations" : {
         "de" : {
@@ -1753,7 +1786,6 @@
       }
     },
     "Preview error" : {
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

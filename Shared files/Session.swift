@@ -34,7 +34,7 @@ class Session: Codable, Identifiable {
         heartRateData = try container.decode([TimeInterval:Double].self, forKey: .heartRateData)
         calories = try container.decode(Double.self, forKey: .calories)
     }
-    var uuid: UUID = UUID()
+    @Attribute(.unique) var uuid: UUID = UUID()
     var date: Date
     var accelData: [TimeInterval:Double]
     var duration: TimeInterval
