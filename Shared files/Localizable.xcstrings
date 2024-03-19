@@ -113,6 +113,9 @@
         }
       }
     },
+    "**KCALs:** %lld" : {
+
+    },
     "**Time:** " : {
       "localizations" : {
         "de" : {
@@ -1750,6 +1753,7 @@
       }
     },
     "Preview error" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import GameKit
 
 struct AchievementsView: View{
     @State var selectedAchievement: Achievement?
