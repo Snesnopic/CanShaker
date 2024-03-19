@@ -61,7 +61,6 @@ struct LastStatsView: View {
                                 }
                                 
                             }
-                            
                         }
                     })
                     .chartForegroundStyleScale([
