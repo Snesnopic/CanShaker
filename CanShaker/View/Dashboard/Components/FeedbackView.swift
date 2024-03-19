@@ -11,7 +11,6 @@ import SwiftData
 struct FeedbackView: View {
     
     @State var sessionToShow: Session?
-    @State var feedbackToGive: Feedback
     var body: some View {
         
         VStack(alignment: .leading){
@@ -26,11 +25,11 @@ struct FeedbackView: View {
                     Text("Hey there newcomer, start a session from the watch app to gain data!")
                     
                 } else {
-                    Image(systemName: feedbackToGive.imageName)
+                    Image(systemName: "\(Feedback(session: sessionToShow!).imageName)")
                         .imageScale(.large)
                         .responsiveFrame(widthPercentage: 10)
                         
-                    Text(feedbackToGive.sentence)
+                    Text("\(Feedback(session: sessionToShow!).sentence)")
                         .offset(x: 5)
                     Spacer()
                 }
@@ -47,8 +46,6 @@ struct FeedbackView: View {
             .frame(height: 1)
             .foregroundStyle(Color.unselectedTabBar)
             .responsiveFrame(widthPercentage: 90, heightPercentage: 1)
-            
-            
     }
 }
 
@@ -68,7 +65,7 @@ struct FeedbackView: View {
     container.mainContext.insert(session)
     
     
-    return FeedbackView(sessionToShow: session, feedbackToGive: Feedback(sentence: "ciaociaociaociaociaociaooo ciaociaociaociaociao ciaociaociaociaociaociao", type: .compliment, category: .accel, condition: .high, imageName: "bolt.fill"))
+    return FeedbackView(sessionToShow: session)
         .modelContainer(container)
 }
 
