@@ -3,6 +3,12 @@
   "strings" : {
     "" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -113,9 +119,6 @@
         }
       }
     },
-    "**KCALs:** %lld" : {
-
-    },
     "**Time:** " : {
       "localizations" : {
         "de" : {
@@ -152,6 +155,12 @@
     },
     "/" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -174,6 +183,12 @@
     },
     "%@!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -196,6 +211,12 @@
     },
     "%lld" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -218,6 +239,12 @@
     },
     "%lld-%lld" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld-%2$lld"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -1753,7 +1780,6 @@
       }
     },
     "Preview error" : {
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
