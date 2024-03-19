@@ -72,8 +72,6 @@ struct LastStatsView: View {
             }
             else {
                 Text("No sessions yet!")
-                    .navigationTitle("Last session")
-                
             }
         }.onAppear {
             if !sessions.isEmpty {
@@ -81,6 +79,7 @@ struct LastStatsView: View {
                 connectivity.send(sessions: sessions)
             }
         }
+        .navigationTitle("Last session")
     }
 }
 
