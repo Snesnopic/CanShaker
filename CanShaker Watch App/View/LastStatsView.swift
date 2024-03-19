@@ -15,8 +15,8 @@ struct LastStatsView: View {
     let connectivity = Connectivity.shared
     let heartGradient = LinearGradient(
         gradient: Gradient (
-            colors: [ Color("heartColor").opacity(0.75),
-                      Color("heartColor")
+            colors: [ Color(.accent).opacity(0.75),
+                      Color(.accent)
                 .opacity(0.25),
                       Color.clear ]
         ),
@@ -55,8 +55,14 @@ struct LastStatsView: View {
                                 Text("\(Int(sessions.last!.heartRateData.values.min()!))-\(Int(sessions.last!.heartRateData.values.max()!))")
                                     .font(.title2)
                                     .foregroundStyle(.white)
-                                Text("BPM")
-                                    .foregroundStyle(Color("heartColor"))
+                                HStack {
+                                    Text("\(Int(sessions.last!.heartRateData.values.min()!))-\(Int(sessions.last!.heartRateData.values.max()!))")
+                                        .font(.title2)
+                                        .foregroundStyle(.white)
+                                    Text("BPM")
+                                        .foregroundStyle(.accent)
+                                }
+                                
                             }
                             
                         }
