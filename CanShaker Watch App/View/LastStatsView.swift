@@ -94,7 +94,9 @@ struct LastStatsView: View {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Session.self, configurations: config)
    
-    let _ = Session(date: Date(), accelData: [:], duration: 10.0, heartRateData: [0.0:60.0,1.0:70.0,2.0:80.0], calories: 65)
+    let session = Session(date: Date(), accelData: [:], duration: 10.0, heartRateData: [0.0:60.0,1.0:70.0,2.0:80.0], calories: 65)
+    container.mainContext.insert(session)
+    
     return LastStatsView()
         .modelContainer(container)
 }
