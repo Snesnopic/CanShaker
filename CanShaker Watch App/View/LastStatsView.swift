@@ -73,7 +73,7 @@ struct LastStatsView: View {
             else {
                 Text("No sessions yet!")
             }
-        }.onAppear {
+        }.task {
             if !sessions.isEmpty {
                 connectivity.sendCount()
                 connectivity.send(sessions: sessions)
