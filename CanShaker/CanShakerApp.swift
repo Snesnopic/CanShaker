@@ -10,10 +10,12 @@ import SwiftData
 
 @main
 struct CanShakerApp: App {
+    @Environment(\.modelContext) private var context
     var connectivity = Connectivity.shared
     @State private var tabBarSelection:Int = 0
     init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor(Color.unselectedTabBar)
+        Connectivity.shared.context = self.context
     }
     var body: some Scene {
         WindowGroup {

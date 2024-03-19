@@ -39,7 +39,6 @@ struct DashboardView: View {
             .preferredColorScheme(.dark)
             .navigationTitle("Dashboard")
             .onAppear {
-                Connectivity.shared.context = self.context
                 Achievement.ensureAchievementsExist(context: context, achievements: achievements)
             }
             .frame(maxWidth: .infinity)
