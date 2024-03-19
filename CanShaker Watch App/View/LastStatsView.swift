@@ -24,36 +24,33 @@ struct LastStatsView: View {
     var body: some View {
         NavigationStack {
             if !sessions.isEmpty {
-                Chart{
-                    ForEach(sessions.last!.heartRateData.keys.sorted(),id: \.self){ time in
-                        
-                        AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                                  y: .value("BPM", (sessions.last!.heartRateData[time]!)))
-                        
-                        .interpolationMethod(.catmullRom)
-                        .foregroundStyle(heartGradient)
-                        
-                    }
-                    
+                if sessions.last!.heartRateData.isEmpty {
+                    Text("No heart data for last session!")
                 }
-                .chartXAxis{
-                    AxisMarks(values: .automatic(desiredCount: 3)) {
-                        AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
+                else {
+                    Chart{
+                        ForEach(sessions.last!.heartRateData.keys.sorted(),id: \.self){ time in
+                            
+                            AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
+                                      y: .value("BPM", (sessions.last!.heartRateData[time]!)))
+                            .interpolationMethod(.catmullRom)
+                            .foregroundStyle(heartGradient)
+                        }
                     }
-                }
-                .chartYAxis {
-                    AxisMarks(position: .trailing) { _ in
-                        AxisValueLabel()
+                    .chartXAxis{
+                        AxisMarks(values: .automatic(desiredCount: 3)) {
+                            AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
+                        }
                     }
-                }
-                .chartLegend(content: {
-                    if !sessions.last!.heartRateData.isEmpty {
-                        VStack (alignment: .leading){
-                            Text("Range")
-                                .foregroundStyle(.white)
-                            HStack {
-                                Text("\(Int(sessions.last!.heartRateData.values.min()!))-\(Int(sessions.last!.heartRateData.values.max()!))")
-                                    .font(.title2)
+                    .chartYAxis {
+                        AxisMarks(position: .trailing) { _ in
+                            AxisValueLabel()
+                        }
+                    }
+                    .chartLegend(content: {
+                        if !sessions.last!.heartRateData.isEmpty {
+                            VStack (alignment: .leading){
+                                Text("Range")
                                     .foregroundStyle(.white)
                                 HStack {
                                     Text("\(Int(sessions.last!.heartRateData.values.min()!))-\(Int(sessions.last!.heartRateData.values.max()!))")
