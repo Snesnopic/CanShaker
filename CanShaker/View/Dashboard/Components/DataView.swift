@@ -21,7 +21,7 @@ struct DataView: View {
             }
             Spacer()
             VStack (alignment: .leading){
-                Text("**KCALs:** \(Int(sessionToShow?.calories ?? 0))")
+                Text("**Energy:** \(Int(sessionToShow?.calories ?? 0)) kcal")
                 Spacer()
                 Text("**Time:** ") + Text(sessionToShow?.duration.doubleToTime() ?? "0s")
             }
