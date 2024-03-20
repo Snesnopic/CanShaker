@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AdviceButtonStyle: View {
-    @State var img: String?
+    @State var img: String? = nil
     @State var category: String
     @State var cDescription: String
     @State var backgroundImg: String
@@ -32,8 +32,11 @@ struct AdviceButtonStyle: View {
             VStack{
                 Spacer()
                 HStack{
-                    Image(systemName: img!)
-                        .font(.title)
+                    //img might not exist in the advice list view
+                    if let img {
+                        Image(systemName: img)
+                            .font(.title)
+                    }
                     Text(category)
                         .bold()
                         .font(.title2)

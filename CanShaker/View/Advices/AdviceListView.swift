@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AdvicesListView: View {
+struct AdviceListView: View {
     @State var advCategory: adviceCategory
     
     var body: some View {
@@ -15,7 +15,7 @@ struct AdvicesListView: View {
             ForEach(Advice.list) { adv in
                 if(adv.category == advCategory){
                     NavigationLink(destination: AdviceDetailView(adv: adv), label: {
-                        AdviceButtonStyle(img: "", category: adv.title, cDescription: String(adv.description.prefix(45) + "..."), backgroundImg: "placeholder")
+                        AdviceButtonStyle(category: adv.title, cDescription: String(adv.description.prefix(45) + "..."), backgroundImg: "placeholder")
                             .foregroundStyle(.white)
                             
                     })
@@ -39,5 +39,5 @@ struct AdvicesListView: View {
 }
 
 #Preview {
-    AdvicesListView(advCategory: .hygiene)
+    AdviceListView(advCategory: .hygiene)
 }
