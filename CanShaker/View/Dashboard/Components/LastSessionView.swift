@@ -27,8 +27,6 @@ struct LastSessionView: View {
             
             VStack(alignment: .center){
                 
-                
-                
                 //Feedback
                 FeedbackView(sessionToShow: sessionToShow)
                 //Graphs
@@ -39,20 +37,17 @@ struct LastSessionView: View {
                 
             }
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
-            
         }
         .preferredColorScheme(.dark)
     }
 }
 
-
-
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Session.self, configurations: config)
     
-    let calories = Double.random(in: (2.0)...(150.0))
-    let duration = Double.random(in: 1...3600)
+    let calories = Double.random(in: (1.0)...(150.0))
+    let duration = Double.random(in: 1...1200)
     var accelD:[TimeInterval:Double] = [:]
     var heartRate:[TimeInterval:Double] = [:]
     for i in 1...10 {

@@ -40,7 +40,6 @@ struct FeedbackView: View {
         }
         .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
     
-        
         Line()
             .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
             .frame(height: 1)

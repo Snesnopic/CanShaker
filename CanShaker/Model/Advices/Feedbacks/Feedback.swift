@@ -42,23 +42,26 @@ class Feedback: Identifiable {
         
         switch (duration, calories, heartRate, accel) {
             case let (d, c, hr, a) where (d > 180.0 && c > 70 && hr > 100 && a > 3.5):
-                feedbackToCreate = Feedback.filterFeedback(byType: .compliment, byCategory: .accel, byCondition: .high)
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .accel, byCondition: .high)
             case let (d, c, hr, a) where (d > 180.0 && c > 70 && hr > 100 && a <= 2):
-                feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .accel, byCondition: .low)
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .accel, byCondition: .low)
             case let (d, c, hr, _) where (d > 180.0 && c > 70 && hr > 100):
-                feedbackToCreate = Feedback.filterFeedback(byType: .compliment, byCategory: .heartBeat, byCondition: .high)
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .heartBeat, byCondition: .high)
             case let (d, c, hr, _) where (d > 180.0 && c > 70 && hr <= 80):
-                feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)
-            case let (d, c, _, _) where (d > 180.0 && c > 50):
-                feedbackToCreate = Feedback.filterFeedback(byType: .compliment, byCategory: .calories, byCondition: .high)
-            case let (d, c, _, _) where (d > 180.0 && c <= 20):
-                feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .calories, byCondition: .low)
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .heartBeat, byCondition: .low)
+            case let (d, c, _, _) where (d > 180.0 && c > 70):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .calories, byCondition: .high)
+            case let (d, c, _, _) where (d > 180.0 && c <= 30):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .calories, byCondition: .low)
             case let (d, _, _, _) where (d > 180.0):
-                feedbackToCreate = Feedback.filterFeedback(byType: .compliment, byCategory: .duration, byCondition: .high)
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .duration, byCondition: .high)
             case let (d, _, _, _) where (d <= 60.0):
-                feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .duration, byCondition: .low)
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .duration, byCondition: .low)
+            case let (d, c, hr, a) where (d == 69.0 || c == 69 || hr == 69 || a == 69):
+            feedbackToCreate = Feedback.filterFeedback(byCategory: .easterEgg, byCondition: .random)
+            
             default:
-                feedbackToCreate = Feedback.filterFeedback(byType: .neutral, byCategory: .random, byCondition: .random)
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .random, byCondition: .random)
             }
         
         self.sentence = feedbackToCreate!.sentence
@@ -69,9 +72,9 @@ class Feedback: Identifiable {
         self.associatedSession = session
     }
     
-    static func filterFeedback(byType type: feedbackType, byCategory category: feedbackCategory, byCondition condition: condition) -> Feedback {
+    static func filterFeedback(byCategory category: feedbackCategory, byCondition condition: condition) -> Feedback {
         let filteredSentences = Feedback.list.filter { feedback in
-            return feedback.type == type && feedback.category == category && feedback.condition == condition
+            return feedback.category == category && feedback.condition == condition
         }
         return filteredSentences.randomElement()!
     }
@@ -89,6 +92,7 @@ class Feedback: Identifiable {
         case calories
         case accel
         case random
+        case easterEgg
     }
     
     enum condition {
