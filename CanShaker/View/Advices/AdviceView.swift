@@ -10,7 +10,6 @@ import SwiftUI
 struct AdviceView: View {
     var body: some View {
         NavigationStack {
-            
             VStack(spacing: 15) {
                 NavigationLink(destination: AdviceListView(advCategory: .hygiene), label: {
                     AdviceButtonStyle(img: "heart.text.square.fill", category: String(localized: "Hygiene"), cDescription: String(localized: "Learn how to keep your can always in top shape"), backgroundImg: "hygiene")
@@ -25,13 +24,12 @@ struct AdviceView: View {
                     AdviceButtonStyle(img: "exclamationmark.triangle.fill", category: String(localized: "Safety"), cDescription: String(localized: "You have to keep your can safe"), backgroundImg: "safety")
                     
                 })
-                Spacer()
+                    
             }
-            .padding()
             .accentColor(.white)
             .navigationTitle(String(localized: "Advice"))
             .preferredColorScheme(.dark)
-            .frame(maxWidth: .infinity)
+            .frame(maxHeight: .infinity)
             .background{
                 Color.bgGray
             }

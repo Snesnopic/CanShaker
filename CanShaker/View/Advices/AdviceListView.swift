@@ -15,18 +15,16 @@ struct AdviceListView: View {
             ForEach(Advice.list) { adv in
                 if(adv.category == advCategory){
                     NavigationLink(destination: AdviceDetailView(adv: adv), label: {
-                        AdviceButtonStyle(category: adv.title, cDescription: String(adv.description.prefix(45) + "..."), backgroundImg: "placeholder")
+                        AdviceButtonStyle(category: adv.title, cDescription: adv.description, backgroundImg: "placeholder")
                             .foregroundStyle(.white)
-                            
+                            .multilineTextAlignment(.leading)
                     })
-                    .padding(.top)
                 }
-                Spacer()
             }
             
+            .padding()
             .preferredColorScheme(.dark)
             .navigationTitle(advCategory.str)
-            .frame(maxWidth: .infinity)
             .background{
                 Color.bgGray
             }

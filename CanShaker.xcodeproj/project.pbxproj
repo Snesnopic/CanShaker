@@ -234,8 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				9D7411A32B7F51BE00869BF8 /* AdviceView.swift */,
-				9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */,
 				9DA6A84C2B8C8B2C009737D7 /* AdviceListView.swift */,
+				9DA6A84B2B8C8B2C009737D7 /* AdviceDetailView.swift */,
 				6BF3EEC22B8B605800B52687 /* Components */,
 			);
 			path = Advices;
