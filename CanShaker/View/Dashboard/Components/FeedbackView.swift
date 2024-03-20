@@ -25,10 +25,17 @@ struct FeedbackView: View {
                     Text("Hey there newcomer, start a session from the watch app to gain data!")
                     
                 } else {
-                    Image(systemName: "\(Feedback(session: sessionToShow!).imageName)")
-                        .imageScale(.large)
-                        .responsiveFrame(widthPercentage: 10)
-                        
+                    if  Feedback(session: sessionToShow!).imageName == "♋️" {
+                        Text("♋️")
+                            .font(.title)
+                            .scaleEffect(1.2)
+                            .padding(.horizontal, 5)
+                    } else {
+                        Image(systemName: "\(Feedback(session: sessionToShow!).imageName)")
+                            .imageScale(.large)
+                            .responsiveFrame(widthPercentage: 10)
+                    }
+                    
                     Text("\(Feedback(session: sessionToShow!).sentence)")
                         .offset(x: 5)
                     Spacer()
@@ -39,7 +46,7 @@ struct FeedbackView: View {
             .fontWeight(.semibold)
         }
         .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
-    
+        
         Line()
             .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
             .frame(height: 1)
@@ -60,7 +67,7 @@ struct FeedbackView: View {
         accelD[Double(i)*0.3] = Double.random(in: 1...4)
         heartRate[Double(i)*0.3] = Double.random(in: 60...150)
     }
-    let session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
+    let session = Session(date: Date(), accelData: accelD, duration: 69, heartRateData: heartRate, calories: calories)
     container.mainContext.insert(session)
     
     

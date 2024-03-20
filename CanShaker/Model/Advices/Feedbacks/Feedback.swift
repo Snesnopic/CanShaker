@@ -41,6 +41,8 @@ class Feedback: Identifiable {
         //MARK: Testing the real life possible values for condition is heavily required. Plus I think we have to reconsider the "compliment" or "insult" given that for how we created them, they go together with the condition. This means we should reconsider having to approach it with a compliment or an insult independently from the condition. The perfect idea would be having the feedback regarding the performance (with the condition being high or low) and select one random sentence without filtering it for compliments or insults in my honest opinion
         
         switch (duration, calories, heartRate, accel) {
+            case let (d, c, hr, _) where (d == 69.0 || c == 69 || hr == 69):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .easterEgg, byCondition: .random)
             case let (d, c, hr, a) where (d > 180.0 && c > 70 && hr > 100 && a > 3.5):
                 feedbackToCreate = Feedback.filterFeedback(byCategory: .accel, byCondition: .high)
             case let (d, c, hr, a) where (d > 180.0 && c > 70 && hr > 100 && a <= 2):
@@ -57,8 +59,6 @@ class Feedback: Identifiable {
                 feedbackToCreate = Feedback.filterFeedback(byCategory: .duration, byCondition: .high)
             case let (d, _, _, _) where (d <= 60.0):
                 feedbackToCreate = Feedback.filterFeedback(byCategory: .duration, byCondition: .low)
-            case let (d, c, hr, a) where (d == 69.0 || c == 69 || hr == 69 || a == 69):
-            feedbackToCreate = Feedback.filterFeedback(byCategory: .easterEgg, byCondition: .random)
             
             default:
                 feedbackToCreate = Feedback.filterFeedback(byCategory: .random, byCondition: .random)

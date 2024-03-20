@@ -53,7 +53,7 @@ extension Feedback {
         Feedback(sentence: "There are clouds above your head, everybody knows your deed.", type: .neutral, category: .random, condition: .random, imageName: "sunset.fill"),
         
         //easter eggs
-        Feedback(sentence: "69? Nice", type: .neutral, category: .easterEgg, condition: .random, imageName: "sunset.fill")
+        Feedback(sentence: "69? Nice", type: .neutral, category: .easterEgg, condition: .random, imageName: "♋️")
         
     ]
 }
