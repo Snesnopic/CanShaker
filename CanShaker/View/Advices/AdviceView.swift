@@ -27,7 +27,7 @@ struct AdviceView: View {
                 })
                 Spacer()
             }
-            .padding(.top, 20)
+            .padding()
             .accentColor(.white)
             .navigationTitle(String(localized: "Advice"))
             .preferredColorScheme(.dark)
