@@ -12,27 +12,18 @@ struct AdvicesListView: View {
     
     var body: some View {
         NavigationStack{
-           
-                //TODO: filter list based on advCategory
-                List{
-                    ForEach(Advice.list){ adv in
-                        if(adv.category == advCategory){
-                            NavigationLink(destination: AdviceDetailView(adv: adv), label: {
-                                VStack{
-                                    Text(adv.title)
-                                        .font(.title2)
-                                        .bold() +
-                                    Text("\n" + adv.description)
-                                }
-                                .responsiveFrame(heightPercentage: 10)
-                                
-                            })
-                            .listRowBackground(Color.clear)
-                        }
-                    }
+            ForEach(Advice.list) { adv in
+                if(adv.category == advCategory){
+                    NavigationLink(destination: AdviceDetailView(adv: adv), label: {
+                        AdviceButtonStyle(img: "", category: adv.title, cDescription: String(adv.description.prefix(45) + "..."), backgroundImg: "placeholder")
+                            .foregroundStyle(.white)
+                            
+                    })
+                    .padding(.top)
                 }
-                .listStyle(.plain)
-                
+                Spacer()
+            }
+            
             .preferredColorScheme(.dark)
             .navigationTitle(advCategory.str)
             .frame(maxWidth: .infinity)

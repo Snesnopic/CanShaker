@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AdviceButtonStyle: View {
-    @State var img: String
+    @State var img: String?
     @State var category: String
     @State var cDescription: String
     @State var backgroundImg: String
@@ -32,7 +32,7 @@ struct AdviceButtonStyle: View {
             VStack{
                 Spacer()
                 HStack{
-                    Image(systemName: img)
+                    Image(systemName: img!)
                         .font(.title)
                     Text(category)
                         .bold()
@@ -43,7 +43,7 @@ struct AdviceButtonStyle: View {
                 
                 ZStack(alignment: .leading) {
                     
-                    UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
+                    UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 15, bottomTrailing: 15, topTrailing: 0))
                         .responsiveFrame(widthPercentage: 95, heightPercentage: 6)
                         .foregroundColor(Color.boxDetail)
                         .shadow(radius: 20)
