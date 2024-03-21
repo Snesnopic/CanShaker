@@ -182,7 +182,14 @@
       }
     },
     "%@" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%@!" : {
       "localizations" : {
@@ -1637,7 +1644,14 @@
       }
     },
     "No heart data for last session!" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun dato del cuore per l'ultima sessione!"
+          }
+        }
+      }
     },
     "No Moment of Pause" : {
       "localizations" : {
@@ -2189,6 +2203,12 @@
             "state" : "translated",
             "value" : "Quelqu'un voulait brûler des calories de manière non conventionnelle..."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qualcuno ha voluto bruciare calore in modo poco ortodosso..."
+          }
         }
       }
     },
@@ -2346,6 +2366,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voici quelques techniques secrètes de graffiti à explorer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ci sono tecniche per graffiti segrete da esplorare"
           }
         }
       }
@@ -2561,6 +2587,12 @@
             "state" : "translated",
             "value" : "Wow, ton rythme cardiaque est tellement rapide, je parie même qu'Usain Bolt aurait du mal à le suivre dans une course !"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tuo battito è così rapido che anche Usain Bolt farebbe fatica a mantenere il passo in una corsa!"
+          }
         }
       }
     },
@@ -2611,6 +2643,12 @@
             "state" : "translated",
             "value" : "Tu as brûlé moins de calories qu'un paresseux faisant du yoga au ralenti."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai bruciato meno calorie di un pigro che fa yoga a rallentatore"
+          }
         }
       }
     },
@@ -2633,6 +2671,12 @@
             "state" : "translated",
             "value" : "Tu dois garder ta bombe en sécurité"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devi mantenere la tua lattina al sicuro"
+          }
         }
       }
     },
@@ -2654,6 +2698,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tu étais tellement rapide que Flash a dû changer de métier !"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sei stato così veloce che Flash ha dovuto cambiare lavoro!"
           }
         }
       }
@@ -2827,27 +2877,11 @@
       }
     },
     "Your heartbeat is so chill, even a meditation guru would envy your cardio-nap routine!" : {
-
-    },
-    "Your post-workout heartbeat is so chill, even a meditation guru would envy your cardio-nap routine!" : {
-      "extractionState" : "stale",
       "localizations" : {
-        "de" : {
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dein Herzschlag nach getaner Arbeit ist so ruhig, selbst Meditations-Profis sind neidisch auf deine Cardio-Nickerchen Routine!"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¡Tus latidos del corazón después del entrenamiento son tan tranquilos que incluso un gurú de la meditación envidiaría tu rutina de siesta cardiovascular!"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ton rythme cardiaque après l'entraînement est tellement calme que même un gourou de la méditation envierait ta routine de cardio-dodo !"
+            "value" : "Il tuo battito è calmissimo, persino un guru della meditazione ti invidierebbe!"
           }
         }
       }
