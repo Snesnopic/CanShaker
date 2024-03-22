@@ -281,6 +281,9 @@
         }
       }
     },
+    "♋️" : {
+
+    },
     "Acceleration" : {
       "localizations" : {
         "de" : {
@@ -1715,6 +1718,9 @@
         }
       }
     },
+    "Pause" : {
+
+    },
     "Persistence" : {
       "localizations" : {
         "de" : {
@@ -1985,6 +1991,9 @@
           }
         }
       }
+    },
+    "Resume" : {
+
     },
     "Rushing to climax often leads to a brief peak followed by a quick decline. Taking your time to build up gradually results in more intense artwork." : {
       "localizations" : {
@@ -2625,6 +2634,7 @@
       }
     },
     "You burned fewer calories than a sloth doing slow-motion yoga" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2651,6 +2661,9 @@
           }
         }
       }
+    },
+    "You burned fewer calories than a sloth doing slow-motion yoga." : {
+
     },
     "You have to keep your can safe" : {
       "localizations" : {

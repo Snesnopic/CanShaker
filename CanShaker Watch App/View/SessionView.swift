@@ -52,17 +52,30 @@ struct SessionView: View {
             }
             else {
                 TabView(selection: $secondTabView){
-                    Button(role: .destructive,
-                           action: {
-                        print("Done!")
-                        motionManager.stopQueuedUpdates()
-                        modelContext.insert(motionManager.session!)
-                        isShaking = false
-                        self.firstTabView = 1
-                    }, label: {
-                        Text("I'm done")
-                        
-                    })
+                    VStack{
+                        Button(role: .destructive,
+                               action: {
+                            print("Done!")
+                            motionManager.stopQueuedUpdates()
+                            modelContext.insert(motionManager.session!)
+                            isShaking = false
+                            self.firstTabView = 1
+                        }, label: {
+                            Text("I'm done")
+                            
+                        })
+                                                
+//                        Button(role: .none,
+//                               action: {
+//                            print("Done!")
+//                            motionManager.stopQueuedUpdates()
+//                            isShaking == false ? motionManager.stopQueuedUpdates() : motionManager.startQueuedUpdates()
+//                            self.firstTabView = 1
+//                        }, label: {
+//                            Text(isShaking == false ? "Resume" : "Pause")
+//                            
+//                        })
+                    }
                     .tag(1)
                     
                     Image("SprayCan")
@@ -89,5 +102,5 @@ struct SessionView: View {
 }
 
 #Preview {
-    SessionView(firstTabView: .constant(0),isShaking: .constant(false))
+    SessionView(firstTabView: .constant(0),isShaking: .constant(true))
 }
