@@ -74,8 +74,10 @@ struct LastStatsView: View {
             }
         }.task {
             if !sessions.isEmpty {
-                connectivity.sendCount()
-                connectivity.send(sessions: sessions)
+                DispatchQueue.global().async {
+                    connectivity.sendCount()
+                    connectivity.send(sessions: sessions)
+                }
             }
         }
         .navigationTitle("Last session")
