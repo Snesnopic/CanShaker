@@ -10,6 +10,7 @@ import Charts
 import CoreMotion
 import SwiftData
 struct LastSessionView: View {
+    
     @State private var statToShow = 0
     var sessionToShow:Session?
     
@@ -26,110 +27,27 @@ struct LastSessionView: View {
             
             VStack(alignment: .center){
                 
-                // FEEDBACK
-                HStack {
-                    if sessionToShow == nil {
-                        Text("Hey there newcomer, start a session from the watch app to gain data!")
-                            .font(.title3)
-                            .multilineTextAlignment(.leading)
-                            .fontWeight(.semibold)
-                    } else {
-                        Image(systemName: Feedback(session: sessionToShow!).imageName)
-                            .resizable()
-                            .scaledToFit()
-                            .responsiveFrame(widthPercentage: 4)
-                        Text(Feedback(session: sessionToShow!).sentence)
-                            .font(.title3)
-                            .multilineTextAlignment(.leading)
-                            .fontWeight(.semibold)
-                    }
-                        
-                }
-                .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
-                
-                Line()
-                    .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
-                    .frame(height: 1)
-                    .foregroundStyle(Color.unselectedTabBar)
-                
-                // PICKER
-                HStack{
-                    Picker("", selection: $statToShow){
-                        Text("BPM")
-                            .tag(0)
-                        Text("Speed")
-                            .tag(1)
-                    }
-                    .responsiveFrame(widthPercentage: 35)
-                    .pickerStyle(.segmented)
-                }
-                .padding(.vertical, 10)
-                
-                // CHART + STATS
-                HStack{
-                    if sessionToShow == nil {
-                        Chart{
-                            AreaMark (x: .value("Time", Date()),
-                                      y: .value("BPM", 40))
-                            .foregroundStyle(Color.clear)
-                            AreaMark (x: .value("Time", Date()),
-                                      y: .value("BPM", 140))
-                        }
-                        .chartYAxis {
-                            AxisMarks(position: .leading) { _ in
-                                AxisValueLabel()
-                            }
-                        }
-                        .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
-                        .padding(.vertical)
-                        .overlay {
-                            Text("No data yet!").bold()
-                        }
-                    }
-                    else {
-                        if(statToShow == 1){
-                            SpeedGraphView(session: sessionToShow!)
-                        }else{
-                            BpmGraphView(session: sessionToShow!)
-                        }
-                    }
-                    Spacer()
-                    
-                }
-                
-                HStack{
-                    VStack (alignment: .leading){
-                        Text("**Avg. BPM:** \(String(format: "%.1f", (sessionToShow?.getAverage(dataset: sessionToShow?.heartRateData.values) ?? "")))")
-                        Spacer()
-                        Text("**Avg. speed:** \(String(format: "%.1f", (sessionToShow?.getAverage(dataset: sessionToShow?.accelData.values) ?? ""))) m/s²")
-                    }
-                    Spacer()
-                    VStack (alignment: .leading){
-                        Text("**Energy:** \(Int(sessionToShow?.calories ?? 0)) kcal")
-                        Spacer()
-                        Text("**Time:** ") + Text(sessionToShow?.duration.doubleToTime() ?? "0s")
-                    }
-                    Spacer()
-                }
-                .font(.subheadline)
+                //Feedback
+                FeedbackView(sessionToShow: sessionToShow)
+                //Graphs
+                AllGraphsView(sessionToShow: sessionToShow)
+                //Data showed on graphs
+                DataView(sessionToShow: sessionToShow)
                 Spacer()
                 
             }
             .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
-            
         }
         .preferredColorScheme(.dark)
     }
 }
 
-
-
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Session.self, configurations: config)
     
-    let calories = Double.random(in: (2.0)...(150.0))
-    let duration = Double.random(in: 1...3600)
+    let calories = Double.random(in: (1.0)...(150.0))
+    let duration = Double.random(in: 1...1200)
     var accelD:[TimeInterval:Double] = [:]
     var heartRate:[TimeInterval:Double] = [:]
     for i in 1...10 {

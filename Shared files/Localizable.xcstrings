@@ -181,6 +181,9 @@
         }
       }
     },
+    "%@" : {
+
+    },
     "%@!" : {
       "localizations" : {
         "de" : {
@@ -1783,6 +1786,7 @@
       }
     },
     "Preview error" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2822,7 +2826,11 @@
         }
       }
     },
+    "Your heartbeat is so chill, even a meditation guru would envy your cardio-nap routine!" : {
+
+    },
     "Your post-workout heartbeat is so chill, even a meditation guru would envy your cardio-nap routine!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

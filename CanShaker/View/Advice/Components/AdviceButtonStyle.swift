@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AdviceButtonStyle: View {
-    @State var img: String
+    @State var img: String? = nil
     @State var category: String
     @State var cDescription: String
     @State var backgroundImg: String
@@ -27,42 +27,48 @@ struct AdviceButtonStyle: View {
                     .responsiveFrame(widthPercentage: 40, aspectRatio: (1,1))
                 
             }
-            .padding(.bottom, 10)
             
             VStack{
                 Spacer()
                 HStack{
-                    Image(systemName: img)
-                        .font(.title)
-                    Text(category)
-                        .bold()
-                        .font(.title2)
+                    //img might not exist in the advice list view
+                    if let img {
+                        Image(systemName: img)
+                            .font(.title)
+                        Text(category)
+                            .bold()
+                            .font(.title2)
+                    } else {
+                        Text(category)
+                            .bold()
+                            .font(.title2)
+                            .padding(.leading, -1)
+                    }
+                        
                     Spacer()
                 }
-                .padding(.horizontal, 30)
+                .padding(.leading)
                 
                 ZStack(alignment: .leading) {
-                    
-                    UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0))
+                    UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 15, bottomTrailing: 15, topTrailing: 0))
                         .responsiveFrame(widthPercentage: 95, heightPercentage: 6)
                         .foregroundColor(Color.boxDetail)
                         .shadow(radius: 20)
                     
-                    Text(cDescription)
+                    Text(cDescription.prefix(40) + "...")
                         .font(.subheadline)
                         .fontWeight(.medium)
                         .padding(.horizontal)
-                    
                 }
             }
+            
             .responsiveFrame(heightPercentage: 20)
-            
-            
         }
+        .padding()
         .preferredColorScheme(.dark)
     }
 }
 
 #Preview{
-    AdviceButtonStyle(img: "book.closed.fill", category: "Methods", cDescription: "Lorem ipsum lorem ipsum lorem", backgroundImg: "safety")
+    AdviceButtonStyle(img: "book.closed.fill", category: "Methods", cDescription: "Lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem", backgroundImg: "safety")
 }

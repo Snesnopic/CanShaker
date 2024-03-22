@@ -37,26 +37,33 @@ class Feedback: Identifiable {
         let heartRate = session.getAverage(dataset: session.heartRateData.values)
         let accel = session.getAverage(dataset: session.accelData.values)
         var feedbackToCreate:Feedback?
-        if duration > 180.0 {
-            if calories > 90 {
-                if heartRate > 120 {
-                    if accel > 3.5 {
-                        feedbackToCreate = Feedback.filterFeedback(byType: .compliment, byCategory: .heartBeat, byCondition: .high)
-                    } else if accel <= 2.5 {
-                        feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)
-                    }
-                } else if heartRate <= 110 {
-                    feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .heartBeat, byCondition: .low)
-                }
-            } else if calories <= 80 {
-                feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .calories, byCondition: .low)
+        
+        //MARK: Testing the real life possible values for condition is heavily required. Plus I think we have to reconsider the "compliment" or "insult" given that for how we created them, they go together with the condition. This means we should reconsider having to approach it with a compliment or an insult independently from the condition. The perfect idea would be having the feedback regarding the performance (with the condition being high or low) and select one random sentence without filtering it for compliments or insults in my honest opinion
+        
+        switch (duration, calories, heartRate, accel) {
+            case let (d, c, hr, _) where (d == 69.0 || c == 69 || hr == 69):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .easterEgg, byCondition: .random)
+            case let (d, c, hr, a) where (d > 180.0 && c > 70 && hr > 100 && a > 3.5):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .accel, byCondition: .high)
+            case let (d, c, hr, a) where (d > 180.0 && c > 70 && hr > 100 && a <= 2):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .accel, byCondition: .low)
+            case let (d, c, hr, _) where (d > 180.0 && c > 70 && hr > 100):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .heartBeat, byCondition: .high)
+            case let (d, c, hr, _) where (d > 180.0 && c > 70 && hr <= 80):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .heartBeat, byCondition: .low)
+            case let (d, c, _, _) where (d > 180.0 && c > 70):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .calories, byCondition: .high)
+            case let (d, c, _, _) where (d > 180.0 && c <= 30):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .calories, byCondition: .low)
+            case let (d, _, _, _) where (d > 180.0):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .duration, byCondition: .high)
+            case let (d, _, _, _) where (d <= 60.0):
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .duration, byCondition: .low)
+            
+            default:
+                feedbackToCreate = Feedback.filterFeedback(byCategory: .random, byCondition: .random)
             }
-        } else if duration <= 60.0 {
-            feedbackToCreate = Feedback.filterFeedback(byType: .insult, byCategory: .speed, byCondition: .high)
-        }
-        else {
-            feedbackToCreate = Feedback.filterFeedback(byType: .neutral, byCategory: .random, byCondition: .random)
-        }
+        
         self.sentence = feedbackToCreate!.sentence
         self.type = feedbackToCreate!.type
         self.category = feedbackToCreate!.category
@@ -65,9 +72,9 @@ class Feedback: Identifiable {
         self.associatedSession = session
     }
     
-    static func filterFeedback(byType type: feedbackType, byCategory category: feedbackCategory, byCondition condition: condition) -> Feedback {
+    static func filterFeedback(byCategory category: feedbackCategory, byCondition condition: condition) -> Feedback {
         let filteredSentences = Feedback.list.filter { feedback in
-            return feedback.type == type && feedback.category == category && feedback.condition == condition
+            return feedback.category == category && feedback.condition == condition
         }
         return filteredSentences.randomElement()!
     }
@@ -80,11 +87,12 @@ class Feedback: Identifiable {
     }
     
     enum feedbackCategory {
-        case speed
+        case duration
         case heartBeat
         case calories
         case accel
         case random
+        case easterEgg
     }
     
     enum condition {

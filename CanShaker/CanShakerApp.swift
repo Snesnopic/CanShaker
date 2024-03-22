@@ -26,7 +26,7 @@ struct CanShakerApp: App {
                     
                 }
                 .tag(0)
-                AdvicesView().tabItem {
+                AdviceView().tabItem {
                     Label("Advice", systemImage: "list.bullet.rectangle")
                         .if(tabBarSelection != 1, transform: { view in
                             view.environment(\.symbolVariants, .none)
