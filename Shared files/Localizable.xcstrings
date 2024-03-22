@@ -1718,9 +1718,6 @@
         }
       }
     },
-    "Pause" : {
-
-    },
     "Persistence" : {
       "localizations" : {
         "de" : {
@@ -1991,9 +1988,6 @@
           }
         }
       }
-    },
-    "Resume" : {
-
     },
     "Rushing to climax often leads to a brief peak followed by a quick decline. Taking your time to build up gradually results in more intense artwork." : {
       "localizations" : {
