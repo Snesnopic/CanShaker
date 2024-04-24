@@ -10,7 +10,7 @@ import SwiftData
 
 struct FeedbackView: View {
     
-    @State var sessionToShow: Session?
+    var sessionToShow: Session?
     var body: some View {
         
         VStack(alignment: .leading){

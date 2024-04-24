@@ -12,7 +12,7 @@ import SwiftData
 struct AllGraphsView: View {
     
     @State var statToShow = 0
-    @State var sessionToShow: Session?
+    var sessionToShow: Session?
     
     var body: some View {
         
