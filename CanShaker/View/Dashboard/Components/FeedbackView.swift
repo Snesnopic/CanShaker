@@ -25,18 +25,18 @@ struct FeedbackView: View {
                     Text("Hey there newcomer, start a session from the watch app to gain data!")
                     
                 } else {
-                    if  Feedback(session: sessionToShow!).imageName == "♋️" {
+                    if  sessionToShow!.associatedFeedback.imageName == "♋️" {
                         Text("♋️")
                             .font(.title)
                             .scaleEffect(1.2)
                             .padding(.horizontal, 5)
                     } else {
-                        Image(systemName: "\(Feedback(session: sessionToShow!).imageName)")
+                        Image(systemName: "\(sessionToShow!.associatedFeedback.imageName)")
                             .imageScale(.large)
                             .responsiveFrame(widthPercentage: 10)
                     }
                     
-                    Text("\(Feedback(session: sessionToShow!).sentence)")
+                    Text("\(sessionToShow!.associatedFeedback.sentence)")
                         .offset(x: 5)
                     Spacer()
                 }
