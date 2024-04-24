@@ -255,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				6BACB1792B91E5710098F263 /* FeedbackList.swift */,
-				6BACB17A2B91E5710098F263 /* Feedback.swift */,
 			);
 			name = Feedbacks;
 			path = Advices/Feedbacks;
@@ -323,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				9D8C39312B88F05400FFB72F /* Session.swift */,
+				6BACB17A2B91E5710098F263 /* Feedback.swift */,
 				9DA6A8612B8C9587009737D7 /* Connectivity.swift */,
 				9D8C39352B89006400FFB72F /* Extensions.swift */,
 				9D9F22D72B97201C000654A4 /* Localizable.xcstrings */,
