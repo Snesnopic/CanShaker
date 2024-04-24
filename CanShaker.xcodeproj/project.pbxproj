@@ -255,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				6BACB1792B91E5710098F263 /* FeedbackList.swift */,
-				6BACB17A2B91E5710098F263 /* Feedback.swift */,
 			);
 			name = Feedbacks;
 			path = Advices/Feedbacks;
@@ -323,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				9D8C39312B88F05400FFB72F /* Session.swift */,
+				6BACB17A2B91E5710098F263 /* Feedback.swift */,
 				9DA6A8612B8C9587009737D7 /* Connectivity.swift */,
 				9D8C39352B89006400FFB72F /* Extensions.swift */,
 				9D9F22D72B97201C000654A4 /* Localizable.xcstrings */,
@@ -712,7 +712,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
@@ -721,13 +721,13 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires permission to write to properly track and give you statistics about your heart rate and energy spent during the session.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -747,7 +747,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CanShaker-Watch-App-Info.plist";
@@ -756,7 +756,7 @@
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires permission to write to properly track and give you statistics about your heart rate and energy spent during the session.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app tracks your wrist movements during sessions";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Dave.CanShaker;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.CanShaker;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -784,7 +784,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;
@@ -803,7 +803,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dave.CanShaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.CanShaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -822,7 +822,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CanShaker/Preview Content\"";
-				DEVELOPMENT_TEAM = WLW428B75Y;
+				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CanShaker/Info.plist;

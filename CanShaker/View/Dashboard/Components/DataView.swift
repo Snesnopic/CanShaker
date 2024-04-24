@@ -15,9 +15,9 @@ struct DataView: View {
     var body: some View {
         HStack{
             VStack (alignment: .leading){
-                Text("**Avg. BPM:** \(String(format: "%.1f", (sessionToShow?.getAverage(dataset: sessionToShow?.heartRateData.values) ?? "")))")
+                Text("**Avg. BPM:** \(String(format: "%.1f", (sessionToShow?.heartRateData.getAverage()) ?? ""))")
                 Spacer()
-                Text("**Avg. speed:** \(String(format: "%.1f", (sessionToShow?.getAverage(dataset: sessionToShow?.accelData.values) ?? ""))) m/s²")
+                Text("**Avg. speed:** \(String(format: "%.1f", (sessionToShow?.accelData.getAverage()) ?? "")) m/s²")
             }
             Spacer()
             VStack (alignment: .leading){

@@ -11,19 +11,23 @@ import CoreMotion
 import SwiftData
 final class Connectivity: NSObject, ObservableObject, WCSessionDelegate {
     //se iOS perde la connessione con watchOS, riprova
+    
 #if os(iOS)
     public func sessionDidBecomeInactive(_ session: WCSession) { }
     public func sessionDidDeactivate(_ session: WCSession) {
         session.activate()
     }
 #endif
+    
     //variabile che iOS userà per accedere alle sessioni
     @Published var sessions:[Session] = []
     var phoneSessionIds:Set<String> = []
     var isListReady:Bool = false
     static let shared = Connectivity()
     var context:ModelContext? = nil
-    override private init() {
+    override private init() 
+    
+    {
         super.init()
         let session = WCSession.default
         session.delegate = self
