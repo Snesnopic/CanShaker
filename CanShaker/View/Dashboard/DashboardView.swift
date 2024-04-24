@@ -12,7 +12,7 @@ import SwiftData
 struct DashboardView: View {
     @Environment(\.modelContext) private var context
     @Query var achievements: [Achievement]
-    @Query private var sessions: [Session]
+    @Query(sort: \Session.date) private var sessions: [Session]
     var body: some View {
         NavigationStack{
 
