@@ -12,7 +12,7 @@ import SwiftData
 @Model 
 class Session: Codable, Identifiable {
     enum CodingKeys: CodingKey {
-        case uuid, date, accelData, duration, heartRateData, calories
+        case uuid, date, accelData, duration, heartRateData, calories, associatedFeedback
     }
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -22,6 +22,7 @@ class Session: Codable, Identifiable {
         try container.encode(duration, forKey: .duration)
         try container.encode(heartRateData, forKey: .heartRateData)
         try container.encode(calories, forKey: .calories)
+        try container.encode(associatedFeedback, forKey: .associatedFeedback)
     }
     
     required public convenience init(from decoder: Decoder) throws {
@@ -33,6 +34,7 @@ class Session: Codable, Identifiable {
         duration = try container.decode(TimeInterval.self, forKey: .duration)
         heartRateData = try container.decode([TimeInterval:Double].self, forKey: .heartRateData)
         calories = try container.decode(Double.self, forKey: .calories)
+        associatedFeedback = try container.decode(Feedback.self, forKey: .associatedFeedback)
     }
     @Attribute(.unique) var uuid: UUID = UUID()
     var date: Date
@@ -40,27 +42,13 @@ class Session: Codable, Identifiable {
     var duration: TimeInterval
     var heartRateData: [TimeInterval:Double]
     var calories: Double
+    var associatedFeedback: Feedback
     init(date: Date = Date(), accelData: [TimeInterval : Double] = [:], duration: TimeInterval = 0.0, heartRateData: [TimeInterval : Double] = [:], calories: Double = 0.0) {
         self.date = date
         self.accelData = accelData
         self.duration = duration
         self.heartRateData = heartRateData
         self.calories = calories
-    }
-    
-    func getAverage(dataset: Optional<Dictionary<Double, Double>.Values>) -> Double{
-        var average = 0.0
-        
-        if(dataset?.isEmpty == false){
-            var temp = 0.0
-            for data in dataset! {
-                average += data
-                temp += 1
-            }
-            
-            average = average/temp
-        }
-        
-        return average
+        self.associatedFeedback = Feedback(accelData: accelData, duration: duration, heartRateData: heartRateData, calories: calories)
     }
 }

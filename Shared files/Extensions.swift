@@ -106,3 +106,21 @@ extension Date {
         return Calendar.current.compare(self, to: date, toGranularity: component) == .orderedSame
     }
 }
+
+extension Dictionary<Double,Double> {
+    func getAverage() -> Double{
+        var average = 0.0
+        
+        if(self.isEmpty == false){
+            var temp = 0.0
+            self.values.forEach { data in
+                average += data
+                temp += 1
+            }
+            
+            average = average/temp
+        }
+        
+        return average
+    }
+}
