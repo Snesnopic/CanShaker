@@ -40,6 +40,7 @@ struct LastSessionView: View {
         }
         .preferredColorScheme(.dark)
     }
+    
 }
 
 #Preview {

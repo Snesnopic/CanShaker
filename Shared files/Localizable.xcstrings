@@ -35,6 +35,16 @@
         }
       }
     },
+    "'Deja vù! I've just  been in this place before'" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "'Deja vù! I've just been in this place before'"
+          }
+        }
+      }
+    },
     "**Avg. BPM:** %@" : {
       "localizations" : {
         "es-419" : {
@@ -282,7 +292,24 @@
       }
     },
     "♋️" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "69? Nice" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "69? Nice"
+          }
+        }
+      }
     },
     "Acceleration" : {
       "localizations" : {
@@ -468,6 +495,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tüm başarılar"
+          }
+        }
+      }
+    },
+    "Are you shaking it like your life depends on it?!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lo stai scuotendo come se la tua vita dipendesse da questo?!"
+          }
+        }
+      }
+    },
+    "Are you still watching?" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stai ancora guardando?"
           }
         }
       }
@@ -816,6 +863,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Doğal kayganlaştırıcılar kullanarak zevki artırın ve sürtünmeye bağlı rahatsızlığı azaltın."
+          }
+        }
+      }
+    },
+    "Ever heard of 'Achille and the tortoise'? Guess who you are." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai mai sentito parlare di 'Achille e la tartaruga'"
           }
         }
       }
@@ -1258,6 +1315,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se inizi a sentire dolore o hai la sensazione che la lattina sia asciutta, è un ottimo segno che dovresti smettere di dipingere."
+          }
+        }
+      }
+    },
+    "Impressive dedication to the craft, my friend." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dedizione impressiva alla causa, amico mio."
           }
         }
       }
@@ -1718,6 +1785,16 @@
         }
       }
     },
+    "Oh so that's why you got the gym membership!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ah ecco perché ti sei preso l'abbonamento in palestra!"
+          }
+        }
+      }
+    },
     "Persistence" : {
       "localizations" : {
         "de" : {
@@ -1803,7 +1880,6 @@
       }
     },
     "Preview error" : {
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2153,6 +2229,16 @@
         }
       }
     },
+    "Slow and steady wins the race." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chi va piano va sano e va lontano"
+          }
+        }
+      }
+    },
     "Slow Down" : {
       "localizations" : {
         "de" : {
@@ -2351,6 +2437,16 @@
         }
       }
     },
+    "There are clouds above your head, everybody knows your deed." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ci sono nuvole sulla tua testa, tutti sanno ciò che hai fatto."
+          }
+        }
+      }
+    },
     "There are secret graffiti techniques to explore" : {
       "localizations" : {
         "de" : {
@@ -2481,6 +2577,16 @@
         }
       }
     },
+    "Try to explain your heart rate to a doctor now..." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adesso prova a spiegare il tuo battito cardiaco ad un dottore..."
+          }
+        }
+      }
+    },
     "Use Lube" : {
       "localizations" : {
         "de" : {
@@ -2539,6 +2645,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "L'uso di un lubrificante a base d'acqua durante l'agitazione può aiutare a ridurre l'attrito e l'irritazione della lattina. Ciò è particolarmente importante se sei incline alla secchezza o alla sensibilità. Evita di usare prodotti come lozioni, oli o creme che potrebbero contenere ingredienti che potrebbero irritare la pelle delicata della tua povera lattina."
+          }
+        }
+      }
+    },
+    "Was that a funeral procession? Oh, you missed it for how slow you were." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Era una veglia funebre? Oh, te la sei persa per quanto sei stato lento."
           }
         }
       }
@@ -2627,37 +2743,15 @@
         }
       }
     },
-    "You burned fewer calories than a sloth doing slow-motion yoga" : {
-      "extractionState" : "stale",
+    "You burned fewer calories than a sloth doing slow-motion yoga." : {
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du hast weniger Kalorien verbrannt als ein Faultier beim Zeitlupen-Yoga"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quemaste menos calorías que un perezoso haciendo yoga a cámara lenta"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu as brûlé moins de calories qu'un paresseux faisant du yoga au ralenti."
-          }
-        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hai bruciato meno calorie di un pigro che fa yoga a rallentatore"
+            "value" : "Hai bruciato meno calo"
           }
         }
       }
-    },
-    "You burned fewer calories than a sloth doing slow-motion yoga." : {
-
     },
     "You have to keep your can safe" : {
       "localizations" : {
