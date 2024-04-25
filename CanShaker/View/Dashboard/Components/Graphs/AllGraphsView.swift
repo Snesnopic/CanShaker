@@ -16,17 +16,19 @@ struct AllGraphsView: View {
     
     var body: some View {
         
-        HStack{
+        HStack(alignment: .center){
             Picker("", selection: $statToShow){
                 Text("BPM")
                     .tag(0)
                 Text("Speed")
                     .tag(1)
             }
-            .responsiveFrame(widthPercentage: 35)
             .pickerStyle(.segmented)
+            Spacer()
         }
-        .padding(.vertical, 10)
+        .padding(.vertical, 15)
+        
+        //TODO: adjust
         
         HStack{
             if sessionToShow == nil {
@@ -37,12 +39,13 @@ struct AllGraphsView: View {
                     AreaMark (x: .value("Time", Date()),
                               y: .value("BPM", 140))
                 }
+                .padding()
+                
                 .chartYAxis {
                     AxisMarks(position: .leading) { _ in
                         AxisValueLabel()
                     }
                 }
-                .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
                 .padding(.vertical)
                 .overlay {
                     Text("No data yet!").bold()
@@ -51,8 +54,10 @@ struct AllGraphsView: View {
             else {
                 if(statToShow == 1) {
                     SpeedGraphView(session: sessionToShow!)
+                        .padding()
                 } else {
                     BpmGraphView(session: sessionToShow!)
+                        .padding()
                 }
             }
             Spacer()

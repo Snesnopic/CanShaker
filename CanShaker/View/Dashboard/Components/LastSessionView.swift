@@ -20,27 +20,26 @@ struct LastSessionView: View {
     }
     
     var body: some View {
-        ZStack{
+        ZStack {
             RoundedRectangle(cornerRadius: 15.0)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 49)
                 .foregroundStyle(.box)
             
             VStack(alignment: .center){
                 
                 //Feedback
                 FeedbackView(sessionToShow: sessionToShow)
+                Spacer()
                 //Graphs
                 AllGraphsView(sessionToShow: sessionToShow)
                 //Data showed on graphs
                 DataView(sessionToShow: sessionToShow)
                 Spacer()
-                
             }
-            .responsiveFrame(widthPercentage: 85, heightPercentage: 35)
+            //MARK: Don't worry if it looks like this, check on DashboardView (that has to be adjusted aswell)
         }
         .preferredColorScheme(.dark)
     }
-    
+        
 }
 
 #Preview {

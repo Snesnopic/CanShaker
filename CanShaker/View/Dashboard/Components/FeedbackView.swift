@@ -21,11 +21,11 @@ struct FeedbackView: View {
                     Image(systemName: "face.smiling")
                         .imageScale(.large)
                         .offset(x:-10)
-                        .responsiveFrame(widthPercentage: 10)
                     Text("Hey there newcomer, start a session from the watch app to gain data!")
+
                     
                 } else {
-                    if  sessionToShow!.associatedFeedback.imageName == "♋️" {
+                    if sessionToShow!.associatedFeedback.imageName == "♋️" {
                         Text("♋️")
                             .font(.title)
                             .scaleEffect(1.2)
@@ -33,25 +33,25 @@ struct FeedbackView: View {
                     } else {
                         Image(systemName: "\(sessionToShow!.associatedFeedback.imageName)")
                             .imageScale(.large)
-                            .responsiveFrame(widthPercentage: 10)
                     }
                     
                     Text("\(sessionToShow!.associatedFeedback.sentence)")
                         .offset(x: 5)
                     Spacer()
                 }
+                    
             }
             .font(.title3)
             .multilineTextAlignment(.leading)
             .fontWeight(.semibold)
+            .padding()
         }
-        .responsiveFrame(widthPercentage: 90, heightPercentage: 10)
         
         Line()
             .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
             .frame(height: 1)
             .foregroundStyle(Color.unselectedTabBar)
-            .responsiveFrame(widthPercentage: 90, heightPercentage: 1)
+        Spacer()
     }
 }
 
@@ -67,11 +67,11 @@ struct FeedbackView: View {
         accelD[Double(i)*0.3] = Double.random(in: 1...4)
         heartRate[Double(i)*0.3] = Double.random(in: 60...150)
     }
-    let session = Session(date: Date(), accelData: accelD, duration: 69, heartRateData: heartRate, calories: calories)
+    let session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
     container.mainContext.insert(session)
     
     
-    return FeedbackView(sessionToShow: session)
+    return FeedbackView(sessionToShow: nil)
         .modelContainer(container)
 }
 

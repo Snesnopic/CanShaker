@@ -32,7 +32,7 @@ struct SpeedGraphView: View {
                 .foregroundStyle(speedGradient)
                 
             }
-            
+        //TODO: adjust 
         }
         .chartXAxis{
             AxisMarks(values: .automatic(desiredCount: 6)) {

@@ -21,31 +21,34 @@ struct BpmGraphView: View {
         startPoint: .top, endPoint: .bottom)
     
     var body: some View {
-        Chart{
-            ForEach(session.heartRateData.keys.sorted(),id: \.self){ time in
-                
-                AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                          y: .value("BPM", (session.heartRateData[time]!)))
-                
-                .interpolationMethod(.catmullRom)
-                .foregroundStyle(heartGradient)
-                
+        VStack(alignment: .center){
+            Chart{
+                ForEach(session.heartRateData.keys.sorted(),id: \.self){ time in
+                    
+                    AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
+                              y: .value("BPM", (session.heartRateData[time]!)))
+                    
+                    .interpolationMethod(.catmullRom)
+                    .foregroundStyle(heartGradient)
+                    
+                }
+            //TODO: adjust 
             }
-            
-        }
-        .chartXAxis{
-            AxisMarks(values: .automatic(desiredCount: 4)) {
-                AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
+            .padding()
+            .chartXAxis{
+                AxisMarks(values: .automatic(desiredCount: 5)) {
+                    AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
+                }
             }
-        }
-        .chartYAxis {
-            AxisMarks(position: .leading) { _ in
-                AxisValueLabel()
+            .chartYAxis {
+                AxisMarks(position: .leading) { _ in
+                    AxisValueLabel()
+                }
             }
+            .padding()
+            Spacer()
         }
-        .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
-        .padding(.vertical)
-        
+        .preferredColorScheme(.dark)
     }
     
 }

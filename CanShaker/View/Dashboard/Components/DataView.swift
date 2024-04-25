@@ -13,19 +13,23 @@ struct DataView: View {
     @State var sessionToShow: Session?
     
     var body: some View {
-        HStack{
+        HStack {
             VStack (alignment: .leading){
                 Text("**Avg. BPM:** \(String(format: "%.1f", (sessionToShow?.heartRateData.getAverage()) ?? ""))")
-                Spacer()
+
                 Text("**Avg. speed:** \(String(format: "%.1f", (sessionToShow?.accelData.getAverage()) ?? "")) m/s²")
+
             }
+            .padding()
+
             Spacer()
+            
             VStack (alignment: .leading){
                 Text("**Energy:** \(Int(sessionToShow?.calories ?? 0)) kcal")
-                Spacer()
+
                 Text("**Time:** ") + Text(sessionToShow?.duration.doubleToTime() ?? "0s")
             }
-            Spacer()
+            .padding()
         }
         .font(.subheadline)
     }
