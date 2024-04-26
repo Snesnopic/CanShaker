@@ -37,16 +37,15 @@ struct AllGraphsView: View {
                               y: .value("BPM", 40))
                     .foregroundStyle(Color.clear)
                     AreaMark (x: .value("Time", Date()),
-                              y: .value("BPM", 140))
+                              y: .value("BPM", 160))
                 }
-                .padding()
                 
                 .chartYAxis {
                     AxisMarks(position: .leading) { _ in
                         AxisValueLabel()
                     }
                 }
-                .padding(.vertical)
+                
                 .overlay {
                     Text("No data yet!").bold()
                 }
@@ -54,13 +53,10 @@ struct AllGraphsView: View {
             else {
                 if(statToShow == 1) {
                     SpeedGraphView(session: sessionToShow!)
-                        .padding()
                 } else {
                     BpmGraphView(session: sessionToShow!)
-                        .padding()
                 }
             }
-            Spacer()
         }
         .preferredColorScheme(.dark)
     }

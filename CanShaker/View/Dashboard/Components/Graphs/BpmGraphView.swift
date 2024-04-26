@@ -13,14 +13,15 @@ struct BpmGraphView: View {
     var session: Session
     let heartGradient = LinearGradient(
         gradient: Gradient (
-            colors: [ Color(.accent).opacity(0.75),
+            colors: [ Color(.accent).opacity(0.85),
                       Color(.accent)
-                .opacity(0.25),
+                .opacity(0.3),
                       Color.clear ]
         ),
         startPoint: .top, endPoint: .bottom)
     
     var body: some View {
+        Spacer()
         VStack(alignment: .center){
             Chart{
                 ForEach(session.heartRateData.keys.sorted(),id: \.self){ time in
@@ -34,20 +35,23 @@ struct BpmGraphView: View {
                 }
             //TODO: adjust 
             }
-            .padding()
             .chartXAxis{
                 AxisMarks(values: .automatic(desiredCount: 5)) {
                     AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
                 }
             }
+            .chartXAxisLabel("time", position: .overlay, alignment: .bottom).fontWeight(.bold)
+            
             .chartYAxis {
-                AxisMarks(position: .leading) { _ in
+                AxisMarks(position: .leading, values: .automatic(desiredCount: 10)) { _ in
                     AxisValueLabel()
                 }
             }
-            .padding()
-            Spacer()
+            .chartYAxisLabel("BPM", position: .automatic, alignment: .leading).fontWeight(.bold)
+
         }
+        .padding()
+        .padding(.vertical, 15)
         .preferredColorScheme(.dark)
     }
     

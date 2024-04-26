@@ -28,12 +28,12 @@ struct LastSessionView: View {
                 
                 //Feedback
                 FeedbackView(sessionToShow: sessionToShow)
-                Spacer()
+
                 //Graphs
                 AllGraphsView(sessionToShow: sessionToShow)
                 //Data showed on graphs
                 DataView(sessionToShow: sessionToShow)
-                Spacer()
+
             }
             //MARK: Don't worry if it looks like this, check on DashboardView (that has to be adjusted aswell)
         }

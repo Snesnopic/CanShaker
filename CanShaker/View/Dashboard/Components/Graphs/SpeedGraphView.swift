@@ -40,15 +40,20 @@ struct SpeedGraphView: View {
             }
         }
         .chartYAxis {
-            AxisMarks(position: .leading) { _ in
+            AxisMarks(position: .leading, values: .automatic(desiredCount: 5)) { _ in
                 AxisValueLabel()
             }
         }
-        .chartYAxisLabel("m/s²")
+        .chartXAxisLabel("time", position: .overlay, alignment: .bottom).fontWeight(.bold)
+        
+        
+        .chartYAxisLabel("m/s²", position: .automatic, alignment: .leading).fontWeight(.bold)
+
         .chartYScale(type: .power(exponent: 0.6))
-        .responsiveFrame(widthPercentage: 80, aspectRatio: (2,1))
+        .padding()
         .padding(.vertical)
         
+        .preferredColorScheme(.dark)
     }
 }
 
