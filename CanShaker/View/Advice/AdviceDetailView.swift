@@ -16,12 +16,11 @@ struct AdviceDetailView: View {
                 .foregroundStyle(Color.boxDetail)
                 .padding()
             
-            
             VStack(alignment: .leading) {
                 //MARK: this is the image
                 Group {
                     UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 15, bottomLeading: 0, bottomTrailing: 0, topTrailing: 15))
-                        .frame(maxHeight: 250)
+                        .frame(maxHeight: 220)
                     
                 }
                 VStack(alignment: .leading, spacing: 15) {
