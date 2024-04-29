@@ -13,7 +13,6 @@ struct AdviceDetailView: View {
         
         ZStack(alignment: .top){
             RoundedRectangle(cornerRadius: 15)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: .infinity)
                 .foregroundStyle(Color.boxDetail)
                 .padding()
             
@@ -22,7 +21,8 @@ struct AdviceDetailView: View {
                 //MARK: this is the image
                 Group {
                     UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 15, bottomLeading: 0, bottomTrailing: 0, topTrailing: 15))
-                        .responsiveFrame(widthPercentage: 95, heightPercentage: 20)
+                        .frame(maxHeight: 250)
+                    
                 }
                 VStack(alignment: .leading, spacing: 15) {
                     Text(adv.title)
@@ -34,9 +34,11 @@ struct AdviceDetailView: View {
                     Text(adv.description)
                 }
                 .padding()
+                Spacer()
             }
             .padding()
             .foregroundStyle(.white)
+            Spacer()
             
         }
         .padding()

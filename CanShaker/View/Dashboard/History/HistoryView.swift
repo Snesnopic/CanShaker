@@ -95,7 +95,7 @@ struct HistoryView: View {
     
     
     var sessions: [Session] = []
-    for i in 0..<100{
+    for _ in 0..<100{
         let calories = Double.random(in: (2.0)...(150.0))
         let duration = Double.random(in: 1...3600)
         var accelD:[TimeInterval:Double] = [:]
@@ -107,13 +107,6 @@ struct HistoryView: View {
         let session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
         sessions.append(session)
     }
-    do {
-        return try HistoryView(sessions: sessions)
+        return HistoryView(sessions: sessions)
             .modelContainer(container)
-    }
-    catch {
-        print(error)
-        return Text("Preview error")
-    }
-    
 }
