@@ -11,7 +11,9 @@ struct NaAchievementView: View {
     var achievement:Achievement
     var body: some View {
         HStack{
-            NavigationLink(destination: AchievementDetailView(achievement: achievement), label: {
+            NavigationLink {
+                AchievementDetailView(achievement: achievement)
+            } label: {
                 Circle()
                     .responsiveFrame(widthPercentage: 25, aspectRatio: (1,1))
                     .foregroundStyle(Color.boxDetail)
@@ -19,8 +21,8 @@ struct NaAchievementView: View {
                         Image(achievement.imageName)
                             .resizable()
                             .padding(.all)
-                    }       
-            })
+                    }
+            }
             Spacer()
             VStack (alignment: .leading){
                 Text(achievement.title)
