@@ -55,7 +55,8 @@ struct AdviceButtonStyle: View {
                         .foregroundColor(Color.boxDetail)
                         .shadow(radius: 20)
                     
-                    Text(cDescription.prefix(40) + "...")
+                    Text(cDescription)
+                        .lineLimit(1)
                         .font(.subheadline)
                         .fontWeight(.medium)
                         .padding(.horizontal)
