@@ -11,7 +11,7 @@ import SwiftData
 struct AllAchievementsView: View {
     @Query private var achievements:[Achievement]
     let col = [
-        GridItem(.adaptive(minimum: 100))
+        GridItem(.adaptive(minimum: (UIScreen.main.bounds.width - 60)/3))
     ]
     var body: some View {
         VStack{
@@ -27,10 +27,8 @@ struct AllAchievementsView: View {
             
         }.background {
             RoundedRectangle(cornerRadius: 15)
-                .responsiveFrame(widthPercentage: 95)
                 .foregroundStyle(Color.box)
-                .responsiveFrame(widthPercentage: 95)
-
+                .padding(.horizontal)
         }
     }
 }
