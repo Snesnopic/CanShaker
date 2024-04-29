@@ -41,9 +41,8 @@ struct NaAchievementView: View {
         .padding(.all,30)
         .background {
             RoundedRectangle(cornerRadius: 15)
-                .responsiveFrame(widthPercentage: 95)
                 .foregroundStyle(Color.box)
-                .responsiveFrame(widthPercentage: 95)
+                .padding(.horizontal)
         }
         .preferredColorScheme(.dark)
     }
