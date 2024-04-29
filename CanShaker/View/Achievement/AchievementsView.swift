@@ -48,7 +48,6 @@ struct AchievementsView: View{
                 
             }
             .navigationTitle(String(localized: "Achievements"))
-            .frame(maxWidth: .infinity)
             .background{
                 Color.bgGray
             }
