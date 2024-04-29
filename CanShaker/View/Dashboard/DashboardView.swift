@@ -42,7 +42,6 @@ struct DashboardView: View {
                 Connectivity.shared.context = self.context
                 Achievement.ensureAchievementsExist(context: context, achievements: achievements)
             }
-            .frame(maxWidth: .infinity)
             .background{
                 Color.bgGray
             }
