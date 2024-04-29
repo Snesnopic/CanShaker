@@ -94,21 +94,25 @@ struct HistoryView: View {
     let container = try! ModelContainer(for: Session.self, configurations: config)
     
     
-    var accelD:[TimeInterval:Double] = [:]
-    var heartRate:[TimeInterval:Double] = [:]
-    for i in 1...10 {
-        accelD[Double(i)*0.3] = Double.random(in: 50...140)
-        heartRate[Double(i)*0.3] = Double.random(in: 50...140)
-    }
+    var sessions: [Session] = []
     for i in 0..<100{
-        container.mainContext.insert(Session(date: Date(timeIntervalSinceNow: 0.0) - TimeInterval(Double(i)*Double.random(in: (0.0)...(10000.0))), accelData: accelD, duration: Double.random(in: 30.0...6000.0), heartRateData: heartRate))
-        container.mainContext.insert(Session(date: Date(timeIntervalSinceNow: 0.0) - TimeInterval(Double(i)*Double.random(in: (0.0)...(10000.0))), accelData: accelD, duration: Double.random(in: 30.0...6000.0), heartRateData: heartRate))
+        let calories = Double.random(in: (2.0)...(150.0))
+        let duration = Double.random(in: 1...3600)
+        var accelD:[TimeInterval:Double] = [:]
+        var heartRate:[TimeInterval:Double] = [:]
+        for i in 1...10 {
+            accelD[Double(i)*0.3] = Double.random(in: 1...4)
+            heartRate[Double(i)*0.3] = Double.random(in: 60...150)
+        }
+        let session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
+        sessions.append(session)
     }
     do {
-        return try HistoryView(sessions: container.mainContext.fetch(FetchDescriptor<Session>()))
+        return try HistoryView(sessions: sessions)
             .modelContainer(container)
     }
     catch {
+        print(error)
         return Text("Preview error")
     }
     
