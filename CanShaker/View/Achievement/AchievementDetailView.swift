@@ -38,10 +38,8 @@ struct AchievementDetailView: View {
             }
             
         }
-        .foregroundStyle(.white)
         .padding()
         .preferredColorScheme(.dark)
-        .foregroundStyle(.white)
         .multilineTextAlignment(.center)
     }
 }
