@@ -60,11 +60,7 @@ struct HistoryView: View {
                                 selectedSession = session
                                 showingSheet = true
                             }
-                           
-                           
-                        
                     }
-                    
                 } header:
                 {
                     Text(header)
