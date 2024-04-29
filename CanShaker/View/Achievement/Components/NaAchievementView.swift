@@ -27,13 +27,7 @@ struct NaAchievementView: View {
                     .font(.title2)
                     .bold()
                 Text(achievement.subTitle)
-                ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: 15.0)
-                        .responsiveFrame(widthPercentage: 60,heightPercentage: 0.7)
-                    RoundedRectangle(cornerRadius: 15.0)
-                        .foregroundStyle(Color.accentColor)
-                        .responsiveFrame(widthPercentage: (Double(achievement.completion) * 60.0) / 100.0,heightPercentage: 0.7)
-                }
+                ProgressView(value: Double(achievement.completion) / 100.0)
             }
             Spacer()
             
@@ -63,6 +57,8 @@ struct NaAchievementView: View {
     list.forEach { achievement in
         container.mainContext.insert(achievement)
     }
-    return NaAchievementView(achievement: list.randomElement()!)
+    let achievement = list.randomElement()!
+    print("Completion: \(achievement.completion)")
+    return NaAchievementView(achievement: achievement)
         .modelContainer(container)
 }
