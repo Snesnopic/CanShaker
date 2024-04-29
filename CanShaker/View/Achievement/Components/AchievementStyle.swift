@@ -22,7 +22,7 @@ struct AchievementStyle: View {
                 }
             
             Text(achievement.title)
-                .foregroundStyle(.white)
+                .foregroundStyle(Color.primary)
                 .font(.callout)
                 .padding(.horizontal)
                 .lineLimit(2)
@@ -36,7 +36,4 @@ struct AchievementStyle: View {
     let container = try! ModelContainer(for: Achievement.self, configurations: config)
     return AchievementStyle(achievement: Achievement(title: "prova", subTitle: "prova", desc: "prova", completion: 53, achievingDate: nil, isAchieved: false, imageName: "splashBlue"))
         .modelContainer(container)
-        .background {
-            Color.black
-        }
 }
