@@ -24,7 +24,7 @@ struct AllGraphsView: View {
                     .tag(1)
             }
             .pickerStyle(.segmented)
-            Spacer()
+            .frame(minWidth: 150, idealWidth: 200, maxWidth: 250)
         }
         .padding(.vertical, 15)
         

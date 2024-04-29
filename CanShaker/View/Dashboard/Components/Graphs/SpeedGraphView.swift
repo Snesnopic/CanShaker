@@ -22,17 +22,19 @@ struct SpeedGraphView: View {
         startPoint: .top, endPoint: .bottom)
     
     var body: some View {
-        Chart{
-            ForEach(session.accelData.keys.sorted(),id: \.self){ time in
-                
-                AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
-                          y: .value("Acceleration", (session.accelData[time]!)))
-                
-                .interpolationMethod(.catmullRom)
-                .foregroundStyle(speedGradient)
-                
+        Spacer()
+        VStack(alignment: .leading){
+            Chart{
+                ForEach(session.accelData.keys.sorted(),id: \.self){ time in
+                    
+                    AreaMark (x: .value("Time", Date(timeIntervalSince1970: time)),
+                              y: .value("Acceleration", (session.accelData[time]!)))
+                    
+                    .interpolationMethod(.catmullRom)
+                    .foregroundStyle(speedGradient)
+                }
             }
-        //TODO: adjust 
+            //TODO: adjust
         }
         .chartXAxis{
             AxisMarks(values: .automatic(desiredCount: 6)) {
@@ -48,7 +50,7 @@ struct SpeedGraphView: View {
         
         
         .chartYAxisLabel("m/s²", position: .automatic, alignment: .leading).fontWeight(.bold)
-
+        
         .chartYScale(type: .power(exponent: 0.6))
         .padding()
         .padding(.vertical)

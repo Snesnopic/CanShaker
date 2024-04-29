@@ -22,7 +22,7 @@ struct BpmGraphView: View {
     
     var body: some View {
         Spacer()
-        VStack(alignment: .center){
+        VStack(alignment: .leading){
             Chart{
                 ForEach(session.heartRateData.keys.sorted(),id: \.self){ time in
                     
@@ -43,7 +43,7 @@ struct BpmGraphView: View {
             .chartXAxisLabel("time", position: .overlay, alignment: .bottom).fontWeight(.bold)
             
             .chartYAxis {
-                AxisMarks(position: .leading, values: .automatic(desiredCount: 10)) { _ in
+                AxisMarks(position: .leading, values: .automatic(desiredCount: 5)) { _ in
                     AxisValueLabel()
                 }
             }

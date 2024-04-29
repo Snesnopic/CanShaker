@@ -27,7 +27,7 @@ extension Feedback {
         
         //high
         Feedback(sentence: String(localized: "Try to explain your heart rate to a doctor now..."), type: .insult, category: .heartBeat, condition: .high, imageName: "heart.fill"),
-        Feedback(sentence: String(localized: "Wow, your heartbeat is so fast, I bet even Usain Bolt would struggle to keep up with it in a sprint!"), type: .compliment, category: .heartBeat, condition: .high, imageName: "heart.fill"),
+        Feedback(sentence: String(localized: "Your heartbeat is so fast, I bet even Usain Bolt would struggle to keep up with it in a sprint!"), type: .compliment, category: .heartBeat, condition: .high, imageName: "heart.fill"),
 
         //MARK: CALORIES
         //low
