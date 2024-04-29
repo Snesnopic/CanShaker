@@ -14,34 +14,31 @@ struct HistoryElementStyle: View {
     @State var session: Session
     
     var body: some View {
-        
-        ZStack {
+        HStack{
+            VStack (alignment: .leading) {
+                Text(session.date.formattedDayMonth + " - " + session.date.formattedHour)
+                    .bold()
+                    .font(.title2)
+                Text("Duration: " + session.duration.doubleToTime())
+                    .foregroundStyle(.secondary)
+                    .font(.title3)
+                
+                
+            }
+            Spacer()
+            Image(systemName: "info.circle")
+                .font(.largeTitle)
+                .foregroundStyle(.accent)
+            
+        }
+        .padding()
+        .padding(.vertical)
+        .background {
             RoundedRectangle(cornerRadius: 15)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 13)
                 .shadow(radius: 15)
                 .foregroundStyle(Color.box)
-                .overlay{
-                    HStack{
-                        VStack (alignment: .leading) {
-                            Text(session.date.formattedDayMonth + " - " + session.date.formattedHour)
-                                .bold()
-                                .font(.title2)
-                            Text("Duration: " + session.duration.doubleToTime())
-                                .foregroundStyle(.secondary)
-                                .font(.title3)
-                            
-                            Spacer()
-            
-                        }
-                        Spacer()
-                        Image(systemName: "info.circle")
-                            .font(.largeTitle)
-                            .foregroundStyle(.accent)
-                        
-                    }
-                    .padding()
-                }
-        }.preferredColorScheme(.dark)
+        }
+        .preferredColorScheme(.dark)
     }
 }
 
