@@ -12,14 +12,15 @@ struct Info: View {
     var sessions: [Session]
     @Query var achievements: [Achievement]
     var body: some View {
-        
         ZStack{
             RoundedRectangle(cornerRadius: 15)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 11, alignment: .center)
                 .foregroundStyle(Color.box)
-                
-            HStack{
-                VStack(alignment: .center, spacing: 10){
+                .frame(width: 360, height: 100)
+            Rectangle()
+                .frame(width: 1, height: 70)
+                .opacity(0.2)
+            HStack(spacing: 70) {
+                VStack(spacing: 0) {
                     Text(sessions.filter({ session in
                         return session.date.isSameWeek(as: Date())
                     }).count.description)
@@ -30,13 +31,9 @@ struct Info: View {
                         .font(.caption)
                     
                 }
-                .padding(.horizontal)
-                Spacer()
-                //TODO: add line in the middle
                 
-                
-                VStack(alignment: .center, spacing: 10){
-                    HStack(spacing: 0.0) {
+                VStack(spacing: 10) {
+                    HStack(spacing: 0) {
                         Text(achievements.filter({ achievement in
                             return achievement.isAchieved
                         }).count.description)
@@ -48,15 +45,15 @@ struct Info: View {
                     
                     Text("Achievements")
                         .font(.caption)
-                    
                 }
-                .padding(.horizontal, 25)
-                
+                .padding()
             }
-            .responsiveFrame(widthPercentage: 85)
             
         }
+        .preferredColorScheme(.dark)
     }
+    
+    
 }
 
 #Preview {
@@ -71,7 +68,7 @@ struct Info: View {
     }
     
     let sessions: [Session] = [Session(date: Date(), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate,calories: Double.random(in: (5.0)...(20.0)))]
-   
+    
     //MARK: change the name to use it if needed
     return Info(sessions: sessions)
         .modelContainer(container)

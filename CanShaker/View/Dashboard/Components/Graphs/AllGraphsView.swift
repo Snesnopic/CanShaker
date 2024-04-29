@@ -15,7 +15,7 @@ struct AllGraphsView: View {
     var sessionToShow: Session?
     
     var body: some View {
-        
+        Spacer()
         HStack(alignment: .center){
             Picker("", selection: $statToShow){
                 Text("BPM")
@@ -26,7 +26,6 @@ struct AllGraphsView: View {
             .pickerStyle(.segmented)
             .frame(minWidth: 150, idealWidth: 200, maxWidth: 250)
         }
-        .padding(.vertical, 15)
         
         //TODO: adjust
         

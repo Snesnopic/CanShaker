@@ -18,7 +18,6 @@ struct DashboardView: View {
 
                 VStack{
                     Info(sessions: sessions)
-                        .padding(.bottom, 10)
                     HStack{
                         Text("Activity")
                             .bold()
@@ -46,6 +45,7 @@ struct DashboardView: View {
                 Color.bgGray
             }
         }
+        
     }
     
 }
