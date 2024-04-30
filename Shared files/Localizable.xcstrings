@@ -1879,34 +1879,6 @@
         }
       }
     },
-    "Preview error" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fehler in der Vorschau"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preview error"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Errore nella preview"
-          }
-        }
-      }
-    },
     "Progress: %lld%%" : {
       "localizations" : {
         "de" : {
@@ -2687,34 +2659,6 @@
         }
       }
     },
-    "Wow, your heartbeat is so fast, I bet even Usain Bolt would struggle to keep up with it in a sprint!" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wow, dein Herz schlägt so schnell, selbst Usain Bolt hätte Schwierigkeiten mit deiner Geschwindigkeit mit zu halten!"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¡Wow, los latidos de tu corazón son tan rápidos que apuesto a que incluso a Usain Bolt le costaría seguirles el ritmo en una carrera de velocidad!"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wow, ton rythme cardiaque est tellement rapide, je parie même qu'Usain Bolt aurait du mal à le suivre dans une course !"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Il tuo battito è così rapido che anche Usain Bolt farebbe fatica a mantenere il passo in una corsa!"
-          }
-        }
-      }
-    },
     "Yesterday" : {
       "localizations" : {
         "de" : {
@@ -2983,6 +2927,34 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Il tuo battito è calmissimo, persino un guru della meditazione ti invidierebbe!"
+          }
+        }
+      }
+    },
+    "Your heartbeat is so fast, I bet even Usain Bolt would struggle to keep up with it in a sprint!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Herz schlägt so schnell, selbst Usain Bolt hätte Schwierigkeiten mit deiner Geschwindigkeit mit zu halten!"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Los latidos de tu corazón son tan rápidos que apuesto a que incluso a Usain Bolt le costaría seguirles el ritmo en una carrera de velocidad!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ton rythme cardiaque est tellement rapide, je parie même qu'Usain Bolt aurait du mal à le suivre dans une course !"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tuo battito è così rapido che anche Usain Bolt farebbe fatica a mantenere il passo in una corsa!"
           }
         }
       }

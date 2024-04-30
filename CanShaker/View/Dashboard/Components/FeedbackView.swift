@@ -36,8 +36,7 @@ struct FeedbackView: View {
                     }
                     
                     Text("\(sessionToShow!.associatedFeedback.sentence)")
-                        .offset(x: 5)
-                    Spacer()
+                        .offset(x: 2)
                 }
                     
             }
@@ -71,7 +70,7 @@ struct FeedbackView: View {
     container.mainContext.insert(session)
     
     
-    return FeedbackView(sessionToShow: nil)
+    return FeedbackView(sessionToShow: session)
         .modelContainer(container)
 }
 
