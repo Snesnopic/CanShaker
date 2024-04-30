@@ -13,10 +13,7 @@ struct Info: View {
     @Query var achievements: [Achievement]
     var body: some View {
         
-        ZStack{
-            RoundedRectangle(cornerRadius: 15)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 11, alignment: .center)
-                .foregroundStyle(Color.box)
+            
                 
             HStack{
                 VStack(alignment: .center, spacing: 10){
@@ -30,7 +27,7 @@ struct Info: View {
                         .font(.caption)
                     
                 }
-                .padding(.horizontal)
+                .padding(.horizontal,25)
                 Spacer()
                 //TODO: add line in the middle
                 
@@ -53,9 +50,14 @@ struct Info: View {
                 .padding(.horizontal, 25)
                 
             }
-            .responsiveFrame(widthPercentage: 85)
+            .padding()
+            .background {
+                RoundedRectangle(cornerRadius: 15)
+                    .foregroundStyle(Color.box)
+                
+            }
             
-        }
+        
     }
 }
 
@@ -75,4 +77,5 @@ struct Info: View {
     //MARK: change the name to use it if needed
     return Info(sessions: sessions)
         .modelContainer(container)
+        .preferredColorScheme(.dark)
 }
