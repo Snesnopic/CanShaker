@@ -12,52 +12,47 @@ struct Info: View {
     var sessions: [Session]
     @Query var achievements: [Achievement]
     var body: some View {
-        
-            
+        HStack{
+            Spacer()
+            VStack(alignment: .center, spacing: 10){
+                Text(sessions.filter({ session in
+                    return session.date.isSameWeek(as: Date())
+                }).count.description)
+                .font(.title)
+                .fontWeight(.bold)
                 
-            HStack{
-                VStack(alignment: .center, spacing: 10){
-                    Text(sessions.filter({ session in
-                        return session.date.isSameWeek(as: Date())
+                Text("Sessions this week")
+                    .font(.caption)
+                
+            }
+            .padding(.horizontal,25)
+            Spacer()
+            //TODO: add line in the middle
+            
+            
+            VStack(alignment: .center, spacing: 10){
+                HStack(spacing: 0.0) {
+                    Text(achievements.filter({ achievement in
+                        return achievement.isAchieved
                     }).count.description)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    
-                    Text("Sessions this week")
-                        .font(.caption)
-                    
+                    Text("/")
+                    Text("\(achievements.count)")
                 }
-                .padding(.horizontal,25)
-                Spacer()
-                //TODO: add line in the middle
+                .font(.title)
+                .fontWeight(.bold)
                 
-                
-                VStack(alignment: .center, spacing: 10){
-                    HStack(spacing: 0.0) {
-                        Text(achievements.filter({ achievement in
-                            return achievement.isAchieved
-                        }).count.description)
-                        Text("/")
-                        Text("\(achievements.count)")
-                    }
-                    .font(.title)
-                    .fontWeight(.bold)
-                    
-                    Text("Achievements")
-                        .font(.caption)
-                    
-                }
-                .padding(.horizontal, 25)
+                Text("Achievements")
+                    .font(.caption)
                 
             }
-            .padding()
-            .background {
-                RoundedRectangle(cornerRadius: 15)
-                    .foregroundStyle(Color.box)
-                
-            }
-            
-        
+            .padding(.horizontal, 25)
+            Spacer()
+        }
+        .padding()
+        .background {
+            RoundedRectangle(cornerRadius: 15)
+                .foregroundStyle(Color.box)
+        }
     }
 }
 
@@ -73,7 +68,7 @@ struct Info: View {
     }
     
     let sessions: [Session] = [Session(date: Date(), accelData: accelD, duration: 50.0/3.0, heartRateData: heartRate,calories: Double.random(in: (5.0)...(20.0)))]
-   
+    
     //MARK: change the name to use it if needed
     return Info(sessions: sessions)
         .modelContainer(container)
