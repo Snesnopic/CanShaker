@@ -26,9 +26,8 @@ struct Info: View {
                 
             }
             .padding(.horizontal,25)
-            Spacer()
-            //TODO: add line in the middle
             
+            Spacer()
             
             VStack(alignment: .center, spacing: 10){
                 HStack(spacing: 0.0) {
@@ -53,6 +52,12 @@ struct Info: View {
             RoundedRectangle(cornerRadius: 15)
                 .foregroundStyle(Color.box)
         }
+        //MARK: this enables the line in the middle, in a way that doesn't expand the container.
+        //        .overlay {
+        //            HStack {
+        //                Divider()
+        //            }
+        //        }
     }
 }
 
