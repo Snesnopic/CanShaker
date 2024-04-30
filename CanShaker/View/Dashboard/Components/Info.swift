@@ -51,40 +51,6 @@ struct Info: View {
         .background {
             RoundedRectangle(cornerRadius: 15)
                 .foregroundStyle(Color.box)
-                .frame(width: 360, height: 100)
-            Rectangle()
-                .frame(width: 1, height: 70)
-                .opacity(0.2)
-            HStack(spacing: 70) {
-                VStack(spacing: 0) {
-                    Text(sessions.filter({ session in
-                        return session.date.isSameWeek(as: Date())
-                    }).count.description)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    
-                    Text("Sessions this week")
-                        .font(.caption)
-                    
-                }
-                
-                VStack(spacing: 10) {
-                    HStack(spacing: 0) {
-                        Text(achievements.filter({ achievement in
-                            return achievement.isAchieved
-                        }).count.description)
-                        Text("/")
-                        Text("\(achievements.count)")
-                    }
-                    .font(.title)
-                    .fontWeight(.bold)
-                    
-                    Text("Achievements")
-                        .font(.caption)
-                }
-                .padding()
-            }
-            
         }
         //MARK: this enables the line in the middle, in a way that doesn't expand the container.
         //        .overlay {
