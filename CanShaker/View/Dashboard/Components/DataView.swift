@@ -11,9 +11,12 @@ struct DataView: View {
     
     @State private var statToShow = 0
     @State var sessionToShow: Session?
-    
+    private var isPortrait : Bool { UIDevice.current.orientation.isPortrait }
     var body: some View {
         HStack {
+            if !isPortrait {
+                Spacer()
+            }
             VStack (alignment: .leading){
                 Text("**Avg. BPM:** \(String(format: "%.1f", (sessionToShow?.heartRateData.getAverage()) ?? ""))")
 
@@ -21,7 +24,7 @@ struct DataView: View {
 
             }
             .padding()
-
+            
             Spacer()
             
             VStack (alignment: .leading){
@@ -30,6 +33,9 @@ struct DataView: View {
                 Text("**Time:** ") + Text(sessionToShow?.duration.doubleToTime() ?? "0s")
             }
             .padding()
+            if !isPortrait {
+                Spacer()
+            }
         }
         .font(.subheadline)
     }
