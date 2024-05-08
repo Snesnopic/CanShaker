@@ -30,9 +30,6 @@ struct AdviceView: View {
             .navigationTitle(String(localized: "Advice"))
             .preferredColorScheme(.dark)
             .frame(maxHeight: .infinity)
-            .background{
-                Color.bgGray
-            }
         }
     }
 }

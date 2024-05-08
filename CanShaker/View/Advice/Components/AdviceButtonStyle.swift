@@ -52,7 +52,7 @@ struct AdviceButtonStyle: View {
                 ZStack(alignment: .leading) {
                     UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 15, bottomTrailing: 15, topTrailing: 0))
                         .responsiveFrame(widthPercentage: 95, heightPercentage: 6)
-                        .foregroundColor(Color.boxDetail)
+                        .foregroundColor(Color.box)
                         .shadow(radius: 20)
                     
                     Text(cDescription)

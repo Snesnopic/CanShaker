@@ -49,7 +49,7 @@ struct FeedbackView: View {
         Line()
             .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
             .frame(height: 1)
-            .foregroundStyle(Color.unselectedTabBar)
+            .foregroundStyle(Color.primaryGray)
         Spacer()
     }
 }

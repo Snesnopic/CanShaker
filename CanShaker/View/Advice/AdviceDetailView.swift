@@ -13,7 +13,7 @@ struct AdviceDetailView: View {
         
         ZStack(alignment: .top){
             RoundedRectangle(cornerRadius: 15)
-                .foregroundStyle(Color.boxDetail)
+                .foregroundStyle(Color.box)
                 .padding()
             
             VStack(alignment: .leading) {
@@ -43,9 +43,6 @@ struct AdviceDetailView: View {
         .padding()
         .preferredColorScheme(.dark)
         .navigationTitle(adv.title)
-        .background{
-            Color.bgGray
-        }
     }
 }
 

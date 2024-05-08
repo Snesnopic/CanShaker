@@ -16,7 +16,7 @@ struct LastSessionView: View {
     
     init(sessionToShow: Session?) {
         self.sessionToShow = sessionToShow
-        UISegmentedControl.appearance().selectedSegmentTintColor = .unselectedTabBar
+        UISegmentedControl.appearance().selectedSegmentTintColor = .primaryGray
     }
     
     var body: some View {

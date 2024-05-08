@@ -13,7 +13,7 @@ struct CanShakerApp: App {
     var connectivity = Connectivity.shared
     @State private var tabBarSelection:Int = 0
     init() {
-        UITabBar.appearance().unselectedItemTintColor = UIColor(Color.unselectedTabBar)
+        UITabBar.appearance().unselectedItemTintColor = UIColor(Color.primaryGray)
     }
     var body: some Scene {
         WindowGroup {

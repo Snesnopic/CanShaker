@@ -13,7 +13,7 @@ struct AchievementDetailView: View {
     var body: some View {
         VStack{
             Circle()
-                .foregroundStyle(Color.box.opacity(0.4))
+                .foregroundStyle(Color.tertiaryGray)
                 .overlay {
                     Image(achievement.imageName)
                         .resizable()

@@ -40,9 +40,20 @@ struct DashboardView: View {
             .onAppear {
                 Connectivity.shared.context = self.context
                 Achievement.ensureAchievementsExist(context: context, achievements: achievements)
-            }
-            .background{
-                Color.bgGray
+                if achievements.isEmpty {
+                    for i in 1..<3 {
+                        let calories = Double.random(in: (2.0)...(150.0))
+                        let duration = Double.random(in: 1...3600)
+                        var accelD:[TimeInterval:Double] = [:]
+                        var heartRate:[TimeInterval:Double] = [:]
+                        for i in 1...10 {
+                            accelD[Double(i)*0.3] = Double.random(in: 1...4)
+                            heartRate[Double(i)*0.3] = Double.random(in: 60...150)
+                        }
+                        let session = Session(date: Date(), accelData: accelD, duration: duration, heartRateData: heartRate, calories: calories)
+                        context.insert(session)
+                    }
+                }
             }
         }
         

@@ -16,7 +16,7 @@ struct NaAchievementView: View {
             } label: {
                 Circle()
                     .responsiveFrame(widthPercentage: 25, aspectRatio: (1,1))
-                    .foregroundStyle(Color.boxDetail)
+                    .foregroundStyle(Color.tertiaryGray)
                     .overlay {
                         Image(achievement.imageName)
                             .resizable()

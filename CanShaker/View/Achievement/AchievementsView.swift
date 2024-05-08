@@ -48,9 +48,6 @@ struct AchievementsView: View{
                 
             }
             .navigationTitle(String(localized: "Achievements"))
-            .background{
-                Color.bgGray
-            }
         }
         .preferredColorScheme(.dark)
         

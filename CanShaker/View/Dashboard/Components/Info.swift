@@ -53,11 +53,11 @@ struct Info: View {
                 .foregroundStyle(Color.box)
         }
         //MARK: this enables the line in the middle, in a way that doesn't expand the container.
-        //        .overlay {
-        //            HStack {
-        //                Divider()
-        //            }
-        //        }
+//                .overlay {
+//                    HStack {
+//                        Divider()
+//                    }
+//                }
     }
 }
 

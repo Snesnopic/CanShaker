@@ -25,9 +25,6 @@ struct AdviceListView: View {
             .padding()
             .preferredColorScheme(.dark)
             .navigationTitle(advCategory.str)
-            .background{
-                Color.bgGray
-            }
             
         }
         
