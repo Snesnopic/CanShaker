@@ -101,6 +101,10 @@ struct SessionView: View {
     }
 }
 
-#Preview {
+#Preview ("Not shaking"){
+    SessionView(firstTabView: .constant(0),isShaking: .constant(false))
+}
+
+#Preview ("Shaking"){
     SessionView(firstTabView: .constant(0),isShaking: .constant(true))
 }
