@@ -15,8 +15,8 @@ extension Advice {
         //
         //let's separate for visibility and filtering by category
         //
-        Advice(title: String(localized: "Slow Down"), description: String(localized: "Rushing to climax often leads to a brief peak followed by a quick decline. Taking your time to build up gradually results in more intense artwork."), category: .methods),
-        Advice(title: String(localized: "Try Edging"), description: String(localized: "Practice holding back when nearing climax of your inspiration, then resume stimulation. Repeating this pattern enhances artwork output intensity and duration."), category: .methods),
+        Advice(title: String(localized: "Slow Down"), description: String(localized: "Rushing to the end often leads to a brief peak followed by a quick decline. Taking your time to build up gradually results in more intense artwork."), category: .methods),
+        Advice(title: String(localized: "Try Edging"), description: String(localized: "Practice holding back when nearing the end of your inspiration, then resume stimulation. Repeating this pattern enhances artwork output intensity and duration."), category: .methods),
         Advice(title:String(localized:  "Use Lube"), description: String(localized: "Enhance pleasure and reduce friction-related discomfort by using natural lubricants."), category: .methods),
         //
         //let's separate for visibility and filtering by category
