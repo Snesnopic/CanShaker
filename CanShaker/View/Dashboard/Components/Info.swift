@@ -50,7 +50,7 @@ struct Info: View {
         .padding()
         .background {
             RoundedRectangle(cornerRadius: 15)
-                .foregroundStyle(Color.box)
+                .foregroundStyle(Color.secondaryGray)
         }
         //MARK: this enables the line in the middle, in a way that doesn't expand the container.
 //                .overlay {

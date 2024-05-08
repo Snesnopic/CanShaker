@@ -27,7 +27,7 @@ struct AllAchievementsView: View {
             
         }.background {
             RoundedRectangle(cornerRadius: 15)
-                .foregroundStyle(Color.box)
+                .foregroundStyle(Color.secondaryGray)
                 .padding(.horizontal)
         }
     }

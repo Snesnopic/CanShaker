@@ -75,7 +75,7 @@ struct HistoryView: View {
                 .presentationDetents([.height(screenHeight!/1.8)])
                 .presentationCornerRadius(15)
                 .presentationDragIndicator(.visible)
-                .presentationBackground(Color.box)
+                .presentationBackground(Color.secondaryGray)
         })
         .listStyle(.plain)
         .preferredColorScheme(.dark)

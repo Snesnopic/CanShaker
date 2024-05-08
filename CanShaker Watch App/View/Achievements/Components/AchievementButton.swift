@@ -23,7 +23,7 @@ struct AchievementButton: View {
         }, label: {
             ZStack {
                     Circle()
-                        .foregroundStyle(Color.box.opacity(0.4))
+                        .foregroundStyle(Color.secondaryGray.opacity(0.4))
                
                 Image(achievement.imageName)
                         .resizable()

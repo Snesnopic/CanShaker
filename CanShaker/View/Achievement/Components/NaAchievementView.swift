@@ -37,7 +37,7 @@ struct NaAchievementView: View {
         .padding(.all,30)
         .background {
             RoundedRectangle(cornerRadius: 15)
-                .foregroundStyle(Color.box)
+                .foregroundStyle(Color.secondaryGray)
                 .padding(.horizontal)
         }
         .preferredColorScheme(.dark)

@@ -36,7 +36,7 @@ struct HistoryElementStyle: View {
         .background {
             RoundedRectangle(cornerRadius: 15)
                 .shadow(radius: 15)
-                .foregroundStyle(Color.box)
+                .foregroundStyle(Color.secondaryGray)
         }
         .preferredColorScheme(.dark)
     }

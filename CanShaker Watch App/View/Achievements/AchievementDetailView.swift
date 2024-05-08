@@ -17,7 +17,7 @@ struct AchievementDetailView: View {
             if achievement != nil {
                 ZStack {
                     Circle()
-                        .foregroundStyle(Color.box.opacity(0.4))
+                        .foregroundStyle(Color.secondaryGray.opacity(0.4))
                     Image(achievement!.imageName)
                         .resizable()
                         .scaledToFit()

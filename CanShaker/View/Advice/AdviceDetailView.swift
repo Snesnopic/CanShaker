@@ -13,7 +13,7 @@ struct AdviceDetailView: View {
         
         ZStack(alignment: .top){
             RoundedRectangle(cornerRadius: 15)
-                .foregroundStyle(Color.box)
+                .foregroundStyle(Color.secondaryGray)
                 .padding()
             
             VStack(alignment: .leading) {

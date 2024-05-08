@@ -22,7 +22,7 @@ struct LastSessionView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 15.0)
-                .foregroundStyle(.box)
+                .foregroundStyle(.secondaryGray)
             
             VStack(alignment: .center){
                 
