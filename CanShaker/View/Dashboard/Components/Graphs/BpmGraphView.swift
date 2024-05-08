@@ -13,7 +13,7 @@ struct BpmGraphView: View {
     var session: Session
     let heartGradient = LinearGradient(
         gradient: Gradient (
-            colors: [ Color(.accent).opacity(0.85),
+            colors: [ Color(.accent).opacity(0.75),
                       Color(.accent)
                 .opacity(0.3),
                       Color.clear ]
@@ -36,7 +36,7 @@ struct BpmGraphView: View {
             //TODO: adjust 
             }
             .chartXAxis{
-                AxisMarks(values: .automatic(desiredCount: 5)) {
+                AxisMarks(values: .automatic) {
                     AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
                 }
             }
@@ -44,14 +44,14 @@ struct BpmGraphView: View {
             
             .chartYAxis {
                 AxisMarks(position: .leading, values: .automatic(desiredCount: 5)) { _ in
-                    AxisValueLabel()
+                    AxisValueLabel(format: Decimal.FormatStyle().precision(.significantDigits(3)))
                 }
             }
             .chartYAxisLabel("BPM", position: .automatic, alignment: .leading).fontWeight(.bold)
 
         }
         .padding()
-        .padding(.vertical, 15)
+        .padding(.vertical)
         .preferredColorScheme(.dark)
     }
     

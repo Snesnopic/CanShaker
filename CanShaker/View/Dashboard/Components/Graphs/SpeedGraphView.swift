@@ -37,13 +37,13 @@ struct SpeedGraphView: View {
             //TODO: adjust
         }
         .chartXAxis{
-            AxisMarks(values: .automatic(desiredCount: 6)) {
+            AxisMarks(values: .automatic) {
                 AxisValueLabel(format: Date.FormatStyle().minute(.defaultDigits).second(.defaultDigits))
             }
         }
         .chartYAxis {
             AxisMarks(position: .leading, values: .automatic(desiredCount: 5)) { _ in
-                AxisValueLabel()
+                AxisValueLabel(format: Decimal.FormatStyle().precision(.significantDigits(3)))
             }
         }
         .chartXAxisLabel("time", position: .overlay, alignment: .bottom).fontWeight(.bold)
@@ -66,7 +66,7 @@ struct SpeedGraphView: View {
     
     var accelD:[TimeInterval:Double] = [:]
     for i in 1...100 {
-        accelD[Double(i)*0.3] = Double.random(in: 50...140)
+        accelD[Double(i)*0.3] = Double.random(in: 0...20)
     }
     let session = Session(date: Date(), accelData: accelD, duration: 50.0/3.0)
     container.mainContext.insert(session)
