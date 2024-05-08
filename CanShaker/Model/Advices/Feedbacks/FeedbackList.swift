@@ -41,10 +41,10 @@ extension Feedback {
         //MARK: ACCEL
         //low
         Feedback(sentence: String(localized: "Slow and steady wins the race."), type: .insult, category: .accel, condition: .low, imageName: "bolt.fill"),
-        Feedback(sentence: String(localized: "Was that a funeral procession? Oh, you missed it for how slow you were."), type: .insult, category: .accel, condition: .low, imageName: "bolt.fill"),
+        //Feedback(sentence: String(localized: "Was that a funeral procession? Oh, you missed it for how slow you were."), type: .insult, category: .accel, condition: .low, imageName: "bolt.fill"),
         
         //high
-        Feedback(sentence: String(localized: "Are you shaking it like your life depends on it?!"), type: .compliment, category: .accel, condition: .high, imageName: "bolt.fill"),
+        //Feedback(sentence: String(localized: "Are you shaking it like your life depends on it?!"), type: .compliment, category: .accel, condition: .high, imageName: "bolt.fill"),
         Feedback(sentence: String(localized: "'Deja vù! I've just  been in this place before'"), type: .compliment, category: .accel, condition: .high, imageName: "bolt.fill"),
         
         //MARK: RANDOM & EASTER EGGS
@@ -53,7 +53,7 @@ extension Feedback {
         Feedback(sentence: String(localized: "There are clouds above your head, everybody knows your deed."), type: .neutral, category: .random, condition: .random, imageName: "sunset.fill"),
         
         //easter eggs
-        Feedback(sentence: String(localized: "69? Nice"), type: .neutral, category: .easterEgg, condition: .random, imageName: "♋️")
+        //Feedback(sentence: String(localized: "69? Nice"), type: .neutral, category: .easterEgg, condition: .random, imageName: "♋️")
         
     ]
 }
