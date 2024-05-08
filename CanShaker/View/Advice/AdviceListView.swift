@@ -12,18 +12,20 @@ struct AdviceListView: View {
     
     var body: some View {
         NavigationStack{
-            ForEach(Advice.list) { adv in
-                if(adv.category == advCategory){
-                    NavigationLink(destination: AdviceDetailView(adv: adv), label: {
-                        AdviceButtonStyle(category: adv.title, cDescription: adv.description, backgroundImg: "placeholder")
-                            .foregroundStyle(.white)
-                            .multilineTextAlignment(.leading)
-                    })
+            VStack(spacing: 0){
+                ForEach(Advice.list) { adv in
+                    if(adv.category == advCategory){
+                        NavigationLink {
+                            AdviceDetailView(adv: adv)
+                        } label: {
+                            AdviceButtonStyle(category: adv.title, cDescription: adv.description, backgroundImg: "placeholder")
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.leading)
+                        }
+                    }
                 }
+                Spacer()
             }
-            
-            .padding()
-            .preferredColorScheme(.dark)
             .navigationTitle(advCategory.str)
             
         }
