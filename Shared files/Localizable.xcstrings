@@ -302,6 +302,7 @@
       }
     },
     "69? Nice" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
@@ -500,6 +501,7 @@
       }
     },
     "Are you shaking it like your life depends on it?!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
@@ -1852,6 +1854,7 @@
       }
     },
     "Practice holding back when nearing climax of your inspiration, then resume stimulation. Repeating this pattern enhances artwork output intensity and duration." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1878,6 +1881,9 @@
           }
         }
       }
+    },
+    "Practice holding back when nearing the end of your inspiration, then resume stimulation. Repeating this pattern enhances artwork output intensity and duration." : {
+
     },
     "Progress: %lld%%" : {
       "localizations" : {
@@ -2038,6 +2044,7 @@
       }
     },
     "Rushing to climax often leads to a brief peak followed by a quick decline. Taking your time to build up gradually results in more intense artwork." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2064,6 +2071,9 @@
           }
         }
       }
+    },
+    "Rushing to the end often leads to a brief peak followed by a quick decline. Taking your time to build up gradually results in more intense artwork." : {
+
     },
     "Safety" : {
       "localizations" : {
@@ -2622,6 +2632,7 @@
       }
     },
     "Was that a funeral procession? Oh, you missed it for how slow you were." : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
