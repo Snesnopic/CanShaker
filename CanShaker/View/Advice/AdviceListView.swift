@@ -12,7 +12,7 @@ struct AdviceListView: View {
     
     var body: some View {
         NavigationStack{
-            VStack(spacing: 0){
+            VStack(spacing: 10){
                 ForEach(Advice.list) { adv in
                     if(adv.category == advCategory){
                         NavigationLink {

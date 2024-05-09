@@ -10,7 +10,7 @@ import SwiftUI
 struct AdviceView: View {
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
+            VStack(spacing: 10) {
                 NavigationLink(destination: AdviceListView(advCategory: .hygiene), label: {
                     AdviceButtonStyle(img: "heart.text.square.fill", category: String(localized: "Hygiene"), cDescription: String(localized: "Learn how to keep your can always in top shape"), backgroundImg: "hygiene")
                     
