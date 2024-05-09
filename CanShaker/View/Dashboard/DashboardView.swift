@@ -41,7 +41,7 @@ struct DashboardView: View {
                 Connectivity.shared.context = self.context
                 Achievement.ensureAchievementsExist(context: context, achievements: achievements)
                 if achievements.isEmpty {
-                    for i in 1..<3 {
+                    for _ in 1..<3 {
                         let calories = Double.random(in: (2.0)...(150.0))
                         let duration = Double.random(in: 1...3600)
                         var accelD:[TimeInterval:Double] = [:]
