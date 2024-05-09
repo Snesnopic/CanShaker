@@ -13,63 +13,55 @@ struct AdviceButtonStyle: View {
     @State var cDescription: String
     @State var backgroundImg: String
     var body: some View {
-        
-        ZStack{
-            RoundedRectangle(cornerRadius: 15)
-                .responsiveFrame(widthPercentage: 95, heightPercentage: 20)
-                .foregroundColor(Color.secondaryGray)
-                .shadow(radius: 20)
-            
+        VStack{
             HStack{
+                //img might not exist in the advice list view
+                if let img {
+                    Image(systemName: img)
+                        .font(.title)
+                }
+                Text(category)
+                    .bold()
+                    .font(.title2)
                 Spacer()
                 Image(backgroundImg)
                     .resizable()
                     .responsiveFrame(widthPercentage: 40, aspectRatio: (1,1))
-                
             }
-            
-            VStack{
-                Spacer()
-                HStack{
-                    //img might not exist in the advice list view
-                    if let img {
-                        Image(systemName: img)
-                            .font(.title)
-                        Text(category)
-                            .bold()
-                            .font(.title2)
-                    } else {
-                        Text(category)
-                            .bold()
-                            .font(.title2)
-                            .padding(.leading, -1)
-                    }
-                        
-                    Spacer()
-                }
-                .padding(.leading)
+            .padding(.leading)
+            .overlay {
                 
-                ZStack(alignment: .leading) {
-                    UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 15, bottomTrailing: 15, topTrailing: 0))
-                        .responsiveFrame(widthPercentage: 95, heightPercentage: 6)
-                        .foregroundColor(Color.secondaryGray)
-                        .shadow(radius: 20)
-                    
+                
+                HStack {
                     Text(cDescription)
                         .lineLimit(1)
                         .font(.subheadline)
                         .fontWeight(.medium)
-                        .padding(.horizontal)
+                        .padding()
+                        .background {
+                            UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 15, bottomTrailing: 15, topTrailing: 0))
+                                .foregroundColor(Color.secondaryGray)
+                        }
+                    
+                    
                 }
+                .padding(.top,110)
             }
-            
-            .responsiveFrame(heightPercentage: 20)
         }
-        .padding()
-        .preferredColorScheme(.dark)
+        
+        
+        .background {
+            RoundedRectangle(cornerRadius: 15)
+                .foregroundColor(Color.secondaryGray)
+                .shadow(radius: 20)
+        }
     }
+    
 }
+
 
 #Preview{
     AdviceButtonStyle(img: "book.closed.fill", category: "Methods", cDescription: "Lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem", backgroundImg: "safety")
+        .preferredColorScheme(.dark)
+    
 }
